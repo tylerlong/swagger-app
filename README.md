@@ -15,7 +15,7 @@ yarn install
 ## Development
 
 ```
-yarn watch
+yarn dev
 open http://localhost:8080
 ```
 
@@ -24,6 +24,20 @@ open http://localhost:8080
 
 ```
 yarn run upgrade
+```
+
+
+## Build
+
+```
+yarn build
+```
+
+
+## Release
+
+```
+yarn release
 ```
 
 
