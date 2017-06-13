@@ -1,3 +1,4 @@
+import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 const rules = [
@@ -28,16 +29,19 @@ const rules = [
 const config = {
   target: 'web',
   entry: {
-    'index': './index.js'
+    index: './src/index.js'
   },
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
   module: { rules },
   plugins: [
     new ExtractTextPlugin('[name].bundle.css')
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist')
+  }
 }
 
 export default [config]
