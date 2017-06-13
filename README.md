@@ -2,6 +2,8 @@
 
 An app to create swagger spec.
 
+It's also an app for me to learn and experiment React.
+
 
 ## Setup
 
