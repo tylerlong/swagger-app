@@ -4,6 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { message, Input, Form } from 'antd'
 import axios from 'axios'
+import R from 'ramda'
 
 class App extends React.Component {
   constructor (props) {
@@ -12,9 +13,9 @@ class App extends React.Component {
       name: '',
       version: ''
     }
-
-    this.handleChangeName = this.handleChangeName.bind(this)
-    this.handleChangeVersion = this.handleChangeVersion.bind(this)
+    const curry = R.curry(this.handleChange)
+    this.handleChangeName = curry('name').bind(this)
+    this.handleChangeVersion = curry('version').bind(this)
   }
   componentDidMount () {
     axios.get('./sample.json').then(res => {
@@ -22,11 +23,8 @@ class App extends React.Component {
       message.success('state loaded')
     })
   }
-  handleChangeName (event) {
-    this.setState({ name: event.target.value })
-  }
-  handleChangeVersion (event) {
-    this.setState({ version: event.target.value })
+  handleChange (key, event) {
+    this.setState({ [key]: event.target.value })
   }
   render () {
     const formItemLayout = {
