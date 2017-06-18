@@ -13,9 +13,9 @@ class App extends React.Component {
       name: '',
       version: ''
     }
-    const curry = R.curry(this.handleChange)
-    this.handleChangeName = curry('name').bind(this)
-    this.handleChangeVersion = curry('version').bind(this)
+    this.handleChange = R.curry(this.handleChange)
+    this.handleChangeName = this.handleChange('name').bind(this)
+    this.handleChangeVersion = this.handleChange('version').bind(this)
   }
   componentDidMount () {
     axios.get('./sample.json').then(res => {
