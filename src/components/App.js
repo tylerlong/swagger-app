@@ -1,19 +1,15 @@
 import React from 'react'
-import { message, Input, Form } from 'antd'
-// import axios from 'axios'
+import { Input, Form } from 'antd'
 import R from 'ramda'
 
 import { connect } from 'react-redux'
 
-import { setProp } from '../actions'
+import { loadState, setProp } from '../actions'
 
 class App extends React.Component {
-  // componentDidMount () {
-  //   axios.get('./sample.json').then(res => {
-  //     this.setState(res.data)
-  //     message.success('state loaded')
-  //   })
-  // }
+  componentDidMount () {
+    this.props.loadState()
+  }
   render () {
     const formItemLayout = {
       labelCol: {
@@ -41,4 +37,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp })(App)
+export default connect(R.identity, { setProp, loadState })(App)
