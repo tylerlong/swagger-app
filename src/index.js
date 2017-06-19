@@ -6,6 +6,10 @@ import { message, Input, Form } from 'antd'
 import axios from 'axios'
 import R from 'ramda'
 
+import { Provider } from 'react-redux'
+
+import store from './store'
+
 class App extends React.Component {
   constructor (props) {
     super(props)
@@ -53,4 +57,9 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
