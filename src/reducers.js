@@ -1,8 +1,8 @@
 import R from 'ramda'
 
 const defaultState = {
-  name: '',
-  version: ''
+  name: 'RingCentral API',
+  version: '1.0'
 }
 
 const reducer = (state = defaultState, action) => {
