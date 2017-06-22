@@ -4,7 +4,7 @@ import { Form, Tabs, Button } from 'antd'
 import { connect } from 'react-redux'
 
 import { loadState } from '../actions'
-import BasicFormItem from './BasicFormItem'
+import InfoFormItem from './InfoFormItem'
 import PermissionFormItem from './PermissionFormItem'
 
 class App extends React.Component {
@@ -17,17 +17,17 @@ class App extends React.Component {
       <div>
         <h1>{this.props.title} {this.props.version}</h1>
         <Tabs tabPosition='left'>
-          <Tabs.TabPane tab='Basic Info' key='basic-info'>
+          <Tabs.TabPane tab='Info' key='info'>
             <Form>
-              <BasicFormItem path='title' />
-              <BasicFormItem path='version' />
-              <BasicFormItem path='description' />
-              <BasicFormItem path='termsOfService' />
-              <BasicFormItem path='host' />
-              <BasicFormItem path='basePath' />
-              <BasicFormItem path='schemes' />
-              <BasicFormItem path='produces' />
-              <BasicFormItem path='consumes' />
+              <InfoFormItem path='title' />
+              <InfoFormItem path='version' />
+              <InfoFormItem path='description' />
+              <InfoFormItem path='termsOfService' />
+              <InfoFormItem path='host' />
+              <InfoFormItem path='basePath' />
+              <InfoFormItem path='schemes' />
+              <InfoFormItem path='produces' />
+              <InfoFormItem path='consumes' />
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
