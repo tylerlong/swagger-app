@@ -19,7 +19,7 @@ class FormItem extends React.Component {
     }
     return (
       <Form.Item {...formItemLayout} label={this.props.path}>
-        <Input placeholder={this.props.path} size='large' value={this.props[this.props.path]} onChange={(event) => { this.props.setProp(this.props.path, event.target.value) }} />
+        <Input placeholder={this.props.path} size='large' value={this.props.info[this.props.path]} onChange={(event) => { this.props.setProp(['info', this.props.path], event.target.value) }} />
       </Form.Item>
     )
   }

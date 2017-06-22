@@ -15,7 +15,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <h1>{this.props.title} {this.props.version}</h1>
+        <h1>{this.props.info.title} {this.props.info.version}</h1>
         <Tabs tabPosition='left'>
           <Tabs.TabPane tab='Info' key='info'>
             <Form>
