@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Form, Tabs, Button } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState } from '../actions'
+import { loadState, setProp } from '../actions'
 import InfoFormItem from './InfoFormItem'
 import PermissionFormItem from './PermissionFormItem'
 
@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.props.info.title} {this.props.info.version}</h1>
-        <Tabs tabPosition='left'>
+        <Tabs tabPosition='left' activeKey={this.props.metadata.activeTabKey} onChange={key => { this.props.setProp(['metadata', 'activeTabKey'], key) }}>
           <Tabs.TabPane tab='Info' key='info'>
             <Form>
               <InfoFormItem path='title' />
@@ -44,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.identity, { loadState })(App)
+export default connect(R.identity, { loadState, setProp })(App)

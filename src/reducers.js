@@ -1,6 +1,9 @@
 import R from 'ramda'
 
 const defaultState = {
+  metadata: {
+    activeTabKey: 'info'
+  },
   info: {
     title: 'Example API',
     version: '1.0',
