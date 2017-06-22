@@ -9,7 +9,8 @@ const defaultState = {
   basePath: '/',
   schemes: 'https',
   produces: 'application/json',
-  consumes: 'application/json'
+  consumes: 'application/json',
+  permissions: {}
 }
 
 const reducer = (state = defaultState, action) => {

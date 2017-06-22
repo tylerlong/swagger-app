@@ -1,17 +1,16 @@
 import React from 'react'
-import { Form, Tabs } from 'antd'
 import R from 'ramda'
-
+import { Form, Tabs } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState, setProp } from '../actions'
-
+import { loadState } from '../actions'
 import FormItem from './FormItem'
 
 class App extends React.Component {
   componentDidMount () {
     this.props.loadState()
   }
+
   render () {
     return (
       <div>
@@ -39,4 +38,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, loadState })(App)
+export default connect(R.identity, { loadState })(App)
