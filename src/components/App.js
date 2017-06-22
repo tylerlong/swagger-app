@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import { loadState } from '../actions'
 import BasicFormItem from './BasicFormItem'
+import PermissionFormItem from './PermissionFormItem'
 
 class App extends React.Component {
   componentDidMount () {
@@ -30,7 +31,10 @@ class App extends React.Component {
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
-            Hello world
+            <Form>
+              <PermissionFormItem index='0' />
+              <PermissionFormItem index='1' />
+            </Form>
           </Tabs.TabPane>
         </Tabs>
       </div>

@@ -3,3 +3,8 @@
   border-top: 1px solid #ddd;
   padding-top: 16px;
 }
+
+.permission-form-item {
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 16px;
+}

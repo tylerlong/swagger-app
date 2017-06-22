@@ -16,7 +16,7 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'SET_PROP':
-      return R.set(R.lensProp(action.path), action.value, state)
+      return R.set(R.lensPath(action.path), action.value, state)
     case 'SET_STATE':
       return action.state
     default:
