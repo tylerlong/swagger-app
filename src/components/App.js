@@ -1,6 +1,6 @@
 import React from 'react'
 import R from 'ramda'
-import { Form, Tabs } from 'antd'
+import { Form, Tabs, Button } from 'antd'
 import { connect } from 'react-redux'
 
 import { loadState } from '../actions'
@@ -31,9 +31,11 @@ class App extends React.Component {
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
+            <div className='primary-button'>
+              <Button type='primary' size='large'>Add permission</Button>
+            </div>
             <Form>
-              <PermissionFormItem index='0' />
-              <PermissionFormItem index='1' />
+              {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={index} />)}
             </Form>
           </Tabs.TabPane>
         </Tabs>

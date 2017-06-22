@@ -16,6 +16,10 @@
     {
       "name": "Contacts",
       "description": "Creating, viewing, editing and deleting user personal contacts"
+    },
+    {
+      "name": "EditAccounts",
+      "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)"
     }
   ]
 }
