@@ -5,7 +5,7 @@ import { Input, Form } from 'antd'
 
 import { setProp } from '../actions'
 
-class FormItem extends React.Component {
+class BasicFormItem extends React.Component {
   render () {
     const formItemLayout = {
       labelCol: {
@@ -25,4 +25,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp })(FormItem)
+export default connect(R.identity, { setProp })(BasicFormItem)

@@ -4,7 +4,7 @@ import { Form, Tabs } from 'antd'
 import { connect } from 'react-redux'
 
 import { loadState } from '../actions'
-import FormItem from './FormItem'
+import BasicFormItem from './BasicFormItem'
 
 class App extends React.Component {
   componentDidMount () {
@@ -18,15 +18,15 @@ class App extends React.Component {
         <Tabs tabPosition='left'>
           <Tabs.TabPane tab='Basic Info' key='basic-info'>
             <Form>
-              <FormItem path='title' />
-              <FormItem path='version' />
-              <FormItem path='description' />
-              <FormItem path='termsOfService' />
-              <FormItem path='host' />
-              <FormItem path='basePath' />
-              <FormItem path='schemes' />
-              <FormItem path='produces' />
-              <FormItem path='consumes' />
+              <BasicFormItem path='title' />
+              <BasicFormItem path='version' />
+              <BasicFormItem path='description' />
+              <BasicFormItem path='termsOfService' />
+              <BasicFormItem path='host' />
+              <BasicFormItem path='basePath' />
+              <BasicFormItem path='schemes' />
+              <BasicFormItem path='produces' />
+              <BasicFormItem path='consumes' />
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
