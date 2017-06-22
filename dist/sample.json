@@ -8,8 +8,14 @@
   "schemes": "https",
   "produces": "application/json",
   "consumes": "application/json",
-  "permissions": {
-    "Accounts": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
-    "Contacts": "Creating, viewing, editing and deleting user personal contacts"
-  }
+  "permissions": [
+    {
+      "name": "Accounts",
+      "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+    },
+    {
+      "name": "Contacts",
+      "description": "Creating, viewing, editing and deleting user personal contacts"
+    }
+  ]
 }
