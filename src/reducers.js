@@ -24,7 +24,10 @@ const reducer = (state = defaultState, action) => {
       return R.set(R.lensPath(action.path), action.value, state)
     case 'SET_STATE':
       return action.state
+    case 'ADD_PERMISSION':
+      return R.over(R.lensPath(['permissions']), R.prepend(R.omit(['type'], action)), state)
     default:
+      console.log(`Unknown action type: ${action.type}`)
       return state
   }
 }

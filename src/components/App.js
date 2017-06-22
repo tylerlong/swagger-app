@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Form, Tabs, Button } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState, setProp } from '../actions'
+import { loadState, setProp, addPermission } from '../actions'
 import InfoFormItem from './InfoFormItem'
 import PermissionFormItem from './PermissionFormItem'
 
@@ -32,7 +32,7 @@ class App extends React.Component {
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
             <div className='primary-button'>
-              <Button type='primary' size='large'>Add permission</Button>
+              <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
             </div>
             <Form>
               {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={index} />)}
@@ -44,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.identity, { loadState, setProp })(App)
+export default connect(R.identity, { loadState, setProp, addPermission })(App)
