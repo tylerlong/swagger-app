@@ -50,3 +50,5 @@ yarn release
 - Show recent files list in home page
 - Design according to http://swagger.io/specification/
 - Find way to update title declaratively
+- Some fields are actually arrays. Refer to how we handle enums
+    - consumes, produces, schemes

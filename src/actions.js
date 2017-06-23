@@ -28,3 +28,8 @@ export const deletePathParameter = (index) => dispatch => {
   dispatch({ type: 'DELETE_PATH_PARAMETER', index })
   message.success(`Path parameter deleted`)
 }
+
+export const addPath = () => dispatch => {
+  dispatch({ type: 'ADD_PATH' })
+  message.success(`Path added`)
+}

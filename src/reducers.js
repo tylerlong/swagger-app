@@ -16,7 +16,9 @@ const defaultState = {
     consumes: 'application/json'
   },
   permissions: [],
-  pathParameters: []
+  pathParameters: [],
+  paths: [],
+  models: []
 }
 
 const reducer = (state = defaultState, action) => {

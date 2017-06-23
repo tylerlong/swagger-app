@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "activeTabKey": "path-parameters"
+    "activeTabKey": "paths"
   },
   "info": {
     "title": "Example API",
@@ -52,5 +52,22 @@
       "description": "Internal identifier of a message attachment",
       "enum": []
     }
+  ],
+  "paths": [
+    {
+      "path": "/restapi",
+      "methods": [
+        {
+          "method": "get",
+          "description": "Get Server Info",
+          "tags": ["API Versions"],
+          "response": {
+          }
+        }
+      ]
+    }
+  ],
+  "models": [
+
   ]
 }
