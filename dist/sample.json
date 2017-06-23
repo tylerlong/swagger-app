@@ -58,16 +58,81 @@
       "path": "/restapi",
       "methods": [
         {
+          "since": "1.0.2",
+          "apiGroup": "Light",
+          "permissions": [],
+          "batch": false,
+          "visibility": "public",
+          "status": "normal",
           "method": "get",
           "description": "Get Server Info",
-          "tags": ["API Versions"],
-          "response": {
-          }
+          "tags": [
+            "API Versions"
+          ],
+          "parameters": {},
+          "request": {},
+          "response": {},
+          "examples": []
         }
       ]
     }
   ],
   "models": [
-
+    {
+      "name": "AccountInfo",
+      "properties": [
+        {
+          "name": "id",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Internal identifier of an account"
+        },
+        {
+          "name": "uri",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Canonical URI of an account"
+        },
+        {
+          "name": "mainNumber",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Main phone number of the current account"
+        }
+      ]
+    },
+    {
+      "name": "AnsweringRuleInfo",
+      "properties": [
+        {
+          "name": "id",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Internal identifier of an asnwering rule"
+        },
+        {
+          "name": "uri",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Canonical URI to the answering rule resource"
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "enum": [
+            "BusinessHours",
+            "AfterHours",
+            "Custom"
+          ],
+          "required": false,
+          "description": "Type of an answering rule"
+        }
+      ]
+    }
   ]
 }
