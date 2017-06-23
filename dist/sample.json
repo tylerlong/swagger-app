@@ -26,5 +26,19 @@
       "name": "EditAccounts",
       "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)"
     }
+  ],
+  "pathParameters": [
+    {
+      "name": "accountId",
+      "descroption": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+    },
+    {
+      "name": "answeringRuleId",
+      "descroption": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule"
+    },
+    {
+      "name": "attachmentId",
+      "descroption": "Internal identifier of a message attachment"
+    }
   ]
 }

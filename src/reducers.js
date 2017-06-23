@@ -15,7 +15,8 @@ const defaultState = {
     produces: 'application/json',
     consumes: 'application/json'
   },
-  permissions: []
+  permissions: [],
+  pathParameters: []
 }
 
 const reducer = (state = defaultState, action) => {
