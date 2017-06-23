@@ -3,10 +3,10 @@ import R from 'ramda'
 import { Form, Tabs, Button } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState, setProp, addPermission, addPathParameter, addPath, addModel } from '../actions'
+import { loadState, setProp, addPath, addModel } from '../actions'
 import InfoFormItem from './InfoFormItem'
 import Permissions from './Permissions'
-import PathParameterFormItem from './PathParameterFormItem'
+import PathParameters from './PathParameters'
 
 class App extends React.Component {
   componentDidMount () {
@@ -24,18 +24,8 @@ class App extends React.Component {
               {['title', 'version', 'description', 'termsOfService', 'host', 'basePath', 'schemes', 'produces', 'consumes'].map(path => <InfoFormItem path={path} key={path} />)}
             </Form>
           </Tabs.TabPane>
-          <Tabs.TabPane tab='Permissions' key='permissions'>
-            <Permissions />
-          </Tabs.TabPane>
-          <Tabs.TabPane tab='Path Parameters' key='path-parameters'>
-            <h2>Path Parameters</h2>
-            <div className='primary-button'>
-              <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
-            </div>
-            <Form>
-              {this.props.pathParameters.map((pathParameter, index) => <PathParameterFormItem index={index} key={`${index}-${pathParameter.name}`} />)}
-            </Form>
-          </Tabs.TabPane>
+          <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
+          <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>
           <Tabs.TabPane tab='Paths' key='paths'>
             <h2>Paths</h2>
             <div className='primary-button'>
@@ -54,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.identity, { loadState, setProp, addPermission, addPathParameter, addPath, addModel })(App)
+export default connect(R.identity, { loadState, setProp, addPath, addModel })(App)

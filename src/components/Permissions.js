@@ -15,7 +15,7 @@ class Permissions extends React.Component {
           <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
         </div>
         <Form>
-          {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={`${index}-${permission.name}`} />)}
+          {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={`${this.props.permissions.length}-${index}`} />)}
         </Form>
       </div>
     )
