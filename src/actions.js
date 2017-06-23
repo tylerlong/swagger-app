@@ -13,3 +13,8 @@ export const addPermission = () => dispatch => {
   dispatch({ type: 'ADD_PERMISSION', name: 'Permission name', description: 'Permission description' })
   message.success(`Permission added`)
 }
+
+export const deletePermission = (index) => dispatch => {
+  dispatch({ type: 'DELETE_PERMISSION', index })
+  message.success(`Permission deleted`)
+}

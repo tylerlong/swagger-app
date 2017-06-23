@@ -3,7 +3,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm } from 'antd'
 
-import { setProp } from '../actions'
+import { setProp, deletePermission } from '../actions'
 
 class FormItem extends React.Component {
   render () {
@@ -27,7 +27,9 @@ class FormItem extends React.Component {
           <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { this.props.setProp(['permissions', this.props.index, 'description'], event.target.value) }} />
         </Form.Item>
         <div className='delete-button'>
-          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No'>
+          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
+            this.props.deletePermission(this.props.index)
+          }}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>
         </div>
@@ -36,4 +38,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp })(FormItem)
+export default connect(R.identity, { setProp, deletePermission })(FormItem)
