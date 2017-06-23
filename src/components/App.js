@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { loadState, setProp, addPermission, addPathParameter, addPath, addModel } from '../actions'
 import InfoFormItem from './InfoFormItem'
-import PermissionFormItem from './PermissionFormItem'
+import Permissions from './Permissions'
 import PathParameterFormItem from './PathParameterFormItem'
 
 class App extends React.Component {
@@ -25,13 +25,7 @@ class App extends React.Component {
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
-            <h2>Permissions</h2>
-            <div className='primary-button'>
-              <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
-            </div>
-            <Form>
-              {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={`${index}-${permission.name}`} />)}
-            </Form>
+            <Permissions />
           </Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'>
             <h2>Path Parameters</h2>
