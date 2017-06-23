@@ -29,6 +29,10 @@ const reducer = (state = defaultState, action) => {
       return R.over(R.lensPath(['permissions']), R.prepend(R.omit(['type'], action)), state)
     case 'DELETE_PERMISSION':
       return R.over(R.lensPath(['permissions']), R.remove(action.index, 1), state)
+    case 'ADD_PATH_PARAMETER':
+      return R.over(R.lensPath(['pathParameters']), R.prepend(R.omit(['type'], action)), state)
+    case 'DELETE_PATH_PARAMETER':
+      return R.over(R.lensPath(['pathParameters']), R.remove(action.index, 1), state)
     default:
       console.log(`Unknown action type: ${action.type}`)
       return state

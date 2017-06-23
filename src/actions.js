@@ -18,3 +18,13 @@ export const deletePermission = (index) => dispatch => {
   dispatch({ type: 'DELETE_PERMISSION', index })
   message.success(`Permission deleted`)
 }
+
+export const addPathParameter = () => dispatch => {
+  dispatch({ type: 'ADD_PATH_PARAMETER', name: 'Name', description: 'Description', enum: [] })
+  message.success(`Path parameter added`)
+}
+
+export const deletePathParameter = (index) => dispatch => {
+  dispatch({ type: 'DELETE_PATH_PARAMETER', index })
+  message.success(`Path parameter deleted`)
+}

@@ -1,0 +1,41 @@
+import React from 'react'
+import R from 'ramda'
+import { connect } from 'react-redux'
+import { Input, Form, Button, Popconfirm } from 'antd'
+
+import { setProp, deletePathParameter } from '../actions'
+
+class FormItem extends React.Component {
+  render () {
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 6 }
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 12 }
+      }
+    }
+    const pathParameter = this.props.pathParameters[this.props.index]
+    return (
+      <div className='pathParameter-form-item'>
+        <Form.Item {...formItemLayout} label='Name'>
+          <Input placeholder='Name' size='large' value={pathParameter.name} onChange={(event) => { this.props.setProp(['pathParameters', this.props.index, 'name'], event.target.value) }} />
+        </Form.Item>
+        <Form.Item {...formItemLayout} label='Description'>
+          <Input placeholder='Description' size='large' value={pathParameter.description} onChange={(event) => { this.props.setProp(['pathParameters', this.props.index, 'description'], event.target.value) }} />
+        </Form.Item>
+        <div className='delete-button'>
+          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
+            this.props.deletePathParameter(this.props.index)
+          }}>
+            <Button type='danger'>Delete</Button>
+          </Popconfirm>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default connect(R.identity, { setProp, deletePathParameter })(FormItem)

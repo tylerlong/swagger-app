@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "activeTabKey": "permissions"
+    "activeTabKey": "path-parameters"
   },
   "info": {
     "title": "Example API",
@@ -30,15 +30,24 @@
   "pathParameters": [
     {
       "name": "accountId",
-      "descroption": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+      "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+    },
+    {
+      "name": "scaleSize",
+      "description": "Dimensions of a profile image which will be returned in response",
+      "enum": [
+        "90x90",
+        "195x195",
+        "584x584"
+      ]
     },
     {
       "name": "answeringRuleId",
-      "descroption": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule"
+      "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule"
     },
     {
       "name": "attachmentId",
-      "descroption": "Internal identifier of a message attachment"
+      "description": "Internal identifier of a message attachment"
     }
   ]
 }
