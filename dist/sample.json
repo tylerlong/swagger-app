@@ -30,7 +30,8 @@
   "pathParameters": [
     {
       "name": "accountId",
-      "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+      "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session",
+      "enum": []
     },
     {
       "name": "scaleSize",
@@ -43,11 +44,13 @@
     },
     {
       "name": "answeringRuleId",
-      "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule"
+      "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule",
+      "enum": []
     },
     {
       "name": "attachmentId",
-      "description": "Internal identifier of a message attachment"
+      "description": "Internal identifier of a message attachment",
+      "enum": []
     }
   ]
 }
