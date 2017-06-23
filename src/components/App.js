@@ -19,11 +19,13 @@ class App extends React.Component {
         <h1>{this.props.info.title} {this.props.info.version}</h1>
         <Tabs tabPosition='left' activeKey={this.props.metadata.activeTabKey} onChange={key => { this.props.setProp(['metadata', 'activeTabKey'], key) }}>
           <Tabs.TabPane tab='Info' key='info'>
+            <h2>Info</h2>
             <Form>
               {['title', 'version', 'description', 'termsOfService', 'host', 'basePath', 'schemes', 'produces', 'consumes'].map(path => <InfoFormItem path={path} key={path} />)}
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
+            <h2>Permissions</h2>
             <div className='primary-button'>
               <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
             </div>
@@ -32,6 +34,7 @@ class App extends React.Component {
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'>
+            <h2>Path Parameters</h2>
             <div className='primary-button'>
               <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
             </div>
