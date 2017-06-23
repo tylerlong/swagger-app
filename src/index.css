@@ -4,7 +4,8 @@
   padding-top: 16px;
 }
 
-.permission-form-item {
+.permission-form-item,
+.path-parameter-form-item {
   border-bottom: 1px dotted #ddd;
   margin-bottom: 16px;
 }

@@ -19,7 +19,7 @@ class FormItem extends React.Component {
     }
     const pathParameter = this.props.pathParameters[this.props.index]
     return (
-      <div className='pathParameter-form-item'>
+      <div className='path-parameter-form-item'>
         <Form.Item {...formItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={pathParameter.name} onChange={(event) => { this.props.setProp(['pathParameters', this.props.index, 'name'], event.target.value) }} />
         </Form.Item>
