@@ -30,7 +30,7 @@ class App extends React.Component {
               <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
             </div>
             <Form>
-              {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={index} />)}
+              {this.props.permissions.map((permission, index) => <PermissionFormItem index={index} key={`${index}-${permission.name}`} />)}
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'>
@@ -39,7 +39,7 @@ class App extends React.Component {
               <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
             </div>
             <Form>
-              {this.props.pathParameters.map((pathParameter, index) => <PathParameterFormItem index={index} key={index} />)}
+              {this.props.pathParameters.map((pathParameter, index) => <PathParameterFormItem index={index} key={`${index}-${pathParameter.name}`} />)}
             </Form>
           </Tabs.TabPane>
         </Tabs>
