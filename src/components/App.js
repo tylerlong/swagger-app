@@ -19,15 +19,7 @@ class App extends React.Component {
         <Tabs tabPosition='left' activeKey={this.props.metadata.activeTabKey} onChange={key => { this.props.setProp(['metadata', 'activeTabKey'], key) }}>
           <Tabs.TabPane tab='Info' key='info'>
             <Form>
-              <InfoFormItem path='title' />
-              <InfoFormItem path='version' />
-              <InfoFormItem path='description' />
-              <InfoFormItem path='termsOfService' />
-              <InfoFormItem path='host' />
-              <InfoFormItem path='basePath' />
-              <InfoFormItem path='schemes' />
-              <InfoFormItem path='produces' />
-              <InfoFormItem path='consumes' />
+              {['title', 'version', 'description', 'termsOfService', 'host', 'basePath', 'schemes', 'produces', 'consumes'].map(path => <InfoFormItem path={path} key={path} />)}
             </Form>
           </Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'>
