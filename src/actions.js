@@ -33,3 +33,8 @@ export const addPath = () => dispatch => {
   dispatch({ type: 'ADD_PATH' })
   message.success(`Path added`)
 }
+
+export const addModel = () => dispatch => {
+  dispatch({ type: 'ADD_MODEL' })
+  message.success(`Model added`)
+}

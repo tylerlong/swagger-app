@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Form, Tabs, Button } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState, setProp, addPermission, addPathParameter, addPath } from '../actions'
+import { loadState, setProp, addPermission, addPathParameter, addPath, addModel } from '../actions'
 import InfoFormItem from './InfoFormItem'
 import PermissionFormItem from './PermissionFormItem'
 import PathParameterFormItem from './PathParameterFormItem'
@@ -48,10 +48,16 @@ class App extends React.Component {
               <Button type='primary' size='large' onClick={this.props.addPath}>Add path</Button>
             </div>
           </Tabs.TabPane>
+          <Tabs.TabPane tab='Models' key='models'>
+            <h2>Models</h2>
+            <div className='primary-button'>
+              <Button type='primary' size='large' onClick={this.props.addModel}>Add model</Button>
+            </div>
+          </Tabs.TabPane>
         </Tabs>
       </div>
     )
   }
 }
 
-export default connect(R.identity, { loadState, setProp, addPermission, addPathParameter, addPath })(App)
+export default connect(R.identity, { loadState, setProp, addPermission, addPathParameter, addPath, addModel })(App)
