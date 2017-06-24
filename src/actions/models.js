@@ -1,7 +1,7 @@
 import { message } from 'antd'
 
 export const addModel = () => (dispatch, getState) => {
-  dispatch({ type: 'ADD_MODEL', name: 'Name', description: 'Description' })
+  dispatch({ type: 'ADD_MODEL', name: 'Name' })
   dispatch({ type: 'SET_PROP', path: ['metadata', 'activeModelIndex'], value: getState().models.length - 1 }) // make last Collapse panel active
   message.success(`Model added`)
 }
