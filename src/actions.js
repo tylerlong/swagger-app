@@ -15,8 +15,8 @@ export const addPermission = () => (dispatch, getState) => {
   message.success(`Permission added`)
 }
 
-export const deletePermission = (index) => dispatch => {
-  dispatch({ type: 'DELETE_PERMISSION', index })
+export const deletePermission = () => dispatch => {
+  dispatch({ type: 'DELETE_PERMISSION' })
   message.success(`Permission deleted`)
 }
 

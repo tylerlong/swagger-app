@@ -31,7 +31,7 @@ const reducer = (state = defaultState, action) => {
     case 'ADD_PERMISSION':
       return R.over(R.lensPath(['permissions']), R.append(R.omit(['type'], action)), state)
     case 'DELETE_PERMISSION':
-      return R.over(R.lensPath(['permissions']), R.remove(action.index, 1), state)
+      return R.over(R.lensPath(['permissions']), R.remove(state.metadata.activePermissionIndex, 1), state)
     case 'ADD_PATH_PARAMETER':
       return R.over(R.lensPath(['pathParameters']), R.append(R.omit(['type'], action)), state)
     case 'DELETE_PATH_PARAMETER':
