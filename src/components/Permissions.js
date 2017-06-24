@@ -11,9 +11,6 @@ class Permissions extends React.Component {
     return (
       <div>
         <h2>Permissions</h2>
-        <div className='primary-button'>
-          <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
-        </div>
         <Form>
           <Collapse accordion>
             {this.props.permissions.map((permission, index) => {
@@ -25,6 +22,9 @@ class Permissions extends React.Component {
             })}
           </Collapse>
         </Form>
+        <div className='primary-button'>
+          <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
+        </div>
       </div>
     )
   }
