@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
-import { addModel, setProp } from '../actions'
+import { addModel, setProp } from '../../actions'
 
 class Models extends React.Component {
   constructor (props) {
