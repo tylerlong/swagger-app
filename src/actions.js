@@ -11,8 +11,7 @@ export const loadState = () => async dispatch => {
 
 export const addPermission = () => (dispatch, getState) => {
   dispatch({ type: 'ADD_PERMISSION', name: 'Permission name', description: 'Permission description' })
-  const size = getState().permissions.length
-  dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionKey'], value: `${size}-${size}` }) // Collapse make last panel active
+  dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionIndex'], value: getState().permissions.length - 1 }) // make last Collapse panel active
   message.success(`Permission added`)
 }
 
