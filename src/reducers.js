@@ -37,9 +37,10 @@ const reducer = (state = defaultState, action) => {
     case 'DELETE_PATH_PARAMETER':
       return R.over(R.lensPath(['pathParameters']), R.remove(action.index, 1), state)
     case 'MOVE_PERMISSION_UP':
-      const permission = state.permissions[state.metadata.activePermissionIndex]
-      let temp = R.over(R.lensPath(['permissions']), R.insert(state.metadata.activePermissionIndex - 1, permission), state)
-      temp = R.over(R.lensPath(['permissions']), R.remove(state.metadata.activePermissionIndex + 1, 1), temp)
+      const permissionIndex = state.metadata.activePermissionIndex
+      const permission = state.permissions[permissionIndex]
+      let temp = R.over(R.lensPath(['permissions']), R.insert(permissionIndex - 1, permission), state)
+      temp = R.over(R.lensPath(['permissions']), R.remove(permissionIndex + 1, 1), temp)
       temp.metadata.activePermissionIndex -= 1
       return temp
     default:
