@@ -39,10 +39,11 @@ const reducer = (state = defaultState, action) => {
     case 'MOVE_PERMISSION_UP':
       const permissionIndex = state.metadata.activePermissionIndex
       const permission = state.permissions[permissionIndex]
-      let temp = R.over(R.lensPath(['permissions']), R.insert(permissionIndex - 1, permission), state)
-      temp = R.over(R.lensPath(['permissions']), R.remove(permissionIndex + 1, 1), temp)
-      temp.metadata.activePermissionIndex -= 1
-      return temp
+      return R.pipe(
+        R.over(R.lensPath(['permissions']), R.insert(permissionIndex - 1, permission)),
+        R.over(R.lensPath(['permissions']), R.remove(permissionIndex + 1, 1)),
+        R.over(R.lensPath(['metadata', 'activePermissionIndex']), R.dec)
+      )(state)
     default:
       console.log(`Unknown action type: ${action.type}`)
       return state
