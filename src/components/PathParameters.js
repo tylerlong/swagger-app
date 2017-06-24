@@ -11,12 +11,12 @@ class PathParameters extends React.Component {
     return (
       <div>
         <h2>Path Parameters</h2>
-        <div className='primary-button'>
-          <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
-        </div>
         <Form>
           {this.props.pathParameters.map((pathParameter, index) => <PathParameterFormItem index={index} key={`${this.props.pathParameters.length}-${index}`} />)}
         </Form>
+        <div className='primary-button'>
+          <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
+        </div>
       </div>
     )
   }
