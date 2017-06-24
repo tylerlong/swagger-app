@@ -3,7 +3,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
-import { setProp, deletePermission, movePermissionUp } from '../actions'
+import { setProp, deletePermission, movePermissionUp, movePermissionDown } from '../actions'
 
 class FormItem extends React.Component {
   render () {
@@ -28,7 +28,7 @@ class FormItem extends React.Component {
         </Form.Item>
         <div className='button-line'>
           <Button disabled={this.props.index === 0} onClick={this.props.movePermissionUp}>Move up <Icon type='arrow-up' /></Button>
-          <Button disabled={this.props.index === this.props.permissions.length - 1}>Move down <Icon type='arrow-down' /></Button>
+          <Button disabled={this.props.index === this.props.permissions.length - 1} onClick={this.props.movePermissionDown}>Move down <Icon type='arrow-down' /></Button>
           <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
             this.props.deletePermission(this.props.index)
           }}>
@@ -40,4 +40,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deletePermission, movePermissionUp })(FormItem)
+export default connect(R.identity, { setProp, deletePermission, movePermissionUp, movePermissionDown })(FormItem)

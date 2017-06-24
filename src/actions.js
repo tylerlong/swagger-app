@@ -48,3 +48,8 @@ export const movePermissionUp = () => dispatch => {
   dispatch({ type: 'MOVE_PERMISSION_UP' })
   message.success(`Permission moved up`)
 }
+
+export const movePermissionDown = () => dispatch => {
+  dispatch({ type: 'MOVE_PERMISSION_DOWN' })
+  message.success(`Permission moved down`)
+}
