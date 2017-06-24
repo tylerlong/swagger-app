@@ -29,7 +29,7 @@ class FormItem extends React.Component {
         <Form.Item {...formItemLayout} label='Enum'>
           <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', pathParameter.enum)} onChange={(event) => { this.props.setProp(['pathParameters', this.props.index, 'enum'], R.reject(R.equals(''), R.map(R.trim, R.split(',', event.target.value)))) }} />
         </Form.Item>
-        <div className='delete-button'>
+        <div className='button-line'>
           <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
             this.props.deletePathParameter(this.props.index)
           }}>

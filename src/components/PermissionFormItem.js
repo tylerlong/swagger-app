@@ -1,7 +1,7 @@
 import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form, Button, Popconfirm } from 'antd'
+import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
 import { setProp, deletePermission } from '../actions'
 
@@ -26,7 +26,9 @@ class FormItem extends React.Component {
         <Form.Item {...formItemLayout} label='Description'>
           <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { this.props.setProp(['permissions', this.props.index, 'description'], event.target.value) }} />
         </Form.Item>
-        <div className='delete-button'>
+        <div className='button-line'>
+          <Button disabled={this.props.index === 0}>Move up <Icon type='arrow-up' /></Button>
+          <Button disabled={this.props.index === this.props.permissions.length - 1}>Move down <Icon type='arrow-down' /></Button>
           <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
             this.props.deletePermission(this.props.index)
           }}>

@@ -19,6 +19,9 @@ h1, h2 {
   margin-top: 16px;
 }
 
-.delete-button {
+.button-line {
   text-align: center;
+}
+.button-line button {
+  margin: 0 8px;
 }
