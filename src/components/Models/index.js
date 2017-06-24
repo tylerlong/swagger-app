@@ -3,6 +3,7 @@ import R from 'ramda'
 import { Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
+import FormItem from './FormItem'
 import { addModel, setProp } from '../../actions'
 
 class Models extends React.Component {
@@ -28,7 +29,7 @@ class Models extends React.Component {
           {this.props.models.map((model, index) => {
             return (
               <Collapse.Panel header={model.name} key={`${this.props.models.length}-${index}`}>
-                Hello model
+                <FormItem index={index} />
               </Collapse.Panel>
             )
           })}

@@ -38,6 +38,10 @@ const reducer = (state = defaultState, action) => {
       return R.over(R.lensPath(['pathParameters']), R.append(R.omit(['type'], action)), state)
     case 'DELETE_PATH_PARAMETER':
       return R.over(R.lensPath(['pathParameters']), R.remove(state.metadata.activePathParameterIndex, 1), state)
+    case 'ADD_MODEL':
+      return R.over(R.lensPath(['models']), R.append(R.omit(['type'], action)), state)
+    case 'DELETE_MODEL':
+      return R.over(R.lensPath(['models']), R.remove(state.metadata.activeModelIndex, 1), state)
     case 'MOVE_PERMISSION_UP':
       const permissionIndex = state.metadata.activePermissionIndex
       const permission = state.permissions[permissionIndex]
