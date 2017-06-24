@@ -7,12 +7,23 @@ import PermissionFormItem from './PermissionFormItem'
 import { addPermission, setProp } from '../actions'
 
 class Permissions extends React.Component {
+  constructor (props) {
+    super(props)
+    this.setActiveIndex = this.setActiveIndex.bind(this)
+  }
+  setActiveIndex (key) {
+    let activeIndex = -1
+    if (key) {
+      activeIndex = parseInt(R.last(R.split('-', key)))
+    }
+    this.props.setProp(['metadata', 'activePermissionIndex'], activeIndex)
+  }
   render () {
     return (
       <div>
         <h2>Permissions</h2>
         <Form>
-          <Collapse accordion activeKey={`${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`} onChange={key => { this.props.setProp(['metadata', 'activePermissionIndex'], parseInt(R.last(R.split('-', key)))) }}>
+          <Collapse accordion activeKey={`${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`} onChange={this.setActiveIndex}>
             {this.props.permissions.map((permission, index) => {
               return (
                 <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
