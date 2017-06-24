@@ -1,6 +1,6 @@
 import React from 'react'
 import R from 'ramda'
-import { Form, Button, Collapse } from 'antd'
+import { Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
@@ -25,17 +25,15 @@ class Permissions extends React.Component {
     return (
       <div>
         <h2>Permissions</h2>
-        <Form>
-          <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
-            {this.props.permissions.map((permission, index) => {
-              return (
-                <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
-                  <FormItem index={index} />
-                </Collapse.Panel>
-              )
-            })}
-          </Collapse>
-        </Form>
+        <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
+          {this.props.permissions.map((permission, index) => {
+            return (
+              <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
+                <FormItem index={index} />
+              </Collapse.Panel>
+            )
+          })}
+        </Collapse>
         <div className='primary-button'>
           <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
         </div>

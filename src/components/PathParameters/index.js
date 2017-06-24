@@ -1,6 +1,6 @@
 import React from 'react'
 import R from 'ramda'
-import { Form, Button, Collapse } from 'antd'
+import { Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
@@ -25,17 +25,15 @@ class PathParameters extends React.Component {
     return (
       <div>
         <h2>Path Parameters</h2>
-        <Form>
-          <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
-            {this.props.pathParameters.map((pathParameter, index) => {
-              return (
-                <Collapse.Panel header={pathParameter.name} key={`${this.props.pathParameters.length}-${index}`}>
-                  <FormItem index={index} />
-                </Collapse.Panel>
-              )
-            })}
-          </Collapse>
-        </Form>
+        <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
+          {this.props.pathParameters.map((pathParameter, index) => {
+            return (
+              <Collapse.Panel header={pathParameter.name} key={`${this.props.pathParameters.length}-${index}`}>
+                <FormItem index={index} />
+              </Collapse.Panel>
+            )
+          })}
+        </Collapse>
         <div className='primary-button'>
           <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
         </div>
