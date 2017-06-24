@@ -53,6 +53,22 @@ const reducer = (state = defaultState, action) => {
         R.over(R.lensPath(['permissions']), R.remove(activePermissionIndex, 1)),
         R.over(R.lensPath(['metadata', 'activePermissionIndex']), R.inc)
       )(state)
+    case 'MOVE_PATH_PARAMETER_UP':
+      const pathParameterIndex = state.metadata.activePathParameterIndex
+      const pathParameter = state.pathParameters[pathParameterIndex]
+      return R.pipe(
+        R.over(R.lensPath(['pathParameters']), R.insert(pathParameterIndex - 1, pathParameter)),
+        R.over(R.lensPath(['pathParameters']), R.remove(pathParameterIndex + 1, 1)),
+        R.over(R.lensPath(['metadata', 'activePathParameterIndex']), R.dec)
+      )(state)
+    case 'MOVE_PATH_PARAMETER_DOWN':
+      const activePathParameterIndex = state.metadata.activePathParameterIndex
+      const activePathParameter = state.pathParameters[activePathParameterIndex]
+      return R.pipe(
+        R.over(R.lensPath(['pathParameters']), R.insert(activePathParameterIndex + 2, activePathParameter)),
+        R.over(R.lensPath(['pathParameters']), R.remove(activePathParameterIndex, 1)),
+        R.over(R.lensPath(['metadata', 'activePathParameterIndex']), R.inc)
+      )(state)
     default:
       console.log(`Unknown action type: ${action.type}`)
       return state

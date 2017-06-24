@@ -58,3 +58,13 @@ export const movePermissionDown = () => dispatch => {
   dispatch({ type: 'MOVE_PERMISSION_DOWN' })
   message.success(`Permission moved down`)
 }
+
+export const movePathParameterUp = () => dispatch => {
+  dispatch({ type: 'MOVE_PATH_PARAMETER_UP' })
+  message.success(`PathParameter moved up`)
+}
+
+export const movePathParameterDown = () => dispatch => {
+  dispatch({ type: 'MOVE_PATH_PARAMETER_DOWN' })
+  message.success(`PathParameter moved down`)
+}
