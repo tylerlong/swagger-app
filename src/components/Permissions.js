@@ -18,12 +18,15 @@ class Permissions extends React.Component {
     }
     this.props.setProp(['metadata', 'activePermissionIndex'], activeIndex)
   }
+  activeKey () {
+    return `${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`
+  }
   render () {
     return (
       <div>
         <h2>Permissions</h2>
         <Form>
-          <Collapse accordion activeKey={`${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`} onChange={this.setActiveIndex}>
+          <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
             {this.props.permissions.map((permission, index) => {
               return (
                 <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
