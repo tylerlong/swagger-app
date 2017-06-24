@@ -3,7 +3,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
-import { setProp, deletePermission, movePermissionUp, movePermissionDown } from '../actions'
+import { setProp, deletePermission, movePermissionUp, movePermissionDown } from '../../actions'
 
 class FormItem extends React.Component {
   render () {

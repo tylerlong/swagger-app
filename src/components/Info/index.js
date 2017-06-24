@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Form } from 'antd'
 import { connect } from 'react-redux'
 
-import InfoFormItem from './InfoFormItem'
+import FormItem from './FormItem'
 
 class Info extends React.Component {
   render () {
@@ -11,7 +11,7 @@ class Info extends React.Component {
       <div>
         <h2>Info</h2>
         <Form>
-          {['title', 'version', 'description', 'termsOfService', 'host', 'basePath', 'schemes', 'produces', 'consumes'].map(path => <InfoFormItem path={path} key={path} />)}
+          {['title', 'version', 'description', 'termsOfService', 'host', 'basePath', 'schemes', 'produces', 'consumes'].map(path => <FormItem path={path} key={path} />)}
         </Form>
       </div>
     )

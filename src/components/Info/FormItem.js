@@ -3,7 +3,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form } from 'antd'
 
-import { setProp } from '../actions'
+import { setProp } from '../../actions'
 
 class FormItem extends React.Component {
   render () {

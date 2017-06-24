@@ -3,7 +3,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
-import { setProp, deletePathParameter, movePathParameterUp, movePathParameterDown } from '../actions'
+import { setProp, deletePathParameter, movePathParameterUp, movePathParameterDown } from '../../actions'
 
 class FormItem extends React.Component {
   render () {

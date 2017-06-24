@@ -3,8 +3,8 @@ import R from 'ramda'
 import { Form, Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
-import PermissionFormItem from './PermissionFormItem'
-import { addPermission, setProp } from '../actions'
+import FormItem from './FormItem'
+import { addPermission, setProp } from '../../actions'
 
 class Permissions extends React.Component {
   constructor (props) {
@@ -30,7 +30,7 @@ class Permissions extends React.Component {
             {this.props.permissions.map((permission, index) => {
               return (
                 <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
-                  <PermissionFormItem index={index} />
+                  <FormItem index={index} />
                 </Collapse.Panel>
               )
             })}

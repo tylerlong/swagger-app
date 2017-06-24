@@ -3,8 +3,8 @@ import R from 'ramda'
 import { Form, Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
-import PathParameterFormItem from './PathParameterFormItem'
-import { addPathParameter, setProp } from '../actions'
+import FormItem from './FormItem'
+import { addPathParameter, setProp } from '../../actions'
 
 class PathParameters extends React.Component {
   constructor (props) {
@@ -30,7 +30,7 @@ class PathParameters extends React.Component {
             {this.props.pathParameters.map((pathParameter, index) => {
               return (
                 <Collapse.Panel header={pathParameter.name} key={`${this.props.pathParameters.length}-${index}`}>
-                  <PathParameterFormItem index={index} />
+                  <FormItem index={index} />
                 </Collapse.Panel>
               )
             })}

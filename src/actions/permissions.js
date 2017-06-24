@@ -1,7 +1,7 @@
 import { message } from 'antd'
 
 export const addPermission = () => (dispatch, getState) => {
-  dispatch({ type: 'ADD_PERMISSION', name: 'Permission name', description: 'Permission description' })
+  dispatch({ type: 'ADD_PERMISSION', name: 'Name', description: 'Description' })
   dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionIndex'], value: getState().permissions.length - 1 }) // make last Collapse panel active
   message.success(`Permission added`)
 }
