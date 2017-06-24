@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Button } from 'antd'
 import { connect } from 'react-redux'
 
-import { addPath } from '../actions'
+import { addPath } from '../../actions'
 
 class Paths extends React.Component {
   render () {

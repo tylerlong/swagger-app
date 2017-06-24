@@ -52,3 +52,5 @@ yarn release
 - Find way to update title declaratively
 - Some fields are actually arrays. Refer to how we handle enums
     - consumes, produces, schemes
+- Move ant assets to local
+    - Let webpack bundle it
