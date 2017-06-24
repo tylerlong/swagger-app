@@ -15,8 +15,12 @@ export const addPermission = () => (dispatch, getState) => {
   message.success(`Permission added`)
 }
 
-export const deletePermission = () => dispatch => {
+export const deletePermission = () => (dispatch, getState) => {
   dispatch({ type: 'DELETE_PERMISSION' })
+  const state = getState()
+  if (state.metadata.activePermissionIndex === state.permissions.length) {
+    dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionIndex'], value: state.permissions.length - 1 }) // make last Collapse panel active
+  }
   message.success(`Permission deleted`)
 }
 
