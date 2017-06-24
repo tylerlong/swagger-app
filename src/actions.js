@@ -43,3 +43,8 @@ export const addModel = () => dispatch => {
   dispatch({ type: 'ADD_MODEL' })
   message.success(`Model added`)
 }
+
+export const movePermissionUp = () => dispatch => {
+  dispatch({ type: 'MOVE_PERMISSION_UP' })
+  message.success(`Permission moved up`)
+}
