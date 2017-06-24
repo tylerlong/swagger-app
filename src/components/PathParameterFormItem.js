@@ -19,7 +19,7 @@ class FormItem extends React.Component {
     }
     const pathParameter = this.props.pathParameters[this.props.index]
     return (
-      <div className='path-parameter-form-item'>
+      <div>
         <Form.Item {...formItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={pathParameter.name} onChange={(event) => { this.props.setProp(['pathParameters', this.props.index, 'name'], event.target.value) }} />
         </Form.Item>
@@ -31,7 +31,7 @@ class FormItem extends React.Component {
         </Form.Item>
         <div className='button-line'>
           <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
-            this.props.deletePathParameter(this.props.index)
+            this.props.deletePathParameter()
           }}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>

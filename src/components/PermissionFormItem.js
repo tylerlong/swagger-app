@@ -19,7 +19,7 @@ class FormItem extends React.Component {
     }
     const permission = this.props.permissions[this.props.index]
     return (
-      <div className='permission-form-item'>
+      <div>
         <Form.Item {...formItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { this.props.setProp(['permissions', this.props.index, 'name'], event.target.value) }} />
         </Form.Item>

@@ -24,13 +24,18 @@ export const deletePermission = () => (dispatch, getState) => {
   message.success(`Permission deleted`)
 }
 
-export const addPathParameter = () => dispatch => {
+export const addPathParameter = () => (dispatch, getState) => {
   dispatch({ type: 'ADD_PATH_PARAMETER', name: 'Name', description: 'Description', enum: [] })
+  dispatch({ type: 'SET_PROP', path: ['metadata', 'activePathParameterIndex'], value: getState().pathParameters.length - 1 }) // make last Collapse panel active
   message.success(`Path parameter added`)
 }
 
-export const deletePathParameter = (index) => dispatch => {
-  dispatch({ type: 'DELETE_PATH_PARAMETER', index })
+export const deletePathParameter = () => (dispatch, getState) => {
+  dispatch({ type: 'DELETE_PATH_PARAMETER' })
+  const state = getState()
+  if (state.metadata.activePathParameterIndex === state.pathParameters.length) {
+    dispatch({ type: 'SET_PROP', path: ['metadata', 'activePathParameterIndex'], value: state.pathParameters.length - 1 }) // make last Collapse panel active
+  }
   message.success(`Path parameter deleted`)
 }
 
