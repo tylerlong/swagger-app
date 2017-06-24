@@ -9,11 +9,6 @@ h1, h2 {
   padding-bottom: 8px !important;
 }
 
-.path-parameter-form-item {
-  border-bottom: 1px dotted #ddd;
-  margin-bottom: 16px;
-}
-
 .primary-button {
   text-align: center;
   margin-top: 16px;

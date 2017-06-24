@@ -1,7 +1,8 @@
 {
   "metadata": {
-    "activeTabKey": "permissions",
-    "activePermissionIndex": 1
+    "activeTabKey": "path-parameters",
+    "activePermissionIndex": 1,
+    "activePathParameterIndex": 1
   },
   "info": {
     "title": "Example API",

@@ -11,15 +11,15 @@ class Permissions extends React.Component {
     super(props)
     this.setActiveIndex = this.setActiveIndex.bind(this)
   }
+  activeKey () {
+    return `${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`
+  }
   setActiveIndex (key) {
     let activeIndex = -1
     if (key) {
       activeIndex = parseInt(R.last(R.split('-', key)))
     }
     this.props.setProp(['metadata', 'activePermissionIndex'], activeIndex)
-  }
-  activeKey () {
-    return `${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`
   }
   render () {
     return (

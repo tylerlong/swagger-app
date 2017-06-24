@@ -3,7 +3,8 @@ import R from 'ramda'
 const defaultState = {
   metadata: {
     activeTabKey: 'info',
-    activePermissionIndex: 0
+    activePermissionIndex: 0,
+    activePathParameterIndex: 0
   },
   info: {
     title: 'Example API',
