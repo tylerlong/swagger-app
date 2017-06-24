@@ -1,8 +1,9 @@
 {
   "metadata": {
-    "activeTabKey": "path-parameters",
+    "activeTabKey": "models",
     "activePermissionIndex": 1,
-    "activePathParameterIndex": 1
+    "activePathParameterIndex": 1,
+    "activeModelIndex": 1
   },
   "info": {
     "title": "Example API",
@@ -133,6 +134,39 @@
           ],
           "required": false,
           "description": "Type of an answering rule"
+        }
+      ]
+    },
+    {
+      "name": "VersionInfo",
+      "properties": [
+        {
+          "name": "uri",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Canonical URI of API versions"
+        },
+        {
+          "name": "versionString",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Version of the RingCentral REST API"
+        },
+        {
+          "name": "releaseDate",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "Release date of this version"
+        },
+        {
+          "name": "uriString",
+          "type": "string",
+          "enum": [],
+          "required": false,
+          "description": "URI part determining the current version"
         }
       ]
     }
