@@ -4,7 +4,7 @@ import { Form, Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
 import PermissionFormItem from './PermissionFormItem'
-import { addPermission } from '../actions'
+import { addPermission, setProp } from '../actions'
 
 class Permissions extends React.Component {
   render () {
@@ -12,7 +12,7 @@ class Permissions extends React.Component {
       <div>
         <h2>Permissions</h2>
         <Form>
-          <Collapse accordion>
+          <Collapse accordion activeKey={`${this.props.metadata.activePermissionKey}`} onChange={key => { this.props.setProp(['metadata', 'activePermissionKey'], key) }}>
             {this.props.permissions.map((permission, index) => {
               return (
                 <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
@@ -30,4 +30,4 @@ class Permissions extends React.Component {
   }
 }
 
-export default connect(R.identity, { addPermission })(Permissions)
+export default connect(R.identity, { addPermission, setProp })(Permissions)

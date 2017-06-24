@@ -1,6 +1,7 @@
 {
   "metadata": {
-    "activeTabKey": "permissions"
+    "activeTabKey": "permissions",
+    "activePermissionKey": "3-1"
   },
   "info": {
     "title": "Example API",
