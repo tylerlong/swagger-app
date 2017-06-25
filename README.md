@@ -43,7 +43,6 @@ yarn release
 
 ## todo list
 
-- Write tests
 - Setup CI
 - Code coverage should be 90+%
 - migrate data from PostgreSQL
