@@ -4,19 +4,10 @@ import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
 import { setProp, deletePermission, movePermissionUp, movePermissionDown } from '../../actions'
+import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 6 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 12 }
-      }
-    }
     const permission = this.props.permissions[this.props.index]
     return (
       <div>

@@ -4,19 +4,10 @@ import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
 import { setProp, deleteModel, moveModelUp, moveModelDown } from '../../actions'
+import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 6 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 12 }
-      }
-    }
     const model = this.props.models[this.props.index]
     return (
       <div>
