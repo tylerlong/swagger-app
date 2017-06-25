@@ -53,7 +53,8 @@ yarn release
 - Some fields are actually arrays. Refer to how we handle enums
     - consumes, produces, schemes
     - Path parameters has enums
+    - postpone
 - Move ant assets to local
     - Let webpack bundle it
-- Create ramda-plus project
-    - Create local util functions first
+- Move some utils/ functions to a new ramda-plus project
+- Try Flow ?
