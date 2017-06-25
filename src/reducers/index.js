@@ -3,6 +3,7 @@ import R from 'ramda'
 import permissionsReducer from './permissions'
 import pathParametersReducer from './pathParameters'
 import modelsReducer from './models'
+import appReducer from './app'
 
 const defaultState = {
   metadata: {
@@ -38,15 +39,7 @@ const reducer = (state = defaultState, action) => {
   if (R.test(/MODEL/, action.type)) {
     return modelsReducer(state, action)
   }
-  switch (action.type) {
-    case 'SET_PROP':
-      return R.set(R.lensPath(action.path), action.value, state)
-    case 'SET_STATE':
-      return action.state
-    default:
-      console.log(`Unknown action type: ${action.type}`)
-      return state
-  }
+  return appReducer(state, action)
 }
 
 export default reducer
