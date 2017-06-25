@@ -9,7 +9,9 @@
     "dev": "node -r babel-register node_modules/.bin/webpack-dev-server",
     "build": "node -r babel-register node_modules/.bin/webpack --progress --colors",
     "release": "yarn build -- -p",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "precommit": "yarn test",
+    "prepush": "yarn test"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
@@ -22,6 +24,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
+    "husky": "^0.14.1",
     "jest": "^20.0.4",
     "standard": "^10.0.2",
     "style-loader": "^0.18.2",

@@ -3,6 +3,7 @@ const { swap } = require('./reducers')
 
 test('swap two elements in an array', () => {
   expect(swap(0, 2, [1, 2, 3])).toEqual([3, 2, 1])
+  expect(swap(1, 0, [1, 2, 3])).toEqual([2, 1, 3])
 })
 
 test('swap index out of bound', () => {
