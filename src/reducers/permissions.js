@@ -1,5 +1,7 @@
 import R from 'ramda'
 
+import { swap } from '../utils/reducers'
+
 const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_PERMISSION':
@@ -7,19 +9,13 @@ const reducer = (state, action) => {
     case 'DELETE_PERMISSION':
       return R.over(R.lensPath(['permissions']), R.remove(state.metadata.activePermissionIndex, 1), state)
     case 'MOVE_PERMISSION_UP':
-      const permissionIndex = state.metadata.activePermissionIndex
-      const permission = state.permissions[permissionIndex]
       return R.pipe(
-        R.over(R.lensPath(['permissions']), R.insert(permissionIndex - 1, permission)),
-        R.over(R.lensPath(['permissions']), R.remove(permissionIndex + 1, 1)),
+        R.over(R.lensPath(['permissions']), swap(state.metadata.activePermissionIndex, state.metadata.activePermissionIndex - 1)),
         R.over(R.lensPath(['metadata', 'activePermissionIndex']), R.dec)
       )(state)
     case 'MOVE_PERMISSION_DOWN':
-      const activePermissionIndex = state.metadata.activePermissionIndex
-      const activePermission = state.permissions[activePermissionIndex]
       return R.pipe(
-        R.over(R.lensPath(['permissions']), R.insert(activePermissionIndex + 2, activePermission)),
-        R.over(R.lensPath(['permissions']), R.remove(activePermissionIndex, 1)),
+        R.over(R.lensPath(['permissions']), swap(state.metadata.activePermissionIndex, state.metadata.activePermissionIndex + 1)),
         R.over(R.lensPath(['metadata', 'activePermissionIndex']), R.inc)
       )(state)
     default:

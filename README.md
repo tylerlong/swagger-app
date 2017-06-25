@@ -56,3 +56,4 @@ yarn release
 - Move ant assets to local
     - Let webpack bundle it
 - Create ramda-plus project
+    - Create local util functions first
