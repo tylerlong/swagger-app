@@ -14,11 +14,9 @@ class App extends React.Component {
   componentDidMount () {
     this.props.loadState()
     this.timer = setInterval(() => {
-      R.forEach(item => {
-        message.success(item)
-      })(this.props.metadata.messages)
+      R.forEach(message.success)(this.props.metadata.messages)
       this.props.setProp(['metadata', 'messages'], [])
-    }, 1000)
+    }, 100)
   }
   componentWillUnmount () {
     clearInterval(this.timer)
