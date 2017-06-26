@@ -1,10 +1,6 @@
-import { message } from 'antd'
-
 export const addPermission = () => (dispatch, getState) => {
   dispatch({ type: 'ADD_PERMISSION', name: 'Name', description: 'Description' })
   dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionIndex'], value: getState().permissions.length - 1 }) // make last Collapse panel active
-  // message.success(`Permission added`)
-  dispatch({ type: 'SET_PROP', path: ['metadata', 'messages'], value: ['Hell world'] })
 }
 
 export const deletePermission = () => (dispatch, getState) => {
@@ -13,15 +9,8 @@ export const deletePermission = () => (dispatch, getState) => {
   if (state.metadata.activePermissionIndex === state.permissions.length) {
     dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionIndex'], value: state.permissions.length - 1 }) // make last Collapse panel active
   }
-  message.success(`Permission deleted`)
 }
 
-export const movePermissionUp = () => dispatch => {
-  dispatch({ type: 'MOVE_PERMISSION_UP' })
-  message.success(`Permission moved up`)
-}
+export const movePermissionUp = () => ({ type: 'MOVE_PERMISSION_UP' })
 
-export const movePermissionDown = () => dispatch => {
-  dispatch({ type: 'MOVE_PERMISSION_DOWN' })
-  message.success(`Permission moved down`)
-}
+export const movePermissionDown = () => ({ type: 'MOVE_PERMISSION_DOWN' })
