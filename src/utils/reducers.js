@@ -11,3 +11,5 @@ export const swap = R.curry((index1, index2, list) => {
     R.set(R.lensIndex(index2), value1)
   )(list)
 })
+
+export const alert = R.curry((type, message) => R.over(R.lensPath(['metadata', 'alerts']), R.append({ type, message })))
