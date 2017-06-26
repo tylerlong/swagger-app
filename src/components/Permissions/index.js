@@ -11,9 +11,6 @@ class Permissions extends React.Component {
     super(props)
     this.setActiveIndex = this.setActiveIndex.bind(this)
   }
-  activeKey () {
-    return `${this.props.permissions.length}-${this.props.metadata.activePermissionIndex}`
-  }
   setActiveIndex (key) {
     let activeIndex = -1
     if (key) {
@@ -22,20 +19,21 @@ class Permissions extends React.Component {
     this.props.setProp(['metadata', 'activePermissionIndex'], activeIndex)
   }
   render () {
+    const { permissions, metadata, addPermission } = this.props
     return (
       <div>
         <h2>Permissions</h2>
-        <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
-          {this.props.permissions.map((permission, index) => {
+        <Collapse accordion activeKey={`${permissions.length}-${metadata.activePermissionIndex}`} onChange={this.setActiveIndex}>
+          {permissions.map((permission, index) => {
             return (
-              <Collapse.Panel header={permission.name} key={`${this.props.permissions.length}-${index}`}>
+              <Collapse.Panel header={permission.name} key={`${permissions.length}-${index}`}>
                 <FormItem index={index} />
               </Collapse.Panel>
             )
           })}
         </Collapse>
         <div className='primary-button'>
-          <Button type='primary' size='large' onClick={this.props.addPermission}>Add permission</Button>
+          <Button type='primary' size='large' onClick={addPermission}>Add permission</Button>
         </div>
       </div>
     )

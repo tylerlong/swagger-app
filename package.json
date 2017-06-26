@@ -33,7 +33,7 @@
     "yarn-upgrade-all": "^0.1.5"
   },
   "dependencies": {
-    "antd": "^2.11.1",
+    "antd": "^2.11.2",
     "axios": "^0.16.2",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
