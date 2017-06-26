@@ -11,9 +11,6 @@ class PathParameters extends React.Component {
     super(props)
     this.setActiveIndex = this.setActiveIndex.bind(this)
   }
-  activeKey () {
-    return `${this.props.pathParameters.length}-${this.props.metadata.activePathParameterIndex}`
-  }
   setActiveIndex (key) {
     let activeIndex = -1
     if (key) {
@@ -22,20 +19,21 @@ class PathParameters extends React.Component {
     this.props.setProp(['metadata', 'activePathParameterIndex'], activeIndex)
   }
   render () {
+    const { pathParameters, metadata, addPathParameter } = this.props
     return (
       <div>
         <h2>Path Parameters</h2>
-        <Collapse accordion activeKey={this.activeKey()} onChange={this.setActiveIndex}>
-          {this.props.pathParameters.map((pathParameter, index) => {
+        <Collapse accordion activeKey={`${pathParameters.length}-${metadata.activePathParameterIndex}`} onChange={this.setActiveIndex}>
+          {pathParameters.map((pathParameter, index) => {
             return (
-              <Collapse.Panel header={pathParameter.name} key={`${this.props.pathParameters.length}-${index}`}>
+              <Collapse.Panel header={pathParameter.name} key={`${pathParameters.length}-${index}`}>
                 <FormItem index={index} />
               </Collapse.Panel>
             )
           })}
         </Collapse>
         <div className='primary-button'>
-          <Button type='primary' size='large' onClick={this.props.addPathParameter}>Add path parameter</Button>
+          <Button type='primary' size='large' onClick={addPathParameter}>Add path parameter</Button>
         </div>
       </div>
     )
