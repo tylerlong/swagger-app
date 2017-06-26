@@ -1,3 +1,5 @@
+import R from 'ramda'
+
 export const addPermission = () => (dispatch, getState) => {
   dispatch({ type: 'ADD_PERMISSION', name: 'Name', description: 'Description' })
   dispatch({ type: 'SET_PROP', path: ['metadata', 'activePermissionIndex'], value: getState().permissions.length - 1 }) // make last Collapse panel active
@@ -11,6 +13,6 @@ export const deletePermission = () => (dispatch, getState) => {
   }
 }
 
-export const movePermissionUp = () => ({ type: 'MOVE_PERMISSION_UP' })
+export const movePermissionUp = R.always({ type: 'MOVE_PERMISSION_UP' })
 
-export const movePermissionDown = () => ({ type: 'MOVE_PERMISSION_DOWN' })
+export const movePermissionDown = R.always({ type: 'MOVE_PERMISSION_DOWN' })
