@@ -18,9 +18,7 @@ class FormItem extends React.Component {
         <div className='button-line'>
           <Button disabled={index === 0} onClick={moveModelUp}>Move up <Icon type='arrow-up' /></Button>
           <Button disabled={index === models.length - 1} onClick={moveModelDown}>Move down <Icon type='arrow-down' /></Button>
-          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
-            deleteModel(index)
-          }}>
+          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={deleteModel}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>
         </div>
