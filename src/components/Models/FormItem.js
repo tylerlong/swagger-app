@@ -8,7 +8,7 @@ import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
-    const { models, index, setProp, moveModelUp, moveModelDown, deleteModel } = this.props
+    const { index, models, setProp, moveModelUp, moveModelDown, deleteModel } = this.props
     const model = models[index]
     return (
       <div>

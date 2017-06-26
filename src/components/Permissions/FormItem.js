@@ -8,21 +8,20 @@ import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
-    const permission = this.props.permissions[this.props.index]
+    const { index, permissions, setProp, deletePermission, movePermissionUp, movePermissionDown } = this.props
+    const permission = permissions[index]
     return (
       <div>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { this.props.setProp(['permissions', this.props.index, 'name'], event.target.value) }} />
+          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { setProp(['permissions', index, 'name'], event.target.value) }} />
         </Form.Item>
         <Form.Item {...formItemLayout} label='Description'>
-          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { this.props.setProp(['permissions', this.props.index, 'description'], event.target.value) }} />
+          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { setProp(['permissions', index, 'description'], event.target.value) }} />
         </Form.Item>
         <div className='button-line'>
-          <Button disabled={this.props.index === 0} onClick={this.props.movePermissionUp}>Move up <Icon type='arrow-up' /></Button>
-          <Button disabled={this.props.index === this.props.permissions.length - 1} onClick={this.props.movePermissionDown}>Move down <Icon type='arrow-down' /></Button>
-          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={(event) => {
-            this.props.deletePermission(this.props.index)
-          }}>
+          <Button disabled={index === 0} onClick={movePermissionUp}>Move up <Icon type='arrow-up' /></Button>
+          <Button disabled={index === permissions.length - 1} onClick={movePermissionDown}>Move down <Icon type='arrow-down' /></Button>
+          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={deletePermission}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>
         </div>
