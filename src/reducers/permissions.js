@@ -7,11 +7,13 @@ const reducer = (state, action) => {
     case 'ADD_PERMISSION':
       return R.pipe(
         R.over(R.lensPath(['permissions']), R.append(R.omit(['type'], action))),
+        R.set(R.lensPath(['metadata', 'activePermissionIndex']), state.permissions.length),
         alert('success', 'Permission added')
       )(state)
     case 'DELETE_PERMISSION':
       return R.pipe(
         R.over(R.lensPath(['permissions']), R.remove(state.metadata.activePermissionIndex, 1)),
+        R.set(R.lensPath(['metadata', 'activePermissionIndex']), -1),
         alert('success', 'Permission deleted')
       )(state)
     case 'MOVE_PERMISSION_UP':
