@@ -1,6 +1,6 @@
 import React from 'react'
 import R from 'ramda'
-import { Tabs } from 'antd'
+import { Tabs, message } from 'antd'
 import { connect } from 'react-redux'
 
 import { loadState, setProp } from '../actions'
@@ -13,6 +13,15 @@ import Models from './Models'
 class App extends React.Component {
   componentDidMount () {
     this.props.loadState()
+    this.timer = setInterval(() => {
+      R.forEach(item => {
+        message.success(item)
+      })(this.props.metadata.messages)
+      this.props.setProp(['metadata', 'messages'], [])
+    }, 1000)
+  }
+  componentWillUnmount () {
+    clearInterval(this.timer)
   }
   render () {
     const { info, metadata, setProp } = this.props

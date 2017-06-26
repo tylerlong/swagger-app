@@ -2,6 +2,7 @@ import R from 'ramda'
 
 const defaultState = {
   metadata: {
+    messages: [],
     activeTabKey: 'info',
     activePermissionIndex: 0,
     activePathParameterIndex: 0,
