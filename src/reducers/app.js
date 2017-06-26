@@ -1,5 +1,7 @@
 import R from 'ramda'
 
+import { alert } from '../utils/reducers'
+
 const defaultState = {
   metadata: {
     alerts: [],
@@ -33,7 +35,7 @@ const reducer = (state = defaultState, action) => {
       return action.state
     default:
       if (action.type !== '@@redux/INIT') { // When app starts, invoked by Redux
-        console.log(`Unknown action type: ${action.type}`)
+        return alert('error', `Unknown action type: ${action.type}`)(state)
       }
       return state
   }

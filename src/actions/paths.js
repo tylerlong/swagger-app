@@ -1,6 +1,3 @@
-import { message } from 'antd'
+import R from 'ramda'
 
-export const addPath = () => dispatch => {
-  dispatch({ type: 'ADD_PATH' })
-  message.success(`Path added`)
-}
+export const addPath = R.always({ type: 'ADD_PATH' })
