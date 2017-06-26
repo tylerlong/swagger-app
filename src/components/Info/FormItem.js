@@ -8,9 +8,11 @@ import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
+    const path = this.props.path
+    const value = this.props.info[path]
     return (
-      <Form.Item {...formItemLayout} label={this.props.path}>
-        <Input placeholder={this.props.path} size='large' value={this.props.info[this.props.path]} onChange={(event) => { this.props.setProp(['info', this.props.path], event.target.value) }} />
+      <Form.Item {...formItemLayout} label={path}>
+        <Input placeholder={path} size='large' value={value} onChange={(event) => { this.props.setProp(['info', path], event.target.value) }} />
       </Form.Item>
     )
   }
