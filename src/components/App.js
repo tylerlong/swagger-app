@@ -14,7 +14,7 @@ class App extends React.Component {
   componentDidMount () {
     this.props.loadState()
     this.timer = setInterval(() => {
-      R.forEach(alert => R.prop(alert.type, message)(alert.message))(this.props.metadata.alerts)
+      R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.metadata.alerts)
       this.props.setProp(['metadata', 'alerts'], [])
     }, 100)
   }
