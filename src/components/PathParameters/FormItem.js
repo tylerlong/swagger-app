@@ -19,7 +19,7 @@ class FormItem extends React.Component {
           <Input placeholder='Description' size='large' value={pathParameter.description} onChange={(event) => { setProp(['pathParameters', index, 'description'], event.target.value) }} />
         </Form.Item>
         <Form.Item {...formItemLayout} label='Enum'>
-          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', pathParameter.enum)} onChange={(event) => { setProp(['pathParameters', index, 'enum'], R.reject(R.equals(''), R.map(R.trim, R.split(',', event.target.value)))) }} />
+          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', pathParameter.enum)} onChange={(event) => { setProp(['pathParameters', index, 'enum'], R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
         </Form.Item>
         <div className='button-line'>
           <Button disabled={index === 0} onClick={movePathParameterUp}>Move up <Icon type='arrow-up' /></Button>
