@@ -18,4 +18,4 @@ const reducer = (state, action) => {
   return appReducer(state, action)
 }
 
-export default reducer
+export default (state, action) => reducer(state, action)(state)

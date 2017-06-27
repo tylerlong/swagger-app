@@ -33,4 +33,4 @@ const reducer = (state, action) => {
   }
 }
 
-export default (state, action) => reducer(state, action)(state)
+export default reducer

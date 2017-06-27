@@ -30,14 +30,17 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case 'SET_PROP':
-      return R.set(R.lensPath(action.path), action.value, state)
+      return R.set(R.lensPath(action.path), action.value)
     case 'SET_STATE':
-      return action.state
+      return R.pipe(
+        R.always(action.state),
+        alert('success', 'Data loaded')
+      )
     default:
       if (action.type !== '@@redux/INIT') { // When app starts, invoked by Redux
-        return alert('error', `Unknown action type: ${action.type}`)(state)
+        return alert('error', `Unknown action type: ${action.type}`)
       }
-      return state
+      return R.always(state)
   }
 }
 
