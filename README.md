@@ -43,8 +43,6 @@ yarn release
 
 ## todo list
 
-- Setup CI
-- Code coverage should be 90+%
 - migrate data from PostgreSQL
 - Show recent files list in home page
 - Design according to http://swagger.io/specification/
