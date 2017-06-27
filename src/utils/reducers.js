@@ -2,7 +2,7 @@ import R from 'ramda'
 
 export const swap = R.curry((index1, index2, list) => {
   if (index1 < 0 || index2 < 0 || index1 > list.length - 1 || index2 > list.length - 1) {
-    return list // index of out bound
+    return list // index out of bound
   }
   const value1 = list[index1]
   const value2 = list[index2]
