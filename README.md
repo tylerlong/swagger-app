@@ -54,4 +54,12 @@ yarn release
 - Move ant assets to local
     - Let webpack bundle it
 - Move some utils/ functions to a new ramda-plus project
-- Try Flow ?
+- Fix React key issue: https://stackoverflow.com/a/43892905/862862
+    - changing key is not identity
+- Use drag & drop to reorder
+    - no support from antd
+    - https://github.com/bevacqua/dragula
+        - https://github.com/bevacqua/react-dragula
+        - https://github.com/bevacqua/dragula#drakeon-events
+        - https://codesandbox.io/s/2vZ15YRpW
+    - https://github.com/RubaXa/Sortable
