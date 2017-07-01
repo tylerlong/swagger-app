@@ -19,9 +19,9 @@ class FormItem extends React.Component {
           <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { setProp(['permissions', index, 'description'], event.target.value) }} />
         </Form.Item>
         <div className='button-line'>
-          <Button disabled={index === 0} onClick={movePermissionUp}>Move up <Icon type='arrow-up' /></Button>
-          <Button disabled={index === permissions.length - 1} onClick={movePermissionDown}>Move down <Icon type='arrow-down' /></Button>
-          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={deletePermission}>
+          <Button disabled={index === 0} onClick={() => movePermissionUp(index)}>Move up <Icon type='arrow-up' /></Button>
+          <Button disabled={index === permissions.length - 1} onClick={() => movePermissionDown(index)}>Move down <Icon type='arrow-down' /></Button>
+          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={() => deletePermission(index)}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>
         </div>

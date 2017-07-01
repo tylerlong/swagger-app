@@ -1,9 +1,7 @@
-import R from 'ramda'
+export const addPermission = () => ({ type: 'ADD_PERMISSION', name: 'Name', description: 'Description', createdAt: new Date().getTime() })
 
-export const addPermission = R.always({ type: 'ADD_PERMISSION', name: 'Name', description: 'Description' })
+export const deletePermission = index => ({ type: 'DELETE_PERMISSION', index })
 
-export const deletePermission = R.always({ type: 'DELETE_PERMISSION' })
+export const movePermissionUp = index => ({ type: 'MOVE_PERMISSION_UP', index })
 
-export const movePermissionUp = R.always({ type: 'MOVE_PERMISSION_UP' })
-
-export const movePermissionDown = R.always({ type: 'MOVE_PERMISSION_DOWN' })
+export const movePermissionDown = index => ({ type: 'MOVE_PERMISSION_DOWN', index })

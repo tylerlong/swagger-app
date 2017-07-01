@@ -6,9 +6,8 @@ const defaultState = {
   metadata: {
     alerts: [],
     activeTabKey: 'info',
-    activePermissionIndex: 0,
-    activePathParameterIndex: 0,
-    activeModelIndex: 0
+    activePathParameterIndex: -1,
+    activeModelIndex: -1
   },
   info: {
     title: 'Example API',

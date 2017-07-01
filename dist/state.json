@@ -1,8 +1,7 @@
 {
   "metadata": {
     "alerts": [],
-    "activeTabKey": "path-parameters",
-    "activePermissionIndex": 1,
+    "activeTabKey": "permissions",
     "activePathParameterIndex": 1,
     "activeModelIndex": 1
   },
@@ -19,25 +18,30 @@
   },
   "permissions": [
     {
+      "createdAt": 1498875008388,
       "name": "Accounts",
       "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
     },
     {
+      "createdAt": 1498875020815,
       "name": "Contacts",
       "description": "Creating, viewing, editing and deleting user personal contacts"
     },
     {
+      "createdAt": 1498875025725,
       "name": "EditAccounts",
       "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)"
     }
   ],
   "pathParameters": [
     {
+      "createdAt": 1498875032646,
       "name": "accountId",
       "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session",
       "enum": []
     },
     {
+      "createdAt": 1498875033792,
       "name": "scaleSize",
       "description": "Dimensions of a profile image which will be returned in response",
       "enum": [
@@ -47,11 +51,13 @@
       ]
     },
     {
+      "createdAt": 1498875137756,
       "name": "answeringRuleId",
       "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule",
       "enum": []
     },
     {
+      "createdAt": 1498875138459,
       "name": "attachmentId",
       "description": "Internal identifier of a message attachment",
       "enum": []
@@ -59,6 +65,7 @@
   ],
   "paths": [
     {
+      "createdAt": 1498875254374,
       "path": "/restapi",
       "methods": [
         {
@@ -83,6 +90,7 @@
   ],
   "models": [
     {
+      "createdAt": 1498875254895,
       "name": "AccountInfo",
       "properties": [
         {
@@ -109,6 +117,7 @@
       ]
     },
     {
+      "createdAt": 1498875255421,
       "name": "AnsweringRuleInfo",
       "properties": [
         {
@@ -139,6 +148,7 @@
       ]
     },
     {
+      "createdAt": 1498875255943,
       "name": "VersionInfo",
       "properties": [
         {
