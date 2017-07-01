@@ -4,9 +4,7 @@ import { alert } from '../utils/reducers'
 
 const defaultState = {
   metadata: {
-    alerts: [],
-    activePathParameterIndex: -1,
-    activeModelIndex: -1
+    alerts: []
   },
   info: {
     title: 'Example API',
