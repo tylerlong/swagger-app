@@ -22,11 +22,11 @@ class App extends React.Component {
     clearInterval(this.timer)
   }
   render () {
-    const { info, metadata, setProp } = this.props
+    const { info } = this.props
     return (
       <div>
         <h1>{info.title} {info.version}</h1>
-        <Tabs tabPosition='left' activeKey={metadata.activeTabKey} onChange={key => { setProp(['metadata', 'activeTabKey'], key) }}>
+        <Tabs tabPosition='left' defaultActiveKey='permissions'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>

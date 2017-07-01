@@ -5,7 +5,6 @@ import { alert } from '../utils/reducers'
 const defaultState = {
   metadata: {
     alerts: [],
-    activeTabKey: 'info',
     activePathParameterIndex: -1,
     activeModelIndex: -1
   },
