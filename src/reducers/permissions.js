@@ -1,6 +1,6 @@
 import R from 'ramda'
 
-import { swap, alert } from '../utils/reducers'
+import { alert } from '../utils/reducers'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -13,16 +13,6 @@ const reducer = (state, action) => {
       return R.pipe(
         R.over(R.lensPath(['permissions']), R.remove(action.index, 1)),
         alert('success', 'Permission deleted')
-      )
-    case 'MOVE_PERMISSION_UP':
-      return R.pipe(
-        R.over(R.lensPath(['permissions']), swap(action.index, action.index - 1)),
-        alert('success', 'Permission moved up')
-      )
-    case 'MOVE_PERMISSION_DOWN':
-      return R.pipe(
-        R.over(R.lensPath(['permissions']), swap(action.index, action.index + 1)),
-        alert('success', 'Permission moved down')
       )
     default:
       return alert('error', `Unknown action type: ${action.type}`)

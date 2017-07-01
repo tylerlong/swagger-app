@@ -1,14 +1,14 @@
 import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form, Button, Popconfirm, Icon } from 'antd'
+import { Input, Form, Button, Popconfirm } from 'antd'
 
-import { setProp, deletePermission, movePermissionUp, movePermissionDown } from '../../actions'
+import { setProp, deletePermission } from '../../actions'
 import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
-    const { index, permissions, setProp, deletePermission, movePermissionUp, movePermissionDown } = this.props
+    const { index, permissions, setProp, deletePermission } = this.props
     const permission = permissions[index]
     return (
       <div>
@@ -19,8 +19,6 @@ class FormItem extends React.Component {
           <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { setProp(['permissions', index, 'description'], event.target.value) }} />
         </Form.Item>
         <div className='button-line'>
-          <Button disabled={index === 0} onClick={() => movePermissionUp(index)}>Move up <Icon type='arrow-up' /></Button>
-          <Button disabled={index === permissions.length - 1} onClick={() => movePermissionDown(index)}>Move down <Icon type='arrow-down' /></Button>
           <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={() => deletePermission(index)}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>
@@ -30,4 +28,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deletePermission, movePermissionUp, movePermissionDown })(FormItem)
+export default connect(R.identity, { setProp, deletePermission })(FormItem)
