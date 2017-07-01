@@ -1,6 +1,18 @@
 /* eslint-env jest */
 import { deleteModel, addModel } from '../actions/models'
+import { setProp } from '../actions/app'
 import reducer from './index'
+
+describe('test app', () => {
+  const state = { models: [{ name: '1' }, { name: '2' }, { name: '3' }] }
+  test('setProp', () => {
+    expect(reducer(state, setProp(['models', 1, 'name'], 'Hello world')).models).toEqual([{ name: '1' }, { name: 'Hello world' }, { name: '3' }])
+  })
+
+  // test('loadState', () => {
+
+  // })
+})
 
 describe('test models', () => {
   const state = { models: [{ name: '1' }, { name: '2' }, { name: '3' }] }
