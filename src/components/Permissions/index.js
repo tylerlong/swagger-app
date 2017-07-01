@@ -2,11 +2,16 @@ import React from 'react'
 import R from 'ramda'
 import { Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
+import dragula from 'dragula'
 
 import FormItem from './FormItem'
 import { addPermission, setProp } from '../../actions'
 
 class Permissions extends React.Component {
+  componentDidMount () {
+    const container = document.querySelector('.ant-collapse')
+    dragula([container])
+  }
   render () {
     const { permissions, addPermission } = this.props
     return (
