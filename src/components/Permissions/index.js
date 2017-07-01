@@ -2,26 +2,21 @@ import React from 'react'
 import R from 'ramda'
 import { Button, Collapse } from 'antd'
 import { connect } from 'react-redux'
-import dragula from 'dragula'
 
 import FormItem from './FormItem'
 import { addPermission, setProp } from '../../actions'
 
 class Permissions extends React.Component {
-  componentDidMount () {
-    const container = document.querySelector('.ant-collapse')
-    dragula([container])
-  }
   render () {
     const { permissions, addPermission } = this.props
     return (
       <div>
         <h2>Permissions</h2>
         <Collapse accordion>
-          {permissions.map((permission, index) => {
+          {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), permissions).map(permission => {
             return (
               <Collapse.Panel header={permission.name} key={`${permission.createdAt}`}>
-                <FormItem index={index} />
+                <FormItem index={R.findIndex(R.propEq('createdAt', permission.createdAt), permissions)} />
               </Collapse.Panel>
             )
           })}
