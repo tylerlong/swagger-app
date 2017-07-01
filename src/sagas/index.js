@@ -1,9 +1,9 @@
-import { takeLatest, call, put } from 'redux-saga/effects'
+import { takeLatest, call, put, all } from 'redux-saga/effects'
 import axios from 'axios'
 
 import { setState } from '../actions'
 
-function * loadState () {
+export function * loadState () {
   const res = yield call(axios.get, './state.json')
   yield put(setState(res.data))
 }
@@ -13,9 +13,9 @@ function * loadStateSaga () {
 }
 
 function * rootSaga () {
-  yield [
+  yield all([
     loadStateSaga()
-  ]
+  ])
 }
 
 export default rootSaga
