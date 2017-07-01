@@ -1,6 +1,5 @@
 /* eslint-env jest */
-import { deleteModel, addModel } from '../actions/models'
-import { setProp } from '../actions/app'
+import { setProp, deleteModel, addModel } from '../actions'
 import reducer from './index'
 
 describe('test app', () => {
