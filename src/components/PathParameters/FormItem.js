@@ -1,14 +1,14 @@
 import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form, Button, Popconfirm, Icon } from 'antd'
+import { Input, Form, Button, Popconfirm } from 'antd'
 
-import { setProp, deletePathParameter, movePathParameterUp, movePathParameterDown } from '../../actions'
+import { setProp, deletePathParameter } from '../../actions'
 import { formItemLayout } from '../../utils/components'
 
 class FormItem extends React.Component {
   render () {
-    const { index, pathParameters, setProp, deletePathParameter, movePathParameterUp, movePathParameterDown } = this.props
+    const { index, pathParameters, setProp, deletePathParameter } = this.props
     const pathParameter = pathParameters[index]
     return (
       <div>
@@ -22,9 +22,7 @@ class FormItem extends React.Component {
           <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', pathParameter.enum)} onChange={(event) => { setProp(['pathParameters', index, 'enum'], R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
         </Form.Item>
         <div className='button-line'>
-          <Button disabled={index === 0} onClick={movePathParameterUp}>Move up <Icon type='arrow-up' /></Button>
-          <Button disabled={index === pathParameters.length - 1} onClick={movePathParameterDown}>Move down <Icon type='arrow-down' /></Button>
-          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={deletePathParameter}>
+          <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={() => deletePathParameter(index)}>
             <Button type='danger'>Delete</Button>
           </Popconfirm>
         </div>
@@ -33,4 +31,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deletePathParameter, movePathParameterUp, movePathParameterDown })(FormItem)
+export default connect(R.identity, { setProp, deletePathParameter })(FormItem)

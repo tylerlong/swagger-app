@@ -1,5 +1,6 @@
 import R from 'ramda'
 
+// todo: this method is not used any more
 export const swap = R.curry((index1, index2, list) => {
   if (index1 < 0 || index2 < 0 || index1 > list.length - 1 || index2 > list.length - 1) {
     return list // index out of bound
