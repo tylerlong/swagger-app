@@ -1,3 +1,3 @@
-import R from 'ramda'
+export const addPath = () => ({ type: 'ADD_PATH', createdAt: new Date().getTime() })
 
-export const addPath = R.always({ type: 'ADD_PATH' })
+export const deletePath = (index) => ({ type: 'DELETE_PATH', index })
