@@ -26,6 +26,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "husky": "^0.14.1",
     "jest": "^20.0.4",
+    "nock": "^9.0.13",
     "standard": "^10.0.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
@@ -34,7 +35,7 @@
   },
   "dependencies": {
     "antd": "^2.11.2",
-    "axios": "^0.16.2",
+    "isomorphic-fetch": "^2.2.1",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

@@ -1,11 +1,12 @@
 import { takeLatest, call, put, all } from 'redux-saga/effects'
-import axios from 'axios'
+import 'isomorphic-fetch'
 
 import { setState } from '../actions'
 
 export function * loadState () {
-  const res = yield call(axios.get, './state.json')
-  yield put(setState(res.data))
+  const res = yield call(global.fetch, '/state.json')
+  const json = yield call(() => res.json())
+  yield put(setState(json))
 }
 
 function * loadStateSaga () {

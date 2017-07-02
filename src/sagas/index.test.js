@@ -1,10 +1,14 @@
 /* eslint-env jest */
-import axios from 'axios'
 import { call } from 'redux-saga/effects'
+import nock from 'nock'
 
 import { loadState } from './index'
 
 test('loadState', () => {
+  nock(/.+?/).get('/state.json').reply(200, { message: 'Hello world' })
   const gen = loadState()
-  expect(gen.next().value).toEqual(call(axios.get, './state.json'))
+  expect(gen.next().value).toEqual(call(global.fetch, '/state.json'))
+  gen.next()
+  gen.next()
+  expect(gen.next().done).toEqual(true)
 })
