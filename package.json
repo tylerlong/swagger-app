@@ -27,6 +27,7 @@
     "husky": "^0.14.1",
     "jest": "^20.0.4",
     "nock": "^9.0.13",
+    "redux-logic-test": "^1.0.5",
     "standard": "^10.0.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
