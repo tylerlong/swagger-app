@@ -7,27 +7,16 @@ import FormItem from './FormItem'
 import { addModel, setProp } from '../../actions'
 
 class Models extends React.Component {
-  constructor (props) {
-    super(props)
-    this.setActiveIndex = this.setActiveIndex.bind(this)
-  }
-  setActiveIndex (key) {
-    let activeIndex = -1
-    if (key) {
-      activeIndex = parseInt(R.last(R.split('-', key)))
-    }
-    this.props.setProp(['metadata', 'activeModelIndex'], activeIndex)
-  }
   render () {
-    const { models, metadata, addModel } = this.props
+    const { models, addModel } = this.props
     return (
       <div>
         <h2>Models</h2>
-        <Collapse accordion activeKey={`${models.length}-${metadata.activeModelIndex}`} onChange={this.setActiveIndex}>
-          {models.map((model, index) => {
+        <Collapse accordion>
+          {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), models).map(model => {
             return (
-              <Collapse.Panel header={model.name} key={`${models.length}-${index}`}>
-                <FormItem index={index} />
+              <Collapse.Panel header={model.name} key={model.createdAt}>
+                <FormItem index={R.findIndex(R.propEq('createdAt', model.createdAt), models)} />
               </Collapse.Panel>
             )
           })}
