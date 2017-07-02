@@ -10,7 +10,6 @@ import logic from './index'
 import { loadState, setState } from '../actions'
 
 const host = 'http://localhost'
-
 axios.defaults.host = host
 axios.defaults.adapter = httpAdapter
 
@@ -29,8 +28,13 @@ test('setState', () => {
 
 test('loadState', () => {
   nock(host).get('/state.json').reply(200, { message: 'Hello world' })
+  store.resetActions()
   store.dispatch(loadState())
   return store.whenComplete(() => {
+    expect(store.actions).toEqual([
+      { type: 'LOAD_STATE' },
+      { type: 'SET_STATE', state: { message: 'Hello world' } }
+    ])
     expect(R.omit('metadata', store.getState())).toEqual({ message: 'Hello world' })
   })
 })
