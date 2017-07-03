@@ -1,5 +1,5 @@
 /* eslint-env jest */
-const { alert } = require('../src/utils/reducers')
+import { alert, getFormItemLayout, formItemLayout, subFormItemLayout } from '../src/utils'
 
 describe('test alert', () => {
   const state = { metadata: { alerts: [] } }
@@ -25,5 +25,38 @@ describe('test alert', () => {
     expect(alert('success', undefined)(state)).toEqual(state)
     expect(alert('success', ['Hello world'])(state)).not.toEqual({ metadata: { alerts: [{ type: 'success', message: ['Hello world'] }] } })
     expect(alert('success', ['Hello world'])(state)).toEqual(state)
+  })
+})
+
+describe('test getFormItemLayout', () => {
+  test('getFormItemLayout for large width', () => {
+    expect(getFormItemLayout(6, 12)).toEqual({
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 6 }
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 12 }
+      }
+    })
+  })
+
+  test('getFormItemLayout for small width', () => {
+    expect(getFormItemLayout(6, 18)).toEqual({
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 6 }
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 18 }
+      }
+    })
+  })
+
+  test('pre-defined FormItemLayouts', () => {
+    expect(formItemLayout).toEqual(getFormItemLayout(6, 12))
+    expect(subFormItemLayout).toEqual(getFormItemLayout(6, 18))
   })
 })

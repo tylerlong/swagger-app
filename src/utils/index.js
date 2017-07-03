@@ -9,3 +9,18 @@ export const alert = R.curry((type, message) => {
   }
   return R.over(R.lensPath(['metadata', 'alerts']), R.append({ type, message }))
 })
+
+export const getFormItemLayout = (labelSpan, wrapperSpan) => {
+  return {
+    labelCol: {
+      xs: { span: 24 },
+      sm: { span: labelSpan }
+    },
+    wrapperCol: {
+      xs: { span: 24 },
+      sm: { span: wrapperSpan }
+    }
+  }
+}
+export const formItemLayout = getFormItemLayout(6, 12)
+export const subFormItemLayout = getFormItemLayout(6, 18)

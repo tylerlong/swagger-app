@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Input, Form } from 'antd'
 
 import { setProp } from '../../actions'
-import { formItemLayout } from '../../utils/components'
+import { formItemLayout } from '../../utils'
 
 class FormItem extends React.Component {
   render () {

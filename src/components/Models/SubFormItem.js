@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Input, Form, Popconfirm, Button } from 'antd'
 
 import { setProp, deleteModelProperty } from '../../actions'
-import { subFormItemLayout } from '../../utils/components'
+import { subFormItemLayout } from '../../utils'
 
 class SubFormItem extends React.Component {
   render () {

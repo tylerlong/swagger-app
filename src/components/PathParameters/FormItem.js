@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm } from 'antd'
 
 import { setProp, deletePathParameter } from '../../actions'
-import { formItemLayout } from '../../utils/components'
+import { formItemLayout } from '../../utils'
 
 class FormItem extends React.Component {
   render () {

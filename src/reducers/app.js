@@ -1,6 +1,6 @@
 import R from 'ramda'
 
-import { alert } from '../utils/reducers'
+import { alert } from '../utils'
 
 const defaultState = {
   metadata: {
