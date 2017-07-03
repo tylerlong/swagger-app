@@ -1,17 +1,11 @@
 /* eslint-env jest */
-import R from 'ramda'
-
-import { setProp, setState, deleteModel, addModel, addModelProperty } from '../src/actions'
+import { setProp, deleteModel, addModel, addModelProperty } from '../src/actions'
 import reducer from '../src/reducers'
 
 describe('test app', () => {
   const state = { models: [{ name: '1' }, { name: '2' }, { name: '3' }] }
   test('setProp', () => {
     expect(reducer(state, setProp(['models', 1, 'name'], 'Hello world')).models).toEqual([{ name: '1' }, { name: 'Hello world' }, { name: '3' }])
-  })
-
-  test('setState', () => {
-    expect(R.omit('metadata', reducer(state, setState({ message: 'Hello world' })))).toEqual({ message: 'Hello world' })
   })
 })
 

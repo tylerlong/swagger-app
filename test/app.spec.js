@@ -7,7 +7,7 @@ import httpAdapter from 'axios/lib/adapters/http'
 
 import reducer from '../src/reducers'
 import logic from '../src/logics'
-import { loadState, setState, addModelProperty, deleteModelProperty } from '../src/actions'
+import { loadState, setState } from '../src/actions'
 
 const host = 'http://localhost'
 axios.defaults.host = host
@@ -42,22 +42,6 @@ describe('test state', () => {
         { type: 'SET_STATE', state: { message: 'Hello world' } }
       ])
       expect(R.omit('metadata', store.getState())).toEqual({ message: 'Hello world' })
-    })
-  })
-})
-
-describe('test model', () => {
-  test('add model property', () => {
-    store.dispatch(addModelProperty(1))
-    return store.whenComplete(() => {
-      expect(store.getState().models[1].properties.length).toEqual(1)
-    })
-  })
-  test('delete model property', () => {
-    store.dispatch(addModelProperty(1))
-    store.dispatch(deleteModelProperty(1, 0))
-    return store.whenComplete(() => {
-      expect(store.getState().models[1].properties.length).toEqual(0)
     })
   })
 })
