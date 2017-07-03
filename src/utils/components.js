@@ -11,11 +11,11 @@ export const formItemLayout = {
 
 export const subFormItemLayout = {
   labelCol: {
-    xs: { span: 6 },
+    xs: { span: 24 },
     sm: { span: 6 }
   },
   wrapperCol: {
-    xs: { span: 18 },
+    xs: { span: 24 },
     sm: { span: 18 }
   }
 }

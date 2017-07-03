@@ -11,7 +11,7 @@ class SubFormItem extends React.Component {
     const { index1, index2, models, setProp } = this.props
     const prop = models[index1].properties[index2]
     return (
-      <div className='sub-form-items'>
+      <div>
         <Form.Item {...subFormItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'name'], event.target.value) }} />
         </Form.Item>

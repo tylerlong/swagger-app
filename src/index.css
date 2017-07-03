@@ -18,13 +18,5 @@ h1, h2 {
   text-align: center;
 }
 .button-line button {
-  margin: 0 8px;
-}
-
-.properties-card {
   margin-top: 16px;
-}
-
-.sub-form-items {
-  padding-bottom: 16px;
 }
