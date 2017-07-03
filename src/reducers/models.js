@@ -19,6 +19,12 @@ const reducer = (state, action) => {
         R.over(R.lensPath(['models', action.index, 'properties']), R.append(action.props)),
         alert('sccess', 'Model property added')
       )
+    case 'DELETE_MODEL_PROPERTY':
+      console.log('DELETE_MODEL_PROPERTY')
+      return R.pipe(
+        R.over(R.lensPath(['models', action.index1, 'properties']), R.remove(action.index2, 1)),
+        alert('sccess', 'Model property deleted')
+      )
     default:
       return alert('error', `Unknown action type: ${action.type}`)
   }

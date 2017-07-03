@@ -1,14 +1,14 @@
 import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form } from 'antd'
+import { Input, Form, Popconfirm, Button } from 'antd'
 
-import { setProp } from '../../actions'
+import { setProp, deleteModelProperty } from '../../actions'
 import { subFormItemLayout } from '../../utils/components'
 
 class SubFormItem extends React.Component {
   render () {
-    const { index1, index2, models, setProp } = this.props
+    const { index1, index2, models, setProp, deleteModelProperty } = this.props
     const prop = models[index1].properties[index2]
     return (
       <div>
@@ -21,9 +21,14 @@ class SubFormItem extends React.Component {
         <Form.Item {...subFormItemLayout} label='Type'>
           <Input placeholder='Type' size='large' value={prop.type} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'type'], event.target.value) }} />
         </Form.Item>
+        <div className='button-line'>
+          <Popconfirm title={`Are you sure to delete property "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModelProperty(index1, index2)}>
+            <Button type='danger'>Delete {prop.name}</Button>
+          </Popconfirm>
+        </div>
       </div>
     )
   }
 }
 
-export default connect(R.identity, { setProp })(SubFormItem)
+export default connect(R.identity, { setProp, deleteModelProperty })(SubFormItem)

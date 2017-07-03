@@ -7,7 +7,7 @@ import httpAdapter from 'axios/lib/adapters/http'
 
 import reducer from '../reducers'
 import logic from './index'
-import { loadState, setState, addModelProperty } from '../actions'
+import { loadState, setState, addModelProperty, deleteModelProperty } from '../actions'
 
 const host = 'http://localhost'
 axios.defaults.host = host
@@ -50,7 +50,16 @@ describe('test model', () => {
   test('add model property', () => {
     store.dispatch(addModelProperty(1))
     return store.whenComplete(() => {
+      console.log(store.getState())
       expect(store.getState().models[1].properties.length).toEqual(1)
+    })
+  })
+  test('delete model property', () => {
+    store.dispatch(addModelProperty(1))
+    store.dispatch(deleteModelProperty(1, 0))
+    return store.whenComplete(() => {
+      console.log(store.getState())
+      expect(store.getState().models[1].properties.length).toEqual(0)
     })
   })
 })
