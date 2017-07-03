@@ -1,8 +1,8 @@
 /* eslint-env jest */
 import R from 'ramda'
 
-import { setProp, setState, deleteModel, addModel, addModelProperty } from '../actions'
-import reducer from './index'
+import { setProp, setState, deleteModel, addModel, addModelProperty } from '../src/actions'
+import reducer from '../src/reducers'
 
 describe('test app', () => {
   const state = { models: [{ name: '1' }, { name: '2' }, { name: '3' }] }

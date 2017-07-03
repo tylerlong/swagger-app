@@ -5,9 +5,9 @@ import R from 'ramda'
 import { createMockStore } from 'redux-logic-test'
 import httpAdapter from 'axios/lib/adapters/http'
 
-import reducer from '../reducers'
-import logic from './index'
-import { loadState, setState, addModelProperty, deleteModelProperty } from '../actions'
+import reducer from '../src/reducers'
+import logic from '../src/logics'
+import { loadState, setState, addModelProperty, deleteModelProperty } from '../src/actions'
 
 const host = 'http://localhost'
 axios.defaults.host = host

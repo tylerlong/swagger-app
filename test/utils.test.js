@@ -1,5 +1,5 @@
 /* eslint-env jest */
-const { swap, alert } = require('./reducers')
+const { swap, alert } = require('../src/utils/reducers')
 
 describe('test swap', () => {
   const state = [1, 2, 3]
