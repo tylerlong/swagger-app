@@ -50,7 +50,6 @@ describe('test model', () => {
   test('add model property', () => {
     store.dispatch(addModelProperty(1))
     return store.whenComplete(() => {
-      console.log(store.getState())
       expect(store.getState().models[1].properties.length).toEqual(1)
     })
   })
@@ -58,7 +57,6 @@ describe('test model', () => {
     store.dispatch(addModelProperty(1))
     store.dispatch(deleteModelProperty(1, 0))
     return store.whenComplete(() => {
-      console.log(store.getState())
       expect(store.getState().models[1].properties.length).toEqual(0)
     })
   })
