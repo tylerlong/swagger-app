@@ -4,18 +4,26 @@ import { connect } from 'react-redux'
 import { Input, Form } from 'antd'
 
 import { setProp } from '../../actions'
-import { formItemLayout } from '../../utils/components'
+import { subFormItemLayout } from '../../utils/components'
 
 class SubFormItem extends React.Component {
   render () {
-    const { index1, index2, models } = this.props
+    const { index1, index2, models, setProp } = this.props
     const prop = models[index1].properties[index2]
     return (
-      <Form.Item {...formItemLayout} label='Name' key={prop.createdAt}>
-        <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'name'], event.target.value) }} />
-      </Form.Item>
+      <div className='sub-form-items'>
+        <Form.Item {...subFormItemLayout} label='Name'>
+          <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'name'], event.target.value) }} />
+        </Form.Item>
+        <Form.Item {...subFormItemLayout} label='Description'>
+          <Input placeholder='Description' size='large' value={prop.description} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'description'], event.target.value) }} />
+        </Form.Item>
+        <Form.Item {...subFormItemLayout} label='Type'>
+          <Input placeholder='Type' size='large' value={prop.type} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'type'], event.target.value) }} />
+        </Form.Item>
+      </div>
     )
   }
 }
 
-export default connect(R.identity, {})(SubFormItem)
+export default connect(R.identity, { setProp })(SubFormItem)

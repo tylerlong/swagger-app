@@ -8,3 +8,14 @@ export const formItemLayout = {
     sm: { span: 12 }
   }
 }
+
+export const subFormItemLayout = {
+  labelCol: {
+    xs: { span: 6 },
+    sm: { span: 6 }
+  },
+  wrapperCol: {
+    xs: { span: 18 },
+    sm: { span: 18 }
+  }
+}
