@@ -1,16 +1,8 @@
 /* eslint-env jest */
-import { createMockStore } from 'redux-logic-test'
-
-import reducer from '../src/reducers'
-import logic from '../src/logics'
-import { setState, addModelProperty, deleteModelProperty } from '../src/actions'
+import store from './store'
+import { setState, addModel, deleteModel, addModelProperty, deleteModelProperty } from '../src/actions'
 
 const initialState = { models: [{ name: '1', properties: [] }, { name: '2', properties: [] }] }
-const store = createMockStore({
-  initialState,
-  reducer,
-  logic
-})
 
 beforeEach(() => {
   store.dispatch(setState(initialState))
@@ -18,17 +10,28 @@ beforeEach(() => {
 })
 
 describe('test model', () => {
+  test('add model', () => {
+    store.dispatch(addModel())
+    const models = store.getState().models
+    expect(models.length).toEqual(3)
+    expect(models[2].name).toEqual('Name')
+  })
+  test('delete model', () => {
+    store.dispatch(deleteModel(1))
+    const models = store.getState().models
+    expect(models.length).toEqual(1)
+    expect(models[0].name).toEqual('1')
+  })
   test('add model property', () => {
     store.dispatch(addModelProperty(1))
-    return store.whenComplete(() => {
-      expect(store.getState().models[1].properties.length).toEqual(1)
-    })
+    const properties = store.getState().models[1].properties
+    expect(properties.length).toEqual(1)
+    expect(properties[0].name).toEqual('name')
   })
   test('delete model property', () => {
     store.dispatch(addModelProperty(1))
     store.dispatch(deleteModelProperty(1, 0))
-    return store.whenComplete(() => {
-      expect(store.getState().models[1].properties.length).toEqual(0)
-    })
+    const properties = store.getState().models[1].properties
+    expect(properties.length).toEqual(0)
   })
 })
