@@ -1,19 +1,5 @@
 /* eslint-env jest */
-const { swap, alert } = require('../src/utils/reducers')
-
-describe('test swap', () => {
-  const state = [1, 2, 3]
-
-  test('swap two elements in an array', () => {
-    expect(swap(0, 2, state)).toEqual([3, 2, 1])
-    expect(swap(1, 0, state)).toEqual([2, 1, 3])
-  })
-
-  test('swap index out of bound', () => {
-    expect(swap(0, 3, state)).toEqual([1, 2, 3])
-    expect(swap(-1, 2, state)).toEqual([1, 2, 3])
-  })
-})
+const { alert } = require('../src/utils/reducers')
 
 describe('test alert', () => {
   const state = { metadata: { alerts: [] } }
