@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test permissions list 1`] = `
+<div>
+  <h2>
+    Permissions
+  </h2>
+  <div
+    className="ant-collapse"
+    style={undefined}
+  >
+    <div
+      className="ant-collapse-item"
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        Accounts
+      </div>
+    </div>
+    <div
+      className="ant-collapse-item"
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        Contacts
+      </div>
+    </div>
+    <div
+      className="ant-collapse-item"
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        EditAccounts
+      </div>
+    </div>
+  </div>
+  <button
+    className="ant-btn ant-btn-primary ant-btn-lg"
+    onClick={[Function]}
+    onMouseUp={[Function]}
+    type="button"
+  >
+    <i
+      className="anticon anticon-plus"
+    />
+    <span>
+      Add permission
+    </span>
+  </button>
+</div>
+`;
