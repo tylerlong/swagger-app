@@ -12,7 +12,7 @@ class FormItem extends React.Component {
     const permission = permissions[index]
     return (
       <div>
-        <Popconfirm title='Are you sure to delete it?' okText='Yes' cancelText='No' onConfirm={() => deletePermission(index)}>
+        <Popconfirm title={`Are you sure to delete permission "${permission.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deletePermission(index)}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
