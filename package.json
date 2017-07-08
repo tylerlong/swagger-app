@@ -20,23 +20,23 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-import": "^1.2.1",
-    "babel-preset-env": "^1.5.2",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
-    "husky": "^0.14.2",
+    "husky": "^0.14.3",
     "jest": "^20.0.4",
     "nock": "^9.0.13",
     "react-test-renderer": "^15.6.1",
     "redux-logic-test": "^1.0.5",
     "standard": "^10.0.2",
     "style-loader": "^0.18.2",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1",
     "yarn-upgrade-all": "^0.1.5"
   },
   "dependencies": {
-    "antd": "^2.11.2",
+    "antd": "^2.12.0",
     "axios": "^0.16.2",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
@@ -44,7 +44,7 @@
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",
     "redux-logic": "^0.12.1",
-    "rxjs": "^5.4.1"
+    "rxjs": "^5.4.2"
   },
   "jest": {
     "setupFiles": [

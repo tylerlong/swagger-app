@@ -11,6 +11,7 @@ exports[`test permissions list 1`] = `
   >
     <div
       className="ant-collapse-item"
+      id={undefined}
       style={undefined}
     >
       <div
@@ -27,6 +28,7 @@ exports[`test permissions list 1`] = `
     </div>
     <div
       className="ant-collapse-item"
+      id={undefined}
       style={undefined}
     >
       <div
@@ -43,6 +45,7 @@ exports[`test permissions list 1`] = `
     </div>
     <div
       className="ant-collapse-item"
+      id={undefined}
       style={undefined}
     >
       <div
