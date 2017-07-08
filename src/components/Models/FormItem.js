@@ -1,7 +1,7 @@
 import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col } from 'antd'
+import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
 
 import { setProp, deleteModel, addModelProperty } from '../../actions'
 import { formItemLayout } from '../../utils'
@@ -13,6 +13,9 @@ class FormItem extends React.Component {
     const model = models[index]
     return (
       <div>
+        <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModel(index)}>
+          <Button type='danger'><Icon type='arrow-up' />Delete</Button>
+        </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { setProp(['models', index, 'name'], event.target.value) }} />
         </Form.Item >
@@ -28,17 +31,10 @@ class FormItem extends React.Component {
                   )
                 })}
               </Collapse>
-              <div className='primary-button'>
-                <Button type='primary' size='large' onClick={() => addModelProperty(index)}>Add property</Button>
-              </div>
+              <Button type='primary' size='large' onClick={() => addModelProperty(index)}><Icon type='plus' />Add property</Button>
             </Card>
           </Col>
         </Row>
-        <div className='button-line'>
-          <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModel(index)}>
-            <Button type='danger'>Delete {model.name}</Button>
-          </Popconfirm>
-        </div>
       </div >
     )
   }

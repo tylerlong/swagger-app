@@ -1,6 +1,6 @@
 import React from 'react'
 import R from 'ramda'
-import { Button, Collapse } from 'antd'
+import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
@@ -21,9 +21,7 @@ class Permissions extends React.Component {
             )
           })}
         </Collapse>
-        <div className='primary-button'>
-          <Button type='primary' size='large' onClick={addPermission}>Add permission</Button>
-        </div>
+        <Button type='primary' size='large' onClick={addPermission}><Icon type='plus' />Add permission</Button>
       </div>
     )
   }

@@ -9,14 +9,6 @@ h1, h2 {
   padding-bottom: 8px !important;
 }
 
-.primary-button {
-  text-align: center;
-  margin-top: 16px;
-}
-
-.button-line {
-  text-align: center;
-}
-.button-line button {
-  margin-top: 16px;
+.ant-collapse {
+  margin-bottom: 16px;
 }

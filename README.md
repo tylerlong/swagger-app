@@ -56,3 +56,8 @@ yarn release
 - Move some utils/ functions to a new ramda-plus project
 - Fix React key issue: https://stackoverflow.com/a/43892905/862862
     - changing key is not identity
+
+
+## Principles
+
+- Avoid adding new CSS classes, reuse existing ones.

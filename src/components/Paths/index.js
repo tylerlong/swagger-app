@@ -1,6 +1,6 @@
 import React from 'react'
 import R from 'ramda'
-import { Button } from 'antd'
+import { Button, Icon } from 'antd'
 import { connect } from 'react-redux'
 
 import { addPath } from '../../actions'
@@ -11,9 +11,7 @@ class Paths extends React.Component {
     return (
       <div>
         <h2>Paths</h2>
-        <div className='primary-button'>
-          <Button type='primary' size='large' onClick={addPath}>Add path</Button>
-        </div>
+        <Button type='primary' size='large' onClick={addPath}><Icon type='plus' />Add path</Button>
       </div>
     )
   }

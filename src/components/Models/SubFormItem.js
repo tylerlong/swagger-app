@@ -1,7 +1,7 @@
 import React from 'react'
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form, Popconfirm, Button } from 'antd'
+import { Input, Form, Popconfirm, Button, Icon } from 'antd'
 
 import { setProp, deleteModelProperty } from '../../actions'
 import { subFormItemLayout } from '../../utils'
@@ -12,6 +12,9 @@ class SubFormItem extends React.Component {
     const prop = models[index1].properties[index2]
     return (
       <div>
+        <Popconfirm title={`Are you sure to delete property "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModelProperty(index1, index2)}>
+          <Button type='danger'><Icon type='arrow-up' />Delete</Button>
+        </Popconfirm>
         <Form.Item {...subFormItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'name'], event.target.value) }} />
         </Form.Item>
@@ -21,11 +24,6 @@ class SubFormItem extends React.Component {
         <Form.Item {...subFormItemLayout} label='Type'>
           <Input placeholder='Type' size='large' value={prop.type} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'type'], event.target.value) }} />
         </Form.Item>
-        <div className='button-line'>
-          <Popconfirm title={`Are you sure to delete property "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModelProperty(index1, index2)}>
-            <Button type='danger'>Delete {prop.name}</Button>
-          </Popconfirm>
-        </div>
       </div>
     )
   }
