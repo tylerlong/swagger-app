@@ -3,6 +3,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
+import { Popconfirm } from 'antd'
 
 import Permissions from '../src/components/Permissions'
 import store from './store'
@@ -50,5 +51,7 @@ test('test permissions list', () => {
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // delete permission
-  // todo
+  wrapper.find(Popconfirm).props().onConfirm()
+  expect(store.getState().permissions.length).toEqual(3)
+  expect(toJson(wrapper)).toMatchSnapshot()
 })
