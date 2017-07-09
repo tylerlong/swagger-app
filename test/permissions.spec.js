@@ -36,11 +36,13 @@ test('test permissions list', () => {
       <Permissions />
     </Provider>
   )
+  expect(store.getState().permissions.length).toEqual(3)
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 
   // add permission
   tree.children[2].props.onClick()
+  expect(store.getState().permissions.length).toEqual(4)
   tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })
