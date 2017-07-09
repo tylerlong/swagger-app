@@ -38,4 +38,9 @@ test('test permissions list', () => {
   )
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
+
+  // add permission
+  tree.children[2].props.onClick()
+  tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
 })

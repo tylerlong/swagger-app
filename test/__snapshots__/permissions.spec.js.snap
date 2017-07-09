@@ -76,3 +76,97 @@ exports[`test permissions list 1`] = `
   </button>
 </div>
 `;
+
+exports[`test permissions list 2`] = `
+<div>
+  <h2>
+    Permissions
+  </h2>
+  <div
+    className="ant-collapse"
+    style={undefined}
+  >
+    <div
+      className="ant-collapse-item"
+      id={undefined}
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        Accounts
+      </div>
+    </div>
+    <div
+      className="ant-collapse-item"
+      id={undefined}
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        Contacts
+      </div>
+    </div>
+    <div
+      className="ant-collapse-item"
+      id={undefined}
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        EditAccounts
+      </div>
+    </div>
+    <div
+      className="ant-collapse-item"
+      id={undefined}
+      style={undefined}
+    >
+      <div
+        aria-expanded={false}
+        className="ant-collapse-header"
+        onClick={[Function]}
+        role="tab"
+      >
+        <i
+          className="arrow"
+        />
+        Name
+      </div>
+    </div>
+  </div>
+  <button
+    className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
+    onClick={[Function]}
+    onMouseUp={[Function]}
+    type="button"
+  >
+    <i
+      className="anticon anticon-plus"
+    />
+    <span>
+      Add permission
+    </span>
+  </button>
+</div>
+`;
