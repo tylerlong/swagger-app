@@ -42,12 +42,12 @@ test('test permissions list', () => {
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // add permission
-  wrapper.find('button').simulate('click')
+  wrapper.find('button.ant-btn-primary').simulate('click')
   expect(store.getState().permissions.length).toEqual(4)
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // view permission
-  wrapper.find('.ant-collapse-header').first().simulate('click')
+  wrapper.find('div.ant-collapse-header').first().simulate('click')
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // delete permission
