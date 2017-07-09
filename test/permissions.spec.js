@@ -1,7 +1,8 @@
 /* eslint-env jest */
-import renderer from 'react-test-renderer'
 import React from 'react'
 import { Provider } from 'react-redux'
+import { mount } from 'enzyme'
+import toJson from 'enzyme-to-json'
 
 import Permissions from '../src/components/Permissions'
 import store from './store'
@@ -31,18 +32,17 @@ beforeEach(() => {
 })
 
 test('test permissions list', () => {
-  const component = renderer.create(
+  const wrapper = mount(
     <Provider store={store}>
       <Permissions />
     </Provider>
   )
   expect(store.getState().permissions.length).toEqual(3)
-  let tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(toJson(wrapper)).toMatchSnapshot()
 
   // add permission
-  tree.children[2].props.onClick()
+  Date.now = jest.fn(() => 1482363367071)
+  wrapper.find('button').simulate('click')
   expect(store.getState().permissions.length).toEqual(4)
-  tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  expect(toJson(wrapper)).toMatchSnapshot()
 })

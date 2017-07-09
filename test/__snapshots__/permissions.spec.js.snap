@@ -1,172 +1,754 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test permissions list 1`] = `
-<div>
-  <h2>
-    Permissions
-  </h2>
-  <div
-    className="ant-collapse"
-    style={undefined}
-  >
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
+<Provider
+  store={
+    Object {
+      "actions": Array [],
+      "dispatch": [Function],
+      "getState": [Function],
+      "logicMiddleware": [Function],
+      "replaceReducer": [Function],
+      "resetActions": [Function],
+      "subscribe": [Function],
+      "whenComplete": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Permissions)>
+    <Permissions
+      addPermission={[Function]}
+      metadata={
+        Object {
+          "alerts": Array [
+            Object {
+              "message": "Data loaded",
+              "type": "success",
+            },
+          ],
+        }
+      }
+      permissions={
+        Array [
+          Object {
+            "createdAt": 1498875025725,
+            "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)",
+            "name": "EditAccounts",
+          },
+          Object {
+            "createdAt": 1498875008388,
+            "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+            "name": "Accounts",
+          },
+          Object {
+            "createdAt": 1498875020815,
+            "description": "Creating, viewing, editing and deleting user personal contacts",
+            "name": "Contacts",
+          },
+        ]
+      }
+      setProp={[Function]}
     >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        Accounts
+      <div>
+        <h2>
+          Permissions
+        </h2>
+        <Collapse
+          accordion={true}
+          bordered={true}
+          openAnimation={
+            Object {
+              "appear": [Function],
+              "enter": [Function],
+              "leave": [Function],
+            }
+          }
+          prefixCls="ant-collapse"
+        >
+          <Collapse
+            accordion={true}
+            bordered={true}
+            className=""
+            destroyInactivePanel={false}
+            onChange={[Function]}
+            openAnimation={
+              Object {
+                "appear": [Function],
+                "enter": [Function],
+                "leave": [Function],
+              }
+            }
+            prefixCls="ant-collapse"
+          >
+            <div
+              className="ant-collapse"
+            >
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Accounts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Accounts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Contacts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Contacts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="EditAccounts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    EditAccounts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+            </div>
+          </Collapse>
+        </Collapse>
+        <Button
+          clicked={false}
+          ghost={false}
+          loading={false}
+          onClick={[Function]}
+          prefixCls="ant-btn"
+          size="large"
+          type="primary"
+        >
+          <button
+            className="ant-btn ant-btn-primary ant-btn-lg"
+            onClick={[Function]}
+            onMouseUp={[Function]}
+            type="button"
+          >
+            <Icon
+              type="plus"
+            >
+              <i
+                className="anticon anticon-plus"
+              />
+            </Icon>
+            <span>
+              Add permission
+            </span>
+          </button>
+        </Button>
       </div>
-    </div>
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
-    >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        Contacts
-      </div>
-    </div>
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
-    >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        EditAccounts
-      </div>
-    </div>
-  </div>
-  <button
-    className="ant-btn ant-btn-primary ant-btn-lg"
-    onClick={[Function]}
-    onMouseUp={[Function]}
-    type="button"
-  >
-    <i
-      className="anticon anticon-plus"
-    />
-    <span>
-      Add permission
-    </span>
-  </button>
-</div>
+    </Permissions>
+  </Connect(Permissions)>
+</Provider>
 `;
 
 exports[`test permissions list 2`] = `
-<div>
-  <h2>
-    Permissions
-  </h2>
-  <div
-    className="ant-collapse"
-    style={undefined}
-  >
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
+<Provider
+  store={
+    Object {
+      "actions": Array [
+        Object {
+          "createdAt": 1482363367071,
+          "description": "Description",
+          "name": "Name",
+          "type": "ADD_PERMISSION",
+        },
+      ],
+      "dispatch": [Function],
+      "getState": [Function],
+      "logicMiddleware": [Function],
+      "replaceReducer": [Function],
+      "resetActions": [Function],
+      "subscribe": [Function],
+      "whenComplete": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Permissions)>
+    <Permissions
+      addPermission={[Function]}
+      metadata={
+        Object {
+          "alerts": Array [
+            Object {
+              "message": "Data loaded",
+              "type": "success",
+            },
+            Object {
+              "message": "Permission added",
+              "type": "success",
+            },
+          ],
+        }
+      }
+      permissions={
+        Array [
+          Object {
+            "createdAt": 1498875025725,
+            "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)",
+            "name": "EditAccounts",
+          },
+          Object {
+            "createdAt": 1498875008388,
+            "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+            "name": "Accounts",
+          },
+          Object {
+            "createdAt": 1498875020815,
+            "description": "Creating, viewing, editing and deleting user personal contacts",
+            "name": "Contacts",
+          },
+          Object {
+            "createdAt": 1482363367071,
+            "description": "Description",
+            "name": "Name",
+          },
+        ]
+      }
+      setProp={[Function]}
     >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        Accounts
+      <div>
+        <h2>
+          Permissions
+        </h2>
+        <Collapse
+          accordion={true}
+          bordered={true}
+          openAnimation={
+            Object {
+              "appear": [Function],
+              "enter": [Function],
+              "leave": [Function],
+            }
+          }
+          prefixCls="ant-collapse"
+        >
+          <Collapse
+            accordion={true}
+            bordered={true}
+            className=""
+            destroyInactivePanel={false}
+            onChange={[Function]}
+            openAnimation={
+              Object {
+                "appear": [Function],
+                "enter": [Function],
+                "leave": [Function],
+              }
+            }
+            prefixCls="ant-collapse"
+          >
+            <div
+              className="ant-collapse"
+            >
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Accounts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Accounts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Contacts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Contacts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="EditAccounts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    EditAccounts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Name"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Name
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+            </div>
+          </Collapse>
+        </Collapse>
+        <Button
+          clicked={false}
+          ghost={false}
+          loading={false}
+          onClick={[Function]}
+          prefixCls="ant-btn"
+          size="large"
+          type="primary"
+        >
+          <button
+            className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
+            onClick={[Function]}
+            onMouseUp={[Function]}
+            type="button"
+          >
+            <Icon
+              type="plus"
+            >
+              <i
+                className="anticon anticon-plus"
+              />
+            </Icon>
+            <span>
+              Add permission
+            </span>
+          </button>
+        </Button>
       </div>
-    </div>
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
-    >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        Contacts
-      </div>
-    </div>
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
-    >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        EditAccounts
-      </div>
-    </div>
-    <div
-      className="ant-collapse-item"
-      id={undefined}
-      style={undefined}
-    >
-      <div
-        aria-expanded={false}
-        className="ant-collapse-header"
-        onClick={[Function]}
-        role="tab"
-      >
-        <i
-          className="arrow"
-        />
-        Name
-      </div>
-    </div>
-  </div>
-  <button
-    className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
-    onClick={[Function]}
-    onMouseUp={[Function]}
-    type="button"
-  >
-    <i
-      className="anticon anticon-plus"
-    />
-    <span>
-      Add permission
-    </span>
-  </button>
-</div>
+    </Permissions>
+  </Connect(Permissions)>
+</Provider>
 `;
