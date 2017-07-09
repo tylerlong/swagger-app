@@ -41,8 +41,14 @@ test('test permissions list', () => {
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // add permission
-  Date.now = jest.fn(() => 1482363367071)
   wrapper.find('button').simulate('click')
   expect(store.getState().permissions.length).toEqual(4)
   expect(toJson(wrapper)).toMatchSnapshot()
+
+  // view permission
+  wrapper.find('.ant-collapse-header').first().simulate('click')
+  expect(toJson(wrapper)).toMatchSnapshot()
+
+  // delete permission
+  // todo
 })

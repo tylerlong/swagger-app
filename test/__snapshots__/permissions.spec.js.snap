@@ -339,7 +339,7 @@ exports[`test permissions list 2`] = `
     Object {
       "actions": Array [
         Object {
-          "createdAt": 1482363367071,
+          "createdAt": 1499601066647,
           "description": "Description",
           "name": "Name",
           "type": "ADD_PERMISSION",
@@ -391,7 +391,7 @@ exports[`test permissions list 2`] = `
             "name": "Contacts",
           },
           Object {
-            "createdAt": 1482363367071,
+            "createdAt": 1499601066647,
             "description": "Description",
             "name": "Name",
           },
@@ -500,6 +500,1371 @@ exports[`test permissions list 2`] = `
                         isActive={false}
                         prefixCls="ant-collapse"
                       />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Contacts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Contacts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="EditAccounts"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    EditAccounts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Name"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Name
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+            </div>
+          </Collapse>
+        </Collapse>
+        <Button
+          clicked={false}
+          ghost={false}
+          loading={false}
+          onClick={[Function]}
+          prefixCls="ant-btn"
+          size="large"
+          type="primary"
+        >
+          <button
+            className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
+            onClick={[Function]}
+            onMouseUp={[Function]}
+            type="button"
+          >
+            <Icon
+              type="plus"
+            >
+              <i
+                className="anticon anticon-plus"
+              />
+            </Icon>
+            <span>
+              Add permission
+            </span>
+          </button>
+        </Button>
+      </div>
+    </Permissions>
+  </Connect(Permissions)>
+</Provider>
+`;
+
+exports[`test permissions list 3`] = `
+<Provider
+  store={
+    Object {
+      "actions": Array [
+        Object {
+          "createdAt": 1499601066647,
+          "description": "Description",
+          "name": "Name",
+          "type": "ADD_PERMISSION",
+        },
+      ],
+      "dispatch": [Function],
+      "getState": [Function],
+      "logicMiddleware": [Function],
+      "replaceReducer": [Function],
+      "resetActions": [Function],
+      "subscribe": [Function],
+      "whenComplete": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Permissions)>
+    <Permissions
+      addPermission={[Function]}
+      metadata={
+        Object {
+          "alerts": Array [
+            Object {
+              "message": "Data loaded",
+              "type": "success",
+            },
+            Object {
+              "message": "Permission added",
+              "type": "success",
+            },
+          ],
+        }
+      }
+      permissions={
+        Array [
+          Object {
+            "createdAt": 1498875025725,
+            "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)",
+            "name": "EditAccounts",
+          },
+          Object {
+            "createdAt": 1498875008388,
+            "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+            "name": "Accounts",
+          },
+          Object {
+            "createdAt": 1498875020815,
+            "description": "Creating, viewing, editing and deleting user personal contacts",
+            "name": "Contacts",
+          },
+          Object {
+            "createdAt": 1499601066647,
+            "description": "Description",
+            "name": "Name",
+          },
+        ]
+      }
+      setProp={[Function]}
+    >
+      <div>
+        <h2>
+          Permissions
+        </h2>
+        <Collapse
+          accordion={true}
+          bordered={true}
+          openAnimation={
+            Object {
+              "appear": [Function],
+              "enter": [Function],
+              "leave": [Function],
+            }
+          }
+          prefixCls="ant-collapse"
+        >
+          <Collapse
+            accordion={true}
+            bordered={true}
+            className=""
+            destroyInactivePanel={false}
+            onChange={[Function]}
+            openAnimation={
+              Object {
+                "appear": [Function],
+                "enter": [Function],
+                "leave": [Function],
+              }
+            }
+            prefixCls="ant-collapse"
+          >
+            <div
+              className="ant-collapse"
+            >
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="Accounts"
+                headerClass=""
+                isActive={true}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item ant-collapse-item-active"
+                >
+                  <div
+                    aria-expanded={true}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    Accounts
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={true}
+                        prefixCls="ant-collapse"
+                      >
+                        <div
+                          className="ant-collapse-content ant-collapse-content-active"
+                          role="tabpanel"
+                        >
+                          <div
+                            className="ant-collapse-content-box"
+                          >
+                            <Connect(FormItem)
+                              index={1}
+                            >
+                              <FormItem
+                                deletePermission={[Function]}
+                                index={1}
+                                metadata={
+                                  Object {
+                                    "alerts": Array [
+                                      Object {
+                                        "message": "Data loaded",
+                                        "type": "success",
+                                      },
+                                      Object {
+                                        "message": "Permission added",
+                                        "type": "success",
+                                      },
+                                    ],
+                                  }
+                                }
+                                permissions={
+                                  Array [
+                                    Object {
+                                      "createdAt": 1498875025725,
+                                      "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)",
+                                      "name": "EditAccounts",
+                                    },
+                                    Object {
+                                      "createdAt": 1498875008388,
+                                      "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+                                      "name": "Accounts",
+                                    },
+                                    Object {
+                                      "createdAt": 1498875020815,
+                                      "description": "Creating, viewing, editing and deleting user personal contacts",
+                                      "name": "Contacts",
+                                    },
+                                    Object {
+                                      "createdAt": 1499601066647,
+                                      "description": "Description",
+                                      "name": "Name",
+                                    },
+                                  ]
+                                }
+                                setProp={[Function]}
+                              >
+                                <div>
+                                  <_a
+                                    cancelText="No"
+                                    okText="Yes"
+                                    onConfirm={[Function]}
+                                    placement="top"
+                                    prefixCls="ant-popover"
+                                    title="Are you sure to delete permission \\"Accounts\\"?"
+                                    transitionName="zoom-big"
+                                    trigger="click"
+                                  >
+                                    <Tooltip
+                                      arrowPointAtCenter={false}
+                                      autoAdjustOverflow={true}
+                                      mouseEnterDelay={0.1}
+                                      mouseLeaveDelay={0.1}
+                                      onConfirm={[Function]}
+                                      onVisibleChange={[Function]}
+                                      overlay={
+                                        <div>
+                                          <div
+                                            className="ant-popover-inner-content"
+                                          >
+                                            <div
+                                              className="ant-popover-message"
+                                            >
+                                              <Icon
+                                                type="exclamation-circle"
+                                              />
+                                              <div
+                                                className="ant-popover-message-title"
+                                              >
+                                                Are you sure to delete permission "Accounts"?
+                                              </div>
+                                            </div>
+                                            <div
+                                              className="ant-popover-buttons"
+                                            >
+                                              <Button
+                                                clicked={false}
+                                                ghost={false}
+                                                loading={false}
+                                                onClick={[Function]}
+                                                prefixCls="ant-btn"
+                                                size="small"
+                                              >
+                                                No
+                                              </Button>
+                                              <Button
+                                                clicked={false}
+                                                ghost={false}
+                                                loading={false}
+                                                onClick={[Function]}
+                                                prefixCls="ant-btn"
+                                                size="small"
+                                                type="primary"
+                                              >
+                                                Yes
+                                              </Button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      }
+                                      placement="top"
+                                      prefixCls="ant-popover"
+                                      transitionName="zoom-big"
+                                      trigger="click"
+                                    >
+                                      <Tooltip
+                                        align={Object {}}
+                                        arrowContent={null}
+                                        arrowPointAtCenter={false}
+                                        autoAdjustOverflow={true}
+                                        builtinPlacements={
+                                          Object {
+                                            "bottom": Object {
+                                              "offset": Array [
+                                                0,
+                                                4,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "tc",
+                                                "bc",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "bottomLeft": Object {
+                                              "offset": Array [
+                                                -21,
+                                                4,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "tl",
+                                                "bc",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "bottomRight": Object {
+                                              "offset": Array [
+                                                21,
+                                                4,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "tr",
+                                                "bc",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "left": Object {
+                                              "offset": Array [
+                                                -4,
+                                                0,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "cr",
+                                                "cl",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "leftBottom": Object {
+                                              "offset": Array [
+                                                -4,
+                                                13,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "br",
+                                                "cl",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "leftTop": Object {
+                                              "offset": Array [
+                                                -4,
+                                                -13,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "tr",
+                                                "cl",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "right": Object {
+                                              "offset": Array [
+                                                4,
+                                                0,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "cl",
+                                                "cr",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "rightBottom": Object {
+                                              "offset": Array [
+                                                4,
+                                                13,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "bl",
+                                                "cr",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "rightTop": Object {
+                                              "offset": Array [
+                                                4,
+                                                -13,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "tl",
+                                                "cr",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "top": Object {
+                                              "offset": Array [
+                                                0,
+                                                -4,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "bc",
+                                                "tc",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "topLeft": Object {
+                                              "offset": Array [
+                                                -21,
+                                                -4,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "bl",
+                                                "tc",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                            "topRight": Object {
+                                              "offset": Array [
+                                                21,
+                                                -4,
+                                              ],
+                                              "overflow": Object {
+                                                "adjustX": 1,
+                                                "adjustY": 1,
+                                              },
+                                              "points": Array [
+                                                "br",
+                                                "tc",
+                                              ],
+                                              "targetOffset": Array [
+                                                0,
+                                                0,
+                                              ],
+                                            },
+                                          }
+                                        }
+                                        destroyTooltipOnHide={false}
+                                        mouseEnterDelay={0.1}
+                                        mouseLeaveDelay={0.1}
+                                        onConfirm={[Function]}
+                                        onPopupAlign={[Function]}
+                                        onVisibleChange={[Function]}
+                                        overlay={
+                                          <div>
+                                            <div
+                                              className="ant-popover-inner-content"
+                                            >
+                                              <div
+                                                className="ant-popover-message"
+                                              >
+                                                <Icon
+                                                  type="exclamation-circle"
+                                                />
+                                                <div
+                                                  className="ant-popover-message-title"
+                                                >
+                                                  Are you sure to delete permission "Accounts"?
+                                                </div>
+                                              </div>
+                                              <div
+                                                className="ant-popover-buttons"
+                                              >
+                                                <Button
+                                                  clicked={false}
+                                                  ghost={false}
+                                                  loading={false}
+                                                  onClick={[Function]}
+                                                  prefixCls="ant-btn"
+                                                  size="small"
+                                                >
+                                                  No
+                                                </Button>
+                                                <Button
+                                                  clicked={false}
+                                                  ghost={false}
+                                                  loading={false}
+                                                  onClick={[Function]}
+                                                  prefixCls="ant-btn"
+                                                  size="small"
+                                                  type="primary"
+                                                >
+                                                  Yes
+                                                </Button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        }
+                                        placement="top"
+                                        prefixCls="ant-popover"
+                                        transitionName="zoom-big"
+                                        trigger="click"
+                                        visible={false}
+                                      >
+                                        <Trigger
+                                          action="click"
+                                          afterPopupVisibleChange={[Function]}
+                                          arrowContent={null}
+                                          arrowPointAtCenter={false}
+                                          autoAdjustOverflow={true}
+                                          blurDelay={0.15}
+                                          builtinPlacements={
+                                            Object {
+                                              "bottom": Object {
+                                                "offset": Array [
+                                                  0,
+                                                  4,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "tc",
+                                                  "bc",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "bottomLeft": Object {
+                                                "offset": Array [
+                                                  -21,
+                                                  4,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "tl",
+                                                  "bc",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "bottomRight": Object {
+                                                "offset": Array [
+                                                  21,
+                                                  4,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "tr",
+                                                  "bc",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "left": Object {
+                                                "offset": Array [
+                                                  -4,
+                                                  0,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "cr",
+                                                  "cl",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "leftBottom": Object {
+                                                "offset": Array [
+                                                  -4,
+                                                  13,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "br",
+                                                  "cl",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "leftTop": Object {
+                                                "offset": Array [
+                                                  -4,
+                                                  -13,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "tr",
+                                                  "cl",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "right": Object {
+                                                "offset": Array [
+                                                  4,
+                                                  0,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "cl",
+                                                  "cr",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "rightBottom": Object {
+                                                "offset": Array [
+                                                  4,
+                                                  13,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "bl",
+                                                  "cr",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "rightTop": Object {
+                                                "offset": Array [
+                                                  4,
+                                                  -13,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "tl",
+                                                  "cr",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "top": Object {
+                                                "offset": Array [
+                                                  0,
+                                                  -4,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "bc",
+                                                  "tc",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "topLeft": Object {
+                                                "offset": Array [
+                                                  -21,
+                                                  -4,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "bl",
+                                                  "tc",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                              "topRight": Object {
+                                                "offset": Array [
+                                                  21,
+                                                  -4,
+                                                ],
+                                                "overflow": Object {
+                                                  "adjustX": 1,
+                                                  "adjustY": 1,
+                                                },
+                                                "points": Array [
+                                                  "br",
+                                                  "tc",
+                                                ],
+                                                "targetOffset": Array [
+                                                  0,
+                                                  0,
+                                                ],
+                                              },
+                                            }
+                                          }
+                                          defaultPopupVisible={false}
+                                          destroyPopupOnHide={false}
+                                          focusDelay={0}
+                                          getDocument={[Function]}
+                                          getPopupClassNameFromAlign={[Function]}
+                                          hideAction={Array []}
+                                          mask={false}
+                                          maskClosable={true}
+                                          mouseEnterDelay={0.1}
+                                          mouseLeaveDelay={0.1}
+                                          onConfirm={[Function]}
+                                          onPopupAlign={[Function]}
+                                          onPopupVisibleChange={[Function]}
+                                          overlay={
+                                            <div>
+                                              <div
+                                                className="ant-popover-inner-content"
+                                              >
+                                                <div
+                                                  className="ant-popover-message"
+                                                >
+                                                  <Icon
+                                                    type="exclamation-circle"
+                                                  />
+                                                  <div
+                                                    className="ant-popover-message-title"
+                                                  >
+                                                    Are you sure to delete permission "Accounts"?
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  className="ant-popover-buttons"
+                                                >
+                                                  <Button
+                                                    clicked={false}
+                                                    ghost={false}
+                                                    loading={false}
+                                                    onClick={[Function]}
+                                                    prefixCls="ant-btn"
+                                                    size="small"
+                                                  >
+                                                    No
+                                                  </Button>
+                                                  <Button
+                                                    clicked={false}
+                                                    ghost={false}
+                                                    loading={false}
+                                                    onClick={[Function]}
+                                                    prefixCls="ant-btn"
+                                                    size="small"
+                                                    type="primary"
+                                                  >
+                                                    Yes
+                                                  </Button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          }
+                                          popup={[Function]}
+                                          popupAlign={Object {}}
+                                          popupClassName=""
+                                          popupPlacement="top"
+                                          popupStyle={Object {}}
+                                          popupTransitionName="zoom-big"
+                                          popupVisible={false}
+                                          prefixCls="ant-popover"
+                                          showAction={Array []}
+                                          visible={false}
+                                        >
+                                          <Button
+                                            clicked={false}
+                                            ghost={false}
+                                            loading={false}
+                                            onClick={[Function]}
+                                            onMouseDown={[Function]}
+                                            onTouchStart={[Function]}
+                                            prefixCls="ant-btn"
+                                            type="danger"
+                                          >
+                                            <button
+                                              className="ant-btn ant-btn-danger"
+                                              onClick={[Function]}
+                                              onMouseDown={[Function]}
+                                              onMouseUp={[Function]}
+                                              onTouchStart={[Function]}
+                                              type="button"
+                                            >
+                                              <Icon
+                                                type="arrow-up"
+                                              >
+                                                <i
+                                                  className="anticon anticon-arrow-up"
+                                                />
+                                              </Icon>
+                                              <span>
+                                                Delete
+                                              </span>
+                                            </button>
+                                          </Button>
+                                        </Trigger>
+                                      </Tooltip>
+                                    </Tooltip>
+                                  </_a>
+                                  <FormItem
+                                    colon={true}
+                                    hasFeedback={false}
+                                    label="Name"
+                                    labelCol={
+                                      Object {
+                                        "sm": Object {
+                                          "span": 6,
+                                        },
+                                        "xs": Object {
+                                          "span": 24,
+                                        },
+                                      }
+                                    }
+                                    prefixCls="ant-form"
+                                    wrapperCol={
+                                      Object {
+                                        "sm": Object {
+                                          "span": 12,
+                                        },
+                                        "xs": Object {
+                                          "span": 24,
+                                        },
+                                      }
+                                    }
+                                  >
+                                    <Row
+                                      className="ant-form-item"
+                                      gutter={0}
+                                    >
+                                      <div
+                                        className="ant-row ant-form-item"
+                                      >
+                                        <Col
+                                          className="ant-form-item-label"
+                                          sm={
+                                            Object {
+                                              "span": 6,
+                                            }
+                                          }
+                                          xs={
+                                            Object {
+                                              "span": 24,
+                                            }
+                                          }
+                                        >
+                                          <div
+                                            className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                                          >
+                                            <label
+                                              className=""
+                                              htmlFor={null}
+                                              title="Name"
+                                            >
+                                              Name
+                                            </label>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="ant-form-item-control-wrapper"
+                                          sm={
+                                            Object {
+                                              "span": 12,
+                                            }
+                                          }
+                                          xs={
+                                            Object {
+                                              "span": 24,
+                                            }
+                                          }
+                                        >
+                                          <div
+                                            className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                                          >
+                                            <div
+                                              className="ant-form-item-control "
+                                            >
+                                              <Input
+                                                disabled={false}
+                                                onChange={[Function]}
+                                                placeholder="Name"
+                                                prefixCls="ant-input"
+                                                size="large"
+                                                type="text"
+                                                value="Accounts"
+                                              >
+                                                <input
+                                                  className="ant-input ant-input-lg"
+                                                  disabled={false}
+                                                  onChange={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  placeholder="Name"
+                                                  size="large"
+                                                  type="text"
+                                                  value="Accounts"
+                                                />
+                                              </Input>
+                                            </div>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </FormItem>
+                                  <FormItem
+                                    colon={true}
+                                    hasFeedback={false}
+                                    label="Description"
+                                    labelCol={
+                                      Object {
+                                        "sm": Object {
+                                          "span": 6,
+                                        },
+                                        "xs": Object {
+                                          "span": 24,
+                                        },
+                                      }
+                                    }
+                                    prefixCls="ant-form"
+                                    wrapperCol={
+                                      Object {
+                                        "sm": Object {
+                                          "span": 12,
+                                        },
+                                        "xs": Object {
+                                          "span": 24,
+                                        },
+                                      }
+                                    }
+                                  >
+                                    <Row
+                                      className="ant-form-item"
+                                      gutter={0}
+                                    >
+                                      <div
+                                        className="ant-row ant-form-item"
+                                      >
+                                        <Col
+                                          className="ant-form-item-label"
+                                          sm={
+                                            Object {
+                                              "span": 6,
+                                            }
+                                          }
+                                          xs={
+                                            Object {
+                                              "span": 24,
+                                            }
+                                          }
+                                        >
+                                          <div
+                                            className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                                          >
+                                            <label
+                                              className=""
+                                              htmlFor={null}
+                                              title="Description"
+                                            >
+                                              Description
+                                            </label>
+                                          </div>
+                                        </Col>
+                                        <Col
+                                          className="ant-form-item-control-wrapper"
+                                          sm={
+                                            Object {
+                                              "span": 12,
+                                            }
+                                          }
+                                          xs={
+                                            Object {
+                                              "span": 24,
+                                            }
+                                          }
+                                        >
+                                          <div
+                                            className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                                          >
+                                            <div
+                                              className="ant-form-item-control "
+                                            >
+                                              <Input
+                                                disabled={false}
+                                                onChange={[Function]}
+                                                placeholder="Description"
+                                                prefixCls="ant-input"
+                                                size="large"
+                                                type="text"
+                                                value="Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+                                              >
+                                                <input
+                                                  className="ant-input ant-input-lg"
+                                                  disabled={false}
+                                                  onChange={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  placeholder="Description"
+                                                  size="large"
+                                                  type="text"
+                                                  value="Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+                                                />
+                                              </Input>
+                                            </div>
+                                          </div>
+                                        </Col>
+                                      </div>
+                                    </Row>
+                                  </FormItem>
+                                </div>
+                              </FormItem>
+                            </Connect(FormItem)>
+                          </div>
+                        </div>
+                      </PanelContent>
                     </AnimateChild>
                   </Animate>
                 </div>

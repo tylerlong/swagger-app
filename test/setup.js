@@ -5,3 +5,5 @@ window.matchMedia = window.matchMedia || function () {
     removeListener: function () {}
   }
 }
+
+Date.now = () => 1499601066647
