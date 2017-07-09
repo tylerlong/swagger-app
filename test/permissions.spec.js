@@ -39,6 +39,7 @@ test('test permissions list', () => {
     </Provider>
   )
   expect(store.getState().permissions.length).toEqual(3)
+  expect(wrapper.find('button.ant-btn-primary').length).toEqual(1)
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // add permission
@@ -48,10 +49,13 @@ test('test permissions list', () => {
 
   // view permission
   wrapper.find('div.ant-collapse-header').first().simulate('click')
+  expect(wrapper.find(Popconfirm).length).toEqual(1)
+  expect(store.getState().permissions.length).toEqual(4)
   expect(toJson(wrapper)).toMatchSnapshot()
 
   // delete permission
   wrapper.find(Popconfirm).props().onConfirm()
   expect(store.getState().permissions.length).toEqual(3)
+  expect(wrapper.find(Popconfirm).length).toEqual(0)
   expect(toJson(wrapper)).toMatchSnapshot()
 })
