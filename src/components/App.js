@@ -12,13 +12,14 @@ import Models from './Models'
 
 class App extends React.Component {
   componentDidMount () {
-    this.props.loadState()
+    const { alerts, loadState, setProp } = this.props
+    loadState()
     this.timer = setInterval(() => {
-      if (this.props.alerts.length === 0) {
+      if (alerts.length === 0) {
         return
       }
-      R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.alerts)
-      this.props.setProp(['alerts'], [])
+      R.forEach(alert => R.prop(alert.type, message)(alert.message), alerts)
+      setProp(['alerts'], [])
     }, 100)
   }
   componentWillUnmount () {
