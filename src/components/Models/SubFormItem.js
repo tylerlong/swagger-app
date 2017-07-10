@@ -33,6 +33,9 @@ class SubFormItem extends React.Component {
             <Select.Option value='binary'>binary</Select.Option>
           </Select>
         </Form.Item>
+        <Form.Item {...subFormItemLayout} label='Enum'>
+          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'enum'], R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+        </Form.Item>
         <Form.Item {...subFormItemLayout} label='Options'>
           <Checkbox checked={prop.required} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'required'], event.target.checked) }}>Required</Checkbox>
           <Checkbox checked={prop.isArray} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'isArray'], event.target.checked) }}>Is array</Checkbox>
