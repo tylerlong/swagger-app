@@ -13,7 +13,7 @@ class Paths extends React.Component {
       <div>
         <h2>Paths</h2>
         <Collapse accordion>
-          {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), paths).map(path => {
+          {R.sort(R.comparator((a, b) => R.toLower(a.path) < R.toLower(b.path)), paths).map(path => {
             return (
               <Collapse.Panel header={path.path} key={path.createdAt}>
                 <FormItem index={R.findIndex(R.propEq('createdAt', path.createdAt), paths)} />

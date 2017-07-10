@@ -4,16 +4,20 @@ import appReducer from './app'
 import permissionsReducer from './permissions'
 import pathParametersReducer from './pathParameters'
 import modelsReducer from './models'
+import pathsReducer from './paths'
 
 const reducer = (state, action) => {
-  if (R.test(/PERMISSION/, action.type)) {
+  if (R.test(/_PERMISSION/, action.type)) {
     return permissionsReducer(state, action)
   }
-  if (R.test(/PATH_PARAMETER/, action.type)) {
+  if (R.test(/_PATH_PARAMETER/, action.type)) {
     return pathParametersReducer(state, action)
   }
-  if (R.test(/MODEL/, action.type)) {
+  if (R.test(/_MODEL/, action.type)) {
     return modelsReducer(state, action)
+  }
+  if (R.test(/_PATH/, action.type)) {
+    return pathsReducer(state, action)
   }
   return appReducer(state, action)
 }
