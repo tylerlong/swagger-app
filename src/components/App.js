@@ -14,6 +14,9 @@ class App extends React.Component {
   componentDidMount () {
     this.props.loadState()
     this.timer = setInterval(() => {
+      if (this.props.metadata.alerts.length === 0) {
+        return
+      }
       R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.metadata.alerts)
       this.props.setProp(['metadata', 'alerts'], [])
     }, 100)
@@ -22,11 +25,12 @@ class App extends React.Component {
     clearInterval(this.timer)
   }
   render () {
+    console.log(`render App`)
     const { info } = this.props
     return (
       <div>
         <h1>{info.title} {info.version}</h1>
-        <Tabs tabPosition='left' defaultActiveKey='paths'>
+        <Tabs tabPosition='left' defaultActiveKey='info'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>
@@ -38,4 +42,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.identity, { loadState, setProp })(App)
+export default connect(R.pick(['info', 'metadata']), { loadState, setProp })(App)

@@ -51,7 +51,8 @@ yarn release
     - consumes, produces, schemes
     - Path parameters has enums
     - postpone
-- investigate combineReducers
+- Investigate combineReducers
+- Remove metadata
 
 
 ## Principles

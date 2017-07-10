@@ -8,6 +8,7 @@ import { formItemLayout } from '../../utils'
 
 class FormItem extends React.Component {
   render () {
+    console.log(`render Paths.FormItem`)
     const { index, paths, setProp, deletePath } = this.props
     const path = paths[index]
     if (!path) {

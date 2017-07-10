@@ -8,6 +8,7 @@ import { formItemLayout } from '../../utils'
 
 class FormItem extends React.Component {
   render () {
+    console.log(`render Info.FormItem`)
     const { path, info, setProp } = this.props
     const value = info[path]
     return (

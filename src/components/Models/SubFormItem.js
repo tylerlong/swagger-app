@@ -8,6 +8,7 @@ import { subFormItemLayout } from '../../utils'
 
 class SubFormItem extends React.Component {
   render () {
+    console.log(`render Models.SubFormItem`)
     const { index1, index2, models, setProp, deleteModelProperty } = this.props
     const model = models[index1]
     if (!model) {

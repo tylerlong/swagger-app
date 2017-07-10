@@ -1,11 +1,10 @@
 import React from 'react'
-import R from 'ramda'
-import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
 
 class Info extends React.Component {
   render () {
+    console.log(`render Info`)
     return (
       <div>
         <h2>Info</h2>
@@ -15,4 +14,4 @@ class Info extends React.Component {
   }
 }
 
-export default connect(R.identity)(Info)
+export default Info

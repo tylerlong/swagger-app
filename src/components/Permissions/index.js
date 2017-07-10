@@ -8,6 +8,7 @@ import { addPermission, setProp } from '../../actions'
 
 class Permissions extends React.Component {
   render () {
+    console.log(`render Permissions`)
     const { permissions, addPermission } = this.props
     return (
       <div>

@@ -8,6 +8,7 @@ import { formItemLayout } from '../../utils'
 
 class FormItem extends React.Component {
   render () {
+    console.log(`render Permissions.FormItem`)
     const { index, permissions, setProp, deletePermission } = this.props
     const permission = permissions[index]
     if (!permission) {

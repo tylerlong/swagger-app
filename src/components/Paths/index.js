@@ -8,6 +8,7 @@ import { addPath } from '../../actions'
 
 class Paths extends React.Component {
   render () {
+    console.log(`render Paths`)
     const { paths, addPath } = this.props
     return (
       <div>

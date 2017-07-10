@@ -9,6 +9,7 @@ import SubFormItem from './SubFormItem'
 
 class FormItem extends React.Component {
   render () {
+    console.log(`render Models.FormItem`)
     const { index, models, setProp, deleteModel, addModelProperty } = this.props
     const model = models[index]
     if (!model) {

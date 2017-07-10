@@ -8,6 +8,7 @@ import { addModel, setProp } from '../../actions'
 
 class Models extends React.Component {
   render () {
+    console.log(`render Models`)
     const { models, addModel } = this.props
     return (
       <div>

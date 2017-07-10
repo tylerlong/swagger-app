@@ -8,6 +8,7 @@ import { addPathParameter, setProp } from '../../actions'
 
 class PathParameters extends React.Component {
   render () {
+    console.log(`render PathParameters`)
     const { pathParameters, addPathParameter } = this.props
     return (
       <div>
