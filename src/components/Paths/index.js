@@ -27,4 +27,4 @@ class Paths extends React.Component {
   }
 }
 
-export default connect(R.identity, { addPath })(Paths)
+export default connect(R.pick(['paths']), { addPath })(Paths)
