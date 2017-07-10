@@ -3,9 +3,7 @@ import R from 'ramda'
 import { alert } from '../utils'
 
 const defaultState = {
-  metadata: {
-    alerts: []
-  },
+  alerts: [],
   info: {
     title: 'Example API',
     version: '1.0',

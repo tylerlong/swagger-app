@@ -13,7 +13,7 @@ beforeEach(() => {
 
 test('setState', () => {
   store.dispatch(setState({ message: 'world' }))
-  expect(R.omit('metadata', store.getState())).toEqual({ message: 'world' })
+  expect(R.omit('alerts', store.getState())).toEqual({ message: 'world' })
 })
 
 test('setProp', () => {

@@ -52,7 +52,6 @@ yarn release
     - Path parameters has enums
     - postpone
 - Investigate combineReducers
-- Remove metadata
 
 
 ## Principles

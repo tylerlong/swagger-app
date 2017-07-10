@@ -7,7 +7,7 @@ export const alert = R.curry((type, message) => {
   if (R.either(R.complement(R.is(String)), R.isEmpty)(message)) {
     return R.identity
   }
-  return R.over(R.lensPath(['metadata', 'alerts']), R.append({ type, message }))
+  return R.over(R.lensPath(['alerts']), R.append({ type, message }))
 })
 
 export const getFormItemLayout = (labelSpan, wrapperSpan) => {

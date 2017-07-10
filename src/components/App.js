@@ -14,11 +14,11 @@ class App extends React.Component {
   componentDidMount () {
     this.props.loadState()
     this.timer = setInterval(() => {
-      if (this.props.metadata.alerts.length === 0) {
+      if (this.props.alerts.length === 0) {
         return
       }
-      R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.metadata.alerts)
-      this.props.setProp(['metadata', 'alerts'], [])
+      R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.alerts)
+      this.props.setProp(['alerts'], [])
     }, 100)
   }
   componentWillUnmount () {
@@ -42,4 +42,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.pick(['info', 'metadata']), { loadState, setProp })(App)
+export default connect(R.pick(['info', 'alerts']), { loadState, setProp })(App)

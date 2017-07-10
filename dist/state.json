@@ -1,7 +1,5 @@
 {
-  "metadata": {
-    "alerts": []
-  },
+  "alerts": [],
   "info": {
     "title": "Example API",
     "version": "1.0",

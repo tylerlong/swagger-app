@@ -26,6 +26,6 @@ test('loadState', () => {
       { type: 'LOAD_STATE' },
       { type: 'SET_STATE', state: { message: 'Hello world' } }
     ])
-    expect(R.omit('metadata', store.getState())).toEqual({ message: 'Hello world' })
+    expect(R.omit('alerts', store.getState())).toEqual({ message: 'Hello world' })
   })
 })
