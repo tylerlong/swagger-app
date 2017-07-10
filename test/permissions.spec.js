@@ -29,6 +29,14 @@ const initialState = {
   ]
 }
 
+const getWrapper = () => {
+  return mount(
+    <Provider store={store}>
+      <Permissions />
+    </Provider>
+  )
+}
+
 beforeEach(() => {
   store.dispatch(setState(initialState))
   store.resetActions()
@@ -36,33 +44,22 @@ beforeEach(() => {
 
 describe('test permission', () => {
   test('permissions list', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <Permissions />
-      </Provider>
-    )
+    const wrapper = getWrapper()
     expect(store.getState().permissions.length).toEqual(3)
     expect(wrapper.find('button.ant-btn-primary').length).toEqual(1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('add permission', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <Permissions />
-      </Provider>
-    )
+    const wrapper = getWrapper()
     wrapper.find('button.ant-btn-primary').simulate('click')
     expect(store.getState().permissions.length).toEqual(4)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('delete permission', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <Permissions />
-      </Provider>
-    )
+    const wrapper = getWrapper()
+
     // view permission
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     expect(wrapper.find(Popconfirm).length).toEqual(1)
