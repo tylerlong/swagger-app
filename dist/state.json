@@ -96,7 +96,7 @@
           "type": "string",
           "enum": [],
           "isArray": false,
-          "required": false,
+          "required": true,
           "description": "Internal identifier of an account"
         },
         {
@@ -129,7 +129,7 @@
           "type": "string",
           "enum": [],
           "isArray": false,
-          "required": false,
+          "required": true,
           "description": "Internal identifier of an asnwering rule"
         },
         {
@@ -166,7 +166,7 @@
           "type": "string",
           "enum": [],
           "isArray": false,
-          "required": false,
+          "required": true,
           "description": "Canonical URI of API versions"
         },
         {
@@ -181,7 +181,7 @@
         {
           "createdAt": 1498875255946,
           "name": "releaseDate",
-          "type": "string",
+          "type": "date-time",
           "enum": [],
           "isArray": false,
           "required": false,
