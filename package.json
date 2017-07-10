@@ -36,6 +36,7 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1",
+    "write-file-webpack-plugin": "^4.1.0",
     "yarn-upgrade-all": "^0.1.5"
   },
   "dependencies": {

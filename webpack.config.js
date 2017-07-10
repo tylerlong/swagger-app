@@ -1,5 +1,6 @@
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import WriteFilePlugin from 'write-file-webpack-plugin'
 
 const rules = [
   {
@@ -37,7 +38,8 @@ const config = {
   },
   module: { rules },
   plugins: [
-    new ExtractTextPlugin('[name].bundle.css')
+    new ExtractTextPlugin('[name].bundle.css'),
+    new WriteFilePlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist')
