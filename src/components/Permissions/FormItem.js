@@ -10,6 +10,9 @@ class FormItem extends React.Component {
   render () {
     const { index, permissions, setProp, deletePermission } = this.props
     const permission = permissions[index]
+    if (!permission) {
+      return null
+    }
     return (
       <div>
         <Popconfirm title={`Are you sure to delete permission "${permission.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deletePermission(index)}>

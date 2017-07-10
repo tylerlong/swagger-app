@@ -10,6 +10,9 @@ class FormItem extends React.Component {
   render () {
     const { index, pathParameters, setProp, deletePathParameter } = this.props
     const pathParameter = pathParameters[index]
+    if (!pathParameter) {
+      return null
+    }
     return (
       <div>
         <Popconfirm title={`Are you sure to delete path parameter "${pathParameter.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deletePathParameter(index)}>

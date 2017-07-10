@@ -51,7 +51,6 @@ yarn release
     - consumes, produces, schemes
     - Path parameters has enums
     - postpone
-- Fix bug: add a path, try to delete it but don't confim, delete another path. error in console
 
 
 ## Principles

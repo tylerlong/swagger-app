@@ -10,6 +10,9 @@ class FormItem extends React.Component {
   render () {
     const { index, paths, setProp, deletePath } = this.props
     const path = paths[index]
+    if (!path) {
+      return null
+    }
     return (
       <div>
         <Popconfirm title={`Are you sure to delete path "${path.path}"?`} okText='Yes' cancelText='No' onConfirm={() => deletePath(index)}>

@@ -11,6 +11,9 @@ class FormItem extends React.Component {
   render () {
     const { index, models, setProp, deleteModel, addModelProperty } = this.props
     const model = models[index]
+    if (!model) {
+      return null
+    }
     return (
       <div>
         <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModel(index)}>

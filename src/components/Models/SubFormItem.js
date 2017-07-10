@@ -9,7 +9,14 @@ import { subFormItemLayout } from '../../utils'
 class SubFormItem extends React.Component {
   render () {
     const { index1, index2, models, setProp, deleteModelProperty } = this.props
-    const prop = models[index1].properties[index2]
+    const model = models[index1]
+    if (!model) {
+      return null
+    }
+    const prop = model.properties[index2]
+    if (!prop) {
+      return null
+    }
     return (
       <div>
         <Popconfirm title={`Are you sure to delete property "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModelProperty(index1, index2)}>
