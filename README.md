@@ -51,11 +51,7 @@ yarn release
     - consumes, produces, schemes
     - Path parameters has enums
     - postpone
-- Move ant assets to local
-    - Let webpack bundle it
-- Move some utils/ functions to a new ramda-plus project
-- Fix React key issue: https://stackoverflow.com/a/43892905/862862
-    - changing key is not identity
+- Fix bug: add a path, try to delete it but don't confim, delete another path. error in console
 
 
 ## Principles
