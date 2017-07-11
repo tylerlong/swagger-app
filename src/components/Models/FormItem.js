@@ -44,4 +44,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deleteModel, addModelProperty })(FormItem)
+export default connect(R.pick(['models']), { setProp, deleteModel, addModelProperty })(FormItem)

@@ -25,14 +25,6 @@ exports[`test info view info 1`] = `
         name="title"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -158,14 +150,6 @@ exports[`test info view info 1`] = `
         name="version"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -291,14 +275,6 @@ exports[`test info view info 1`] = `
         name="description"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -424,14 +400,6 @@ exports[`test info view info 1`] = `
         name="termsOfService"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -557,14 +525,6 @@ exports[`test info view info 1`] = `
         name="host"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -690,14 +650,6 @@ exports[`test info view info 1`] = `
         name="basePath"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -823,14 +775,6 @@ exports[`test info view info 1`] = `
         name="schemes"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -956,14 +900,6 @@ exports[`test info view info 1`] = `
         name="produces"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",
@@ -1089,14 +1025,6 @@ exports[`test info view info 1`] = `
         name="consumes"
       >
         <FormItem
-          alerts={
-            Array [
-              Object {
-                "message": "Data loaded",
-                "type": "success",
-              },
-            ]
-          }
           info={
             Object {
               "basePath": "/",

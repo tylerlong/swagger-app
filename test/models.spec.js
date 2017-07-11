@@ -1,13 +1,27 @@
 /* eslint-env jest */
+import React from 'react'
+import { Provider } from 'react-redux'
+import { mount } from 'enzyme'
+import toJson from 'enzyme-to-json'
+
 import store from './store'
 import { setState, addModel, deleteModel, addModelProperty, deleteModelProperty } from '../src/actions'
+import Models from '../src/components/Models'
 
-const initialState = { models: [{ name: '1', properties: [] }, { name: '2', properties: [] }] }
+const initialState = { models: [{ createdAt: 123, name: '1', properties: [] }, { createdAt: 456, name: '2', properties: [] }] }
 
 beforeEach(() => {
   store.dispatch(setState(initialState))
   store.resetActions()
 })
+
+const getWrapper = () => {
+  return mount(
+    <Provider store={store}>
+      <Models />
+    </Provider>
+  )
+}
 
 describe('test model', () => {
   test('add model', () => {
@@ -33,5 +47,10 @@ describe('test model', () => {
     store.dispatch(deleteModelProperty(1, 0))
     const properties = store.getState().models[1].properties
     expect(properties.length).toEqual(0)
+  })
+  test('view model', () => {
+    const wrapper = getWrapper()
+    expect(wrapper.find('.ant-collapse-item').length).toEqual(2)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
 })

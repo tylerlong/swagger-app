@@ -53,4 +53,4 @@ class SubFormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deleteModelProperty })(SubFormItem)
+export default connect(R.pick(['models']), { setProp, deleteModelProperty })(SubFormItem)

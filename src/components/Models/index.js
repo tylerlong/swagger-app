@@ -4,7 +4,7 @@ import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
-import { addModel, setProp } from '../../actions'
+import { addModel } from '../../actions'
 
 class Models extends React.Component {
   render () {
@@ -28,4 +28,4 @@ class Models extends React.Component {
   }
 }
 
-export default connect(R.identity, { addModel, setProp })(Models)
+export default connect(R.pick(['models']), { addModel })(Models)

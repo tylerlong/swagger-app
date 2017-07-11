@@ -19,4 +19,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp })(FormItem)
+export default connect(R.pick(['info']), { setProp })(FormItem)
