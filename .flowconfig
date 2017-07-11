@@ -1,5 +1,6 @@
 [ignore]
-.*/node_modules/
+.*/node_modules/draft-js/lib/
+.*/node_modules/nock/node_modules/changelog/examples/
 
 [include]
 

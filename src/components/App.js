@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import R from 'ramda'
 import { Tabs, message } from 'antd'
@@ -11,6 +13,7 @@ import Paths from './Paths'
 import Models from './Models'
 
 class App extends React.Component {
+  timer: number
   componentDidMount () {
     const { alerts, loadState, setProp } = this.props
     loadState()
