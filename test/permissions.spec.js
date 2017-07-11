@@ -1,15 +1,12 @@
 /* eslint-env jest */
-import React from 'react'
-import { Provider } from 'react-redux'
-import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import { Popconfirm } from 'antd'
 
 import Permissions from '../src/components/Permissions'
 import store from './store'
-import { setState } from '../src/actions'
+import { getWrapper } from './shared'
 
-const initialState = {
+const state = {
   permissions: [
     {
       'createdAt': 1498875025725,
@@ -29,36 +26,23 @@ const initialState = {
   ]
 }
 
-const getWrapper = () => {
-  return mount(
-    <Provider store={store}>
-      <Permissions />
-    </Provider>
-  )
-}
-
-beforeEach(() => {
-  store.dispatch(setState(initialState))
-  store.resetActions()
-})
-
 describe('test permission', () => {
   test('permissions list', () => {
-    const wrapper = getWrapper()
+    const wrapper = getWrapper(Permissions, state)
     expect(store.getState().permissions.length).toEqual(3)
     expect(wrapper.find('button.ant-btn-primary').length).toEqual(1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('add permission', () => {
-    const wrapper = getWrapper()
+    const wrapper = getWrapper(Permissions, state)
     wrapper.find('button.ant-btn-primary').simulate('click')
     expect(store.getState().permissions.length).toEqual(4)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('delete permission', () => {
-    const wrapper = getWrapper()
+    const wrapper = getWrapper(Permissions, state)
 
     // view permission
     wrapper.find('div.ant-collapse-header').first().simulate('click')
