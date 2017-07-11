@@ -1,12 +1,10 @@
 /* eslint-env jest */
-import React from 'react'
 import toJson from 'enzyme-to-json'
-import { Provider } from 'react-redux'
-import { mount } from 'enzyme'
 
 import Paths from '../src/components/Paths'
 import { setState } from '../src/actions'
 import store from './store'
+import { getWrapper } from './shared'
 
 const initialState = {
   'paths': [
@@ -34,14 +32,6 @@ const initialState = {
       ]
     }
   ]
-}
-
-const getWrapper = (Component) => {
-  return mount(
-    <Provider store={store}>
-      <Component />
-    </Provider>
-  )
 }
 
 beforeEach(() => {
