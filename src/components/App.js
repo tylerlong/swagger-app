@@ -15,13 +15,13 @@ import Models from './Models'
 class App extends React.Component {
   timer: number
   componentDidMount () {
-    const { alerts, loadState, setProp } = this.props
+    const { loadState, setProp } = this.props
     loadState()
     this.timer = setInterval(() => {
-      if (alerts.length === 0) {
+      if (this.props.alerts.length === 0) { // never cache `alerts`
         return
       }
-      R.forEach(alert => R.prop(alert.type, message)(alert.message), alerts)
+      R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.alerts)
       setProp(['alerts'], [])
     }, 100)
   }
