@@ -1,0 +1,1224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test info view info 1`] = `
+<Provider
+  store={
+    Object {
+      "actions": Array [],
+      "dispatch": [Function],
+      "getState": [Function],
+      "logicMiddleware": [Function],
+      "replaceReducer": [Function],
+      "resetActions": [Function],
+      "subscribe": [Function],
+      "whenComplete": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Info>
+    <div>
+      <h2>
+        Info
+      </h2>
+      <Connect(FormItem)
+        name="title"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="title"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="title"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="title"
+                    >
+                      title
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="title"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="Example API"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="title"
+                          size="large"
+                          type="text"
+                          value="Example API"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="version"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="version"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="version"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="version"
+                    >
+                      version
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="version"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="1.0"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="version"
+                          size="large"
+                          type="text"
+                          value="1.0"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="description"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="description"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="description"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="description"
+                    >
+                      description
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="description"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="Restful API for Example"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="description"
+                          size="large"
+                          type="text"
+                          value="Restful API for Example"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="termsOfService"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="termsOfService"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="termsOfService"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="termsOfService"
+                    >
+                      termsOfService
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="termsOfService"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="https://www.example.com/terms-of-service"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="termsOfService"
+                          size="large"
+                          type="text"
+                          value="https://www.example.com/terms-of-service"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="host"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="host"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="host"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="host"
+                    >
+                      host
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="host"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="api.example.com"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="host"
+                          size="large"
+                          type="text"
+                          value="api.example.com"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="basePath"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="basePath"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="basePath"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="basePath"
+                    >
+                      basePath
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="basePath"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="/"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="basePath"
+                          size="large"
+                          type="text"
+                          value="/"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="schemes"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="schemes"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="schemes"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="schemes"
+                    >
+                      schemes
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="schemes"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="https"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="schemes"
+                          size="large"
+                          type="text"
+                          value="https"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="produces"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="produces"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="produces"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="produces"
+                    >
+                      produces
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="produces"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="application/json"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="produces"
+                          size="large"
+                          type="text"
+                          value="application/json"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="consumes"
+      >
+        <FormItem
+          alerts={
+            Array [
+              Object {
+                "message": "Data loaded",
+                "type": "success",
+              },
+            ]
+          }
+          info={
+            Object {
+              "basePath": "/",
+              "consumes": "application/json",
+              "description": "Restful API for Example",
+              "host": "api.example.com",
+              "produces": "application/json",
+              "schemes": "https",
+              "termsOfService": "https://www.example.com/terms-of-service",
+              "title": "Example API",
+              "version": "1.0",
+            }
+          }
+          name="consumes"
+          setProp={[Function]}
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="consumes"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="consumes"
+                    >
+                      consumes
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="consumes"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="application/json"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="consumes"
+                          size="large"
+                          type="text"
+                          value="application/json"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+    </div>
+  </Info>
+</Provider>
+`;
