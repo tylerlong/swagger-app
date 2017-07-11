@@ -7,3 +7,5 @@ window.matchMedia = window.matchMedia || function () {
 }
 
 Date.now = () => 1499601066647
+
+console.log = () => {}
