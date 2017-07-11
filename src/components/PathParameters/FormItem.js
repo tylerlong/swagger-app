@@ -33,4 +33,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deletePathParameter })(FormItem)
+export default connect(R.pick(['pathParameters']), { setProp, deletePathParameter })(FormItem)

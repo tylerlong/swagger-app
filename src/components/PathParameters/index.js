@@ -4,7 +4,7 @@ import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
-import { addPathParameter, setProp } from '../../actions'
+import { addPathParameter } from '../../actions'
 
 class PathParameters extends React.Component {
   render () {
@@ -28,4 +28,4 @@ class PathParameters extends React.Component {
   }
 }
 
-export default connect(R.identity, { addPathParameter, setProp })(PathParameters)
+export default connect(R.pick(['pathParameters']), { addPathParameter })(PathParameters)
