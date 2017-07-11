@@ -2,11 +2,9 @@
 import toJson from 'enzyme-to-json'
 
 import Paths from '../src/components/Paths'
-import { setState } from '../src/actions'
-import store from './store'
 import { getWrapper } from './shared'
 
-const initialState = {
+const state = {
   'paths': [
     {
       'createdAt': 1498875254374,
@@ -34,14 +32,9 @@ const initialState = {
   ]
 }
 
-beforeEach(() => {
-  store.dispatch(setState(initialState))
-  store.resetActions()
-})
-
 describe('test paths', () => {
   test('view paths', () => {
-    const wrapper = getWrapper(Paths)
+    const wrapper = getWrapper(Paths, state)
     expect(wrapper.find('.ant-collapse-item').length).toEqual(1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
