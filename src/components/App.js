@@ -2,10 +2,11 @@
 
 import React from 'react'
 import R from 'ramda'
-import { Tabs, message } from 'antd'
+import { Tabs } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState, setProp } from '../actions'
+import { loadState } from '../actions'
+import Alerts from './Alerts'
 import Info from './Info'
 import Permissions from './Permissions'
 import PathParameters from './PathParameters'
@@ -13,26 +14,15 @@ import Paths from './Paths'
 import Models from './Models'
 
 class App extends React.Component {
-  timer: number
   componentDidMount () {
-    const { loadState, setProp } = this.props
-    loadState()
-    this.timer = setInterval(() => {
-      if (this.props.alerts.length === 0) { // never cache `alerts`
-        return
-      }
-      R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.alerts)
-      setProp(['alerts'], [])
-    }, 100)
-  }
-  componentWillUnmount () {
-    clearInterval(this.timer)
+    this.props.loadState()
   }
   render () {
     console.log(`render App`)
     const { info } = this.props
     return (
       <div>
+        <Alerts />
         <h1>{info.title} {info.version}</h1>
         <Tabs tabPosition='left' defaultActiveKey='permissions'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>
@@ -46,4 +36,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.pick(['info', 'alerts']), { loadState, setProp })(App)
+export default connect(R.pick(['info']), { loadState })(App)
