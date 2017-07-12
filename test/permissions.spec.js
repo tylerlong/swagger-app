@@ -28,13 +28,9 @@ describe('test permission', () => {
   })
 
   test('delete permission', () => {
-    // view permission
-    wrapper.find('div.ant-collapse-header').first().simulate('click')
-    expect(wrapper.find(Popconfirm).length).toEqual(1)
-    expect(store.getState().permissions.length).toEqual(3)
-    expect(toJson(wrapper)).toMatchSnapshot()
-
     // delete permission
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
+    expect(store.getState().permissions.length).toEqual(3)
     wrapper.find(Popconfirm).props().onConfirm()
     expect(store.getState().permissions.length).toEqual(2)
     expect(wrapper.find(Popconfirm).length).toEqual(0)
@@ -42,13 +38,8 @@ describe('test permission', () => {
   })
 
   test('edit permission name', () => {
-    // view permission
-    wrapper.find('div.ant-collapse-header').first().simulate('click')
-    expect(wrapper.find(Popconfirm).length).toEqual(1)
-    expect(store.getState().permissions.length).toEqual(3)
-    expect(toJson(wrapper)).toMatchSnapshot()
-
     // update permission name
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
     expect(store.getState().permissions[index].name).toEqual('Hello')

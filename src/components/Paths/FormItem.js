@@ -8,18 +8,17 @@ import { formItemLayout } from '../../utils'
 class FormItem extends React.Component {
   render () {
     console.log(`render Paths.FormItem`)
-    const { index, paths, setProp, deletePath } = this.props
-    const path = paths[index]
+    const { path, updateProp, deletePath } = this.props
     if (!path) {
       return null
     }
     return (
       <div>
-        <Popconfirm title={`Are you sure to delete path "${path.path}"?`} okText='Yes' cancelText='No' onConfirm={() => deletePath(index)}>
+        <Popconfirm title={`Are you sure to delete path "${path.path}"?`} okText='Yes' cancelText='No' onConfirm={deletePath}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { setProp(['paths', index, 'path'], event.target.value) }} />
+          <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { updateProp('path', event.target.value) }} />
         </Form.Item>
       </div>
     )
@@ -27,4 +26,8 @@ class FormItem extends React.Component {
 }
 
 const mapStateToProps = ({ paths }, { index }) => ({ path: paths[index] })
-export default connect(mapStateToProps, { setProp, deletePath })(FormItem)
+const mapDispatchToProps = (dispatch, { index }) => ({
+  deletePath: () => dispatch(deletePath(index)),
+  updateProp: (key, value) => dispatch(setProp(['paths', index, key], value))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(FormItem)
