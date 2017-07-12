@@ -62,7 +62,6 @@ exports[`test permission add permission 1`] = `
           },
         ]
       }
-      setProp={[Function]}
     >
       <div>
         <h2>
@@ -464,7 +463,6 @@ exports[`test permission delete permission 1`] = `
           },
         ]
       }
-      setProp={[Function]}
     >
       <div>
         <h2>
@@ -1733,7 +1731,6 @@ exports[`test permission delete permission 2`] = `
           },
         ]
       }
-      setProp={[Function]}
     >
       <div>
         <h2>
@@ -1993,7 +1990,6 @@ exports[`test permission permissions list 1`] = `
           },
         ]
       }
-      setProp={[Function]}
     >
       <div>
         <h2>

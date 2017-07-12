@@ -4,7 +4,7 @@ import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
-import { addPermission, setProp } from '../../actions'
+import { addPermission } from '../../actions'
 
 class Permissions extends React.Component {
   render () {
@@ -28,4 +28,4 @@ class Permissions extends React.Component {
   }
 }
 
-export default connect(R.identity, { addPermission, setProp })(Permissions)
+export default connect(R.identity, { addPermission })(Permissions)
