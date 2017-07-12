@@ -22,14 +22,116 @@ exports[`test model view model 1`] = `
       models={
         Array [
           Object {
-            "createdAt": 123,
-            "name": "1",
-            "properties": Array [],
+            "createdAt": 1498875254895,
+            "name": "AccountInfo",
+            "properties": Array [
+              Object {
+                "createdAt": 1498875254896,
+                "description": "Internal identifier of an account",
+                "enum": Array [],
+                "isArray": false,
+                "name": "id",
+                "required": true,
+                "type": "string",
+              },
+              Object {
+                "createdAt": 1498875254897,
+                "description": "Canonical URI of an account",
+                "enum": Array [],
+                "isArray": false,
+                "name": "uri",
+                "required": false,
+                "type": "string",
+              },
+              Object {
+                "createdAt": 1498875254898,
+                "description": "Main phone number of the current account",
+                "enum": Array [],
+                "isArray": false,
+                "name": "mainNumber",
+                "required": false,
+                "type": "string",
+              },
+            ],
           },
           Object {
-            "createdAt": 456,
-            "name": "2",
-            "properties": Array [],
+            "createdAt": 1498875255421,
+            "name": "AnsweringRuleInfo",
+            "properties": Array [
+              Object {
+                "createdAt": 1498875255422,
+                "description": "Internal identifier of an asnwering rule",
+                "enum": Array [],
+                "isArray": false,
+                "name": "id",
+                "required": true,
+                "type": "string",
+              },
+              Object {
+                "createdAt": 1498875255423,
+                "description": "Canonical URI to the answering rule resource",
+                "enum": Array [],
+                "isArray": false,
+                "name": "uri",
+                "required": false,
+                "type": "string",
+              },
+              Object {
+                "createdAt": 1498875255424,
+                "description": "Type of an answering rule",
+                "enum": Array [
+                  "BusinessHours",
+                  "AfterHours",
+                  "Custom",
+                ],
+                "isArray": false,
+                "name": "type",
+                "required": false,
+                "type": "string",
+              },
+            ],
+          },
+          Object {
+            "createdAt": 1498875255943,
+            "name": "VersionInfo",
+            "properties": Array [
+              Object {
+                "createdAt": 1498875255944,
+                "description": "Canonical URI of API versions",
+                "enum": Array [],
+                "isArray": false,
+                "name": "uri",
+                "required": true,
+                "type": "string",
+              },
+              Object {
+                "createdAt": 1498875255945,
+                "description": "Version of the RingCentral REST API",
+                "enum": Array [],
+                "isArray": false,
+                "name": "versionString",
+                "required": false,
+                "type": "string",
+              },
+              Object {
+                "createdAt": 1498875255946,
+                "description": "Release date of this version",
+                "enum": Array [],
+                "isArray": false,
+                "name": "releaseDate",
+                "required": false,
+                "type": "date-time",
+              },
+              Object {
+                "createdAt": 1498875255947,
+                "description": "URI part determining the current version",
+                "enum": Array [],
+                "isArray": false,
+                "name": "uriString",
+                "required": false,
+                "type": "string",
+              },
+            ],
           },
         ]
       }
@@ -70,7 +172,7 @@ exports[`test model view model 1`] = `
             >
               <CollapsePanel
                 destroyInactivePanel={false}
-                header="1"
+                header="AccountInfo"
                 headerClass=""
                 isActive={false}
                 onItemClick={[Function]}
@@ -96,7 +198,7 @@ exports[`test model view model 1`] = `
                     <i
                       className="arrow"
                     />
-                    1
+                    AccountInfo
                   </div>
                   <Animate
                     animation={
@@ -141,7 +243,7 @@ exports[`test model view model 1`] = `
               </CollapsePanel>
               <CollapsePanel
                 destroyInactivePanel={false}
-                header="2"
+                header="AnsweringRuleInfo"
                 headerClass=""
                 isActive={false}
                 onItemClick={[Function]}
@@ -167,7 +269,78 @@ exports[`test model view model 1`] = `
                     <i
                       className="arrow"
                     />
-                    2
+                    AnsweringRuleInfo
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="VersionInfo"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    VersionInfo
                   </div>
                   <Animate
                     animation={

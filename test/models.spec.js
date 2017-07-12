@@ -1,56 +1,49 @@
 /* eslint-env jest */
-import React from 'react'
-import { Provider } from 'react-redux'
-import { mount } from 'enzyme'
+import R from 'ramda'
 import toJson from 'enzyme-to-json'
 
 import store from './store'
-import { setState, addModel, deleteModel, addModelProperty, deleteModelProperty } from '../src/actions'
+import { addModel, deleteModel, addModelProperty, deleteModelProperty } from '../src/actions'
 import Models from '../src/components/Models'
+import { getWrapper } from './shared'
+import state from '../dist/state.json'
 
-const initialState = { models: [{ createdAt: 123, name: '1', properties: [] }, { createdAt: 456, name: '2', properties: [] }] }
-
+let wrapper = null
 beforeEach(() => {
-  store.dispatch(setState(initialState))
-  store.resetActions()
+  wrapper = getWrapper(Models, R.pick(['models'], state))
 })
-
-const getWrapper = () => {
-  return mount(
-    <Provider store={store}>
-      <Models />
-    </Provider>
-  )
-}
 
 describe('test model', () => {
   test('add model', () => {
     store.dispatch(addModel())
     const models = store.getState().models
-    expect(models.length).toEqual(3)
-    expect(models[2].name).toEqual('Name')
+    expect(models.length).toEqual(4)
+    expect(R.last(models).name).toEqual('Name')
   })
   test('delete model', () => {
     store.dispatch(deleteModel(1))
     const models = store.getState().models
-    expect(models.length).toEqual(1)
-    expect(models[0].name).toEqual('1')
+    expect(models.length).toEqual(2)
+    expect(models[1].name).toEqual('VersionInfo')
   })
   test('add model property', () => {
     store.dispatch(addModelProperty(1))
     const properties = store.getState().models[1].properties
-    expect(properties.length).toEqual(1)
-    expect(properties[0].name).toEqual('name')
+    expect(properties.length).toEqual(4)
+    expect(R.last(properties).name).toEqual('name')
   })
   test('delete model property', () => {
+    let properties = store.getState().models[1].properties
+    expect(properties.length).toEqual(3)
     store.dispatch(addModelProperty(1))
+    properties = store.getState().models[1].properties
+    expect(properties.length).toEqual(4)
     store.dispatch(deleteModelProperty(1, 0))
-    const properties = store.getState().models[1].properties
-    expect(properties.length).toEqual(0)
+    properties = store.getState().models[1].properties
+    expect(properties.length).toEqual(3)
   })
   test('view model', () => {
-    const wrapper = getWrapper()
-    expect(wrapper.find('.ant-collapse-item').length).toEqual(2)
+    expect(wrapper.find('.ant-collapse-item').length).toEqual(3)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 })
