@@ -1,5 +1,4 @@
 import React from 'react'
-import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
 
@@ -10,8 +9,7 @@ import SubFormItem from './SubFormItem'
 class FormItem extends React.Component {
   render () {
     console.log(`render Models.FormItem`)
-    const { index, models, setProp, deleteModel, addModelProperty } = this.props
-    const model = models[index]
+    const { index, model, setProp, deleteModel, addModelProperty } = this.props
     if (!model) {
       return null
     }
@@ -44,4 +42,5 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.pick(['models']), { setProp, deleteModel, addModelProperty })(FormItem)
+const mapStateToProps = ({ models }, { index }) => ({ model: models[index] })
+export default connect(mapStateToProps, { setProp, deleteModel, addModelProperty })(FormItem)

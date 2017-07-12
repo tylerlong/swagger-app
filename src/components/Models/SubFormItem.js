@@ -9,12 +9,7 @@ import { subFormItemLayout } from '../../utils'
 class SubFormItem extends React.Component {
   render () {
     console.log(`render Models.SubFormItem`)
-    const { index1, index2, models, setProp, deleteModelProperty } = this.props
-    const model = models[index1]
-    if (!model) {
-      return null
-    }
-    const prop = model.properties[index2]
+    const { index1, index2, prop, setProp, deleteModelProperty } = this.props
     if (!prop) {
       return null
     }
@@ -53,4 +48,5 @@ class SubFormItem extends React.Component {
   }
 }
 
-export default connect(R.pick(['models']), { setProp, deleteModelProperty })(SubFormItem)
+const mapStateToProps = ({ models }, { index1, index2 }) => ({ prop: models[index1].properties[index2] })
+export default connect(mapStateToProps, { setProp, deleteModelProperty })(SubFormItem)
