@@ -565,7 +565,7 @@ exports[`test permission delete permission 1`] = `
                                     "name": "Accounts",
                                   }
                                 }
-                                setProp={[Function]}
+                                updateProp={[Function]}
                               >
                                 <div>
                                   <_a

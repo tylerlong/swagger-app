@@ -8,20 +8,20 @@ import { formItemLayout } from '../../utils'
 class FormItem extends React.Component {
   render () {
     console.log(`render Permissions.FormItem`)
-    const { index, permission, setProp, deletePermission } = this.props
+    const { permission, updateProp, deletePermission } = this.props
     if (!permission) {
       return null
     }
     return (
       <div>
-        <Popconfirm title={`Are you sure to delete permission "${permission.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deletePermission(index)}>
+        <Popconfirm title={`Are you sure to delete permission "${permission.name}"?`} okText='Yes' cancelText='No' onConfirm={deletePermission}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { setProp(['permissions', index, 'name'], event.target.value) }} />
+          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { updateProp('name', event.target.value) }} />
         </Form.Item>
         <Form.Item {...formItemLayout} label='Description'>
-          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { setProp(['permissions', index, 'description'], event.target.value) }} />
+          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { updateProp('description', event.target.value) }} />
         </Form.Item>
       </div>
     )
@@ -29,4 +29,8 @@ class FormItem extends React.Component {
 }
 
 const mapStateToProps = ({ permissions }, { index }) => ({ permission: permissions[index] })
-export default connect(mapStateToProps, { setProp, deletePermission })(FormItem)
+const mapDispatchToProps = (dispatch, { index }) => ({
+  deletePermission: () => dispatch(deletePermission(index)),
+  updateProp: (key, value) => dispatch(setProp(['permissions', index, key], value))
+})
+export default connect(mapStateToProps, mapDispatchToProps)(FormItem)

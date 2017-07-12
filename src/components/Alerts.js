@@ -7,16 +7,16 @@ import { message } from 'antd'
 
 import { setProp } from '../actions'
 
-class Alerts extends React.Component<void, { alerts: { type: string, message: string }[], setProp: Function }, void> {
+class Alerts extends React.Component<void, { alerts: { type: string, message: string }[], clearAlerts: Function }, void> {
   timer: number
   componentDidMount () {
-    const { setProp } = this.props
+    const { clearAlerts } = this.props
     this.timer = setInterval(() => {
       if (this.props.alerts.length === 0) { // never cache `alerts`
         return
       }
       R.forEach(alert => R.prop(alert.type, message)(alert.message), this.props.alerts)
-      setProp(['alerts'], [])
+      clearAlerts()
     }, 100)
   }
   componentWillUnmount () {
@@ -28,4 +28,6 @@ class Alerts extends React.Component<void, { alerts: { type: string, message: st
   }
 }
 
-export default connect(R.pick(['alerts']), { setProp })(Alerts)
+const mapStateToProps = ({ alerts }) => ({ alerts })
+const mapDispatchToProps = (dispatch) => ({ clearAlerts: () => dispatch(setProp(['alerts'], [])) })
+export default connect(mapStateToProps, mapDispatchToProps)(Alerts)
