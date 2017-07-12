@@ -271,6 +271,101 @@ exports[`test paths add path 1`] = `
 </Provider>
 `;
 
+exports[`test paths delete path 1`] = `
+<Provider
+  store={
+    Object {
+      "actions": Array [
+        Object {
+          "index": 0,
+          "type": "DELETE_PATH",
+        },
+      ],
+      "dispatch": [Function],
+      "getState": [Function],
+      "logicMiddleware": [Function],
+      "replaceReducer": [Function],
+      "resetActions": [Function],
+      "subscribe": [Function],
+      "whenComplete": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Paths)>
+    <Paths
+      addPath={[Function]}
+      paths={Array []}
+    >
+      <div>
+        <h2>
+          Paths
+        </h2>
+        <Collapse
+          accordion={true}
+          bordered={true}
+          openAnimation={
+            Object {
+              "appear": [Function],
+              "enter": [Function],
+              "leave": [Function],
+            }
+          }
+          prefixCls="ant-collapse"
+        >
+          <Collapse
+            accordion={true}
+            bordered={true}
+            className=""
+            destroyInactivePanel={false}
+            onChange={[Function]}
+            openAnimation={
+              Object {
+                "appear": [Function],
+                "enter": [Function],
+                "leave": [Function],
+              }
+            }
+            prefixCls="ant-collapse"
+          >
+            <div
+              className="ant-collapse"
+            />
+          </Collapse>
+        </Collapse>
+        <Button
+          clicked={false}
+          ghost={false}
+          loading={false}
+          onClick={[Function]}
+          prefixCls="ant-btn"
+          size="large"
+          type="primary"
+        >
+          <button
+            className="ant-btn ant-btn-primary ant-btn-lg"
+            onClick={[Function]}
+            onMouseUp={[Function]}
+            type="button"
+          >
+            <Icon
+              type="plus"
+            >
+              <i
+                className="anticon anticon-plus"
+              />
+            </Icon>
+            <span>
+              Add path
+            </span>
+          </button>
+        </Button>
+      </div>
+    </Paths>
+  </Connect(Paths)>
+</Provider>
+`;
+
 exports[`test paths edit path path 1`] = `
 <Provider
   store={
