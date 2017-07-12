@@ -34,7 +34,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{info.title} {info.version}</h1>
-        <Tabs tabPosition='left' defaultActiveKey='info'>
+        <Tabs tabPosition='left' defaultActiveKey='permissions'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>

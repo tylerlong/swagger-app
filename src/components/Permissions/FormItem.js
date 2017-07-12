@@ -1,5 +1,4 @@
 import React from 'react'
-import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
@@ -9,8 +8,7 @@ import { formItemLayout } from '../../utils'
 class FormItem extends React.Component {
   render () {
     console.log(`render Permissions.FormItem`)
-    const { index, permissions, setProp, deletePermission } = this.props
-    const permission = permissions[index]
+    const { index, permission, setProp, deletePermission } = this.props
     if (!permission) {
       return null
     }
@@ -30,4 +28,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.pick(['permissions']), { setProp, deletePermission })(FormItem)
+export default connect(({ permissions }, { index }) => ({ permission: permissions[index] }), { setProp, deletePermission })(FormItem)

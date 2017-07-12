@@ -558,24 +558,12 @@ exports[`test permission delete permission 1`] = `
                               <FormItem
                                 deletePermission={[Function]}
                                 index={1}
-                                permissions={
-                                  Array [
-                                    Object {
-                                      "createdAt": 1498875025725,
-                                      "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)",
-                                      "name": "EditAccounts",
-                                    },
-                                    Object {
-                                      "createdAt": 1498875008388,
-                                      "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
-                                      "name": "Accounts",
-                                    },
-                                    Object {
-                                      "createdAt": 1498875020815,
-                                      "description": "Creating, viewing, editing and deleting user personal contacts",
-                                      "name": "Contacts",
-                                    },
-                                  ]
+                                permission={
+                                  Object {
+                                    "createdAt": 1498875008388,
+                                    "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+                                    "name": "Accounts",
+                                  }
                                 }
                                 setProp={[Function]}
                               >
