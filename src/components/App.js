@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react'
-import R from 'ramda'
 import { Tabs } from 'antd'
 import { connect } from 'react-redux'
 
@@ -19,11 +18,11 @@ class App extends React.Component {
   }
   render () {
     console.log(`render App`)
-    const { info } = this.props
+    const { title, version } = this.props
     return (
       <div>
         <Alerts />
-        <h1>{info.title} {info.version}</h1>
+        <h1>{title} {version}</h1>
         <Tabs tabPosition='left' defaultActiveKey='permissions'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
@@ -36,4 +35,5 @@ class App extends React.Component {
   }
 }
 
-export default connect(R.pick(['info']), { loadState })(App)
+const mapStateToProps = ({ info: { title, version } }) => ({ title, version })
+export default connect(mapStateToProps, { loadState })(App)

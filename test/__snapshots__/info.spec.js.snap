@@ -25,21 +25,9 @@ exports[`test info view info 1`] = `
         name="title"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="title"
           setProp={[Function]}
+          value="Example API"
         >
           <FormItem
             colon={true}
@@ -150,21 +138,9 @@ exports[`test info view info 1`] = `
         name="version"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="version"
           setProp={[Function]}
+          value="1.0"
         >
           <FormItem
             colon={true}
@@ -275,21 +251,9 @@ exports[`test info view info 1`] = `
         name="description"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="description"
           setProp={[Function]}
+          value="Restful API for Example"
         >
           <FormItem
             colon={true}
@@ -400,21 +364,9 @@ exports[`test info view info 1`] = `
         name="termsOfService"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="termsOfService"
           setProp={[Function]}
+          value="https://www.example.com/terms-of-service"
         >
           <FormItem
             colon={true}
@@ -525,21 +477,9 @@ exports[`test info view info 1`] = `
         name="host"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="host"
           setProp={[Function]}
+          value="api.example.com"
         >
           <FormItem
             colon={true}
@@ -650,21 +590,9 @@ exports[`test info view info 1`] = `
         name="basePath"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="basePath"
           setProp={[Function]}
+          value="/"
         >
           <FormItem
             colon={true}
@@ -775,21 +703,9 @@ exports[`test info view info 1`] = `
         name="schemes"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="schemes"
           setProp={[Function]}
+          value="https"
         >
           <FormItem
             colon={true}
@@ -900,21 +816,9 @@ exports[`test info view info 1`] = `
         name="produces"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="produces"
           setProp={[Function]}
+          value="application/json"
         >
           <FormItem
             colon={true}
@@ -1025,21 +929,9 @@ exports[`test info view info 1`] = `
         name="consumes"
       >
         <FormItem
-          info={
-            Object {
-              "basePath": "/",
-              "consumes": "application/json",
-              "description": "Restful API for Example",
-              "host": "api.example.com",
-              "produces": "application/json",
-              "schemes": "https",
-              "termsOfService": "https://www.example.com/terms-of-service",
-              "title": "Example API",
-              "version": "1.0",
-            }
-          }
           name="consumes"
           setProp={[Function]}
+          value="application/json"
         >
           <FormItem
             colon={true}
