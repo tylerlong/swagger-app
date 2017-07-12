@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import R from 'ramda'
 import { Popconfirm, Button, Icon, Form, Input } from 'antd'
 
 import { setProp, deletePath } from '../../actions'
@@ -27,4 +26,5 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.pick(['paths']), { setProp, deletePath })(FormItem)
+const mapStateToProps = ({ paths }, { index }) => ({ path: paths[index] })
+export default connect(mapStateToProps, { setProp, deletePath })(FormItem)

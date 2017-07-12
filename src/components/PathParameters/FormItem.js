@@ -9,8 +9,7 @@ import { formItemLayout } from '../../utils'
 class FormItem extends React.Component {
   render () {
     console.log(`render PathParameters.FormItem`)
-    const { index, pathParameters, setProp, deletePathParameter } = this.props
-    const pathParameter = pathParameters[index]
+    const { index, pathParameter, setProp, deletePathParameter } = this.props
     if (!pathParameter) {
       return null
     }
@@ -33,4 +32,5 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.pick(['pathParameters']), { setProp, deletePathParameter })(FormItem)
+const mapStateToProps = ({ pathParameters }, { index }) => ({ pathParameter: pathParameters[index] })
+export default connect(mapStateToProps, { setProp, deletePathParameter })(FormItem)

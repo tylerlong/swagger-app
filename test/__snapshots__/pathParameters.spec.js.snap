@@ -657,37 +657,13 @@ exports[`test pathParameters delete pathParameter 1`] = `
                               <FormItem
                                 deletePathParameter={[Function]}
                                 index={0}
-                                pathParameters={
-                                  Array [
-                                    Object {
-                                      "createdAt": 1498875032646,
-                                      "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session",
-                                      "enum": Array [],
-                                      "name": "accountId",
-                                    },
-                                    Object {
-                                      "createdAt": 1498875033792,
-                                      "description": "Dimensions of a profile image which will be returned in response",
-                                      "enum": Array [
-                                        "90x90",
-                                        "195x195",
-                                        "584x584",
-                                      ],
-                                      "name": "scaleSize",
-                                    },
-                                    Object {
-                                      "createdAt": 1498875137756,
-                                      "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule",
-                                      "enum": Array [],
-                                      "name": "answeringRuleId",
-                                    },
-                                    Object {
-                                      "createdAt": 1498875138459,
-                                      "description": "Internal identifier of a message attachment",
-                                      "enum": Array [],
-                                      "name": "attachmentId",
-                                    },
-                                  ]
+                                pathParameter={
+                                  Object {
+                                    "createdAt": 1498875032646,
+                                    "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session",
+                                    "enum": Array [],
+                                    "name": "accountId",
+                                  }
                                 }
                                 setProp={[Function]}
                               >
