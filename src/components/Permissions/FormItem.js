@@ -28,4 +28,5 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(({ permissions }, { index }) => ({ permission: permissions[index] }), { setProp, deletePermission })(FormItem)
+const mapStateToProps = ({ permissions }, { index }) => ({ permission: permissions[index] })
+export default connect(mapStateToProps, { setProp, deletePermission })(FormItem)
