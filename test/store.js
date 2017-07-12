@@ -1,3 +1,5 @@
+// @flow
+
 import { createMockStore } from 'redux-logic-test'
 import reducer from '../src/reducers'
 import logic from '../src/logics'

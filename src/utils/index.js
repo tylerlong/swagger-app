@@ -1,6 +1,8 @@
+// @flow
+
 import R from 'ramda'
 
-export const alert = R.curry((type, message) => {
+export const alert = R.curry((type: 'success' | 'info' | 'warning' | 'error', message: string): Function => {
   if (R.complement(R.contains)(type, ['success', 'info', 'warning', 'error'])) {
     return R.identity
   }
@@ -10,7 +12,7 @@ export const alert = R.curry((type, message) => {
   return R.over(R.lensPath(['alerts']), R.append({ type, message }))
 })
 
-export const getFormItemLayout = (labelSpan, wrapperSpan) => {
+export const getFormItemLayout = (labelSpan: number, wrapperSpan: number) => {
   return {
     labelCol: {
       xs: { span: 24 },
