@@ -30,4 +30,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default connect(R.identity, { setProp, deletePermission })(FormItem)
+export default connect(R.pick(['permissions']), { setProp, deletePermission })(FormItem)

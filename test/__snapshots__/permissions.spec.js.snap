@@ -26,18 +26,6 @@ exports[`test permission add permission 1`] = `
   <Connect(Permissions)>
     <Permissions
       addPermission={[Function]}
-      alerts={
-        Array [
-          Object {
-            "message": "Data loaded",
-            "type": "success",
-          },
-          Object {
-            "message": "Permission added",
-            "type": "success",
-          },
-        ]
-      }
       permissions={
         Array [
           Object {
@@ -436,14 +424,6 @@ exports[`test permission delete permission 1`] = `
   <Connect(Permissions)>
     <Permissions
       addPermission={[Function]}
-      alerts={
-        Array [
-          Object {
-            "message": "Data loaded",
-            "type": "success",
-          },
-        ]
-      }
       permissions={
         Array [
           Object {
@@ -576,14 +556,6 @@ exports[`test permission delete permission 1`] = `
                               index={1}
                             >
                               <FormItem
-                                alerts={
-                                  Array [
-                                    Object {
-                                      "message": "Data loaded",
-                                      "type": "success",
-                                    },
-                                  ]
-                                }
                                 deletePermission={[Function]}
                                 index={1}
                                 permissions={
@@ -1705,18 +1677,6 @@ exports[`test permission delete permission 2`] = `
   <Connect(Permissions)>
     <Permissions
       addPermission={[Function]}
-      alerts={
-        Array [
-          Object {
-            "message": "Data loaded",
-            "type": "success",
-          },
-          Object {
-            "message": "Permission deleted",
-            "type": "success",
-          },
-        ]
-      }
       permissions={
         Array [
           Object {
@@ -1963,14 +1923,6 @@ exports[`test permission permissions list 1`] = `
   <Connect(Permissions)>
     <Permissions
       addPermission={[Function]}
-      alerts={
-        Array [
-          Object {
-            "message": "Data loaded",
-            "type": "success",
-          },
-        ]
-      }
       permissions={
         Array [
           Object {

@@ -28,4 +28,4 @@ class Permissions extends React.Component {
   }
 }
 
-export default connect(R.identity, { addPermission })(Permissions)
+export default connect(R.pick(['permissions']), { addPermission })(Permissions)
