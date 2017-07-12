@@ -19,6 +19,13 @@ describe('test paths', () => {
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
+  test('add path', () => {
+    const count = store.getState().paths.length
+    wrapper.find('button.ant-btn-primary').simulate('click')
+    expect(store.getState().paths.length).toEqual(count + 1)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+
   test('edit path path', () => {
     // update path path
     wrapper.find('div.ant-collapse-header').first().simulate('click')
