@@ -49,4 +49,5 @@ class SubFormItem extends React.Component {
 }
 
 const mapStateToProps = ({ models }, { index1, index2 }) => ({ prop: models[index1].properties[index2] })
-export default connect(mapStateToProps, { setProp, deleteModelProperty })(SubFormItem)
+const mapDispatchToProps = { setProp, deleteModelProperty }
+export default connect(mapStateToProps, mapDispatchToProps)(SubFormItem)

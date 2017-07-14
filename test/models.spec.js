@@ -42,6 +42,17 @@ describe('test model', () => {
     expect(getModel(index).name).toEqual('World')
     expect(toJson(wrapper)).toMatchSnapshot()
   })
+  test('model properties list', () => {
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
+    let index = wrapper.find(FormItem).first().props().index
+    let count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    expect(store.getState().models[index].properties.length).toEqual(count)
+
+    wrapper.find('div.ant-collapse-header').at(1).simulate('click')
+    index = wrapper.find(FormItem).first().props().index
+    count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    expect(store.getState().models[index].properties.length).toEqual(count)
+  })
   test('add model property', () => {
     store.dispatch(addModelProperty(1))
     const properties = store.getState().models[1].properties
@@ -57,5 +68,8 @@ describe('test model', () => {
     store.dispatch(deleteModelProperty(1, 0))
     properties = store.getState().models[1].properties
     expect(properties.length).toEqual(3)
+  })
+  test('update model property name', () => {
+
   })
 })
