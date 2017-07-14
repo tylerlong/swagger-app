@@ -9,23 +9,23 @@ import { subFormItemLayout } from '../../utils'
 class SubFormItem extends React.Component {
   render () {
     console.log(`render Models.SubFormItem`)
-    const { index1, index2, prop, setProp, deleteModelProperty } = this.props
+    const { prop, setProp, deleteModelProperty } = this.props
     if (!prop) {
       return null
     }
     return (
       <div>
-        <Popconfirm title={`Are you sure to delete property "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModelProperty(index1, index2)}>
+        <Popconfirm title={`Are you sure to delete property "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModelProperty}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...subFormItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'name'], event.target.value) }} />
+          <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp('name', event.target.value) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Description'>
-          <Input placeholder='Description' size='large' value={prop.description} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'description'], event.target.value) }} />
+          <Input placeholder='Description' size='large' value={prop.description} onChange={(event) => { setProp('description', event.target.value) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Type'>
-          <Select style={{ width: 120 }} value={prop.type} onChange={(value) => { setProp(['models', index1, 'properties', index2, 'type'], value) }}>
+          <Select style={{ width: 120 }} value={prop.type} onChange={(value) => { setProp('type', value) }}>
             <Select.Option value='string'>string</Select.Option>
             <Select.Option value='object'>object</Select.Option>
             <Select.Option value='integer'>integer</Select.Option>
@@ -37,11 +37,11 @@ class SubFormItem extends React.Component {
           </Select>
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Enum'>
-          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'enum'], R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Options'>
-          <Checkbox checked={prop.required} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'required'], event.target.checked) }}>Required</Checkbox>
-          <Checkbox checked={prop.isArray} onChange={(event) => { setProp(['models', index1, 'properties', index2, 'isArray'], event.target.checked) }}>Is array</Checkbox>
+          <Checkbox checked={prop.required} onChange={(event) => { setProp('required', event.target.checked) }}>Required</Checkbox>
+          <Checkbox checked={prop.isArray} onChange={(event) => { setProp('isArray', event.target.checked) }}>Is array</Checkbox>
         </Form.Item>
       </div>
     )
@@ -49,5 +49,8 @@ class SubFormItem extends React.Component {
 }
 
 const mapStateToProps = ({ models }, { index1, index2 }) => ({ prop: models[index1].properties[index2] })
-const mapDispatchToProps = { setProp, deleteModelProperty }
+const mapDispatchToProps = (dispatch, { index1, index2 }) => ({
+  setProp: (key, value) => dispatch(setProp(['models', index1, 'properties', index2, key], value)),
+  deleteModelProperty: () => dispatch(deleteModelProperty(index1, index2))
+})
 export default connect(mapStateToProps, mapDispatchToProps)(SubFormItem)
