@@ -42,16 +42,26 @@ describe('test model', () => {
     expect(getModel(index).name).toEqual('World')
     expect(toJson(wrapper)).toMatchSnapshot()
   })
-  test('model properties list', () => {
+  test('model properties list index #0', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    let index = wrapper.find(FormItem).first().props().index
-    let count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    const index = wrapper.find(FormItem).first().props().index
+    const count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
-
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  test('model properties list index #1', () => {
     wrapper.find('div.ant-collapse-header').at(1).simulate('click')
-    index = wrapper.find(FormItem).first().props().index
-    count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    const index = wrapper.find(FormItem).first().props().index
+    const count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  test('model properties list index #2', () => {
+    wrapper.find('div.ant-collapse-header').at(2).simulate('click')
+    const index = wrapper.find(FormItem).first().props().index
+    const count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    expect(store.getState().models[index].properties.length).toEqual(count)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('add model property', () => {
     store.dispatch(addModelProperty(1))
@@ -70,6 +80,18 @@ describe('test model', () => {
     expect(properties.length).toEqual(3)
   })
   test('update model property name', () => {
-
+    // wrapper.find('div.ant-collapse-header').at(1).simulate('click')
+    // const index1 = wrapper.find(FormItem).first().props().index
+    // wrapper.find(FormItem).first().children().find('div.ant-collapse-header').first().simulate('click')
+    // console.info(wrapper.find(FormItem).first().children())
+    // console.info(wrapper.find(FormItem).first().children().find(FormItem))
+    // const index2 = wrapper.find(FormItem).first().children().find(FormItem).first().props().index
+    // console.info(`index1: ${index1}; index2: ${index2}`)
+    // const input = wrapper.find(FormItem).first().find(FormItem).first().find('input').first()
+    // input.simulate('change', { target: { value: 'Hello' } })
+    // expect(store.getState().models[index1].properties[index2].name).toEqual('Hello')
+    // input.simulate('change', { target: { value: 'World' } })
+    // expect(store.getState().models[index1].properties[index2].name).toEqual('World')
+    // expect(toJson(wrapper)).toMatchSnapshot()
   })
 })
