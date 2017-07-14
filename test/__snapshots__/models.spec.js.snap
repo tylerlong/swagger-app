@@ -1527,7 +1527,7 @@ exports[`test model model properties list index #0 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="uri"
+                                                        header="mainNumber"
                                                         headerClass=""
                                                         isActive={false}
                                                         onItemClick={[Function]}
@@ -1553,7 +1553,7 @@ exports[`test model model properties list index #0 1`] = `
                                                             <i
                                                               className="arrow"
                                                             />
-                                                            uri
+                                                            mainNumber
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -1598,7 +1598,7 @@ exports[`test model model properties list index #0 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="mainNumber"
+                                                        header="uri"
                                                         headerClass=""
                                                         isActive={false}
                                                         onItemClick={[Function]}
@@ -1624,7 +1624,7 @@ exports[`test model model properties list index #0 1`] = `
                                                             <i
                                                               className="arrow"
                                                             />
-                                                            mainNumber
+                                                            uri
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -3174,7 +3174,7 @@ exports[`test model model properties list index #1 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="uri"
+                                                        header="type"
                                                         headerClass=""
                                                         isActive={false}
                                                         onItemClick={[Function]}
@@ -3200,7 +3200,7 @@ exports[`test model model properties list index #1 1`] = `
                                                             <i
                                                               className="arrow"
                                                             />
-                                                            uri
+                                                            type
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -3245,7 +3245,7 @@ exports[`test model model properties list index #1 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="type"
+                                                        header="uri"
                                                         headerClass=""
                                                         isActive={false}
                                                         onItemClick={[Function]}
@@ -3271,7 +3271,7 @@ exports[`test model model properties list index #1 1`] = `
                                                             <i
                                                               className="arrow"
                                                             />
-                                                            type
+                                                            uri
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -4755,148 +4755,6 @@ exports[`test model model properties list index #2 1`] = `
                                                     >
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="uri"
-                                                        headerClass=""
-                                                        isActive={false}
-                                                        onItemClick={[Function]}
-                                                        openAnimation={
-                                                          Object {
-                                                            "appear": [Function],
-                                                            "enter": [Function],
-                                                            "leave": [Function],
-                                                          }
-                                                        }
-                                                        prefixCls="ant-collapse"
-                                                        showArrow={true}
-                                                      >
-                                                        <div
-                                                          className="ant-collapse-item"
-                                                        >
-                                                          <div
-                                                            aria-expanded={false}
-                                                            className="ant-collapse-header"
-                                                            onClick={[Function]}
-                                                            role="tab"
-                                                          >
-                                                            <i
-                                                              className="arrow"
-                                                            />
-                                                            uri
-                                                          </div>
-                                                          <Animate
-                                                            animation={
-                                                              Object {
-                                                                "appear": [Function],
-                                                                "enter": [Function],
-                                                                "leave": [Function],
-                                                              }
-                                                            }
-                                                            component=""
-                                                            componentProps={Object {}}
-                                                            exclusive={true}
-                                                            onAppear={[Function]}
-                                                            onEnd={[Function]}
-                                                            onEnter={[Function]}
-                                                            onLeave={[Function]}
-                                                            showProp="isActive"
-                                                            transitionAppear={false}
-                                                            transitionEnter={true}
-                                                            transitionLeave={true}
-                                                          >
-                                                            <AnimateChild
-                                                              animation={
-                                                                Object {
-                                                                  "appear": [Function],
-                                                                  "enter": [Function],
-                                                                  "leave": [Function],
-                                                                }
-                                                              }
-                                                              transitionAppear={false}
-                                                              transitionEnter={true}
-                                                              transitionLeave={true}
-                                                            >
-                                                              <PanelContent
-                                                                destroyInactivePanel={false}
-                                                                isActive={false}
-                                                                prefixCls="ant-collapse"
-                                                              />
-                                                            </AnimateChild>
-                                                          </Animate>
-                                                        </div>
-                                                      </CollapsePanel>
-                                                      <CollapsePanel
-                                                        destroyInactivePanel={false}
-                                                        header="versionString"
-                                                        headerClass=""
-                                                        isActive={false}
-                                                        onItemClick={[Function]}
-                                                        openAnimation={
-                                                          Object {
-                                                            "appear": [Function],
-                                                            "enter": [Function],
-                                                            "leave": [Function],
-                                                          }
-                                                        }
-                                                        prefixCls="ant-collapse"
-                                                        showArrow={true}
-                                                      >
-                                                        <div
-                                                          className="ant-collapse-item"
-                                                        >
-                                                          <div
-                                                            aria-expanded={false}
-                                                            className="ant-collapse-header"
-                                                            onClick={[Function]}
-                                                            role="tab"
-                                                          >
-                                                            <i
-                                                              className="arrow"
-                                                            />
-                                                            versionString
-                                                          </div>
-                                                          <Animate
-                                                            animation={
-                                                              Object {
-                                                                "appear": [Function],
-                                                                "enter": [Function],
-                                                                "leave": [Function],
-                                                              }
-                                                            }
-                                                            component=""
-                                                            componentProps={Object {}}
-                                                            exclusive={true}
-                                                            onAppear={[Function]}
-                                                            onEnd={[Function]}
-                                                            onEnter={[Function]}
-                                                            onLeave={[Function]}
-                                                            showProp="isActive"
-                                                            transitionAppear={false}
-                                                            transitionEnter={true}
-                                                            transitionLeave={true}
-                                                          >
-                                                            <AnimateChild
-                                                              animation={
-                                                                Object {
-                                                                  "appear": [Function],
-                                                                  "enter": [Function],
-                                                                  "leave": [Function],
-                                                                }
-                                                              }
-                                                              transitionAppear={false}
-                                                              transitionEnter={true}
-                                                              transitionLeave={true}
-                                                            >
-                                                              <PanelContent
-                                                                destroyInactivePanel={false}
-                                                                isActive={false}
-                                                                prefixCls="ant-collapse"
-                                                              />
-                                                            </AnimateChild>
-                                                          </Animate>
-                                                        </div>
-                                                      </CollapsePanel>
-                                                      <CollapsePanel
-                                                        destroyInactivePanel={false}
                                                         header="releaseDate"
                                                         headerClass=""
                                                         isActive={false}
@@ -4968,6 +4826,77 @@ exports[`test model model properties list index #2 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
+                                                        header="uri"
+                                                        headerClass=""
+                                                        isActive={false}
+                                                        onItemClick={[Function]}
+                                                        openAnimation={
+                                                          Object {
+                                                            "appear": [Function],
+                                                            "enter": [Function],
+                                                            "leave": [Function],
+                                                          }
+                                                        }
+                                                        prefixCls="ant-collapse"
+                                                        showArrow={true}
+                                                      >
+                                                        <div
+                                                          className="ant-collapse-item"
+                                                        >
+                                                          <div
+                                                            aria-expanded={false}
+                                                            className="ant-collapse-header"
+                                                            onClick={[Function]}
+                                                            role="tab"
+                                                          >
+                                                            <i
+                                                              className="arrow"
+                                                            />
+                                                            uri
+                                                          </div>
+                                                          <Animate
+                                                            animation={
+                                                              Object {
+                                                                "appear": [Function],
+                                                                "enter": [Function],
+                                                                "leave": [Function],
+                                                              }
+                                                            }
+                                                            component=""
+                                                            componentProps={Object {}}
+                                                            exclusive={true}
+                                                            onAppear={[Function]}
+                                                            onEnd={[Function]}
+                                                            onEnter={[Function]}
+                                                            onLeave={[Function]}
+                                                            showProp="isActive"
+                                                            transitionAppear={false}
+                                                            transitionEnter={true}
+                                                            transitionLeave={true}
+                                                          >
+                                                            <AnimateChild
+                                                              animation={
+                                                                Object {
+                                                                  "appear": [Function],
+                                                                  "enter": [Function],
+                                                                  "leave": [Function],
+                                                                }
+                                                              }
+                                                              transitionAppear={false}
+                                                              transitionEnter={true}
+                                                              transitionLeave={true}
+                                                            >
+                                                              <PanelContent
+                                                                destroyInactivePanel={false}
+                                                                isActive={false}
+                                                                prefixCls="ant-collapse"
+                                                              />
+                                                            </AnimateChild>
+                                                          </Animate>
+                                                        </div>
+                                                      </CollapsePanel>
+                                                      <CollapsePanel
+                                                        destroyInactivePanel={false}
                                                         header="uriString"
                                                         headerClass=""
                                                         isActive={false}
@@ -4995,6 +4924,77 @@ exports[`test model model properties list index #2 1`] = `
                                                               className="arrow"
                                                             />
                                                             uriString
+                                                          </div>
+                                                          <Animate
+                                                            animation={
+                                                              Object {
+                                                                "appear": [Function],
+                                                                "enter": [Function],
+                                                                "leave": [Function],
+                                                              }
+                                                            }
+                                                            component=""
+                                                            componentProps={Object {}}
+                                                            exclusive={true}
+                                                            onAppear={[Function]}
+                                                            onEnd={[Function]}
+                                                            onEnter={[Function]}
+                                                            onLeave={[Function]}
+                                                            showProp="isActive"
+                                                            transitionAppear={false}
+                                                            transitionEnter={true}
+                                                            transitionLeave={true}
+                                                          >
+                                                            <AnimateChild
+                                                              animation={
+                                                                Object {
+                                                                  "appear": [Function],
+                                                                  "enter": [Function],
+                                                                  "leave": [Function],
+                                                                }
+                                                              }
+                                                              transitionAppear={false}
+                                                              transitionEnter={true}
+                                                              transitionLeave={true}
+                                                            >
+                                                              <PanelContent
+                                                                destroyInactivePanel={false}
+                                                                isActive={false}
+                                                                prefixCls="ant-collapse"
+                                                              />
+                                                            </AnimateChild>
+                                                          </Animate>
+                                                        </div>
+                                                      </CollapsePanel>
+                                                      <CollapsePanel
+                                                        destroyInactivePanel={false}
+                                                        header="versionString"
+                                                        headerClass=""
+                                                        isActive={false}
+                                                        onItemClick={[Function]}
+                                                        openAnimation={
+                                                          Object {
+                                                            "appear": [Function],
+                                                            "enter": [Function],
+                                                            "leave": [Function],
+                                                          }
+                                                        }
+                                                        prefixCls="ant-collapse"
+                                                        showArrow={true}
+                                                      >
+                                                        <div
+                                                          className="ant-collapse-item"
+                                                        >
+                                                          <div
+                                                            aria-expanded={false}
+                                                            className="ant-collapse-header"
+                                                            onClick={[Function]}
+                                                            role="tab"
+                                                          >
+                                                            <i
+                                                              className="arrow"
+                                                            />
+                                                            versionString
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -6904,7 +6904,7 @@ exports[`test model update model name 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="uri"
+                                                        header="mainNumber"
                                                         headerClass=""
                                                         isActive={false}
                                                         onItemClick={[Function]}
@@ -6930,7 +6930,7 @@ exports[`test model update model name 1`] = `
                                                             <i
                                                               className="arrow"
                                                             />
-                                                            uri
+                                                            mainNumber
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -6975,7 +6975,7 @@ exports[`test model update model name 1`] = `
                                                       </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
-                                                        header="mainNumber"
+                                                        header="uri"
                                                         headerClass=""
                                                         isActive={false}
                                                         onItemClick={[Function]}
@@ -7001,7 +7001,7 @@ exports[`test model update model name 1`] = `
                                                             <i
                                                               className="arrow"
                                                             />
-                                                            mainNumber
+                                                            uri
                                                           </div>
                                                           <Animate
                                                             animation={
@@ -7135,9 +7135,9 @@ exports[`test model update model property name 1`] = `
         Object {
           "path": Array [
             "models",
-            2,
+            0,
             "properties",
-            1,
+            0,
             "name",
           ],
           "type": "SET_PROP",
@@ -7146,9 +7146,9 @@ exports[`test model update model property name 1`] = `
         Object {
           "path": Array [
             "models",
-            2,
+            0,
             "properties",
-            1,
+            0,
             "name",
           ],
           "type": "SET_PROP",
@@ -7180,7 +7180,7 @@ exports[`test model update model property name 1`] = `
                 "description": "Internal identifier of an account",
                 "enum": Array [],
                 "isArray": false,
-                "name": "id",
+                "name": "World",
                 "required": true,
                 "type": "string",
               },
@@ -7259,7 +7259,7 @@ exports[`test model update model property name 1`] = `
                 "description": "Version of the RingCentral REST API",
                 "enum": Array [],
                 "isArray": false,
-                "name": "World",
+                "name": "versionString",
                 "required": false,
                 "type": "string",
               },
@@ -7324,148 +7324,6 @@ exports[`test model update model property name 1`] = `
                 destroyInactivePanel={false}
                 header="AccountInfo"
                 headerClass=""
-                isActive={false}
-                onItemClick={[Function]}
-                openAnimation={
-                  Object {
-                    "appear": [Function],
-                    "enter": [Function],
-                    "leave": [Function],
-                  }
-                }
-                prefixCls="ant-collapse"
-                showArrow={true}
-              >
-                <div
-                  className="ant-collapse-item"
-                >
-                  <div
-                    aria-expanded={false}
-                    className="ant-collapse-header"
-                    onClick={[Function]}
-                    role="tab"
-                  >
-                    <i
-                      className="arrow"
-                    />
-                    AccountInfo
-                  </div>
-                  <Animate
-                    animation={
-                      Object {
-                        "appear": [Function],
-                        "enter": [Function],
-                        "leave": [Function],
-                      }
-                    }
-                    component=""
-                    componentProps={Object {}}
-                    exclusive={true}
-                    onAppear={[Function]}
-                    onEnd={[Function]}
-                    onEnter={[Function]}
-                    onLeave={[Function]}
-                    showProp="isActive"
-                    transitionAppear={false}
-                    transitionEnter={true}
-                    transitionLeave={true}
-                  >
-                    <AnimateChild
-                      animation={
-                        Object {
-                          "appear": [Function],
-                          "enter": [Function],
-                          "leave": [Function],
-                        }
-                      }
-                      transitionAppear={false}
-                      transitionEnter={true}
-                      transitionLeave={true}
-                    >
-                      <PanelContent
-                        destroyInactivePanel={false}
-                        isActive={false}
-                        prefixCls="ant-collapse"
-                      />
-                    </AnimateChild>
-                  </Animate>
-                </div>
-              </CollapsePanel>
-              <CollapsePanel
-                destroyInactivePanel={false}
-                header="AnsweringRuleInfo"
-                headerClass=""
-                isActive={false}
-                onItemClick={[Function]}
-                openAnimation={
-                  Object {
-                    "appear": [Function],
-                    "enter": [Function],
-                    "leave": [Function],
-                  }
-                }
-                prefixCls="ant-collapse"
-                showArrow={true}
-              >
-                <div
-                  className="ant-collapse-item"
-                >
-                  <div
-                    aria-expanded={false}
-                    className="ant-collapse-header"
-                    onClick={[Function]}
-                    role="tab"
-                  >
-                    <i
-                      className="arrow"
-                    />
-                    AnsweringRuleInfo
-                  </div>
-                  <Animate
-                    animation={
-                      Object {
-                        "appear": [Function],
-                        "enter": [Function],
-                        "leave": [Function],
-                      }
-                    }
-                    component=""
-                    componentProps={Object {}}
-                    exclusive={true}
-                    onAppear={[Function]}
-                    onEnd={[Function]}
-                    onEnter={[Function]}
-                    onLeave={[Function]}
-                    showProp="isActive"
-                    transitionAppear={false}
-                    transitionEnter={true}
-                    transitionLeave={true}
-                  >
-                    <AnimateChild
-                      animation={
-                        Object {
-                          "appear": [Function],
-                          "enter": [Function],
-                          "leave": [Function],
-                        }
-                      }
-                      transitionAppear={false}
-                      transitionEnter={true}
-                      transitionLeave={true}
-                    >
-                      <PanelContent
-                        destroyInactivePanel={false}
-                        isActive={false}
-                        prefixCls="ant-collapse"
-                      />
-                    </AnimateChild>
-                  </Animate>
-                </div>
-              </CollapsePanel>
-              <CollapsePanel
-                destroyInactivePanel={false}
-                header="VersionInfo"
-                headerClass=""
                 isActive={true}
                 onItemClick={[Function]}
                 openAnimation={
@@ -7490,7 +7348,7 @@ exports[`test model update model property name 1`] = `
                     <i
                       className="arrow"
                     />
-                    VersionInfo
+                    AccountInfo
                   </div>
                   <Animate
                     animation={
@@ -7537,50 +7395,41 @@ exports[`test model update model property name 1`] = `
                             className="ant-collapse-content-box"
                           >
                             <Connect(FormItem)
-                              index={2}
+                              index={0}
                             >
                               <FormItem
                                 addModelProperty={[Function]}
                                 deleteModel={[Function]}
-                                index={2}
+                                index={0}
                                 model={
                                   Object {
-                                    "createdAt": 1498875255943,
-                                    "name": "VersionInfo",
+                                    "createdAt": 1498875254895,
+                                    "name": "AccountInfo",
                                     "properties": Array [
                                       Object {
-                                        "createdAt": 1498875255944,
-                                        "description": "Canonical URI of API versions",
+                                        "createdAt": 1498875254896,
+                                        "description": "Internal identifier of an account",
                                         "enum": Array [],
                                         "isArray": false,
-                                        "name": "uri",
+                                        "name": "World",
                                         "required": true,
                                         "type": "string",
                                       },
                                       Object {
-                                        "createdAt": 1498875255945,
-                                        "description": "Version of the RingCentral REST API",
+                                        "createdAt": 1498875254897,
+                                        "description": "Canonical URI of an account",
                                         "enum": Array [],
                                         "isArray": false,
-                                        "name": "World",
+                                        "name": "uri",
                                         "required": false,
                                         "type": "string",
                                       },
                                       Object {
-                                        "createdAt": 1498875255946,
-                                        "description": "Release date of this version",
+                                        "createdAt": 1498875254898,
+                                        "description": "Main phone number of the current account",
                                         "enum": Array [],
                                         "isArray": false,
-                                        "name": "releaseDate",
-                                        "required": false,
-                                        "type": "date-time",
-                                      },
-                                      Object {
-                                        "createdAt": 1498875255947,
-                                        "description": "URI part determining the current version",
-                                        "enum": Array [],
-                                        "isArray": false,
-                                        "name": "uriString",
+                                        "name": "mainNumber",
                                         "required": false,
                                         "type": "string",
                                       },
@@ -7596,7 +7445,7 @@ exports[`test model update model property name 1`] = `
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
-                                    title="Are you sure to delete model \\"VersionInfo\\"?"
+                                    title="Are you sure to delete model \\"AccountInfo\\"?"
                                     transitionName="zoom-big"
                                     trigger="click"
                                   >
@@ -7621,7 +7470,7 @@ exports[`test model update model property name 1`] = `
                                               <div
                                                 className="ant-popover-message-title"
                                               >
-                                                Are you sure to delete model "VersionInfo"?
+                                                Are you sure to delete model "AccountInfo"?
                                               </div>
                                             </div>
                                             <div
@@ -7902,7 +7751,7 @@ exports[`test model update model property name 1`] = `
                                                 <div
                                                   className="ant-popover-message-title"
                                                 >
-                                                  Are you sure to delete model "VersionInfo"?
+                                                  Are you sure to delete model "AccountInfo"?
                                                 </div>
                                               </div>
                                               <div
@@ -8192,7 +8041,7 @@ exports[`test model update model property name 1`] = `
                                                   <div
                                                     className="ant-popover-message-title"
                                                   >
-                                                    Are you sure to delete model "VersionInfo"?
+                                                    Are you sure to delete model "AccountInfo"?
                                                   </div>
                                                 </div>
                                                 <div
@@ -8350,7 +8199,7 @@ exports[`test model update model property name 1`] = `
                                                 prefixCls="ant-input"
                                                 size="large"
                                                 type="text"
-                                                value="VersionInfo"
+                                                value="AccountInfo"
                                               >
                                                 <input
                                                   className="ant-input ant-input-lg"
@@ -8360,7 +8209,7 @@ exports[`test model update model property name 1`] = `
                                                   placeholder="Name"
                                                   size="large"
                                                   type="text"
-                                                  value="VersionInfo"
+                                                  value="AccountInfo"
                                                 />
                                               </Input>
                                             </div>
@@ -8432,6 +8281,77 @@ exports[`test model update model property name 1`] = `
                                                     <div
                                                       className="ant-collapse"
                                                     >
+                                                      <CollapsePanel
+                                                        destroyInactivePanel={false}
+                                                        header="mainNumber"
+                                                        headerClass=""
+                                                        isActive={false}
+                                                        onItemClick={[Function]}
+                                                        openAnimation={
+                                                          Object {
+                                                            "appear": [Function],
+                                                            "enter": [Function],
+                                                            "leave": [Function],
+                                                          }
+                                                        }
+                                                        prefixCls="ant-collapse"
+                                                        showArrow={true}
+                                                      >
+                                                        <div
+                                                          className="ant-collapse-item"
+                                                        >
+                                                          <div
+                                                            aria-expanded={false}
+                                                            className="ant-collapse-header"
+                                                            onClick={[Function]}
+                                                            role="tab"
+                                                          >
+                                                            <i
+                                                              className="arrow"
+                                                            />
+                                                            mainNumber
+                                                          </div>
+                                                          <Animate
+                                                            animation={
+                                                              Object {
+                                                                "appear": [Function],
+                                                                "enter": [Function],
+                                                                "leave": [Function],
+                                                              }
+                                                            }
+                                                            component=""
+                                                            componentProps={Object {}}
+                                                            exclusive={true}
+                                                            onAppear={[Function]}
+                                                            onEnd={[Function]}
+                                                            onEnter={[Function]}
+                                                            onLeave={[Function]}
+                                                            showProp="isActive"
+                                                            transitionAppear={false}
+                                                            transitionEnter={true}
+                                                            transitionLeave={true}
+                                                          >
+                                                            <AnimateChild
+                                                              animation={
+                                                                Object {
+                                                                  "appear": [Function],
+                                                                  "enter": [Function],
+                                                                  "leave": [Function],
+                                                                }
+                                                              }
+                                                              transitionAppear={false}
+                                                              transitionEnter={true}
+                                                              transitionLeave={true}
+                                                            >
+                                                              <PanelContent
+                                                                destroyInactivePanel={false}
+                                                                isActive={false}
+                                                                prefixCls="ant-collapse"
+                                                              />
+                                                            </AnimateChild>
+                                                          </Animate>
+                                                        </div>
+                                                      </CollapsePanel>
                                                       <CollapsePanel
                                                         destroyInactivePanel={false}
                                                         header="uri"
@@ -8578,21 +8498,21 @@ exports[`test model update model property name 1`] = `
                                                                     className="ant-collapse-content-box"
                                                                   >
                                                                     <Connect(SubFormItem)
-                                                                      index1={2}
-                                                                      index2={1}
+                                                                      index1={0}
+                                                                      index2={0}
                                                                     >
                                                                       <SubFormItem
                                                                         deleteModelProperty={[Function]}
-                                                                        index1={2}
-                                                                        index2={1}
+                                                                        index1={0}
+                                                                        index2={0}
                                                                         prop={
                                                                           Object {
-                                                                            "createdAt": 1498875255945,
-                                                                            "description": "Version of the RingCentral REST API",
+                                                                            "createdAt": 1498875254896,
+                                                                            "description": "Internal identifier of an account",
                                                                             "enum": Array [],
                                                                             "isArray": false,
                                                                             "name": "World",
-                                                                            "required": false,
+                                                                            "required": true,
                                                                             "type": "string",
                                                                           }
                                                                         }
@@ -9462,7 +9382,7 @@ exports[`test model update model property name 1`] = `
                                                                                         prefixCls="ant-input"
                                                                                         size="large"
                                                                                         type="text"
-                                                                                        value="Version of the RingCentral REST API"
+                                                                                        value="Internal identifier of an account"
                                                                                       >
                                                                                         <input
                                                                                           className="ant-input ant-input-lg"
@@ -9472,7 +9392,7 @@ exports[`test model update model property name 1`] = `
                                                                                           placeholder="Description"
                                                                                           size="large"
                                                                                           type="text"
-                                                                                          value="Version of the RingCentral REST API"
+                                                                                          value="Internal identifier of an account"
                                                                                         />
                                                                                       </Input>
                                                                                     </div>
@@ -9982,7 +9902,7 @@ exports[`test model update model property name 1`] = `
                                                                                       className="ant-form-item-control "
                                                                                     >
                                                                                       <Checkbox
-                                                                                        checked={false}
+                                                                                        checked={true}
                                                                                         indeterminate={false}
                                                                                         onChange={[Function]}
                                                                                         prefixCls="ant-checkbox"
@@ -9992,7 +9912,7 @@ exports[`test model update model property name 1`] = `
                                                                                           className="ant-checkbox-wrapper"
                                                                                         >
                                                                                           <Checkbox
-                                                                                            checked={false}
+                                                                                            checked={true}
                                                                                             className=""
                                                                                             defaultChecked={false}
                                                                                             onBlur={[Function]}
@@ -10004,11 +9924,11 @@ exports[`test model update model property name 1`] = `
                                                                                             type="checkbox"
                                                                                           >
                                                                                             <span
-                                                                                              className="ant-checkbox"
+                                                                                              className="ant-checkbox ant-checkbox-checked"
                                                                                               style={Object {}}
                                                                                             >
                                                                                               <input
-                                                                                                checked={false}
+                                                                                                checked={true}
                                                                                                 className="ant-checkbox-input"
                                                                                                 onBlur={[Function]}
                                                                                                 onChange={[Function]}
@@ -10085,148 +10005,6 @@ exports[`test model update model property name 1`] = `
                                                           </Animate>
                                                         </div>
                                                       </CollapsePanel>
-                                                      <CollapsePanel
-                                                        destroyInactivePanel={false}
-                                                        header="releaseDate"
-                                                        headerClass=""
-                                                        isActive={false}
-                                                        onItemClick={[Function]}
-                                                        openAnimation={
-                                                          Object {
-                                                            "appear": [Function],
-                                                            "enter": [Function],
-                                                            "leave": [Function],
-                                                          }
-                                                        }
-                                                        prefixCls="ant-collapse"
-                                                        showArrow={true}
-                                                      >
-                                                        <div
-                                                          className="ant-collapse-item"
-                                                        >
-                                                          <div
-                                                            aria-expanded={false}
-                                                            className="ant-collapse-header"
-                                                            onClick={[Function]}
-                                                            role="tab"
-                                                          >
-                                                            <i
-                                                              className="arrow"
-                                                            />
-                                                            releaseDate
-                                                          </div>
-                                                          <Animate
-                                                            animation={
-                                                              Object {
-                                                                "appear": [Function],
-                                                                "enter": [Function],
-                                                                "leave": [Function],
-                                                              }
-                                                            }
-                                                            component=""
-                                                            componentProps={Object {}}
-                                                            exclusive={true}
-                                                            onAppear={[Function]}
-                                                            onEnd={[Function]}
-                                                            onEnter={[Function]}
-                                                            onLeave={[Function]}
-                                                            showProp="isActive"
-                                                            transitionAppear={false}
-                                                            transitionEnter={true}
-                                                            transitionLeave={true}
-                                                          >
-                                                            <AnimateChild
-                                                              animation={
-                                                                Object {
-                                                                  "appear": [Function],
-                                                                  "enter": [Function],
-                                                                  "leave": [Function],
-                                                                }
-                                                              }
-                                                              transitionAppear={false}
-                                                              transitionEnter={true}
-                                                              transitionLeave={true}
-                                                            >
-                                                              <PanelContent
-                                                                destroyInactivePanel={false}
-                                                                isActive={false}
-                                                                prefixCls="ant-collapse"
-                                                              />
-                                                            </AnimateChild>
-                                                          </Animate>
-                                                        </div>
-                                                      </CollapsePanel>
-                                                      <CollapsePanel
-                                                        destroyInactivePanel={false}
-                                                        header="uriString"
-                                                        headerClass=""
-                                                        isActive={false}
-                                                        onItemClick={[Function]}
-                                                        openAnimation={
-                                                          Object {
-                                                            "appear": [Function],
-                                                            "enter": [Function],
-                                                            "leave": [Function],
-                                                          }
-                                                        }
-                                                        prefixCls="ant-collapse"
-                                                        showArrow={true}
-                                                      >
-                                                        <div
-                                                          className="ant-collapse-item"
-                                                        >
-                                                          <div
-                                                            aria-expanded={false}
-                                                            className="ant-collapse-header"
-                                                            onClick={[Function]}
-                                                            role="tab"
-                                                          >
-                                                            <i
-                                                              className="arrow"
-                                                            />
-                                                            uriString
-                                                          </div>
-                                                          <Animate
-                                                            animation={
-                                                              Object {
-                                                                "appear": [Function],
-                                                                "enter": [Function],
-                                                                "leave": [Function],
-                                                              }
-                                                            }
-                                                            component=""
-                                                            componentProps={Object {}}
-                                                            exclusive={true}
-                                                            onAppear={[Function]}
-                                                            onEnd={[Function]}
-                                                            onEnter={[Function]}
-                                                            onLeave={[Function]}
-                                                            showProp="isActive"
-                                                            transitionAppear={false}
-                                                            transitionEnter={true}
-                                                            transitionLeave={true}
-                                                          >
-                                                            <AnimateChild
-                                                              animation={
-                                                                Object {
-                                                                  "appear": [Function],
-                                                                  "enter": [Function],
-                                                                  "leave": [Function],
-                                                                }
-                                                              }
-                                                              transitionAppear={false}
-                                                              transitionEnter={true}
-                                                              transitionLeave={true}
-                                                            >
-                                                              <PanelContent
-                                                                destroyInactivePanel={false}
-                                                                isActive={false}
-                                                                prefixCls="ant-collapse"
-                                                              />
-                                                            </AnimateChild>
-                                                          </Animate>
-                                                        </div>
-                                                      </CollapsePanel>
                                                     </div>
                                                   </Collapse>
                                                 </Collapse>
@@ -10270,6 +10048,148 @@ exports[`test model update model property name 1`] = `
                           </div>
                         </div>
                       </PanelContent>
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="AnsweringRuleInfo"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    AnsweringRuleInfo
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
+                    </AnimateChild>
+                  </Animate>
+                </div>
+              </CollapsePanel>
+              <CollapsePanel
+                destroyInactivePanel={false}
+                header="VersionInfo"
+                headerClass=""
+                isActive={false}
+                onItemClick={[Function]}
+                openAnimation={
+                  Object {
+                    "appear": [Function],
+                    "enter": [Function],
+                    "leave": [Function],
+                  }
+                }
+                prefixCls="ant-collapse"
+                showArrow={true}
+              >
+                <div
+                  className="ant-collapse-item"
+                >
+                  <div
+                    aria-expanded={false}
+                    className="ant-collapse-header"
+                    onClick={[Function]}
+                    role="tab"
+                  >
+                    <i
+                      className="arrow"
+                    />
+                    VersionInfo
+                  </div>
+                  <Animate
+                    animation={
+                      Object {
+                        "appear": [Function],
+                        "enter": [Function],
+                        "leave": [Function],
+                      }
+                    }
+                    component=""
+                    componentProps={Object {}}
+                    exclusive={true}
+                    onAppear={[Function]}
+                    onEnd={[Function]}
+                    onEnter={[Function]}
+                    onLeave={[Function]}
+                    showProp="isActive"
+                    transitionAppear={false}
+                    transitionEnter={true}
+                    transitionLeave={true}
+                  >
+                    <AnimateChild
+                      animation={
+                        Object {
+                          "appear": [Function],
+                          "enter": [Function],
+                          "leave": [Function],
+                        }
+                      }
+                      transitionAppear={false}
+                      transitionEnter={true}
+                      transitionLeave={true}
+                    >
+                      <PanelContent
+                        destroyInactivePanel={false}
+                        isActive={false}
+                        prefixCls="ant-collapse"
+                      />
                     </AnimateChild>
                   </Animate>
                 </div>

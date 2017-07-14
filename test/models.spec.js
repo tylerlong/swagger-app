@@ -81,8 +81,8 @@ describe('test model', () => {
     expect(properties.length).toEqual(3)
   })
   test('update model property name', () => {
-    wrapper.find('div.ant-collapse-header').at(2).simulate('click')
-    wrapper.find(FormItem).first().find('div.ant-collapse-header').at(1).simulate('click')
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
+    wrapper.find(FormItem).first().find('div.ant-collapse-header').first().simulate('click')
     const form = wrapper.find(FormItem).first().find(SubFormItem).first()
     const { index1, index2 } = form.props()
     const input = form.find('input').first()

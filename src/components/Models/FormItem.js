@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
@@ -25,10 +26,10 @@ class FormItem extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {model.properties.map((prop, index2) => {
+                {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), model.properties).map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
-                      <SubFormItem index1={index} index2={index2} />
+                      <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
                     </Collapse.Panel>
                   )
                 })}
