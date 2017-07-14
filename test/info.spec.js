@@ -7,11 +7,21 @@ import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
 
+let wrapper = null
+beforeEach(() => {
+  wrapper = getWrapper(Info, R.pick(['info'], state))
+})
+
 describe('test info', () => {
   test('view info', () => {
-    const wrapper = getWrapper(Info, R.pick(['info'], state))
-    expect(store.getState().info.title).toEqual('Example API')
-    expect(wrapper.find('input').first().props().value).toEqual('Example API')
+    expect(wrapper.find('input').first().props().value).toEqual(store.getState().info.title)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
+  test('update title', () => {
+    wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
+    expect(store.getState().info.title).toEqual('Hello')
+    wrapper.find('input').first().simulate('change', { target: { value: 'World' } })
+    expect(store.getState().info.title).toEqual('World')
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 })
