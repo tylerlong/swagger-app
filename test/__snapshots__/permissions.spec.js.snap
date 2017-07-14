@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test permission add permission 1`] = `
+exports[`test permissions add permission 1`] = `
 <Provider
   store={
     Object {
@@ -405,7 +405,7 @@ exports[`test permission add permission 1`] = `
 </Provider>
 `;
 
-exports[`test permission delete permission 1`] = `
+exports[`test permissions delete permission 1`] = `
 <Provider
   store={
     Object {
@@ -656,7 +656,7 @@ exports[`test permission delete permission 1`] = `
 </Provider>
 `;
 
-exports[`test permission permissions list 1`] = `
+exports[`test permissions permissions list 1`] = `
 <Provider
   store={
     Object {
@@ -978,7 +978,7 @@ exports[`test permission permissions list 1`] = `
 </Provider>
 `;
 
-exports[`test permission update permission name 1`] = `
+exports[`test permissions update permission name 1`] = `
 <Provider
   store={
     Object {

@@ -15,8 +15,9 @@ beforeEach(() => {
 })
 const count = state.permissions.length
 const getCount = () => store.getState().permissions.length
+const getModel = (index) => store.getState().permissions[index]
 
-describe('test permission', () => {
+describe('test permissions', () => {
   test('permissions list', () => {
     expect(wrapper.find('.ant-collapse-item').length).toEqual(count)
     expect(toJson(wrapper)).toMatchSnapshot()
@@ -39,9 +40,9 @@ describe('test permission', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
-    expect(store.getState().permissions[index].name).toEqual('Hello')
+    expect(getModel(index).name).toEqual('Hello')
     wrapper.find('input').first().simulate('change', { target: { value: 'World' } })
-    expect(store.getState().permissions[index].name).toEqual('World')
+    expect(getModel(index).name).toEqual('World')
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 })
