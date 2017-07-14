@@ -22,17 +22,18 @@ describe('test permission', () => {
   })
 
   test('add permission', () => {
+    const count = store.getState().permissions.length
     wrapper.find('button.ant-btn-primary').simulate('click')
-    expect(store.getState().permissions.length).toEqual(4)
+    expect(store.getState().permissions.length).toEqual(count + 1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('delete permission', () => {
     // delete permission
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    expect(store.getState().permissions.length).toEqual(3)
+    const count = store.getState().permissions.length
     wrapper.find(Popconfirm).props().onConfirm()
-    expect(store.getState().permissions.length).toEqual(2)
+    expect(store.getState().permissions.length).toEqual(count - 1)
     expect(wrapper.find(Popconfirm).length).toEqual(0)
     expect(toJson(wrapper)).toMatchSnapshot()
   })

@@ -1,9 +1,10 @@
 /* eslint-env jest */
 import R from 'ramda'
 import toJson from 'enzyme-to-json'
+import { Popconfirm } from 'antd'
 
 import store from './store'
-import { addModel, deleteModel, addModelProperty, deleteModelProperty } from '../src/actions'
+import { addModelProperty, deleteModelProperty } from '../src/actions'
 import Models from '../src/components/Models'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
@@ -15,16 +16,20 @@ beforeEach(() => {
 
 describe('test model', () => {
   test('add model', () => {
-    store.dispatch(addModel())
+    const count = store.getState().models.length
+    wrapper.find('button.ant-btn-primary').simulate('click')
     const models = store.getState().models
-    expect(models.length).toEqual(4)
-    expect(R.last(models).name).toEqual('Name')
+    expect(models.length).toEqual(count + 1)
+    const defaultName = 'Name'
+    expect(R.last(models).name).toEqual(defaultName)
   })
   test('delete model', () => {
-    store.dispatch(deleteModel(1))
-    const models = store.getState().models
-    expect(models.length).toEqual(2)
-    expect(models[1].name).toEqual('VersionInfo')
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
+    const count = store.getState().models.length
+    wrapper.find(Popconfirm).props().onConfirm()
+    expect(store.getState().models.length).toEqual(count - 1)
+    expect(wrapper.find(Popconfirm).length).toEqual(0)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('add model property', () => {
     store.dispatch(addModelProperty(1))

@@ -15,7 +15,7 @@ class FormItem extends React.Component {
     }
     return (
       <div>
-        <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={() => deleteModel(index)}>
+        <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModel}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
@@ -33,7 +33,7 @@ class FormItem extends React.Component {
                   )
                 })}
               </Collapse>
-              <Button type='primary' size='large' onClick={() => addModelProperty(index)}><Icon type='plus' />Add property</Button>
+              <Button type='primary' size='large' onClick={addModelProperty}><Icon type='plus' />Add property</Button>
             </Card>
           </Col>
         </Row>
@@ -43,4 +43,9 @@ class FormItem extends React.Component {
 }
 
 const mapStateToProps = ({ models }, { index }) => ({ model: models[index] })
-export default connect(mapStateToProps, { setProp, deleteModel, addModelProperty })(FormItem)
+const mapDispathToProps = (dispatch, { index }) => ({
+  setProp: (key, value) => dispatch(setProp(['models', index, key], value)),
+  deleteModel: () => dispatch(deleteModel(index)),
+  addModelProperty: () => dispatch(addModelProperty(index))
+})
+export default connect(mapStateToProps, mapDispathToProps)(FormItem)
