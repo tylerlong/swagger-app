@@ -977,7 +977,7 @@ exports[`test permission edit permission name 1`] = `
                                     "name": "World",
                                   }
                                 }
-                                updateProp={[Function]}
+                                setProp={[Function]}
                               >
                                 <div>
                                   <_a

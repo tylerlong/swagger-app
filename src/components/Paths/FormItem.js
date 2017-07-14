@@ -8,7 +8,7 @@ import { formItemLayout } from '../../utils'
 class FormItem extends React.Component {
   render () {
     console.log(`render Paths.FormItem`)
-    const { path, updateProp, deletePath } = this.props
+    const { path, setProp, deletePath } = this.props
     if (!path) {
       return null
     }
@@ -18,7 +18,7 @@ class FormItem extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { updateProp('path', event.target.value) }} />
+          <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { setProp('path', event.target.value) }} />
         </Form.Item>
       </div>
     )
@@ -28,6 +28,6 @@ class FormItem extends React.Component {
 const mapStateToProps = ({ paths }, { index }) => ({ path: paths[index] })
 const mapDispatchToProps = (dispatch, { index }) => ({
   deletePath: () => dispatch(deletePath(index)),
-  updateProp: (key, value) => dispatch(setProp(['paths', index, key], value))
+  setProp: (key, value) => dispatch(setProp(['paths', index, key], value))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(FormItem)

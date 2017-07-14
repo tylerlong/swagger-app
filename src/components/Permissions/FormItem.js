@@ -8,7 +8,7 @@ import { formItemLayout } from '../../utils'
 class FormItem extends React.Component {
   render () {
     console.log(`render Permissions.FormItem`)
-    const { permission, updateProp, deletePermission } = this.props
+    const { permission, setProp, deletePermission } = this.props
     if (!permission) {
       return null
     }
@@ -18,10 +18,10 @@ class FormItem extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { updateProp('name', event.target.value) }} />
+          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { setProp('name', event.target.value) }} />
         </Form.Item>
         <Form.Item {...formItemLayout} label='Description'>
-          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { updateProp('description', event.target.value) }} />
+          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { setProp('description', event.target.value) }} />
         </Form.Item>
       </div>
     )
@@ -31,6 +31,6 @@ class FormItem extends React.Component {
 const mapStateToProps = ({ permissions }, { index }) => ({ permission: permissions[index] })
 const mapDispatchToProps = (dispatch, { index }) => ({
   deletePermission: () => dispatch(deletePermission(index)),
-  updateProp: (key, value) => dispatch(setProp(['permissions', index, key], value))
+  setProp: (key, value) => dispatch(setProp(['permissions', index, key], value))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(FormItem)
