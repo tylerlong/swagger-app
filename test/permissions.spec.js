@@ -4,42 +4,38 @@ import toJson from 'enzyme-to-json'
 import { Popconfirm } from 'antd'
 
 import Permissions from '../src/components/Permissions'
+import FormItem from '../src/components/Permissions/FormItem'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
-import FormItem from '../src/components/Permissions/FormItem'
 
 let wrapper = null
 beforeEach(() => {
   wrapper = getWrapper(Permissions, R.pick(['permissions'], state))
 })
+const count = state.permissions.length
+const getCount = () => store.getState().permissions.length
 
 describe('test permission', () => {
   test('permissions list', () => {
-    expect(store.getState().permissions.length).toEqual(3)
-    expect(wrapper.find('button.ant-btn-primary').length).toEqual(1)
+    expect(wrapper.find('.ant-collapse-item').length).toEqual(count)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('add permission', () => {
-    const count = store.getState().permissions.length
     wrapper.find('button.ant-btn-primary').simulate('click')
-    expect(store.getState().permissions.length).toEqual(count + 1)
+    expect(getCount()).toEqual(count + 1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('delete permission', () => {
-    // delete permission
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const count = store.getState().permissions.length
     wrapper.find(Popconfirm).props().onConfirm()
-    expect(store.getState().permissions.length).toEqual(count - 1)
-    expect(wrapper.find(Popconfirm).length).toEqual(0)
+    expect(getCount()).toEqual(count - 1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
-  test('edit permission name', () => {
-    // update permission name
+  test('update permission name', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
