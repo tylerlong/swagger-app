@@ -19,7 +19,7 @@ class FormItem extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { setProp(['models', index, 'name'], event.target.value) }} />
+          <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { setProp('name', event.target.value) }} />
         </Form.Item >
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>
