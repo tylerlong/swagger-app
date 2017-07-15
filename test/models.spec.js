@@ -45,21 +45,21 @@ describe('test model', () => {
   test('model properties list index #0', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
-    const count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    const count = wrapper.find(FormItem).first().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('model properties list index #1', () => {
     wrapper.find('div.ant-collapse-header').at(1).simulate('click')
     const index = wrapper.find(FormItem).first().props().index
-    const count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    const count = wrapper.find(FormItem).first().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('model properties list index #2', () => {
     wrapper.find('div.ant-collapse-header').at(2).simulate('click')
     const index = wrapper.find(FormItem).first().props().index
-    const count = wrapper.find(FormItem).first().children().find('.ant-collapse-item').length
+    const count = wrapper.find(FormItem).first().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
@@ -67,7 +67,7 @@ describe('test model', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
     const count = store.getState().models[index].properties.length
-    wrapper.find(FormItem).first().children().find('button.ant-btn-primary').simulate('click')
+    wrapper.find(FormItem).first().find('button.ant-btn-primary').simulate('click')
     expect(store.getState().models[index].properties.length).toEqual(count + 1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
