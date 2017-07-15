@@ -4,7 +4,6 @@ import toJson from 'enzyme-to-json'
 import { Popconfirm } from 'antd'
 
 import store from './store'
-import { addModelProperty, deleteModelProperty } from '../src/actions'
 import Models from '../src/components/Models'
 import FormItem from '../src/components/Models/FormItem'
 import SubFormItem from '../src/components/Models/SubFormItem'
@@ -65,20 +64,21 @@ describe('test model', () => {
     expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('add model property', () => {
-    store.dispatch(addModelProperty(1))
-    const properties = store.getState().models[1].properties
-    expect(properties.length).toEqual(4)
-    expect(R.last(properties).name).toEqual('name')
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
+    const index = wrapper.find(FormItem).first().props().index
+    const count = store.getState().models[index].properties.length
+    wrapper.find(FormItem).first().children().find('button.ant-btn-primary').simulate('click')
+    expect(store.getState().models[index].properties.length).toEqual(count + 1)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('delete model property', () => {
-    let properties = store.getState().models[1].properties
-    expect(properties.length).toEqual(3)
-    store.dispatch(addModelProperty(1))
-    properties = store.getState().models[1].properties
-    expect(properties.length).toEqual(4)
-    store.dispatch(deleteModelProperty(1, 0))
-    properties = store.getState().models[1].properties
-    expect(properties.length).toEqual(3)
+    wrapper.find('div.ant-collapse-header').first().simulate('click')
+    wrapper.find(FormItem).first().find('div.ant-collapse-header').first().simulate('click')
+    const index = wrapper.find(FormItem).first().props().index
+    const count = store.getState().models[index].properties.length
+    wrapper.find(FormItem).first().find(SubFormItem).first().find(Popconfirm).props().onConfirm()
+    expect(store.getState().models[index].properties.length).toEqual(count - 1)
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('update model property name', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')

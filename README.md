@@ -52,7 +52,8 @@ yarn release
     - Path parameters has enums
     - postpone
 - Investigate combineReducers
-- Replace all `store.dispatch` with `onChange`
+- Remove flow
+- State array must in order
 
 
 ## Principles
