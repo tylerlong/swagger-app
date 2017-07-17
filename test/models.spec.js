@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import R from 'ramda'
 import toJson from 'enzyme-to-json'
-import { Popconfirm } from 'antd'
+import { Popconfirm, Select } from 'antd'
 
 import store from './store'
 import Models from '../src/components/Models'
@@ -80,16 +80,34 @@ describe('test model', () => {
     expect(store.getState().models[index].properties.length).toEqual(count - 1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
-  test('update model property name', () => {
+  test('update model property fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     wrapper.find(FormItem).first().find('div.ant-collapse-header').first().simulate('click')
     const form = wrapper.find(FormItem).first().find(SubFormItem).first()
     const { index1, index2 } = form.props()
-    const input = form.find('input').first()
+
+    let input = form.find('input').first()
     input.simulate('change', { target: { value: 'Hello' } })
     expect(store.getState().models[index1].properties[index2].name).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
     expect(store.getState().models[index1].properties[index2].name).toEqual('World')
+
+    input = form.find('input').at(1)
+    input.simulate('change', { target: { value: 'Hello' } })
+    expect(store.getState().models[index1].properties[index2].description).toEqual('Hello')
+    input.simulate('change', { target: { value: 'World' } })
+    expect(store.getState().models[index1].properties[index2].description).toEqual('World')
+
+    const select = form.find(Select).first()
+    select.props().onChange('int64')
+    expect(store.getState().models[index1].properties[index2].type).toEqual('int64')
+    select.props().onChange('binary')
+    expect(store.getState().models[index1].properties[index2].type).toEqual('binary')
+
+    input = form.find('input').at(2)
+    input.simulate('change', { target: { value: 'Hello, World' } })
+    expect(store.getState().models[index1].properties[index2].enum).toEqual(['Hello', 'World'])
+
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 })

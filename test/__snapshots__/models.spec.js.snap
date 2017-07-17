@@ -10276,7 +10276,7 @@ exports[`test model update model name 1`] = `
 </Provider>
 `;
 
-exports[`test model update model property name 1`] = `
+exports[`test model update model property fields 1`] = `
 <Provider
   store={
     Object {
@@ -10303,6 +10303,64 @@ exports[`test model update model property name 1`] = `
           "type": "SET_PROP",
           "value": "World",
         },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "description",
+          ],
+          "type": "SET_PROP",
+          "value": "Hello",
+        },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "description",
+          ],
+          "type": "SET_PROP",
+          "value": "World",
+        },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "type",
+          ],
+          "type": "SET_PROP",
+          "value": "int64",
+        },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "type",
+          ],
+          "type": "SET_PROP",
+          "value": "binary",
+        },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "enum",
+          ],
+          "type": "SET_PROP",
+          "value": Array [
+            "Hello",
+            "World",
+          ],
+        },
       ],
       "dispatch": [Function],
       "getState": [Function],
@@ -10326,12 +10384,15 @@ exports[`test model update model property name 1`] = `
             "properties": Array [
               Object {
                 "createdAt": 1498875254896,
-                "description": "Internal identifier of an account",
-                "enum": Array [],
+                "description": "World",
+                "enum": Array [
+                  "Hello",
+                  "World",
+                ],
                 "isArray": false,
                 "name": "World",
                 "required": true,
-                "type": "string",
+                "type": "binary",
               },
               Object {
                 "createdAt": 1498875254897,
@@ -10557,12 +10618,15 @@ exports[`test model update model property name 1`] = `
                                     "properties": Array [
                                       Object {
                                         "createdAt": 1498875254896,
-                                        "description": "Internal identifier of an account",
-                                        "enum": Array [],
+                                        "description": "World",
+                                        "enum": Array [
+                                          "Hello",
+                                          "World",
+                                        ],
                                         "isArray": false,
                                         "name": "World",
                                         "required": true,
-                                        "type": "string",
+                                        "type": "binary",
                                       },
                                       Object {
                                         "createdAt": 1498875254897,
@@ -11657,12 +11721,15 @@ exports[`test model update model property name 1`] = `
                                                                         prop={
                                                                           Object {
                                                                             "createdAt": 1498875254896,
-                                                                            "description": "Internal identifier of an account",
-                                                                            "enum": Array [],
+                                                                            "description": "World",
+                                                                            "enum": Array [
+                                                                              "Hello",
+                                                                              "World",
+                                                                            ],
                                                                             "isArray": false,
                                                                             "name": "World",
                                                                             "required": true,
-                                                                            "type": "string",
+                                                                            "type": "binary",
                                                                           }
                                                                         }
                                                                         setProp={[Function]}
@@ -12531,7 +12598,7 @@ exports[`test model update model property name 1`] = `
                                                                                         prefixCls="ant-input"
                                                                                         size="large"
                                                                                         type="text"
-                                                                                        value="Internal identifier of an account"
+                                                                                        value="World"
                                                                                       >
                                                                                         <input
                                                                                           className="ant-input ant-input-lg"
@@ -12541,7 +12608,7 @@ exports[`test model update model property name 1`] = `
                                                                                           placeholder="Description"
                                                                                           size="large"
                                                                                           type="text"
-                                                                                          value="Internal identifier of an account"
+                                                                                          value="World"
                                                                                         />
                                                                                       </Input>
                                                                                     </div>
@@ -12639,7 +12706,7 @@ exports[`test model update model property name 1`] = `
                                                                                           }
                                                                                         }
                                                                                         transitionName="slide-up"
-                                                                                        value="string"
+                                                                                        value="binary"
                                                                                       >
                                                                                         <Select
                                                                                           allowClear={false}
@@ -12670,7 +12737,7 @@ exports[`test model update model property name 1`] = `
                                                                                             }
                                                                                           }
                                                                                           transitionName="slide-up"
-                                                                                          value="string"
+                                                                                          value="binary"
                                                                                         >
                                                                                           <SelectTrigger
                                                                                             defaultActiveFirstOption={true}
@@ -12689,8 +12756,8 @@ exports[`test model update model property name 1`] = `
                                                                                             value={
                                                                                               Array [
                                                                                                 Object {
-                                                                                                  "key": "string",
-                                                                                                  "label": "string",
+                                                                                                  "key": "binary",
+                                                                                                  "label": "binary",
                                                                                                   "title": undefined,
                                                                                                 },
                                                                                               ]
@@ -12772,8 +12839,8 @@ exports[`test model update model property name 1`] = `
                                                                                                   value={
                                                                                                     Array [
                                                                                                       Object {
-                                                                                                        "key": "string",
-                                                                                                        "label": "string",
+                                                                                                        "key": "binary",
+                                                                                                        "label": "binary",
                                                                                                         "title": undefined,
                                                                                                       },
                                                                                                     ]
@@ -12798,8 +12865,8 @@ exports[`test model update model property name 1`] = `
                                                                                               value={
                                                                                                 Array [
                                                                                                   Object {
-                                                                                                    "key": "string",
-                                                                                                    "label": "string",
+                                                                                                    "key": "binary",
+                                                                                                    "label": "binary",
                                                                                                     "title": undefined,
                                                                                                   },
                                                                                                 ]
@@ -12840,9 +12907,9 @@ exports[`test model update model property name 1`] = `
                                                                                                           "opacity": 1,
                                                                                                         }
                                                                                                       }
-                                                                                                      title="string"
+                                                                                                      title="binary"
                                                                                                     >
-                                                                                                      string
+                                                                                                      binary
                                                                                                     </div>
                                                                                                   </div>
                                                                                                   <span
@@ -12948,7 +13015,7 @@ exports[`test model update model property name 1`] = `
                                                                                       className="ant-form-item-control "
                                                                                     >
                                                                                       <Input
-                                                                                        defaultValue=""
+                                                                                        defaultValue="Hello, World"
                                                                                         disabled={false}
                                                                                         onChange={[Function]}
                                                                                         placeholder="Enum values separated by commas"
@@ -12958,7 +13025,7 @@ exports[`test model update model property name 1`] = `
                                                                                       >
                                                                                         <input
                                                                                           className="ant-input ant-input-lg"
-                                                                                          defaultValue=""
+                                                                                          defaultValue="Hello, World"
                                                                                           disabled={false}
                                                                                           onChange={[Function]}
                                                                                           onKeyDown={[Function]}
