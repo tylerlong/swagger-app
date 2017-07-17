@@ -1,10 +1,8 @@
-// @flow
-
 import React from 'react'
 
 import FormItem from './FormItem'
 
-class Info extends React.Component<void, {}, void> {
+class Info extends React.Component {
   render () {
     console.log(`render Info`)
     return (

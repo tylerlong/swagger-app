@@ -1,5 +1,3 @@
-// @flow
-
 import R from 'ramda'
 import React from 'react'
 import { connect } from 'react-redux'
@@ -7,8 +5,7 @@ import { message } from 'antd'
 
 import { setProp } from '../actions'
 
-class Alerts extends React.Component<void, { alerts: { type: string, message: string }[], clearAlerts: Function }, void> {
-  timer: number
+class Alerts extends React.Component {
   componentDidMount () {
     const { clearAlerts } = this.props
     this.timer = setInterval(() => {

@@ -46,8 +46,6 @@ yarn build
 ## todo list
 
 - migrate data from PostgreSQL
-- Investigate combineReducers
-- Remove flow
 
 
 ## Principles
