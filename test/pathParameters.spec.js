@@ -36,13 +36,29 @@ describe('test pathParameters', () => {
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
-  test('update pathParameter name', () => {
+  test('update pathParameter fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
-    wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
+
+    // name
+    let input = wrapper.find('input').first()
+    input.simulate('change', { target: { value: 'Hello' } })
     expect(getModel(index).name).toEqual('Hello')
-    wrapper.find('input').first().simulate('change', { target: { value: 'World' } })
+    input.simulate('change', { target: { value: 'World' } })
     expect(getModel(index).name).toEqual('World')
+
+    // description
+    input = wrapper.find('input').at(1)
+    input.simulate('change', { target: { value: 'Hello' } })
+    expect(getModel(index).description).toEqual('Hello')
+    input.simulate('change', { target: { value: 'World' } })
+    expect(getModel(index).description).toEqual('World')
+
+    // enum
+    input = wrapper.find('input').at(2)
+    input.simulate('change', { target: { value: 'Hello, World' } })
+    expect(getModel(index).enum).toEqual(['Hello', 'World'])
+
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 })

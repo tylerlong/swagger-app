@@ -1231,7 +1231,7 @@ exports[`test pathParameters pathParameters list 1`] = `
 </Provider>
 `;
 
-exports[`test pathParameters update pathParameter name 1`] = `
+exports[`test pathParameters update pathParameter fields 1`] = `
 <Provider
   store={
     Object {
@@ -1254,6 +1254,36 @@ exports[`test pathParameters update pathParameter name 1`] = `
           "type": "SET_PROP",
           "value": "World",
         },
+        Object {
+          "path": Array [
+            "pathParameters",
+            0,
+            "description",
+          ],
+          "type": "SET_PROP",
+          "value": "Hello",
+        },
+        Object {
+          "path": Array [
+            "pathParameters",
+            0,
+            "description",
+          ],
+          "type": "SET_PROP",
+          "value": "World",
+        },
+        Object {
+          "path": Array [
+            "pathParameters",
+            0,
+            "enum",
+          ],
+          "type": "SET_PROP",
+          "value": Array [
+            "Hello",
+            "World",
+          ],
+        },
       ],
       "dispatch": [Function],
       "getState": [Function],
@@ -1273,8 +1303,11 @@ exports[`test pathParameters update pathParameter name 1`] = `
         Array [
           Object {
             "createdAt": 1498875032646,
-            "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session",
-            "enum": Array [],
+            "description": "World",
+            "enum": Array [
+              "Hello",
+              "World",
+            ],
             "name": "World",
           },
           Object {
@@ -1632,8 +1665,11 @@ exports[`test pathParameters update pathParameter name 1`] = `
                                 pathParameter={
                                   Object {
                                     "createdAt": 1498875032646,
-                                    "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session",
-                                    "enum": Array [],
+                                    "description": "World",
+                                    "enum": Array [
+                                      "Hello",
+                                      "World",
+                                    ],
                                     "name": "World",
                                   }
                                 }
@@ -2503,7 +2539,7 @@ exports[`test pathParameters update pathParameter name 1`] = `
                                                 prefixCls="ant-input"
                                                 size="large"
                                                 type="text"
-                                                value="Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+                                                value="World"
                                               >
                                                 <input
                                                   className="ant-input ant-input-lg"
@@ -2513,7 +2549,7 @@ exports[`test pathParameters update pathParameter name 1`] = `
                                                   placeholder="Description"
                                                   size="large"
                                                   type="text"
-                                                  value="Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+                                                  value="World"
                                                 />
                                               </Input>
                                             </div>
@@ -2600,7 +2636,7 @@ exports[`test pathParameters update pathParameter name 1`] = `
                                               className="ant-form-item-control "
                                             >
                                               <Input
-                                                defaultValue=""
+                                                defaultValue="Hello, World"
                                                 disabled={false}
                                                 onChange={[Function]}
                                                 placeholder="Enum values separated by commas"
@@ -2610,7 +2646,7 @@ exports[`test pathParameters update pathParameter name 1`] = `
                                               >
                                                 <input
                                                   className="ant-input ant-input-lg"
-                                                  defaultValue=""
+                                                  defaultValue="Hello, World"
                                                   disabled={false}
                                                   onChange={[Function]}
                                                   onKeyDown={[Function]}
