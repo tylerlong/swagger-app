@@ -1,5 +1,1097 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test info update arrays 1`] = `
+<Provider
+  store={
+    Object {
+      "actions": Array [
+        Object {
+          "path": Array [
+            "info",
+            "schemes",
+          ],
+          "type": "SET_PROP",
+          "value": Array [
+            "https",
+            "http",
+          ],
+        },
+        Object {
+          "path": Array [
+            "info",
+            "produces",
+          ],
+          "type": "SET_PROP",
+          "value": Array [
+            "application/json",
+            "text/plain; charset=utf-8",
+          ],
+        },
+        Object {
+          "path": Array [
+            "info",
+            "consumes",
+          ],
+          "type": "SET_PROP",
+          "value": Array [
+            "application/json",
+            "text/plain; charset=utf-8",
+          ],
+        },
+      ],
+      "dispatch": [Function],
+      "getState": [Function],
+      "logicMiddleware": [Function],
+      "replaceReducer": [Function],
+      "resetActions": [Function],
+      "subscribe": [Function],
+      "whenComplete": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Info>
+    <div>
+      <h2>
+        Info
+      </h2>
+      <Connect(FormItem)
+        name="title"
+      >
+        <FormItem
+          name="title"
+          setProp={[Function]}
+          value="Example API"
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="title"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="title"
+                    >
+                      title
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="title"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="Example API"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="title"
+                          size="large"
+                          type="text"
+                          value="Example API"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="version"
+      >
+        <FormItem
+          name="version"
+          setProp={[Function]}
+          value="1.0"
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="version"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="version"
+                    >
+                      version
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="version"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="1.0"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="version"
+                          size="large"
+                          type="text"
+                          value="1.0"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="description"
+      >
+        <FormItem
+          name="description"
+          setProp={[Function]}
+          value="Restful API for Example"
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="description"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="description"
+                    >
+                      description
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="description"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="Restful API for Example"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="description"
+                          size="large"
+                          type="text"
+                          value="Restful API for Example"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="termsOfService"
+      >
+        <FormItem
+          name="termsOfService"
+          setProp={[Function]}
+          value="https://www.example.com/terms-of-service"
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="termsOfService"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="termsOfService"
+                    >
+                      termsOfService
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="termsOfService"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="https://www.example.com/terms-of-service"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="termsOfService"
+                          size="large"
+                          type="text"
+                          value="https://www.example.com/terms-of-service"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="host"
+      >
+        <FormItem
+          name="host"
+          setProp={[Function]}
+          value="api.example.com"
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="host"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="host"
+                    >
+                      host
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="host"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="api.example.com"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="host"
+                          size="large"
+                          type="text"
+                          value="api.example.com"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="basePath"
+      >
+        <FormItem
+          name="basePath"
+          setProp={[Function]}
+          value="/"
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="basePath"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="basePath"
+                    >
+                      basePath
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="basePath"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                        value="/"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="basePath"
+                          size="large"
+                          type="text"
+                          value="/"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="schemes"
+      >
+        <FormItem
+          name="schemes"
+          setProp={[Function]}
+          value={
+            Array [
+              "https",
+              "http",
+            ]
+          }
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="schemes"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="schemes"
+                    >
+                      schemes
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        defaultValue="https, http"
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="Values separated by commas"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          defaultValue="https, http"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Values separated by commas"
+                          size="large"
+                          type="text"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="produces"
+      >
+        <FormItem
+          name="produces"
+          setProp={[Function]}
+          value={
+            Array [
+              "application/json",
+              "text/plain; charset=utf-8",
+            ]
+          }
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="produces"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="produces"
+                    >
+                      produces
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        defaultValue="application/json, text/plain; charset=utf-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="Values separated by commas"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          defaultValue="application/json, text/plain; charset=utf-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Values separated by commas"
+                          size="large"
+                          type="text"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+      <Connect(FormItem)
+        name="consumes"
+      >
+        <FormItem
+          name="consumes"
+          setProp={[Function]}
+          value={
+            Array [
+              "application/json",
+              "text/plain; charset=utf-8",
+            ]
+          }
+        >
+          <FormItem
+            colon={true}
+            hasFeedback={false}
+            label="consumes"
+            labelCol={
+              Object {
+                "sm": Object {
+                  "span": 6,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "sm": Object {
+                  "span": 12,
+                },
+                "xs": Object {
+                  "span": 24,
+                },
+              }
+            }
+          >
+            <Row
+              className="ant-form-item"
+              gutter={0}
+            >
+              <div
+                className="ant-row ant-form-item"
+              >
+                <Col
+                  className="ant-form-item-label"
+                  sm={
+                    Object {
+                      "span": 6,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-label ant-col-xs-24 ant-col-sm-6"
+                  >
+                    <label
+                      className=""
+                      htmlFor={null}
+                      title="consumes"
+                    >
+                      consumes
+                    </label>
+                  </div>
+                </Col>
+                <Col
+                  className="ant-form-item-control-wrapper"
+                  sm={
+                    Object {
+                      "span": 12,
+                    }
+                  }
+                  xs={
+                    Object {
+                      "span": 24,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-form-item-control-wrapper ant-col-xs-24 ant-col-sm-12"
+                  >
+                    <div
+                      className="ant-form-item-control "
+                    >
+                      <Input
+                        defaultValue="application/json, text/plain; charset=utf-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        placeholder="Values separated by commas"
+                        prefixCls="ant-input"
+                        size="large"
+                        type="text"
+                      >
+                        <input
+                          className="ant-input ant-input-lg"
+                          defaultValue="application/json, text/plain; charset=utf-8"
+                          disabled={false}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Values separated by commas"
+                          size="large"
+                          type="text"
+                        />
+                      </Input>
+                    </div>
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </FormItem>
+        </FormItem>
+      </Connect(FormItem)>
+    </div>
+  </Info>
+</Provider>
+`;
+
 exports[`test info update title 1`] = `
 <Provider
   store={
@@ -722,7 +1814,11 @@ exports[`test info update title 1`] = `
         <FormItem
           name="schemes"
           setProp={[Function]}
-          value="https"
+          value={
+            Array [
+              "https",
+            ]
+          }
         >
           <FormItem
             colon={true}
@@ -802,23 +1898,23 @@ exports[`test info update title 1`] = `
                       className="ant-form-item-control "
                     >
                       <Input
+                        defaultValue="https"
                         disabled={false}
                         onChange={[Function]}
-                        placeholder="schemes"
+                        placeholder="Values separated by commas"
                         prefixCls="ant-input"
                         size="large"
                         type="text"
-                        value="https"
                       >
                         <input
                           className="ant-input ant-input-lg"
+                          defaultValue="https"
                           disabled={false}
                           onChange={[Function]}
                           onKeyDown={[Function]}
-                          placeholder="schemes"
+                          placeholder="Values separated by commas"
                           size="large"
                           type="text"
-                          value="https"
                         />
                       </Input>
                     </div>
@@ -835,7 +1931,11 @@ exports[`test info update title 1`] = `
         <FormItem
           name="produces"
           setProp={[Function]}
-          value="application/json"
+          value={
+            Array [
+              "application/json",
+            ]
+          }
         >
           <FormItem
             colon={true}
@@ -915,23 +2015,23 @@ exports[`test info update title 1`] = `
                       className="ant-form-item-control "
                     >
                       <Input
+                        defaultValue="application/json"
                         disabled={false}
                         onChange={[Function]}
-                        placeholder="produces"
+                        placeholder="Values separated by commas"
                         prefixCls="ant-input"
                         size="large"
                         type="text"
-                        value="application/json"
                       >
                         <input
                           className="ant-input ant-input-lg"
+                          defaultValue="application/json"
                           disabled={false}
                           onChange={[Function]}
                           onKeyDown={[Function]}
-                          placeholder="produces"
+                          placeholder="Values separated by commas"
                           size="large"
                           type="text"
-                          value="application/json"
                         />
                       </Input>
                     </div>
@@ -948,7 +2048,11 @@ exports[`test info update title 1`] = `
         <FormItem
           name="consumes"
           setProp={[Function]}
-          value="application/json"
+          value={
+            Array [
+              "application/json",
+            ]
+          }
         >
           <FormItem
             colon={true}
@@ -1028,23 +2132,23 @@ exports[`test info update title 1`] = `
                       className="ant-form-item-control "
                     >
                       <Input
+                        defaultValue="application/json"
                         disabled={false}
                         onChange={[Function]}
-                        placeholder="consumes"
+                        placeholder="Values separated by commas"
                         prefixCls="ant-input"
                         size="large"
                         type="text"
-                        value="application/json"
                       >
                         <input
                           className="ant-input ant-input-lg"
+                          defaultValue="application/json"
                           disabled={false}
                           onChange={[Function]}
                           onKeyDown={[Function]}
-                          placeholder="consumes"
+                          placeholder="Values separated by commas"
                           size="large"
                           type="text"
-                          value="application/json"
                         />
                       </Input>
                     </div>
@@ -1765,7 +2869,11 @@ exports[`test info view info 1`] = `
         <FormItem
           name="schemes"
           setProp={[Function]}
-          value="https"
+          value={
+            Array [
+              "https",
+            ]
+          }
         >
           <FormItem
             colon={true}
@@ -1845,23 +2953,23 @@ exports[`test info view info 1`] = `
                       className="ant-form-item-control "
                     >
                       <Input
+                        defaultValue="https"
                         disabled={false}
                         onChange={[Function]}
-                        placeholder="schemes"
+                        placeholder="Values separated by commas"
                         prefixCls="ant-input"
                         size="large"
                         type="text"
-                        value="https"
                       >
                         <input
                           className="ant-input ant-input-lg"
+                          defaultValue="https"
                           disabled={false}
                           onChange={[Function]}
                           onKeyDown={[Function]}
-                          placeholder="schemes"
+                          placeholder="Values separated by commas"
                           size="large"
                           type="text"
-                          value="https"
                         />
                       </Input>
                     </div>
@@ -1878,7 +2986,11 @@ exports[`test info view info 1`] = `
         <FormItem
           name="produces"
           setProp={[Function]}
-          value="application/json"
+          value={
+            Array [
+              "application/json",
+            ]
+          }
         >
           <FormItem
             colon={true}
@@ -1958,23 +3070,23 @@ exports[`test info view info 1`] = `
                       className="ant-form-item-control "
                     >
                       <Input
+                        defaultValue="application/json"
                         disabled={false}
                         onChange={[Function]}
-                        placeholder="produces"
+                        placeholder="Values separated by commas"
                         prefixCls="ant-input"
                         size="large"
                         type="text"
-                        value="application/json"
                       >
                         <input
                           className="ant-input ant-input-lg"
+                          defaultValue="application/json"
                           disabled={false}
                           onChange={[Function]}
                           onKeyDown={[Function]}
-                          placeholder="produces"
+                          placeholder="Values separated by commas"
                           size="large"
                           type="text"
-                          value="application/json"
                         />
                       </Input>
                     </div>
@@ -1991,7 +3103,11 @@ exports[`test info view info 1`] = `
         <FormItem
           name="consumes"
           setProp={[Function]}
-          value="application/json"
+          value={
+            Array [
+              "application/json",
+            ]
+          }
         >
           <FormItem
             colon={true}
@@ -2071,23 +3187,23 @@ exports[`test info view info 1`] = `
                       className="ant-form-item-control "
                     >
                       <Input
+                        defaultValue="application/json"
                         disabled={false}
                         onChange={[Function]}
-                        placeholder="consumes"
+                        placeholder="Values separated by commas"
                         prefixCls="ant-input"
                         size="large"
                         type="text"
-                        value="application/json"
                       >
                         <input
                           className="ant-input ant-input-lg"
+                          defaultValue="application/json"
                           disabled={false}
                           onChange={[Function]}
                           onKeyDown={[Function]}
-                          placeholder="consumes"
+                          placeholder="Values separated by commas"
                           size="large"
                           type="text"
-                          value="application/json"
                         />
                       </Input>
                     </div>

@@ -37,7 +37,7 @@ class SubFormItem extends React.Component {
           </Select>
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Enum'>
-          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+          <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Options'>
           <Checkbox checked={prop.required} onChange={(event) => { setProp('required', event.target.checked) }}>Required</Checkbox>

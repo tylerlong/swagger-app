@@ -11,9 +11,9 @@ const defaultState = {
     termsOfService: 'https://www.example.com/terms-of-service',
     host: 'api.example.com',
     basePath: '/',
-    schemes: 'https',
-    produces: 'application/json',
-    consumes: 'application/json'
+    schemes: ['https'],
+    produces: ['application/json'],
+    consumes: ['application/json']
   },
   permissions: [],
   pathParameters: [],

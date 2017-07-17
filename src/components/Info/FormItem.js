@@ -1,4 +1,5 @@
 import React from 'react'
+import R from 'ramda'
 import { connect } from 'react-redux'
 import { Input, Form } from 'antd'
 
@@ -9,9 +10,13 @@ class FormItem extends React.Component {
   render () {
     console.log(`render Info.FormItem`)
     const { name, value, setProp } = this.props
+    let input = <Input placeholder={name} size='large' value={value} onChange={(event) => { setProp(name, event.target.value) }} />
+    if (name === 'schemes' || name === 'produces' || name === 'consumes') {
+      input = <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', value)} onChange={(event) => { setProp(name, R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+    }
     return (
       <Form.Item {...formItemLayout} label={name}>
-        <Input placeholder={name} size='large' value={value} onChange={(event) => { setProp(name, event.target.value) }} />
+        {input}
       </Form.Item>
     )
   }

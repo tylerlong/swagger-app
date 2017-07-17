@@ -24,4 +24,22 @@ describe('test info', () => {
     expect(store.getState().info.title).toEqual('World')
     expect(toJson(wrapper)).toMatchSnapshot()
   })
+  test('update arrays', () => {
+    // schemes
+    let input = wrapper.find('input[placeholder="Values separated by commas"]').first()
+    input.simulate('change', { target: { value: 'https,http' } })
+    expect(store.getState().info.schemes).toEqual(['https', 'http'])
+
+    // produces
+    input = wrapper.find('input[placeholder="Values separated by commas"]').at(1)
+    input.simulate('change', { target: { value: 'application/json,text/plain; charset=utf-8' } })
+    expect(store.getState().info.produces).toEqual(['application/json', 'text/plain; charset=utf-8'])
+
+    // consumes
+    input = wrapper.find('input[placeholder="Values separated by commas"]').at(2)
+    input.simulate('change', { target: { value: 'application/json,text/plain; charset=utf-8' } })
+    expect(store.getState().info.consumes).toEqual(['application/json', 'text/plain; charset=utf-8'])
+
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
 })

@@ -25,7 +25,7 @@ class FormItem extends React.Component {
           <Input placeholder='Description' size='large' value={pathParameter.description} onChange={(event) => { setProp('description', event.target.value) }} />
         </Form.Item>
         <Form.Item {...formItemLayout} label='Enum'>
-          <Input placeholder='Enum values separated by commas' size='large' defaultValue={R.join(', ', pathParameter.enum)} onChange={(event) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+          <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', pathParameter.enum)} onChange={(event) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
         </Form.Item>
       </div>
     )

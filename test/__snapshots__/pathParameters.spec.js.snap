@@ -2639,7 +2639,7 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                                 defaultValue="Hello, World"
                                                 disabled={false}
                                                 onChange={[Function]}
-                                                placeholder="Enum values separated by commas"
+                                                placeholder="Values separated by commas"
                                                 prefixCls="ant-input"
                                                 size="large"
                                                 type="text"
@@ -2650,7 +2650,7 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                                   disabled={false}
                                                   onChange={[Function]}
                                                   onKeyDown={[Function]}
-                                                  placeholder="Enum values separated by commas"
+                                                  placeholder="Values separated by commas"
                                                   size="large"
                                                   type="text"
                                                 />
