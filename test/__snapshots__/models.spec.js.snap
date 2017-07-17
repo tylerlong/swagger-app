@@ -8688,7 +8688,7 @@ exports[`test model models list 1`] = `
 </Provider>
 `;
 
-exports[`test model update model name 1`] = `
+exports[`test model update model fields 1`] = `
 <Provider
   store={
     Object {
@@ -10361,6 +10361,28 @@ exports[`test model update model property fields 1`] = `
             "World",
           ],
         },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "required",
+          ],
+          "type": "SET_PROP",
+          "value": true,
+        },
+        Object {
+          "path": Array [
+            "models",
+            0,
+            "properties",
+            0,
+            "isArray",
+          ],
+          "type": "SET_PROP",
+          "value": true,
+        },
       ],
       "dispatch": [Function],
       "getState": [Function],
@@ -10389,7 +10411,7 @@ exports[`test model update model property fields 1`] = `
                   "Hello",
                   "World",
                 ],
-                "isArray": false,
+                "isArray": true,
                 "name": "World",
                 "required": true,
                 "type": "binary",
@@ -10623,7 +10645,7 @@ exports[`test model update model property fields 1`] = `
                                           "Hello",
                                           "World",
                                         ],
-                                        "isArray": false,
+                                        "isArray": true,
                                         "name": "World",
                                         "required": true,
                                         "type": "binary",
@@ -11726,7 +11748,7 @@ exports[`test model update model property fields 1`] = `
                                                                               "Hello",
                                                                               "World",
                                                                             ],
-                                                                            "isArray": false,
+                                                                            "isArray": true,
                                                                             "name": "World",
                                                                             "required": true,
                                                                             "type": "binary",
@@ -13162,7 +13184,7 @@ exports[`test model update model property fields 1`] = `
                                                                                         </label>
                                                                                       </Checkbox>
                                                                                       <Checkbox
-                                                                                        checked={false}
+                                                                                        checked={true}
                                                                                         indeterminate={false}
                                                                                         onChange={[Function]}
                                                                                         prefixCls="ant-checkbox"
@@ -13172,7 +13194,7 @@ exports[`test model update model property fields 1`] = `
                                                                                           className="ant-checkbox-wrapper"
                                                                                         >
                                                                                           <Checkbox
-                                                                                            checked={false}
+                                                                                            checked={true}
                                                                                             className=""
                                                                                             defaultChecked={false}
                                                                                             onBlur={[Function]}
@@ -13184,11 +13206,11 @@ exports[`test model update model property fields 1`] = `
                                                                                             type="checkbox"
                                                                                           >
                                                                                             <span
-                                                                                              className="ant-checkbox"
+                                                                                              className="ant-checkbox ant-checkbox-checked"
                                                                                               style={Object {}}
                                                                                             >
                                                                                               <input
-                                                                                                checked={false}
+                                                                                                checked={true}
                                                                                                 className="ant-checkbox-input"
                                                                                                 onBlur={[Function]}
                                                                                                 onChange={[Function]}

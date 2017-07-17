@@ -33,7 +33,7 @@ describe('test model', () => {
     expect(getCount()).toEqual(count - 1)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
-  test('update model name', () => {
+  test('update model fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const index = wrapper.find(FormItem).first().props().index
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
@@ -86,27 +86,39 @@ describe('test model', () => {
     const form = wrapper.find(FormItem).first().find(SubFormItem).first()
     const { index1, index2 } = form.props()
 
+    // name
     let input = form.find('input').first()
     input.simulate('change', { target: { value: 'Hello' } })
     expect(store.getState().models[index1].properties[index2].name).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
     expect(store.getState().models[index1].properties[index2].name).toEqual('World')
 
+    // description
     input = form.find('input').at(1)
     input.simulate('change', { target: { value: 'Hello' } })
     expect(store.getState().models[index1].properties[index2].description).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
     expect(store.getState().models[index1].properties[index2].description).toEqual('World')
 
+    // type
     const select = form.find(Select).first()
     select.props().onChange('int64')
     expect(store.getState().models[index1].properties[index2].type).toEqual('int64')
     select.props().onChange('binary')
     expect(store.getState().models[index1].properties[index2].type).toEqual('binary')
 
+    // enum
     input = form.find('input').at(2)
     input.simulate('change', { target: { value: 'Hello, World' } })
     expect(store.getState().models[index1].properties[index2].enum).toEqual(['Hello', 'World'])
+
+    // required & isArray
+    input = form.find('.ant-checkbox-input').first()
+    input.simulate('change', { target: { checked: true } })
+    expect(store.getState().models[index1].properties[index2].required).toEqual(true)
+    input = form.find('.ant-checkbox-input').at(1)
+    input.simulate('change', { target: { checked: true } })
+    expect(store.getState().models[index1].properties[index2].isArray).toEqual(true)
 
     expect(toJson(wrapper)).toMatchSnapshot()
   })
