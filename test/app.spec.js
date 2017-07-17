@@ -11,12 +11,29 @@ beforeEach(() => {
   store.resetActions()
 })
 
-test('setState', () => {
-  store.dispatch(setState({ message: 'world' }))
-  expect(R.omit('alerts', store.getState())).toEqual({ message: 'world' })
+describe('global actions', () => {
+  test('setState', () => {
+    store.dispatch(setState({ message: 'world' }))
+    expect(R.omit('alerts', store.getState())).toEqual({ message: 'world' })
+  })
+
+  test('setProp', () => {
+    store.dispatch(setProp(['models', 1, 'name'], 'hello'))
+    expect(store.getState().models[1]).toEqual({ name: 'hello', properties: [] })
+  })
 })
 
-test('setProp', () => {
-  store.dispatch(setProp(['models', 1, 'name'], 'hello'))
-  expect(store.getState().models[1]).toEqual({ name: 'hello', properties: [] })
+describe('unknown actions', () => {
+  test('path', () => {
+    store.dispatch({ type: 'MOVE_PATH' })
+    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_PATH')
+  })
+  test('permission', () => {
+    store.dispatch({ type: 'MOVE_PERMISSION' })
+    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_PERMISSION')
+  })
+  test('path_parameter', () => {
+    store.dispatch({ type: 'MOVE_PATH_PARAMETER' })
+    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_PATH_PARAMETER')
+  })
 })
