@@ -46,12 +46,8 @@ yarn build
 ## todo list
 
 - migrate data from PostgreSQL
-- Show recent files list in home page
-- Design according to http://swagger.io/specification/
-- Find way to update title declaratively
 - Investigate combineReducers
 - Remove flow
-- State array must in order
 
 
 ## Principles
