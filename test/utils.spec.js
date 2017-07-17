@@ -1,5 +1,6 @@
 /* eslint-env jest */
-import { alert, getFormItemLayout, formItemLayout, subFormItemLayout } from '../src/utils'
+import { alert, getFormItemLayout, formItemLayout, subFormItemLayout, orderBy } from '../src/utils'
+import R from 'ramda'
 
 describe('test alert', () => {
   const state = { alerts: [] }
@@ -58,5 +59,17 @@ describe('test getFormItemLayout', () => {
   test('pre-defined FormItemLayouts', () => {
     expect(formItemLayout).toEqual(getFormItemLayout(6, 12))
     expect(subFormItemLayout).toEqual(getFormItemLayout(6, 18))
+  })
+})
+
+describe('test orderBy', () => {
+  const objects = [{ name: 'c', path: '/B' }, { name: 'a', path: '/c' }, { name: 'B', path: '/a' }]
+  test('order by name', () => {
+    const expected = [{ name: 'a', path: '/c' }, { name: 'B', path: '/a' }, { name: 'c', path: '/B' }]
+    expect(orderBy(R.prop('name'), objects)).toEqual(expected)
+  })
+  test('order by path', () => {
+    const expected = [{ name: 'B', path: '/a' }, { name: 'c', path: '/B' }, { name: 'a', path: '/c' }]
+    expect(orderBy(R.prop('path'), objects)).toEqual(expected)
   })
 })

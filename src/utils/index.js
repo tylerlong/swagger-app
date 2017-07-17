@@ -26,3 +26,7 @@ export const getFormItemLayout = (labelSpan: number, wrapperSpan: number) => {
 }
 export const formItemLayout = getFormItemLayout(6, 12)
 export const subFormItemLayout = getFormItemLayout(6, 18)
+
+export const orderBy = R.curry((selector, objects) => {
+  return R.sort(R.comparator((a, b) => R.toLower(selector(a)) < R.toLower(selector(b))), objects)
+})
