@@ -23,7 +23,7 @@ class App extends React.Component {
       <div>
         <Alerts />
         <h1>{title} {version}</h1>
-        <Tabs tabPosition='left' defaultActiveKey='permissions'>
+        <Tabs tabPosition='left' defaultActiveKey='paths'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>
