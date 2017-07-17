@@ -1,5 +1,8 @@
 # swagger-app
 
+[![Build Status](https://travis-ci.org/tylerlong/swagger-app.svg?branch=master)](https://travis-ci.org/tylerlong/swagger-app)
+[![Coverage Status](https://coveralls.io/repos/github/tylerlong/swagger-app/badge.svg?branch=master)](https://coveralls.io/github/tylerlong/swagger-app?branch=master)
+
 An app to create swagger spec.
 
 It's also an app for me to learn and experiment React.
