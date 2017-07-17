@@ -22,6 +22,12 @@ yarn dev
 open http://localhost:8080
 ```
 
+## Test
+
+```
+yarn test -- --watch
+```
+
 
 ## Upgrade dependent libraries
 
@@ -34,13 +40,6 @@ yarn run upgrade
 
 ```
 yarn build
-```
-
-
-## Release
-
-```
-yarn release
 ```
 
 
