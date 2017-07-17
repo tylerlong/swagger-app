@@ -978,7 +978,7 @@ exports[`test permissions permissions list 1`] = `
 </Provider>
 `;
 
-exports[`test permissions update permission name 1`] = `
+exports[`test permissions update permission fields 1`] = `
 <Provider
   store={
     Object {
@@ -997,6 +997,24 @@ exports[`test permissions update permission name 1`] = `
             "permissions",
             1,
             "name",
+          ],
+          "type": "SET_PROP",
+          "value": "World",
+        },
+        Object {
+          "path": Array [
+            "permissions",
+            1,
+            "description",
+          ],
+          "type": "SET_PROP",
+          "value": "Hello",
+        },
+        Object {
+          "path": Array [
+            "permissions",
+            1,
+            "description",
           ],
           "type": "SET_PROP",
           "value": "World",
@@ -1025,7 +1043,7 @@ exports[`test permissions update permission name 1`] = `
           },
           Object {
             "createdAt": 1498875008388,
-            "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+            "description": "World",
             "name": "World",
           },
           Object {
@@ -1295,7 +1313,7 @@ exports[`test permissions update permission name 1`] = `
                                 permission={
                                   Object {
                                     "createdAt": 1498875008388,
-                                    "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts",
+                                    "description": "World",
                                     "name": "World",
                                   }
                                 }
@@ -2165,7 +2183,7 @@ exports[`test permissions update permission name 1`] = `
                                                 prefixCls="ant-input"
                                                 size="large"
                                                 type="text"
-                                                value="Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+                                                value="World"
                                               >
                                                 <input
                                                   className="ant-input ant-input-lg"
@@ -2175,7 +2193,7 @@ exports[`test permissions update permission name 1`] = `
                                                   placeholder="Description"
                                                   size="large"
                                                   type="text"
-                                                  value="Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+                                                  value="World"
                                                 />
                                               </Input>
                                             </div>
