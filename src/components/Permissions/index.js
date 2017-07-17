@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
 import { addPermission } from '../../actions'
+import { orderBy } from '../../utils'
 
 class Permissions extends React.Component {
   render () {
@@ -14,7 +15,7 @@ class Permissions extends React.Component {
       <div>
         <h2>Permissions</h2>
         <Collapse accordion>
-          {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), permissions).map(permission => {
+          {orderBy(R.prop('name'), permissions).map(permission => {
             return (
               <Collapse.Panel header={permission.name} key={`${permission.createdAt}`}>
                 <FormItem index={R.findIndex(R.propEq('createdAt', permission.createdAt), permissions)} />

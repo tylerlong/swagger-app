@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
 import { addPath } from '../../actions'
+import { orderBy } from '../../utils'
 
 class Paths extends React.Component {
   render () {
@@ -14,7 +15,7 @@ class Paths extends React.Component {
       <div>
         <h2>Paths</h2>
         <Collapse accordion>
-          {R.sort(R.comparator((a, b) => R.toLower(a.path) < R.toLower(b.path)), paths).map(path => {
+          {orderBy(R.prop('path'), paths).map(path => {
             return (
               <Collapse.Panel header={path.path} key={path.createdAt}>
                 <FormItem index={R.findIndex(R.propEq('createdAt', path.createdAt), paths)} />

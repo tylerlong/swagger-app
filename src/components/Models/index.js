@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import FormItem from './FormItem'
 import { addModel } from '../../actions'
+import { orderBy } from '../../utils'
 
 class Models extends React.Component {
   render () {
@@ -14,7 +15,7 @@ class Models extends React.Component {
       <div>
         <h2>Models</h2>
         <Collapse accordion>
-          {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), models).map(model => {
+          {orderBy(R.prop('name'), models).map(model => {
             return (
               <Collapse.Panel header={model.name} key={model.createdAt}>
                 <FormItem index={R.findIndex(R.propEq('createdAt', model.createdAt), models)} />

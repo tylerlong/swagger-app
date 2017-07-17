@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
 
 import { setProp, deleteModel, addModelProperty } from '../../actions'
-import { formItemLayout } from '../../utils'
+import { formItemLayout, orderBy } from '../../utils'
 import SubFormItem from './SubFormItem'
 
 class FormItem extends React.Component {
@@ -26,7 +26,7 @@ class FormItem extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {R.sort(R.comparator((a, b) => R.toLower(a.name) < R.toLower(b.name)), model.properties).map(prop => {
+                {orderBy(R.prop('name'), model.properties).map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
                       <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
