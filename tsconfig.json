@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"outDir": "./build",
+		"target": "es6",
+		"moduleResolution": "node",
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"importHelpers": true,
+		"jsx": "react"
+	},
+	"files": [
+		"src/index.tsx"
+	],
+	"compileOnSave": true
+}
