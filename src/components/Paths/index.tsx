@@ -7,8 +7,8 @@ import FormItem from './FormItem'
 import { addPath } from '../../actions'
 import { orderBy } from '../../utils'
 
-class Paths extends React.Component {
-  render () {
+class Paths extends React.Component<any> {
+  render() {
     console.log(`render Paths`)
     const { paths, addPath } = this.props
     return (

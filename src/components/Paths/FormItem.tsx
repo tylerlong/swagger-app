@@ -5,8 +5,8 @@ import { Popconfirm, Button, Icon, Form, Input } from 'antd'
 import { setProp, deletePath } from '../../actions'
 import { formItemLayout } from '../../utils'
 
-class FormItem extends React.Component {
-  render () {
+class FormItem extends React.Component<any> {
+  render() {
     console.log(`render Paths.FormItem`)
     const { path, setProp, deletePath } = this.props
     if (!path) {
@@ -18,7 +18,7 @@ class FormItem extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { setProp('path', event.target.value) }} />
+          <Input placeholder='Path' size='large' value={path.path} onChange={(event: any) => { setProp('path', event.target.value) }} />
         </Form.Item>
       </div>
     )

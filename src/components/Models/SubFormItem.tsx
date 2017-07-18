@@ -6,8 +6,8 @@ import { Input, Form, Popconfirm, Button, Icon, Checkbox, Select } from 'antd'
 import { setProp, deleteModelProperty } from '../../actions'
 import { subFormItemLayout } from '../../utils'
 
-class SubFormItem extends React.Component {
-  render () {
+class SubFormItem extends React.Component<any> {
+  render() {
     console.log(`render Models.SubFormItem`)
     const { prop, setProp, deleteModelProperty } = this.props
     if (!prop) {
@@ -19,10 +19,10 @@ class SubFormItem extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...subFormItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp('name', event.target.value) }} />
+          <Input placeholder='Name' size='large' value={prop.name} onChange={(event: any) => { setProp('name', event.target.value) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Description'>
-          <Input placeholder='Description' size='large' value={prop.description} onChange={(event) => { setProp('description', event.target.value) }} />
+          <Input placeholder='Description' size='large' value={prop.description} onChange={(event: any) => { setProp('description', event.target.value) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Type'>
           <Select style={{ width: 120 }} value={prop.type} onChange={(value) => { setProp('type', value) }}>
@@ -37,11 +37,11 @@ class SubFormItem extends React.Component {
           </Select>
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Enum'>
-          <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+          <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', prop.enum)} onChange={(event: any) => { setProp('enum', R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
         </Form.Item>
         <Form.Item {...subFormItemLayout} label='Options'>
-          <Checkbox checked={prop.required} onChange={(event) => { setProp('required', event.target.checked) }}>Required</Checkbox>
-          <Checkbox checked={prop.isArray} onChange={(event) => { setProp('isArray', event.target.checked) }}>Is array</Checkbox>
+          <Checkbox checked={prop.required} onChange={(event: any) => { setProp('required', event.target.checked) }}>Required</Checkbox>
+          <Checkbox checked={prop.isArray} onChange={(event: any) => { setProp('isArray', event.target.checked) }}>Is array</Checkbox>
         </Form.Item>
       </div>
     )

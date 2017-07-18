@@ -5,8 +5,9 @@ import { message } from 'antd'
 
 import { setProp } from '../actions'
 
-class Alerts extends React.Component {
-  componentDidMount () {
+class Alerts extends React.Component<any> {
+  timer: NodeJS.Timer;
+  componentDidMount() {
     const { clearAlerts } = this.props
     this.timer = setInterval(() => {
       if (this.props.alerts.length === 0) { // never cache `alerts`
@@ -16,10 +17,10 @@ class Alerts extends React.Component {
       clearAlerts()
     }, 100)
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     clearInterval(this.timer)
   }
-  render () {
+  render() {
     console.log(`render Alerts`)
     return null
   }

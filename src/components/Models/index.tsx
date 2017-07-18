@@ -7,8 +7,8 @@ import FormItem from './FormItem'
 import { addModel } from '../../actions'
 import { orderBy } from '../../utils'
 
-class Models extends React.Component {
-  render () {
+class Models extends React.Component<any> {
+  render() {
     console.log(`render Models`)
     const { models, addModel } = this.props
     return (

@@ -7,8 +7,8 @@ import FormItem from './FormItem'
 import { addPermission } from '../../actions'
 import { orderBy } from '../../utils'
 
-class Permissions extends React.Component {
-  render () {
+class Permissions extends React.Component<any> {
+  render() {
     console.log(`render Permissions`)
     const { permissions, addPermission } = this.props
     return (
