@@ -10,11 +10,11 @@ import PathParameters from './PathParameters'
 import Paths from './Paths'
 import Models from './Models'
 
-class App extends React.Component {
-  componentDidMount () {
+class App extends React.Component<any> {
+  componentDidMount() {
     this.props.loadState()
   }
-  render () {
+  render() {
     console.log(`render App`)
     const { title, version } = this.props
     return (

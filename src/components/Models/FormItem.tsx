@@ -7,8 +7,8 @@ import { setProp, deleteModel, addModelProperty } from '../../actions'
 import { formItemLayout, orderBy } from '../../utils'
 import SubFormItem from './SubFormItem'
 
-class FormItem extends React.Component {
-  render () {
+class FormItem extends React.Component<any> {
+  render() {
     console.log(`render Models.FormItem`)
     const { index, model, setProp, deleteModel, addModelProperty } = this.props
     if (!model) {
@@ -20,7 +20,7 @@ class FormItem extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { setProp('name', event.target.value) }} />
+          <Input placeholder='Name' size='large' value={model.name} onChange={(event: any) => { setProp('name', event.target.value) }} />
         </Form.Item >
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>
