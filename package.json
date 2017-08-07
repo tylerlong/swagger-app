@@ -11,7 +11,6 @@
     "release": "yarn build -- -p",
     "test": "standard && jest --coverage",
     "test:watch": "yarn test -- --watch",
-    "precommit": "yarn test",
     "prepush": "yarn test"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
