@@ -668,7 +668,7 @@ exports[`test paths edit path path 1`] = `
                                             },
                                             "bottomLeft": Object {
                                               "offset": Array [
-                                                -21,
+                                                0,
                                                 4,
                                               ],
                                               "overflow": Object {
@@ -677,7 +677,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "tl",
-                                                "bc",
+                                                "bl",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -686,7 +686,7 @@ exports[`test paths edit path path 1`] = `
                                             },
                                             "bottomRight": Object {
                                               "offset": Array [
-                                                21,
+                                                0,
                                                 4,
                                               ],
                                               "overflow": Object {
@@ -695,7 +695,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "tr",
-                                                "bc",
+                                                "br",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -723,7 +723,7 @@ exports[`test paths edit path path 1`] = `
                                             "leftBottom": Object {
                                               "offset": Array [
                                                 -4,
-                                                13,
+                                                0,
                                               ],
                                               "overflow": Object {
                                                 "adjustX": 1,
@@ -731,7 +731,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "br",
-                                                "cl",
+                                                "bl",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -741,7 +741,7 @@ exports[`test paths edit path path 1`] = `
                                             "leftTop": Object {
                                               "offset": Array [
                                                 -4,
-                                                -13,
+                                                0,
                                               ],
                                               "overflow": Object {
                                                 "adjustX": 1,
@@ -749,7 +749,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "tr",
-                                                "cl",
+                                                "tl",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -777,7 +777,7 @@ exports[`test paths edit path path 1`] = `
                                             "rightBottom": Object {
                                               "offset": Array [
                                                 4,
-                                                13,
+                                                0,
                                               ],
                                               "overflow": Object {
                                                 "adjustX": 1,
@@ -785,7 +785,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "bl",
-                                                "cr",
+                                                "br",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -795,7 +795,7 @@ exports[`test paths edit path path 1`] = `
                                             "rightTop": Object {
                                               "offset": Array [
                                                 4,
-                                                -13,
+                                                0,
                                               ],
                                               "overflow": Object {
                                                 "adjustX": 1,
@@ -803,7 +803,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "tl",
-                                                "cr",
+                                                "tr",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -830,7 +830,7 @@ exports[`test paths edit path path 1`] = `
                                             },
                                             "topLeft": Object {
                                               "offset": Array [
-                                                -21,
+                                                0,
                                                 -4,
                                               ],
                                               "overflow": Object {
@@ -839,7 +839,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "bl",
-                                                "tc",
+                                                "tl",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -848,7 +848,7 @@ exports[`test paths edit path path 1`] = `
                                             },
                                             "topRight": Object {
                                               "offset": Array [
-                                                21,
+                                                0,
                                                 -4,
                                               ],
                                               "overflow": Object {
@@ -857,7 +857,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "points": Array [
                                                 "br",
-                                                "tc",
+                                                "tr",
                                               ],
                                               "targetOffset": Array [
                                                 0,
@@ -951,7 +951,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "bottomLeft": Object {
                                                 "offset": Array [
-                                                  -21,
+                                                  0,
                                                   4,
                                                 ],
                                                 "overflow": Object {
@@ -960,7 +960,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "tl",
-                                                  "bc",
+                                                  "bl",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -969,7 +969,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "bottomRight": Object {
                                                 "offset": Array [
-                                                  21,
+                                                  0,
                                                   4,
                                                 ],
                                                 "overflow": Object {
@@ -978,7 +978,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "tr",
-                                                  "bc",
+                                                  "br",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -1006,7 +1006,7 @@ exports[`test paths edit path path 1`] = `
                                               "leftBottom": Object {
                                                 "offset": Array [
                                                   -4,
-                                                  13,
+                                                  0,
                                                 ],
                                                 "overflow": Object {
                                                   "adjustX": 1,
@@ -1014,7 +1014,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "br",
-                                                  "cl",
+                                                  "bl",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -1024,7 +1024,7 @@ exports[`test paths edit path path 1`] = `
                                               "leftTop": Object {
                                                 "offset": Array [
                                                   -4,
-                                                  -13,
+                                                  0,
                                                 ],
                                                 "overflow": Object {
                                                   "adjustX": 1,
@@ -1032,7 +1032,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "tr",
-                                                  "cl",
+                                                  "tl",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -1060,7 +1060,7 @@ exports[`test paths edit path path 1`] = `
                                               "rightBottom": Object {
                                                 "offset": Array [
                                                   4,
-                                                  13,
+                                                  0,
                                                 ],
                                                 "overflow": Object {
                                                   "adjustX": 1,
@@ -1068,7 +1068,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "bl",
-                                                  "cr",
+                                                  "br",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -1078,7 +1078,7 @@ exports[`test paths edit path path 1`] = `
                                               "rightTop": Object {
                                                 "offset": Array [
                                                   4,
-                                                  -13,
+                                                  0,
                                                 ],
                                                 "overflow": Object {
                                                   "adjustX": 1,
@@ -1086,7 +1086,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "tl",
-                                                  "cr",
+                                                  "tr",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -1113,7 +1113,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "topLeft": Object {
                                                 "offset": Array [
-                                                  -21,
+                                                  0,
                                                   -4,
                                                 ],
                                                 "overflow": Object {
@@ -1122,7 +1122,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "bl",
-                                                  "tc",
+                                                  "tl",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
@@ -1131,7 +1131,7 @@ exports[`test paths edit path path 1`] = `
                                               },
                                               "topRight": Object {
                                                 "offset": Array [
-                                                  21,
+                                                  0,
                                                   -4,
                                                 ],
                                                 "overflow": Object {
@@ -1140,7 +1140,7 @@ exports[`test paths edit path path 1`] = `
                                                 },
                                                 "points": Array [
                                                   "br",
-                                                  "tc",
+                                                  "tr",
                                                 ],
                                                 "targetOffset": Array [
                                                   0,
