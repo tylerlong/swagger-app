@@ -35,18 +35,18 @@
     "redux-logic-test": "^1.0.5",
     "standard": "^10.0.3",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
+    "webpack": "^3.5.2",
+    "webpack-dev-server": "^2.7.1",
     "write-file-webpack-plugin": "^4.1.0",
-    "yarn-upgrade-all": "^0.1.5"
+    "yarn-upgrade-all": "^0.1.6"
   },
   "dependencies": {
-    "antd": "^2.12.4",
+    "antd": "^2.12.5",
     "axios": "^0.16.2",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
+    "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-logic": "^0.12.2",
     "rxjs": "^5.4.2"
