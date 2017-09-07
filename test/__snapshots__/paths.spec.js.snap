@@ -250,7 +250,6 @@ exports[`test paths add path 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -345,7 +344,6 @@ exports[`test paths delete path 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -577,6 +575,7 @@ exports[`test paths edit path path 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -1230,7 +1229,6 @@ exports[`test paths edit path path 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -1302,6 +1300,7 @@ exports[`test paths edit path path 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -1378,7 +1377,6 @@ exports[`test paths edit path path 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -1566,7 +1564,6 @@ exports[`test paths view paths 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon

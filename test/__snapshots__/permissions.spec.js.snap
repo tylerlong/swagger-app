@@ -384,7 +384,6 @@ exports[`test permissions add permission 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -635,7 +634,6 @@ exports[`test permissions delete permission 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -957,7 +955,6 @@ exports[`test permissions permissions list 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -1323,6 +1320,7 @@ exports[`test permissions update permission fields 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -1976,7 +1974,6 @@ exports[`test permissions update permission fields 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -2048,6 +2045,7 @@ exports[`test permissions update permission fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -2151,6 +2149,7 @@ exports[`test permissions update permission fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Description"
                                             >
                                               Description
@@ -2227,7 +2226,6 @@ exports[`test permissions update permission fields 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon

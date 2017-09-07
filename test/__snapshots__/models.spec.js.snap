@@ -315,6 +315,7 @@ exports[`test model add model property 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -968,7 +969,6 @@ exports[`test model add model property 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -1040,6 +1040,7 @@ exports[`test model add model property 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -1115,11 +1116,11 @@ exports[`test model add model property 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -1453,7 +1454,6 @@ exports[`test model add model property 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -1642,7 +1642,6 @@ exports[`test model add model property 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -1962,7 +1961,6 @@ exports[`test model delete model 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -2263,6 +2261,7 @@ exports[`test model delete model property 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -2916,7 +2915,6 @@ exports[`test model delete model property 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -2988,6 +2986,7 @@ exports[`test model delete model property 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -3063,11 +3062,11 @@ exports[`test model delete model property 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -3259,7 +3258,6 @@ exports[`test model delete model property 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -3448,7 +3446,6 @@ exports[`test model delete model property 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -3761,6 +3758,7 @@ exports[`test model model properties list index #0 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -4417,7 +4415,6 @@ exports[`test model model properties list index #0 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -4489,6 +4486,7 @@ exports[`test model model properties list index #0 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -4564,11 +4562,11 @@ exports[`test model model properties list index #0 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -4831,7 +4829,6 @@ exports[`test model model properties list index #0 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -5020,7 +5017,6 @@ exports[`test model model properties list index #0 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -5408,6 +5404,7 @@ exports[`test model model properties list index #1 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -6064,7 +6061,6 @@ exports[`test model model properties list index #1 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -6136,6 +6132,7 @@ exports[`test model model properties list index #1 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -6211,11 +6208,11 @@ exports[`test model model properties list index #1 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -6478,7 +6475,6 @@ exports[`test model model properties list index #1 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -6596,7 +6592,6 @@ exports[`test model model properties list index #1 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -7060,6 +7055,7 @@ exports[`test model model properties list index #2 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -7716,7 +7712,6 @@ exports[`test model model properties list index #2 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -7788,6 +7783,7 @@ exports[`test model model properties list index #2 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -7863,11 +7859,11 @@ exports[`test model model properties list index #2 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -8201,7 +8197,6 @@ exports[`test model model properties list index #2 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -8248,7 +8243,6 @@ exports[`test model model properties list index #2 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -8667,7 +8661,6 @@ exports[`test model models list 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -9141,6 +9134,7 @@ exports[`test model update model fields 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -9794,7 +9788,6 @@ exports[`test model update model fields 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -9866,6 +9859,7 @@ exports[`test model update model fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -9941,11 +9935,11 @@ exports[`test model update model fields 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -10208,7 +10202,6 @@ exports[`test model update model fields 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -10255,7 +10248,6 @@ exports[`test model update model fields 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -10677,6 +10669,7 @@ exports[`test model update model property fields 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -11330,7 +11323,6 @@ exports[`test model update model property fields 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -11402,6 +11394,7 @@ exports[`test model update model property fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -11477,11 +11470,11 @@ exports[`test model update model property fields 1`] = `
                                               <div
                                                 className="ant-card-head"
                                               >
-                                                <h3
+                                                <div
                                                   className="ant-card-head-title"
                                                 >
                                                   Properties
-                                                </h3>
+                                                </div>
                                               </div>
                                               <div
                                                 className="ant-card-body"
@@ -11760,6 +11753,7 @@ exports[`test model update model property fields 1`] = `
                                                                           <_a
                                                                             cancelText="No"
                                                                             okText="Yes"
+                                                                            okType="primary"
                                                                             onConfirm={[Function]}
                                                                             placement="top"
                                                                             prefixCls="ant-popover"
@@ -12413,7 +12407,6 @@ exports[`test model update model property fields 1`] = `
                                                                                       className="ant-btn ant-btn-danger"
                                                                                       onClick={[Function]}
                                                                                       onMouseDown={[Function]}
-                                                                                      onMouseUp={[Function]}
                                                                                       onTouchStart={[Function]}
                                                                                       type="button"
                                                                                     >
@@ -12485,6 +12478,7 @@ exports[`test model update model property fields 1`] = `
                                                                                     <label
                                                                                       className=""
                                                                                       htmlFor={null}
+                                                                                      onClick={[Function]}
                                                                                       title="Name"
                                                                                     >
                                                                                       Name
@@ -12588,6 +12582,7 @@ exports[`test model update model property fields 1`] = `
                                                                                     <label
                                                                                       className=""
                                                                                       htmlFor={null}
+                                                                                      onClick={[Function]}
                                                                                       title="Description"
                                                                                     >
                                                                                       Description
@@ -12691,6 +12686,7 @@ exports[`test model update model property fields 1`] = `
                                                                                     <label
                                                                                       className=""
                                                                                       htmlFor={null}
+                                                                                      onClick={[Function]}
                                                                                       title="Type"
                                                                                     >
                                                                                       Type
@@ -12732,6 +12728,7 @@ exports[`test model update model property fields 1`] = `
                                                                                       >
                                                                                         <Select
                                                                                           allowClear={false}
+                                                                                          backfill={false}
                                                                                           choiceTransitionName="zoom"
                                                                                           className="ant-select-lg"
                                                                                           defaultActiveFirstOption={true}
@@ -12851,6 +12848,7 @@ exports[`test model update model property fields 1`] = `
                                                                                                 <DropdownMenu
                                                                                                   defaultActiveFirstOption={true}
                                                                                                   dropdownMenuStyle={Object {}}
+                                                                                                  firstActiveValue={undefined}
                                                                                                   inputValue=""
                                                                                                   menuItems={Array []}
                                                                                                   multiple={undefined}
@@ -12913,7 +12911,7 @@ exports[`test model update model property fields 1`] = `
                                                                                                   aria-expanded={false}
                                                                                                   aria-haspopup="true"
                                                                                                   className="ant-select-selection
-                                                                                                            ant-select-selection--single"
+            ant-select-selection--single"
                                                                                                   onKeyDown={[Function]}
                                                                                                   role="combobox"
                                                                                                   tabIndex={0}
@@ -13011,6 +13009,7 @@ exports[`test model update model property fields 1`] = `
                                                                                     <label
                                                                                       className=""
                                                                                       htmlFor={null}
+                                                                                      onClick={[Function]}
                                                                                       title="Enum"
                                                                                     >
                                                                                       Enum
@@ -13114,6 +13113,7 @@ exports[`test model update model property fields 1`] = `
                                                                                     <label
                                                                                       className=""
                                                                                       htmlFor={null}
+                                                                                      onClick={[Function]}
                                                                                       title="Options"
                                                                                     >
                                                                                       Options
@@ -13258,7 +13258,6 @@ exports[`test model update model property fields 1`] = `
                                                   <button
                                                     className="ant-btn ant-btn-primary ant-btn-lg"
                                                     onClick={[Function]}
-                                                    onMouseUp={[Function]}
                                                     type="button"
                                                   >
                                                     <Icon
@@ -13447,7 +13446,6 @@ exports[`test model update model property fields 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon

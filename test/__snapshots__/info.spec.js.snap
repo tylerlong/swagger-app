@@ -115,6 +115,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="title"
                     >
                       title
@@ -228,6 +229,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="version"
                     >
                       version
@@ -341,6 +343,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="description"
                     >
                       description
@@ -454,6 +457,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="termsOfService"
                     >
                       termsOfService
@@ -567,6 +571,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="host"
                     >
                       host
@@ -680,6 +685,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="basePath"
                     >
                       basePath
@@ -798,6 +804,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="schemes"
                     >
                       schemes
@@ -916,6 +923,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="produces"
                     >
                       produces
@@ -1034,6 +1042,7 @@ exports[`test info update arrays 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="consumes"
                     >
                       consumes
@@ -1190,6 +1199,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="title"
                     >
                       title
@@ -1303,6 +1313,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="version"
                     >
                       version
@@ -1416,6 +1427,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="description"
                     >
                       description
@@ -1529,6 +1541,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="termsOfService"
                     >
                       termsOfService
@@ -1642,6 +1655,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="host"
                     >
                       host
@@ -1755,6 +1769,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="basePath"
                     >
                       basePath
@@ -1872,6 +1887,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="schemes"
                     >
                       schemes
@@ -1989,6 +2005,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="produces"
                     >
                       produces
@@ -2106,6 +2123,7 @@ exports[`test info update title 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="consumes"
                     >
                       consumes
@@ -2245,6 +2263,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="title"
                     >
                       title
@@ -2358,6 +2377,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="version"
                     >
                       version
@@ -2471,6 +2491,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="description"
                     >
                       description
@@ -2584,6 +2605,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="termsOfService"
                     >
                       termsOfService
@@ -2697,6 +2719,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="host"
                     >
                       host
@@ -2810,6 +2833,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="basePath"
                     >
                       basePath
@@ -2927,6 +2951,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="schemes"
                     >
                       schemes
@@ -3044,6 +3069,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="produces"
                     >
                       produces
@@ -3161,6 +3187,7 @@ exports[`test info view info 1`] = `
                     <label
                       className=""
                       htmlFor={null}
+                      onClick={[Function]}
                       title="consumes"
                     >
                       consumes

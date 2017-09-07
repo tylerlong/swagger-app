@@ -470,7 +470,6 @@ exports[`test pathParameters add pathParameter 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg ant-btn-clicked"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -804,7 +803,6 @@ exports[`test pathParameters delete pathParameter 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -1210,7 +1208,6 @@ exports[`test pathParameters pathParameters list 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
@@ -1679,6 +1676,7 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                   <_a
                                     cancelText="No"
                                     okText="Yes"
+                                    okType="primary"
                                     onConfirm={[Function]}
                                     placement="top"
                                     prefixCls="ant-popover"
@@ -2332,7 +2330,6 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                               className="ant-btn ant-btn-danger"
                                               onClick={[Function]}
                                               onMouseDown={[Function]}
-                                              onMouseUp={[Function]}
                                               onTouchStart={[Function]}
                                               type="button"
                                             >
@@ -2404,6 +2401,7 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Name"
                                             >
                                               Name
@@ -2507,6 +2505,7 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Description"
                                             >
                                               Description
@@ -2610,6 +2609,7 @@ exports[`test pathParameters update pathParameter fields 1`] = `
                                             <label
                                               className=""
                                               htmlFor={null}
+                                              onClick={[Function]}
                                               title="Enum"
                                             >
                                               Enum
@@ -2686,7 +2686,6 @@ exports[`test pathParameters update pathParameter fields 1`] = `
           <button
             className="ant-btn ant-btn-primary ant-btn-lg"
             onClick={[Function]}
-            onMouseUp={[Function]}
             type="button"
           >
             <Icon
