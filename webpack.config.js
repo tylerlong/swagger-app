@@ -17,7 +17,6 @@ const jsRule = {
     loader: 'babel-loader',
     options: {
       presets: [
-        ['env', { targets: { browsers: ['last 2 Chrome versions'] } }],
         'react'
       ],
       plugins: [
@@ -30,16 +29,7 @@ const jsRule = {
 const electronRule = {
   test: /\.js$/,
   use: {
-    loader: 'babel-loader',
-    options: {
-      presets: [
-        ['env', {
-          'targets': {
-            'electron': '1.7'
-          }
-        }]
-      ]
-    }
+    loader: 'babel-loader'
   }
 }
 
