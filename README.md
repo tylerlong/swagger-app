@@ -25,7 +25,7 @@ open http://localhost:8080
 ## Test
 
 ```
-yarn test -- --watch
+yarn test:watch
 ```
 
 

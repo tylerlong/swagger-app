@@ -5,12 +5,12 @@
   "description": "An app to create swagger spec.",
   "main": "index.js",
   "scripts": {
-    "upgrade": "yarn-upgrade-all",
+    "upgrade": "yarn upgrade --latest && yarn remove jest && yarn add --dev jest@21.0.1",
     "dev": "node -r babel-register node_modules/.bin/webpack-dev-server",
     "build": "node -r babel-register node_modules/.bin/webpack --progress --colors",
-    "release": "yarn build -- -p",
+    "release": "yarn build -p",
     "test": "standard && jest --coverage",
-    "test:watch": "yarn test -- --watch",
+    "test:watch": "yarn test --watch",
     "prepush": "yarn test"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
@@ -29,7 +29,7 @@
     "enzyme-to-json": "^1.5.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
-    "jest": "^21.0.1",
+    "jest": "21.0.1",
     "nock": "^9.0.14",
     "react-test-renderer": "^15.6.1",
     "redux-logic-test": "^1.0.5",
@@ -37,11 +37,10 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.7.1",
-    "write-file-webpack-plugin": "^4.1.0",
-    "yarn-upgrade-all": "^0.1.8"
+    "write-file-webpack-plugin": "^4.1.0"
   },
   "dependencies": {
-    "antd": "^2.13.0",
+    "antd": "^2.13.1",
     "axios": "^0.16.2",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
