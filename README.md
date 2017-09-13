@@ -5,8 +5,6 @@
 
 An app to create swagger spec.
 
-It's also an app for me to learn and experiment React.
-
 
 ## Setup
 
@@ -26,13 +24,6 @@ open http://localhost:8080
 
 ```
 yarn test:watch
-```
-
-
-## Upgrade dependent libraries
-
-```
-yarn run upgrade
 ```
 
 
