@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/edit/:base64' component={App} />
+        <Route exact path='/edit' component={App} />
       </Switch>
     </Router>
   </Provider>,

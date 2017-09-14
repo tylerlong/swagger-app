@@ -2,7 +2,6 @@ import React from 'react'
 import { Tabs } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState } from '../actions'
 import Alerts from './Alerts'
 import Info from './Info'
 import Permissions from './Permissions'
@@ -11,9 +10,6 @@ import Paths from './Paths'
 import Models from './Models'
 
 class App extends React.Component {
-  componentDidMount () {
-    this.props.loadState()
-  }
   render () {
     console.log(`render App`)
     const { title, version } = this.props
@@ -34,4 +30,4 @@ class App extends React.Component {
 }
 
 const mapStateToProps = ({ info: { title, version } }) => ({ title, version })
-export default connect(mapStateToProps, { loadState })(App)
+export default connect(mapStateToProps, null)(App)

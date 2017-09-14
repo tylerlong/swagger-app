@@ -9,10 +9,12 @@ const loadStateLogic = createLogic({
   async process ({ getState, action }, dispatch, done) {
     if (global.electron) { // electron
       global.electron.dialog.showOpenDialog({ properties: ['openFile'] })
-      dispatch(showAlert('success', global.electron ? 'true' : 'false'))
+      dispatch(showAlert('success', 'file opened'))
+      window.location = window.location.href.split('#')[0] + '#/edit'
     } else { // browser
       const res = await axios.get('/state.json')
       dispatch(setState(res.data))
+      window.location = window.location.href.split('#')[0] + '#/edit'
     }
     done()
   }
