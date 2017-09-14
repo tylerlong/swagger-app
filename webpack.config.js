@@ -2,10 +2,10 @@ import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
-const rendererConfig = {
+const webConfig = {
   target: 'web',
   entry: {
-    index: './src/index.js'
+    index: './src/web/index.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -45,11 +45,11 @@ const rendererConfig = {
   }
 }
 
-const mainConfig = {
-  target: 'electron-main',
+const electronConfig = {
+  target: 'electron',
   entry: {
-    electron: './src/electron.js',
-    preload: './src/preload.js'
+    electron: './src/electron/index.js',
+    preload: './src/electron/preload.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -68,4 +68,4 @@ const mainConfig = {
   }
 }
 
-export default [rendererConfig, mainConfig]
+export default [webConfig, electronConfig]
