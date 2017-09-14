@@ -3,7 +3,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
 const rendererConfig = {
-  target: 'web',
+  target: 'electron-renderer',
   entry: {
     index: './src/index.js'
   },

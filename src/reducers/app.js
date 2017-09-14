@@ -33,9 +33,9 @@ const reducer = (state = defaultState, action) => {
     case 'SHOW_ALERT':
       return alert(action.alert.type, action.alert.message)
     default:
-      if (action.type !== '@@redux/INIT' && action.type !== 'LOAD_STATE') {
+      if (!R.contains(action.type, ['@@redux/INIT', 'LOAD_STATE', 'OPEN_FILE'])) {
         // When app starts, '@@redux/INIT' invoked by Redux
-        // 'LOAD_STATE' is handled by redux-logic
+        // 'LOAD_STATE' & 'OPEN_FILE' are handled by redux-logic
         return alert('error', `Unknown action type: ${action.type}`)
       }
       return R.always(state)
