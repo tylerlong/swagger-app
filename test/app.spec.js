@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import R from 'ramda'
 
-import { setState, setProp } from '../src/actions'
+import { setState, setProp } from '../src/web/actions'
 import store from './store'
 
 const initialState = { models: [{ name: '1', properties: [] }, { name: '2', properties: [] }] }

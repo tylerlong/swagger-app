@@ -5,7 +5,7 @@ import axios from 'axios'
 import httpAdapter from 'axios/lib/adapters/http'
 
 import store from './store'
-import { loadState, setState } from '../src/actions'
+import { loadState, setState } from '../src/web/actions'
 
 const host = 'http://localhost'
 axios.defaults.host = host

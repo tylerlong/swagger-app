@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { alert, getFormItemLayout, formItemLayout, subFormItemLayout, orderBy } from '../src/utils'
+import { alert, getFormItemLayout, formItemLayout, subFormItemLayout, orderBy } from '../src/web/utils'
 import R from 'ramda'
 
 describe('test alert', () => {

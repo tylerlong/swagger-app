@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 
 import store from './store'
-import { setState } from '../src/actions'
+import { setState } from '../src/web/actions'
 
 export const getWrapper = (Component, state) => {
   store.dispatch(setState(state))

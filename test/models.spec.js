@@ -4,9 +4,9 @@ import toJson from 'enzyme-to-json'
 import { Popconfirm, Select } from 'antd'
 
 import store from './store'
-import Models from '../src/components/Models'
-import FormItem from '../src/components/Models/FormItem'
-import SubFormItem from '../src/components/Models/SubFormItem'
+import Models from '../src/web/components/Models'
+import FormItem from '../src/web/components/Models/FormItem'
+import SubFormItem from '../src/web/components/Models/SubFormItem'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
 

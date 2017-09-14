@@ -2,7 +2,7 @@
 import toJson from 'enzyme-to-json'
 import R from 'ramda'
 
-import Info from '../src/components/Info'
+import Info from '../src/web/components/Info'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
