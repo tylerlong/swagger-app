@@ -30,6 +30,8 @@ const reducer = (state = defaultState, action) => {
         R.always(action.state),
         alert('success', 'Data loaded')
       )
+    case 'SHOW_ALERT':
+      return alert(action.alert.type, action.alert.message)
     default:
       if (action.type !== '@@redux/INIT' && action.type !== 'LOAD_STATE') {
         // When app starts, '@@redux/INIT' invoked by Redux

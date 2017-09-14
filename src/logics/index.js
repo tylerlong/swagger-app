@@ -1,7 +1,7 @@
 import { createLogic } from 'redux-logic'
 import axios from 'axios'
 
-import { setState } from '../actions'
+import { setState, showAlert } from '../actions'
 
 const loadStateLogic = createLogic({
   type: 'LOAD_STATE',
@@ -13,6 +13,16 @@ const loadStateLogic = createLogic({
   }
 })
 
+const openFileLogic = createLogic({
+  type: 'OPEN_FILE',
+  latest: true,
+  async process ({ getState, action }, dispatch, done) {
+    dispatch(showAlert('success', 'file opened'))
+    done()
+  }
+})
+
 export default [
-  loadStateLogic
+  loadStateLogic,
+  openFileLogic
 ]
