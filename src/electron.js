@@ -4,7 +4,14 @@ import path from 'path'
 let browserWindow = null
 
 const createWindow = () => {
-  browserWindow = new BrowserWindow({ width: 1024, height: 768 })
+  browserWindow = new BrowserWindow({
+    width: 1024,
+    height: 768,
+    webPreferences: {
+      nodeIntegration: false,
+      preload: path.join(__dirname, 'preload.bundle.js')
+    }
+  })
   browserWindow.loadURL(path.join('file://', __dirname, 'index.html'))
   browserWindow.on('closed', () => {
     browserWindow = null

@@ -3,7 +3,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
 const rendererConfig = {
-  target: 'electron-renderer',
+  target: 'web',
   entry: {
     index: './src/index.js'
   },
@@ -47,9 +47,12 @@ const rendererConfig = {
 
 const mainConfig = {
   target: 'electron-main',
-  entry: './src/electron.js',
+  entry: {
+    electron: './src/electron.js',
+    preload: './src/preload.js'
+  },
   output: {
-    filename: 'electron.bundle.js',
+    filename: '[name].bundle.js',
     path: path.join(__dirname, 'dist')
   },
   node: {
