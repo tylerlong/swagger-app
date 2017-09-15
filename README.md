@@ -37,6 +37,7 @@ yarn build
 ## todo list
 
 - migrate data from PostgreSQL
+- detect file changed not by me
 
 
 ## Principles
