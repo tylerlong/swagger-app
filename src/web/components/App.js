@@ -1,6 +1,7 @@
 import React from 'react'
-import { Tabs } from 'antd'
+import { Tabs, Button, Icon } from 'antd'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import Info from './Info'
 import Permissions from './Permissions'
@@ -14,6 +15,7 @@ class App extends React.Component {
     const { title, version } = this.props
     return (
       <div>
+        <Button><Link to='/'><Icon type='home' /> Home</Link></Button>
         <h1>{title} {version}</h1>
         <Tabs tabPosition='left' defaultActiveKey='paths'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>

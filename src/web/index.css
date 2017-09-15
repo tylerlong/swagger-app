@@ -9,6 +9,12 @@ h1, h2 {
   padding-bottom: 8px !important;
 }
 
+h1 {
+  border-top: 1px dotted #ddd;
+  margin-top: 16px !important;
+  padding-top: 8px !important;
+}
+
 .ant-collapse {
   margin-bottom: 16px;
 }

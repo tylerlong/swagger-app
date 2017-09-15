@@ -37,7 +37,6 @@ yarn build
 ## todo list
 
 - migrate data from PostgreSQL
-- electron how to go back
 
 
 ## Principles
