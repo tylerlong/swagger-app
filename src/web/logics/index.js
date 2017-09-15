@@ -10,8 +10,11 @@ const loadStateLogic = createLogic({
     if (global.electron) { // electron
       const filesOpened = global.electron.dialog.showOpenDialog({ properties: ['openFile'] })
       if (filesOpened) {
-        const data = global.fs.readFileSync(filesOpened[0], 'utf-8')
-        dispatch(setState(JSON.parse(data)))
+        const fileOpened = filesOpened[0]
+        const data = global.fs.readFileSync(fileOpened, 'utf-8')
+        const state = JSON.parse(data)
+        state.fileOpened = fileOpened
+        dispatch(setState(state))
         window.location = window.location.href.split('#')[0] + '#/edit'
       }
     } else { // browser

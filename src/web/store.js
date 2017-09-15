@@ -10,4 +10,17 @@ const store = createStore(
   applyMiddleware(logicMiddleware)
 )
 
+// auto persist state
+if (global.electron) {
+  let currentData
+  store.subscribe(() => {
+    const state = store.getState()
+    const data = JSON.stringify(state, null, 2)
+    if (state.fileOpened && data !== currentData) {
+      global.fs.writeFileSync(state.fileOpened, data)
+      currentData = data
+    }
+  })
+}
+
 export default store
