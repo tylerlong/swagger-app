@@ -2,7 +2,6 @@ import React from 'react'
 import { Tabs } from 'antd'
 import { connect } from 'react-redux'
 
-import Alerts from './Alerts'
 import Info from './Info'
 import Permissions from './Permissions'
 import PathParameters from './PathParameters'
@@ -15,7 +14,6 @@ class App extends React.Component {
     const { title, version } = this.props
     return (
       <div>
-        <Alerts />
         <h1>{title} {version}</h1>
         <Tabs tabPosition='left' defaultActiveKey='paths'>
           <Tabs.TabPane tab='Info' key='info'><Info /></Tabs.TabPane>

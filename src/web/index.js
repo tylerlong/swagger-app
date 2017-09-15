@@ -8,15 +8,19 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import store from './store'
 import Home from './components/Home'
 import App from './components/App'
+import Alerts from './components/Alerts'
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/edit' component={App} />
-      </Switch>
-    </Router>
+    <div>
+      <Alerts />
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/edit' component={App} />
+        </Switch>
+      </Router>
+    </div>
   </Provider>,
   document.getElementById('root')
 )
