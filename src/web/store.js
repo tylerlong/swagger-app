@@ -15,16 +15,14 @@ const store = createStore(
 if (global.electron) {
   let currentData
   const subject = new Rx.Subject().debounceTime(1000)
-  subject.subscribe({
-    next: () => {
-      const state = store.getState()
-      const data = JSON.stringify(state, null, 2)
-      if (state.fileOpened && data !== currentData) {
-        global.fs.writeFileSync(state.fileOpened, data)
-        currentData = data
-      }
-      console.log('Saved')
+  subject.subscribe(() => {
+    const state = store.getState()
+    const data = JSON.stringify(state, null, 2)
+    if (state.fileOpened && data !== currentData) {
+      global.fs.writeFileSync(state.fileOpened, data)
+      currentData = data
     }
+    console.log('Saved')
   })
   store.subscribe(() => {
     subject.next()
