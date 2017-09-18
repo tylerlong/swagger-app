@@ -26,7 +26,7 @@ class FormItem extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {orderBy(R.prop('name'), model.properties).map(prop => {
+                {orderBy(R.prop('createdAt'), model.properties).map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
                       <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
