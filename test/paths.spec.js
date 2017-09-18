@@ -1,6 +1,5 @@
 /* eslint-env jest */
 import R from 'ramda'
-import toJson from 'enzyme-to-json'
 import { Popconfirm } from 'antd'
 
 import Paths from '../src/web/components/Paths'
@@ -20,20 +19,17 @@ const getModel = (index) => store.getState().paths[index]
 describe('test paths', () => {
   test('view paths', () => {
     expect(wrapper.find('.ant-collapse-item').length).toEqual(count)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('add path', () => {
     wrapper.find('button.ant-btn-primary').simulate('click')
     expect(getCount()).toEqual(count + 1)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('delete path', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     wrapper.find(Popconfirm).props().onConfirm()
     expect(getCount()).toEqual(count - 1)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('edit path path', () => {
@@ -43,6 +39,5 @@ describe('test paths', () => {
     expect(getModel(index).path).toEqual('/hello')
     wrapper.find('input').first().simulate('change', { target: { value: '/world' } })
     expect(getModel(index).path).toEqual('/world')
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 })

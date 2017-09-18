@@ -1,5 +1,4 @@
 /* eslint-env jest */
-import toJson from 'enzyme-to-json'
 import R from 'ramda'
 
 import Info from '../src/web/components/Info'
@@ -15,14 +14,12 @@ beforeEach(() => {
 describe('test info', () => {
   test('view info', () => {
     expect(wrapper.find('input').first().props().value).toEqual(store.getState().info.title)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('update title', () => {
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
     expect(store.getState().info.title).toEqual('Hello')
     wrapper.find('input').first().simulate('change', { target: { value: 'World' } })
     expect(store.getState().info.title).toEqual('World')
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
   test('update arrays', () => {
     // schemes
@@ -39,7 +36,5 @@ describe('test info', () => {
     input = wrapper.find('input[placeholder="Values separated by commas"]').at(2)
     input.simulate('change', { target: { value: 'application/json,text/plain; charset=utf-8' } })
     expect(store.getState().info.consumes).toEqual(['application/json', 'text/plain; charset=utf-8'])
-
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 })

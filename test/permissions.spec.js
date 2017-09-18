@@ -1,6 +1,5 @@
 /* eslint-env jest */
 import R from 'ramda'
-import toJson from 'enzyme-to-json'
 import { Popconfirm } from 'antd'
 
 import Permissions from '../src/web/components/Permissions'
@@ -20,20 +19,17 @@ const getModel = (index) => store.getState().permissions[index]
 describe('test permissions', () => {
   test('permissions list', () => {
     expect(wrapper.find('.ant-collapse-item').length).toEqual(count)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('add permission', () => {
     wrapper.find('button.ant-btn-primary').simulate('click')
     expect(getCount()).toEqual(count + 1)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('delete permission', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     wrapper.find(Popconfirm).props().onConfirm()
     expect(getCount()).toEqual(count - 1)
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   test('update permission fields', () => {
@@ -53,7 +49,5 @@ describe('test permissions', () => {
     expect(getModel(index).description).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
     expect(getModel(index).description).toEqual('World')
-
-    expect(toJson(wrapper)).toMatchSnapshot()
   })
 })
