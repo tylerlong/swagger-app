@@ -17,7 +17,7 @@ class FormItem extends React.Component {
         <Popconfirm title={`Are you sure to delete path "${path.path}"?`} okText='Yes' cancelText='No' onConfirm={deletePath}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
-        <Form.Item {...formItemLayout} label='Name'>
+        <Form.Item {...formItemLayout} label='Path'>
           <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { setProp('path', event.target.value) }} />
         </Form.Item>
       </div>
