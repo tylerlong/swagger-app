@@ -1,6 +1,8 @@
 import { createLogic } from 'redux-logic'
 import { Base64 } from 'js-base64'
 
+import { defaultState } from '../reducers/app'
+
 const openFileLogic = createLogic({
   type: 'OPEN_FILE',
   latest: true,
@@ -26,7 +28,7 @@ const newFileLogic = createLogic({
         filters: [{ name: 'swagger files', extensions: ['json'] }]
       })
       if (filePath) {
-        global.fs.writeFileSync(filePath, JSON.stringify(getState(), null, 2)) // todo: should write default template state instead
+        global.fs.writeFileSync(filePath, JSON.stringify(defaultState, null, 2)) // todo: should write default template state instead
         window.location = window.location.href.split('#')[0] + '#/edit/' + Base64.encodeURI(filePath)
       }
     }

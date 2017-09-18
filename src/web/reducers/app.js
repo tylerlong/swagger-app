@@ -2,7 +2,7 @@ import R from 'ramda'
 
 import { alert } from '../utils'
 
-const defaultState = {
+export const defaultState = {
   alerts: [],
   info: {
     title: 'Example API',

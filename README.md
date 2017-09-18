@@ -38,6 +38,7 @@ yarn build
 
 - migrate data from PostgreSQL
 - detect file changed not by me
+- don't persist alerts
 
 
 ## Principles
