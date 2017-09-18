@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'antd'
 import { connect } from 'react-redux'
 
-import { loadState, newState } from '../actions'
+import { openFile, newFile } from '../actions'
 
 class Home extends React.Component {
   componentDidMount () {
@@ -10,12 +10,13 @@ class Home extends React.Component {
   }
   render () {
     console.log('render Home')
+    const { openFile, newFile } = this.props
     return <div>
       <h1>swagger-app</h1>
-      <Button type='primary' onClick={this.props.loadState}>Open</Button>
-      { global.electron ? <Button onClick={this.props.newState}>New</Button> : '' }
+      <Button type='primary' onClick={openFile}>Open</Button>
+      { global.electron ? <Button onClick={newFile}>New</Button> : null }
     </div>
   }
 }
 
-export default connect(null, { loadState, newState })(Home)
+export default connect(null, { openFile, newFile })(Home)

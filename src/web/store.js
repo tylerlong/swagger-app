@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
 import { createLogicMiddleware } from 'redux-logic'
 import Rx from 'rxjs/Rx'
+import { Base64 } from 'js-base64'
 
 import reducer from './reducers'
 import logics from './logics'
@@ -18,11 +19,14 @@ if (global.electron) {
   subject.subscribe(() => {
     const state = store.getState()
     const data = JSON.stringify(state, null, 2)
-    if (state.fileOpened && data !== currentData) {
-      global.fs.writeFileSync(state.fileOpened, data)
-      currentData = data
+    if (data !== currentData) {
+      const tokens = window.location.href.split('#/edit/')
+      if (tokens.length > 1) {
+        const filePath = Base64.decode(tokens[1])
+        global.fs.writeFileSync(filePath, data)
+        currentData = data
+      }
     }
-    console.log('Saved')
   })
   store.subscribe(() => {
     subject.next()

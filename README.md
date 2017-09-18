@@ -38,7 +38,6 @@ yarn build
 
 - migrate data from PostgreSQL
 - detect file changed not by me
-- don't save non-common data, such as filePath.
 
 
 ## Principles

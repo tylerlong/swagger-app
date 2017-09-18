@@ -1,3 +1,3 @@
-export const loadState = () => ({ type: 'LOAD_STATE' })
+export const openFile = () => ({ type: 'OPEN_FILE' })
 
-export const newState = () => ({ type: 'NEW_STATE' })
+export const newFile = () => ({ type: 'NEW_FILE' })
