@@ -5,6 +5,9 @@ import { connect } from 'react-redux'
 import { loadState, newState } from '../actions'
 
 class Home extends React.Component {
+  componentDidMount () {
+    window.document.title = 'swagger-app'
+  }
   render () {
     console.log('render Home')
     return <div>

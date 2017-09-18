@@ -16,6 +16,7 @@ const loadStateLogic = createLogic({
         state.fileOpened = fileOpened
         dispatch(setState(state))
         window.location = window.location.href.split('#')[0] + '#/edit'
+        window.document.title = fileOpened
       }
     } else { // browser
       const res = await axios.get('/state.json')
@@ -40,6 +41,7 @@ const newStateLogic = createLogic({
         state.fileOpened = filePath
         dispatch(setState(state))
         window.location = window.location.href.split('#')[0] + '#/edit'
+        window.document.title = filePath
       }
     }
     done()
