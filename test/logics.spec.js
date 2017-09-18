@@ -20,10 +20,10 @@ beforeEach(() => {
 
 test('loadState', () => {
   nock(host).get('/state.json').reply(200, { message: 'Hello world' })
-  store.dispatch(loadState())
+  store.dispatch(loadState('/state.json'))
   return store.whenComplete(() => { // because it is async
     expect(store.actions).toEqual([
-      { type: 'LOAD_STATE' },
+      { type: 'LOAD_STATE', filePath: '/state.json' },
       { type: 'SET_STATE', state: { message: 'Hello world' } }
     ])
     expect(R.omit('alerts', store.getState())).toEqual({ message: 'Hello world' })
