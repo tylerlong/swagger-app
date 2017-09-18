@@ -26,6 +26,27 @@ const loadStateLogic = createLogic({
   }
 })
 
+const newStateLogic = createLogic({
+  type: 'NEW_STATE',
+  latest: true,
+  async process ({ getState, action }, dispatch, done) {
+    if (global.electron) {
+      const filePath = global.electron.dialog.showSaveDialog({
+        filters: [{ name: 'swagger files', extensions: ['json'] }]
+      })
+      if (filePath) {
+        console.log(filePath)
+        const state = getState()
+        state.fileOpened = filePath
+        dispatch(setState(state))
+        window.location = window.location.href.split('#')[0] + '#/edit'
+      }
+    }
+    done()
+  }
+})
+
 export default [
-  loadStateLogic
+  loadStateLogic,
+  newStateLogic
 ]
