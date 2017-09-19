@@ -32,6 +32,11 @@ const reducer = (state = defaultState, action) => {
       )
     case 'SHOW_ALERT':
       return alert(action.alert.type, action.alert.message)
+    case 'DELETE_FROM_ARRAY':
+      return R.pipe(
+        R.over(R.lensPath(R.init(action.path)), R.remove(R.last(action.path), 1)),
+        alert('success', 'Deleted')
+      )
     default:
       if (!R.contains(action.type, ['@@redux/INIT', 'OPEN_FILE', 'NEW_FILE', 'LOAD_STATE'])) {
         // When app starts, '@@redux/INIT' invoked by Redux

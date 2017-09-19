@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Input, Form, Popconfirm, Button, Icon, Select } from 'antd'
 
-import { setProp, deletePathRequest } from '../../actions'
+import { setProp, deleteFromArray } from '../../actions'
 import { subFormItemLayout } from '../../utils'
 
 class SubFormItem extends React.Component {
@@ -17,6 +17,9 @@ class SubFormItem extends React.Component {
         <Popconfirm title={`Are you sure to delete request "${prop.name}"?`} okText='Yes' cancelText='No' onConfirm={deletePathRequest}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
+        <Form.Item {...subFormItemLayout} label='Name'>
+          <Input placeholder='Name' size='large' value={prop.name} onChange={(event) => { setProp('name', event.target.value) }} />
+        </Form.Item>
         <Form.Item {...subFormItemLayout} label='Method'>
           <Select style={{ width: 120 }} value={prop.method} onChange={(value) => { setProp('method', value) }}>
             <Select.Option value='GET'>GET</Select.Option>
@@ -36,6 +39,6 @@ class SubFormItem extends React.Component {
 const mapStateToProps = ({ paths }, { index1, index2 }) => ({ prop: paths[index1].requests[index2] })
 const mapDispatchToProps = (dispatch, { index1, index2 }) => ({
   setProp: (key, value) => dispatch(setProp(['paths', index1, 'requests', index2, key], value)),
-  deletePathRequest: () => dispatch(deletePathRequest(index1, index2))
+  deletePathRequest: () => dispatch(deleteFromArray('paths', index1, 'requests', index2))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(SubFormItem)

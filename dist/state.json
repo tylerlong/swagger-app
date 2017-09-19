@@ -65,6 +65,8 @@
       "requests": [
         {
           "createdAt": 1498875254375,
+          "name": "Get API Versions",
+          "description": "Returns current API version(s) and server info.",
           "since": "1.0.2",
           "apiGroup": "Light",
           "permissions": [],
@@ -72,7 +74,6 @@
           "visibility": "public",
           "status": "normal",
           "method": "GET",
-          "description": "Get Server Info",
           "tags": [
             "API Versions"
           ],
