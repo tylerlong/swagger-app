@@ -5,11 +5,11 @@ import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 
 
 import { setProp, deleteModel, addModelProperty } from '../../actions'
 import { formItemLayout, orderBy } from '../../utils'
-import PropertyFormItems from './PropertyFormItems'
+import Property from './Property'
 
-class FormItem extends React.Component {
+class Model extends React.Component {
   render () {
-    console.log(`render Models.FormItem`)
+    console.log(`render Models.Model`)
     const { index, model, setProp, deleteModel, addModelProperty } = this.props
     if (!model) {
       return null
@@ -29,7 +29,7 @@ class FormItem extends React.Component {
                 {orderBy(R.prop('createdAt'), model.properties).map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
-                      <PropertyFormItems index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
+                      <Property index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
                     </Collapse.Panel>
                   )
                 })}
@@ -49,4 +49,4 @@ const mapDispathToProps = (dispatch, { index }) => ({
   deleteModel: () => dispatch(deleteModel(index)),
   addModelProperty: () => dispatch(addModelProperty(index))
 })
-export default connect(mapStateToProps, mapDispathToProps)(FormItem)
+export default connect(mapStateToProps, mapDispathToProps)(Model)

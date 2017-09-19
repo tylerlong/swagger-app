@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
-import FormItem from './FormItem'
+import Model from './Model'
 import { addModel } from '../../actions'
 import { orderBy } from '../../utils'
 
@@ -18,7 +18,7 @@ class Models extends React.Component {
           {orderBy(R.prop('name'), models).map(model => {
             return (
               <Collapse.Panel header={model.name} key={model.createdAt}>
-                <FormItem index={R.findIndex(R.propEq('createdAt', model.createdAt), models)} />
+                <Model index={R.findIndex(R.propEq('createdAt', model.createdAt), models)} />
               </Collapse.Panel>
             )
           })}
