@@ -6,9 +6,9 @@ import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 import { setProp, deletePathParameter } from '../../actions'
 import { formItemLayout } from '../../utils'
 
-class FormItem extends React.Component {
+class PathParameter extends React.Component {
   render () {
-    console.log(`render PathParameters.FormItem`)
+    console.log(`render PathParameters.PathParameter`)
     const { pathParameter, setProp, deletePathParameter } = this.props
     if (!pathParameter) {
       return null
@@ -37,4 +37,4 @@ const mapDispathToProps = (dispatch, { index }) => ({
   deletePathParameter: () => dispatch(deletePathParameter(index)),
   setProp: (key, value) => dispatch(setProp(['pathParameters', index, key], value))
 })
-export default connect(mapStateToProps, mapDispathToProps)(FormItem)
+export default connect(mapStateToProps, mapDispathToProps)(PathParameter)

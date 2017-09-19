@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
-import FormItem from './FormItem'
+import PathParameter from './PathParameter'
 import { addPathParameter } from '../../actions'
 import { orderBy } from '../../utils'
 
@@ -18,7 +18,7 @@ class PathParameters extends React.Component {
           {orderBy(R.prop('name'), pathParameters).map(pathParameter => {
             return (
               <Collapse.Panel header={pathParameter.name} key={pathParameter.createdAt}>
-                <FormItem index={R.findIndex(R.propEq('createdAt', pathParameter.createdAt), pathParameters)} />
+                <PathParameter index={R.findIndex(R.propEq('createdAt', pathParameter.createdAt), pathParameters)} />
               </Collapse.Panel>
             )
           })}
