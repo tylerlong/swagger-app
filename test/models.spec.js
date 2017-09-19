@@ -4,8 +4,8 @@ import { Popconfirm, Select } from 'antd'
 
 import store from './store'
 import Models from '../src/web/components/Models'
-import FormItem from '../src/web/components/Models/FormItem'
-import SubFormItem from '../src/web/components/Models/SubFormItem'
+import Model from '../src/web/components/Models/Model'
+import Property from '../src/web/components/Models/Property'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
 
@@ -32,7 +32,7 @@ describe('test model', () => {
   })
   test('update model fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
+    const index = wrapper.find(Model).first().props().index
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
     expect(getModel(index).name).toEqual('Hello')
     wrapper.find('input').first().simulate('change', { target: { value: 'World' } })
@@ -40,41 +40,41 @@ describe('test model', () => {
   })
   test('model properties list index #0', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
-    const count = wrapper.find(FormItem).first().find('.ant-collapse-item').length
+    const index = wrapper.find(Model).first().props().index
+    const count = wrapper.find(Model).first().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
   })
   test('model properties list index #1', () => {
     wrapper.find('div.ant-collapse-header').at(1).simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
-    const count = wrapper.find(FormItem).first().find('.ant-collapse-item').length
+    const index = wrapper.find(Model).first().props().index
+    const count = wrapper.find(Model).first().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
   })
   test('model properties list index #2', () => {
     wrapper.find('div.ant-collapse-header').at(2).simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
-    const count = wrapper.find(FormItem).first().find('.ant-collapse-item').length
+    const index = wrapper.find(Model).first().props().index
+    const count = wrapper.find(Model).first().find('.ant-collapse-item').length
     expect(store.getState().models[index].properties.length).toEqual(count)
   })
   test('add model property', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
+    const index = wrapper.find(Model).first().props().index
     const count = store.getState().models[index].properties.length
-    wrapper.find(FormItem).first().find('button.ant-btn-primary').simulate('click')
+    wrapper.find(Model).first().find('button.ant-btn-primary').simulate('click')
     expect(store.getState().models[index].properties.length).toEqual(count + 1)
   })
   test('delete model property', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    wrapper.find(FormItem).first().find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
+    wrapper.find(Model).first().find('div.ant-collapse-header').first().simulate('click')
+    const index = wrapper.find(Model).first().props().index
     const count = store.getState().models[index].properties.length
-    wrapper.find(FormItem).first().find(SubFormItem).first().find(Popconfirm).props().onConfirm()
+    wrapper.find(Model).first().find(Property).first().find(Popconfirm).props().onConfirm()
     expect(store.getState().models[index].properties.length).toEqual(count - 1)
   })
   test('update model property fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    wrapper.find(FormItem).first().find('div.ant-collapse-header').first().simulate('click')
-    const form = wrapper.find(FormItem).first().find(SubFormItem).first()
+    wrapper.find(Model).first().find('div.ant-collapse-header').first().simulate('click')
+    const form = wrapper.find(Model).first().find(Property).first()
     const { index1, index2 } = form.props()
 
     // name
