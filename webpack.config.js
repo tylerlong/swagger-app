@@ -42,7 +42,8 @@ const webConfig = {
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist')
-  }
+  },
+  devtool: 'source-map'
 }
 
 const electronConfig = {
