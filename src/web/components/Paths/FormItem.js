@@ -28,7 +28,7 @@ class FormItem extends React.Component {
               <Collapse accordion>
                 {orderBy(R.prop('createdAt'), path.requests).map(prop => {
                   return (
-                    <Collapse.Panel header={prop.name} key={prop.createdAt}>
+                    <Collapse.Panel header={prop.method} key={prop.createdAt}>
                       <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), path.requests)} />
                     </Collapse.Panel>
                   )
