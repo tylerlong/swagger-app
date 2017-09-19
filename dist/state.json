@@ -62,8 +62,9 @@
     {
       "createdAt": 1498875254374,
       "path": "/restapi",
-      "methods": [
+      "requests": [
         {
+          "createdAt": 1498875254375,
           "since": "1.0.2",
           "apiGroup": "Light",
           "permissions": [],
