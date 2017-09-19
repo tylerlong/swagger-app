@@ -14,6 +14,11 @@ const reducer = (state, action) => {
         R.over(R.lensPath(['paths']), R.remove(action.index, 1)),
         alert('success', 'Path deleted')
       )
+    case 'ADD_PATH_REQUEST':
+      return R.pipe(
+        R.over(R.lensPath(['paths', action.index, 'requests']), R.append(action.props)),
+        alert('sccess', 'Path request added')
+      )
     default:
       return alert('error', `Unknown action type: ${action.type}`)
   }
