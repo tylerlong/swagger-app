@@ -6,9 +6,9 @@ import { Input, Form, Popconfirm, Button, Icon, Checkbox, Select } from 'antd'
 import { setProp, deleteModelProperty } from '../../actions'
 import { subFormItemLayout } from '../../utils'
 
-class SubFormItem extends React.Component {
+class PropertyFormItems extends React.Component {
   render () {
-    console.log(`render Models.SubFormItem`)
+    console.log(`render Models.PropertyFormItems`)
     const { prop, setProp, deleteModelProperty } = this.props
     if (!prop) {
       return null
@@ -53,4 +53,4 @@ const mapDispatchToProps = (dispatch, { index1, index2 }) => ({
   setProp: (key, value) => dispatch(setProp(['models', index1, 'properties', index2, key], value)),
   deleteModelProperty: () => dispatch(deleteModelProperty(index1, index2))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(SubFormItem)
+export default connect(mapStateToProps, mapDispatchToProps)(PropertyFormItems)

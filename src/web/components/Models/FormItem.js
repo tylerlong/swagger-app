@@ -5,7 +5,7 @@ import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 
 
 import { setProp, deleteModel, addModelProperty } from '../../actions'
 import { formItemLayout, orderBy } from '../../utils'
-import SubFormItem from './SubFormItem'
+import PropertyFormItems from './PropertyFormItems'
 
 class FormItem extends React.Component {
   render () {
@@ -29,7 +29,7 @@ class FormItem extends React.Component {
                 {orderBy(R.prop('createdAt'), model.properties).map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
-                      <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
+                      <PropertyFormItems index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
                     </Collapse.Panel>
                   )
                 })}
