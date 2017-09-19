@@ -71,7 +71,7 @@
           "batch": false,
           "visibility": "public",
           "status": "normal",
-          "method": "get",
+          "method": "GET",
           "description": "Get Server Info",
           "tags": [
             "API Versions"
