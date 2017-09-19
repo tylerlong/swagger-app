@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Button, Collapse, Icon } from 'antd'
 import { connect } from 'react-redux'
 
-import FormItem from './FormItem'
+import Permission from './Permission'
 import { addPermission } from '../../actions'
 import { orderBy } from '../../utils'
 
@@ -18,7 +18,7 @@ class Permissions extends React.Component {
           {orderBy(R.prop('name'), permissions).map(permission => {
             return (
               <Collapse.Panel header={permission.name} key={`${permission.createdAt}`}>
-                <FormItem index={R.findIndex(R.propEq('createdAt', permission.createdAt), permissions)} />
+                <Permission index={R.findIndex(R.propEq('createdAt', permission.createdAt), permissions)} />
               </Collapse.Panel>
             )
           })}

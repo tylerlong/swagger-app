@@ -5,9 +5,9 @@ import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 import { setProp, deletePermission } from '../../actions'
 import { formItemLayout } from '../../utils'
 
-class FormItem extends React.Component {
+class Permission extends React.Component {
   render () {
-    console.log(`render Permissions.FormItem`)
+    console.log(`render Permissions.Permission`)
     const { permission, setProp, deletePermission } = this.props
     if (!permission) {
       return null
@@ -33,4 +33,4 @@ const mapDispatchToProps = (dispatch, { index }) => ({
   deletePermission: () => dispatch(deletePermission(index)),
   setProp: (key, value) => dispatch(setProp(['permissions', index, key], value))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(FormItem)
+export default connect(mapStateToProps, mapDispatchToProps)(Permission)

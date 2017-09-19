@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Popconfirm } from 'antd'
 
 import Permissions from '../src/web/components/Permissions'
-import FormItem from '../src/web/components/Permissions/FormItem'
+import Permission from '../src/web/components/Permissions/Permission'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
@@ -34,7 +34,7 @@ describe('test permissions', () => {
 
   test('update permission fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
+    const index = wrapper.find(Permission).first().props().index
 
     // name
     let input = wrapper.find('input').first()
