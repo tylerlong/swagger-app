@@ -1,14 +1,16 @@
+import R from 'ramda'
 import React from 'react'
 import { connect } from 'react-redux'
-import { Popconfirm, Button, Icon, Form, Input } from 'antd'
+import { Popconfirm, Button, Icon, Form, Input, Row, Col, Card, Collapse } from 'antd'
 
-import { setProp, deletePath } from '../../actions'
-import { formItemLayout } from '../../utils'
+import { setProp, deletePath, addPathRequest } from '../../actions'
+import { formItemLayout, orderBy } from '../../utils'
+import SubFormItem from './SubFormItem'
 
 class FormItem extends React.Component {
   render () {
     console.log(`render Paths.FormItem`)
-    const { path, setProp, deletePath } = this.props
+    const { index, path, setProp, deletePath, addPathRequest } = this.props
     if (!path) {
       return null
     }
@@ -20,6 +22,22 @@ class FormItem extends React.Component {
         <Form.Item {...formItemLayout} label='Path'>
           <Input placeholder='Path' size='large' value={path.path} onChange={(event) => { setProp('path', event.target.value) }} />
         </Form.Item>
+        <Row type='flex' justify='center'>
+          <Col xs={24} sm={18}>
+            <Card title='Requests'>
+              <Collapse accordion>
+                {orderBy(R.prop('createdAt'), path.requests).map(prop => {
+                  return (
+                    <Collapse.Panel header={prop.name} key={prop.createdAt}>
+                      <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), path.requests)} />
+                    </Collapse.Panel>
+                  )
+                })}
+              </Collapse>
+              <Button type='primary' size='large' onClick={addPathRequest}><Icon type='plus' />Add request</Button>
+            </Card>
+          </Col>
+        </Row>
       </div>
     )
   }
@@ -27,7 +45,8 @@ class FormItem extends React.Component {
 
 const mapStateToProps = ({ paths }, { index }) => ({ path: paths[index] })
 const mapDispatchToProps = (dispatch, { index }) => ({
+  setProp: (key, value) => dispatch(setProp(['paths', index, key], value)),
   deletePath: () => dispatch(deletePath(index)),
-  setProp: (key, value) => dispatch(setProp(['paths', index, key], value))
+  addPathRequest: () => dispatch(addPathRequest(index))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(FormItem)
