@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Button, Icon, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
-import FormItem from './FormItem'
+import Path from './Path'
 import { addPath } from '../../actions'
 import { orderBy } from '../../utils'
 
@@ -18,7 +18,7 @@ class Paths extends React.Component {
           {orderBy(R.prop('path'), paths).map(path => {
             return (
               <Collapse.Panel header={path.path} key={path.createdAt}>
-                <FormItem index={R.findIndex(R.propEq('createdAt', path.createdAt), paths)} />
+                <Path index={R.findIndex(R.propEq('createdAt', path.createdAt), paths)} />
               </Collapse.Panel>
             )
           })}

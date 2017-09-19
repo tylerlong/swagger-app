@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Popconfirm } from 'antd'
 
 import Paths from '../src/web/components/Paths'
-import FormItem from '../src/web/components/Paths/FormItem'
+import Path from '../src/web/components/Paths/Path'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
 import store from './store'
@@ -34,7 +34,7 @@ describe('test paths', () => {
 
   test('edit path path', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(FormItem).first().props().index
+    const index = wrapper.find(Path).first().props().index
     wrapper.find('input').first().simulate('change', { target: { value: '/hello' } })
     expect(getModel(index).path).toEqual('/hello')
     wrapper.find('input').first().simulate('change', { target: { value: '/world' } })

@@ -5,9 +5,9 @@ import { Input, Form, Popconfirm, Button, Icon, Select } from 'antd'
 import { setProp, deleteFromArray } from '../../actions'
 import { subFormItemLayout } from '../../utils'
 
-class SubFormItem extends React.Component {
+class Request extends React.Component {
   render () {
-    console.log(`render Paths.SubFormItem`)
+    console.log(`render Paths.Request`)
     const { prop, setProp, deletePathRequest } = this.props
     if (!prop) {
       return null
@@ -41,4 +41,4 @@ const mapDispatchToProps = (dispatch, { index1, index2 }) => ({
   setProp: (key, value) => dispatch(setProp(['paths', index1, 'requests', index2, key], value)),
   deletePathRequest: () => dispatch(deleteFromArray('paths', index1, 'requests', index2))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(SubFormItem)
+export default connect(mapStateToProps, mapDispatchToProps)(Request)

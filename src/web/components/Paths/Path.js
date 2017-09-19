@@ -5,11 +5,11 @@ import { Popconfirm, Button, Icon, Form, Input, Row, Col, Card, Collapse } from 
 
 import { setProp, deletePath, addPathRequest } from '../../actions'
 import { formItemLayout, orderBy } from '../../utils'
-import SubFormItem from './SubFormItem'
+import Request from './Request'
 
-class FormItem extends React.Component {
+class Path extends React.Component {
   render () {
-    console.log(`render Paths.FormItem`)
+    console.log(`render Paths.Path`)
     const { index, path, setProp, deletePath, addPathRequest } = this.props
     if (!path) {
       return null
@@ -29,7 +29,7 @@ class FormItem extends React.Component {
                 {orderBy(R.prop('createdAt'), path.requests).map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
-                      <SubFormItem index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), path.requests)} />
+                      <Request index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), path.requests)} />
                     </Collapse.Panel>
                   )
                 })}
@@ -49,4 +49,4 @@ const mapDispatchToProps = (dispatch, { index }) => ({
   deletePath: () => dispatch(deletePath(index)),
   addPathRequest: () => dispatch(addPathRequest(index))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(FormItem)
+export default connect(mapStateToProps, mapDispatchToProps)(Path)
