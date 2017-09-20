@@ -1,8 +1,7 @@
-import R from 'ramda'
 import React from 'react'
 import { Input, Form, Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
 
-import { formItemLayout, orderBy } from '../../utils'
+import { formItemLayout } from '../../utils'
 import Property from '../../containers/Models/Property'
 
 class Model extends React.Component {
@@ -24,10 +23,10 @@ class Model extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {orderBy(R.prop('createdAt'), model.properties).map(prop => {
+                {model.properties.map(prop => {
                   return (
                     <Collapse.Panel header={prop.name} key={prop.createdAt}>
-                      <Property index1={index} index2={R.findIndex(R.propEq('createdAt', prop.createdAt), model.properties)} />
+                      <Property index1={index} index2={prop.index} />
                     </Collapse.Panel>
                   )
                 })}
