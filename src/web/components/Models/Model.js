@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
 
 import Property from '../../containers/Models/Property'
-import FormItem from '../../containers/Models/FormItem'
+import ModelTextField from '../../containers/Models/ModelTextField'
 
 class Model extends React.Component {
   render () {
@@ -16,7 +16,7 @@ class Model extends React.Component {
         <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModel}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
-        <FormItem index={index1} name='name' />
+        <ModelTextField index={index1} name='name' />
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>
             <Card title='Properties'>
