@@ -7,13 +7,10 @@ import { ModelTextField } from '../../containers/Models/ModelFields'
 class Model extends React.Component {
   render () {
     console.log(`render Models.Model`)
-    const { index: index1, model, deleteModel, addModelProperty } = this.props
-    if (!model) {
-      return null
-    }
+    const { index: index1, name, properties, deleteModel, addModelProperty } = this.props
     return (
       <div>
-        <Popconfirm title={`Are you sure to delete model "${model.name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModel}>
+        <Popconfirm title={`Are you sure to delete model "${name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModel}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <ModelTextField index={index1} name='name' />
@@ -21,7 +18,7 @@ class Model extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {model.properties.map(({ index: index2, name, createdAt }) => {
+                {properties.map(({ index: index2, name, createdAt }) => {
                   return (
                     <Collapse.Panel header={name} key={createdAt}>
                       <Property index1={index1} index2={index2} />

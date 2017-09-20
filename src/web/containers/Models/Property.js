@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { deleteModelProperty } from '../../actions'
 import Property from '../../components/Models/Property'
 
-// todo: only connect necessary fields in property
-const mapStateToProps = ({ models }, { index1, index2 }) => ({ property: models[index1].properties[index2] })
+const mapStateToProps = ({ models }, { index1, index2 }) => ({ name: models[index1].properties[index2].name })
 const mapDispatchToProps = (dispatch, { index1, index2 }) => ({
   deleteModelProperty: () => dispatch(deleteModelProperty(index1, index2))
 })

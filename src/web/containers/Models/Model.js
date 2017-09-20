@@ -7,13 +7,11 @@ import Model from '../../components/Models/Model'
 const mapStateToProps = ({ models }, { index }) => {
   const { name, properties } = models[index]
   return {
-    model: {
-      name,
-      properties: R.pipe(
-        R.addIndex(R.map)(({ name, createdAt }, index) => ({ index, name, createdAt })),
-        R.sortBy(R.prop('createdAt'))
-      )(properties)
-    }
+    name,
+    properties: R.pipe(
+      R.addIndex(R.map)(({ name, createdAt }, index) => ({ index, name, createdAt })),
+      R.sortBy(R.prop('createdAt'))
+    )(properties)
   }
 }
 const mapDispathToProps = (dispatch, { index }) => ({

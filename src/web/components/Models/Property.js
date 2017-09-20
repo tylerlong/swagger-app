@@ -6,14 +6,11 @@ import { PropertyTextField, PropertySelectField, PropertyCheckboxField } from '.
 class Property extends React.Component {
   render () {
     console.log(`render Models.Model.Property`)
-    const { index1, index2, property, deleteModelProperty } = this.props
-    if (!property) {
-      return null
-    }
+    const { index1, index2, name, deleteModelProperty } = this.props
     return (
       <div>
         {/* todo: Move Popconfirm to components/Common */}
-        <Popconfirm title={`Are you sure to delete property "${property.name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModelProperty}>
+        <Popconfirm title={`Are you sure to delete property "${name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModelProperty}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <PropertyTextField index1={index1} index2={index2} name='name' />
