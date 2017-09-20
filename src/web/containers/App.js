@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Base64 } from 'js-base64'
 
-import Info from './Info'
+import Info from '../components/Info'
 import Permissions from './Permissions'
 import PathParameters from './PathParameters'
 import Paths from './Paths'

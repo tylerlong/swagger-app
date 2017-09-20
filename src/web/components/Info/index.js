@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FormItem from './FormItem'
+import FormItem from '../../containers/Info/FormItem'
 
 class Info extends React.Component {
   render () {
