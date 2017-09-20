@@ -18,7 +18,7 @@ class Model extends React.Component {
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { update('name', event.target.value) }} />
-        </Form.Item >
+        </Form.Item>
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>
             <Card title='Properties'>
@@ -35,7 +35,7 @@ class Model extends React.Component {
             </Card>
           </Col>
         </Row>
-      </div >
+      </div>
     )
   }
 }
