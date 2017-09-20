@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FormItem from '../../containers/Info/FormItem'
+import InfoTextField from '../../containers/Info/InfoTextField'
 
 class Info extends React.Component {
   render () {
@@ -8,11 +8,15 @@ class Info extends React.Component {
     return (
       <div>
         <h2>Info</h2>
-        {[
-          'title', 'version', 'description',
-          'termsOfService', 'host', 'basePath',
-          'schemes', 'produces', 'consumes'
-        ].map(name => <FormItem name={name} key={name} />)}
+        <InfoTextField name='title' />
+        <InfoTextField name='version' />
+        <InfoTextField name='description' />
+        <InfoTextField name='termsOfService' />
+        <InfoTextField name='host' />
+        <InfoTextField name='basePath' />
+        <InfoTextField name='schemes' isArray />
+        <InfoTextField name='produces' isArray />
+        <InfoTextField name='consumes' isArray />
       </div>
     )
   }
