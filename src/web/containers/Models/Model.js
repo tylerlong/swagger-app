@@ -1,7 +1,7 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import { setProp, deleteModel, addModelProperty } from '../../actions'
+import { deleteModel, addModelProperty } from '../../actions'
 import Model from '../../components/Models/Model'
 
 const mapStateToProps = ({ models }, { index }) => {
@@ -17,7 +17,6 @@ const mapStateToProps = ({ models }, { index }) => {
   }
 }
 const mapDispathToProps = (dispatch, { index }) => ({
-  update: (key, value) => dispatch(setProp(['models', index, key], value)),
   deleteModel: () => dispatch(deleteModel(index)),
   addModelProperty: () => dispatch(addModelProperty(index))
 })

@@ -6,7 +6,7 @@ import { formItemLayout } from '../../utils'
 
 class FormItem extends React.Component {
   render () {
-    console.log(`render Info.FormItem`)
+    console.log(`render FormItem`)
     const { name, value, update, isArray = false } = this.props
     let input = null
     if (isArray) {
