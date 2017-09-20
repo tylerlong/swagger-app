@@ -8,7 +8,11 @@ class Info extends React.Component {
     return (
       <div>
         <h2>Info</h2>
-        {['title', 'version', 'description', 'termsOfService', 'host', 'basePath', 'schemes', 'produces', 'consumes'].map(name => <FormItem name={name} key={name} />)}
+        {[
+          'title', 'version', 'description',
+          'termsOfService', 'host', 'basePath',
+          'schemes', 'produces', 'consumes'
+        ].map(name => <FormItem name={name} key={name} />)}
       </div>
     )
   }
