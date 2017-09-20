@@ -7,4 +7,4 @@ const mapStateToProps = ({ info }, { name }) => ({ value: info[name] })
 const mapDispatchToProps = (dispatch, { name }) => ({
   update: value => dispatch(setProp(['info', name], value))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(TextField)
+export const InfoTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)

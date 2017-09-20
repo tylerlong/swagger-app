@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Popconfirm, Collapse, Card, Row, Col, Icon } from 'antd'
 
 import Property from '../../containers/Models/Property'
-import ModelTextField from '../../containers/Models/ModelTextField'
+import { ModelTextField } from '../../containers/Models/ModelFields'
 
 class Model extends React.Component {
   render () {

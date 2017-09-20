@@ -7,4 +7,4 @@ const mapStateToProps = ({ models }, { index, name }) => ({ value: models[index]
 const mapDispatchToProps = (dispatch, { index, name }) => ({
   update: value => dispatch(setProp(['models', index, name], value))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(TextField)
+export const ModelTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)

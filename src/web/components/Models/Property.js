@@ -2,8 +2,7 @@ import React from 'react'
 import { Form, Popconfirm, Button, Icon, Checkbox } from 'antd'
 
 import { formItemLayout } from '../../utils'
-import PropertyTextField from '../../containers/Models/PropertyTextField'
-import PropertySelectField from '../../containers/Models/PropertySelectField'
+import { PropertyTextField, PropertySelectField } from '../../containers/Models/PropertyFields'
 
 class Property extends React.Component {
   render () {
