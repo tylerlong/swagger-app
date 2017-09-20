@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import R from 'ramda'
 
-import Info from '../src/web/components/Info'
+import Info from '../src/web/containers/Info'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'

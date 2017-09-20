@@ -2,8 +2,8 @@
 import R from 'ramda'
 import { Popconfirm } from 'antd'
 
-import PathParameters from '../src/web/components/PathParameters'
-import PathParameter from '../src/web/components/PathParameters/PathParameter'
+import PathParameters from '../src/web/containers/PathParameters'
+import PathParameter from '../src/web/containers/PathParameters/PathParameter'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'

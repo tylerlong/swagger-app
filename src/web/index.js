@@ -6,9 +6,9 @@ import { Provider } from 'react-redux'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import store from './store'
-import Home from './components/Home'
-import App from './components/App'
-import Alerts from './components/Alerts'
+import Home from './containers/Home'
+import App from './containers/App'
+import Alerts from './containers/Alerts'
 
 ReactDOM.render(
   <Provider store={store}>

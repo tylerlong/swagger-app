@@ -2,8 +2,8 @@
 import R from 'ramda'
 import { Popconfirm } from 'antd'
 
-import Permissions from '../src/web/components/Permissions'
-import Permission from '../src/web/components/Permissions/Permission'
+import Permissions from '../src/web/containers/Permissions'
+import Permission from '../src/web/containers/Permissions/Permission'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
