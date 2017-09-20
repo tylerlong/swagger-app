@@ -7,7 +7,7 @@ import Property from '../../containers/Models/Property'
 class Model extends React.Component {
   render () {
     console.log(`render Models.Model`)
-    const { index, model, setProp, deleteModel, addModelProperty } = this.props
+    const { index: index1, model, setProp, deleteModel, addModelProperty } = this.props
     if (!model) {
       return null
     }
@@ -23,10 +23,10 @@ class Model extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {model.properties.map(prop => {
+                {model.properties.map(({ index: index2, name, createdAt }) => {
                   return (
-                    <Collapse.Panel header={prop.name} key={prop.createdAt}>
-                      <Property index1={index} index2={prop.index} />
+                    <Collapse.Panel header={name} key={createdAt}>
+                      <Property index1={index1} index2={index2} />
                     </Collapse.Panel>
                   )
                 })}
