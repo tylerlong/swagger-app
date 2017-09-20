@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Input, Form, Popconfirm, Button, Icon, Select } from 'antd'
 
 import { setProp, deleteFromArray } from '../../actions'
-import { subFormItemLayout } from '../../utils'
+import { formItemLayout } from '../../utils'
 
 class Request extends React.Component {
   render () {
@@ -17,10 +17,10 @@ class Request extends React.Component {
         <Popconfirm title={`Are you sure to delete request "${request.name}"?`} okText='Yes' cancelText='No' onConfirm={deletePathRequest}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
-        <Form.Item {...subFormItemLayout} label='Name'>
+        <Form.Item {...formItemLayout} label='Name'>
           <Input placeholder='Name' size='large' value={request.name} onChange={(event) => { setProp('name', event.target.value) }} />
         </Form.Item>
-        <Form.Item {...subFormItemLayout} label='Method'>
+        <Form.Item {...formItemLayout} label='Method'>
           <Select style={{ width: 120 }} value={request.method} onChange={(value) => { setProp('method', value) }}>
             <Select.Option value='GET'>GET</Select.Option>
             <Select.Option value='POST'>POST</Select.Option>
@@ -28,7 +28,7 @@ class Request extends React.Component {
             <Select.Option value='DELETE'>DELETE</Select.Option>
           </Select>
         </Form.Item>
-        <Form.Item {...subFormItemLayout} label='Description'>
+        <Form.Item {...formItemLayout} label='Description'>
           <Input placeholder='Description' size='large' value={request.description} onChange={(event) => { setProp('description', event.target.value) }} />
         </Form.Item>
       </div>

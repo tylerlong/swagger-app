@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { alert, getFormItemLayout, formItemLayout, subFormItemLayout, orderBy } from '../src/web/utils'
+import { alert, getFormItemLayout, formItemLayout, orderBy } from '../src/web/utils'
 import R from 'ramda'
 
 describe('test alert', () => {
@@ -57,8 +57,7 @@ describe('test getFormItemLayout', () => {
   })
 
   test('pre-defined FormItemLayouts', () => {
-    expect(formItemLayout).toEqual(getFormItemLayout(6, 12))
-    expect(subFormItemLayout).toEqual(getFormItemLayout(6, 18))
+    expect(formItemLayout).toEqual(getFormItemLayout(4, 18))
   })
 })
 

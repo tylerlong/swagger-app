@@ -22,3 +22,11 @@ h1 {
 .ant-btn {
   margin-right: 16px;
 }
+
+.ant-btn-danger {
+  margin-bottom: 16px !important;
+}
+
+.ant-form-item-label {
+  text-transform: capitalize;
+}
