@@ -7,7 +7,7 @@ import Property from '../../containers/Models/Property'
 class Model extends React.Component {
   render () {
     console.log(`render Models.Model`)
-    const { index: index1, model, setProp, deleteModel, addModelProperty } = this.props
+    const { index: index1, model, update, deleteModel, addModelProperty } = this.props
     if (!model) {
       return null
     }
@@ -17,7 +17,7 @@ class Model extends React.Component {
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
         <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { setProp('name', event.target.value) }} />
+          <Input placeholder='Name' size='large' value={model.name} onChange={(event) => { update('name', event.target.value) }} />
         </Form.Item >
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>

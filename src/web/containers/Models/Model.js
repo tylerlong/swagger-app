@@ -17,7 +17,7 @@ const mapStateToProps = ({ models }, { index }) => {
   }
 }
 const mapDispathToProps = (dispatch, { index }) => ({
-  setProp: (key, value) => dispatch(setProp(['models', index, key], value)),
+  update: (key, value) => dispatch(setProp(['models', index, key], value)),
   deleteModel: () => dispatch(deleteModel(index)),
   addModelProperty: () => dispatch(addModelProperty(index))
 })
