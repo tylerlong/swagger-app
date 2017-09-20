@@ -13,6 +13,7 @@ class Property extends React.Component {
     }
     return (
       <div>
+        {/* todo: Move Popconfirm to components/Common */}
         <Popconfirm title={`Are you sure to delete property "${property.name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModelProperty}>
           <Button type='danger'><Icon type='arrow-up' />Delete</Button>
         </Popconfirm>
