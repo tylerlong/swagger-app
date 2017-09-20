@@ -4,7 +4,7 @@ import { Input, Form } from 'antd'
 
 import { formItemLayout } from '../../utils'
 
-class FormItem extends React.Component {
+class TextField extends React.Component {
   render () {
     console.log(`render FormItem`)
     const { name, value, update, isArray = false } = this.props
@@ -24,4 +24,4 @@ class FormItem extends React.Component {
   }
 }
 
-export default FormItem
+export default TextField
