@@ -1,18 +1,15 @@
 import React from 'react'
-import { Popconfirm, Button, Icon } from 'antd'
 
 import { PropertyTextField, PropertySelectField, PropertyCheckboxField } from '../../containers/Models/PropertyFields'
+import DeletePropertyButton from '../../containers/Models/DeletePropertyButton'
 
 class Property extends React.Component {
   render () {
     console.log(`render Models.Model.Property`)
-    const { index1, index2, name, deleteModelProperty } = this.props
+    const { index1, index2 } = this.props
     return (
       <div>
-        {/* todo: Move Popconfirm to components/Common */}
-        <Popconfirm title={`Are you sure to delete property "${name}"?`} okText='Yes' cancelText='No' onConfirm={deleteModelProperty}>
-          <Button type='danger'><Icon type='arrow-up' />Delete</Button>
-        </Popconfirm>
+        <DeletePropertyButton index1={index1} index2={index2} />
         <PropertyTextField index1={index1} index2={index2} name='name' />
         <PropertyTextField index1={index1} index2={index2} name='description' />
         <PropertySelectField index1={index1} index2={index2} name='type'
