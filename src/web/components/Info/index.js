@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { InfoTextField } from '../../containers/Info/InfoFields'
+import { InfoTextField } from '../../containers/Info'
 
 class Info extends React.Component {
   render () {

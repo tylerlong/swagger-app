@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { PropertyTextField, PropertySelectField, PropertyCheckboxField } from '../../containers/Models/PropertyFields'
-import DeletePropertyButton from '../../containers/Models/DeletePropertyButton'
+import { PropertyTextField, PropertySelectField, PropertyCheckboxField, DeletePropertyButton } from '../../containers/Models/Property'
 
 class Property extends React.Component {
   render () {

@@ -1,8 +1,10 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import { addModelProperty } from '../../actions'
+import { setProp, addModelProperty, deleteFromArray } from '../../actions'
 import Model from '../../components/Models/Model'
+import TextField from '../../components/Common/TextField'
+import DeleteButton from '../../components/Common/DeleteButton'
 
 const mapStateToProps = ({ models }, { index }) => {
   const { properties } = models[index]
@@ -17,3 +19,21 @@ const mapDispathToProps = (dispatch, { index }) => ({
   addModelProperty: () => dispatch(addModelProperty(index))
 })
 export default connect(mapStateToProps, mapDispathToProps)(Model)
+
+export const ModelTextField = connect(
+  ({ models }, { index, name }) => ({ value: models[index][name] }),
+  (dispatch, { index, name }) => ({
+    update: value => dispatch(setProp(['models', index, name], value))
+  }))(TextField)
+
+export const DeleteModelButton = connect(
+  ({ models }, { index }) => {
+    const { name } = models[index]
+    return {
+      componentName: 'model',
+      recordName: name
+    }
+  },
+  (dispatch, { index }) => ({
+    deleteRecord: () => dispatch(deleteFromArray('models', index))
+  }))(DeleteButton)
