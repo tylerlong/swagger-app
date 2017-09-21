@@ -1,36 +1,23 @@
-import React from 'react'
+import R from 'ramda'
 import { connect } from 'react-redux'
-import { Input, Form, Button, Popconfirm, Icon } from 'antd'
 
-import { setProp, deletePermission } from '../../actions'
-import { formItemLayout } from '../../utils'
+import { setProp, deleteFromArray } from '../../actions'
+import { TextField, DeleteButton } from '../../components/Common'
 
-class Permission extends React.Component {
-  render () {
-    console.log(`render Permissions.Permission`)
-    const { permission, setProp, deletePermission } = this.props
-    if (!permission) {
-      return null
+export const PermissionTextField = connect(
+  (state, { path, name }) => ({ value: R.path(path.concat(name), state) }),
+  (dispatch, { path, name }) => ({
+    update: value => dispatch(setProp(path.concat(name), value))
+  }))(TextField)
+
+export const DeletePermissionButton = connect(
+  (state, { path }) => {
+    const { name } = R.path(path, state)
+    return {
+      componentName: 'permission',
+      recordName: name
     }
-    return (
-      <div>
-        <Popconfirm title={`Are you sure to delete permission "${permission.name}"?`} okText='Yes' cancelText='No' onConfirm={deletePermission}>
-          <Button type='danger'><Icon type='arrow-up' />Delete</Button>
-        </Popconfirm>
-        <Form.Item {...formItemLayout} label='Name'>
-          <Input placeholder='Name' size='large' value={permission.name} onChange={(event) => { setProp('name', event.target.value) }} />
-        </Form.Item>
-        <Form.Item {...formItemLayout} label='Description'>
-          <Input placeholder='Description' size='large' value={permission.description} onChange={(event) => { setProp('description', event.target.value) }} />
-        </Form.Item>
-      </div>
-    )
-  }
-}
-
-const mapStateToProps = ({ permissions }, { index }) => ({ permission: permissions[index] })
-const mapDispatchToProps = (dispatch, { index }) => ({
-  deletePermission: () => dispatch(deletePermission(index)),
-  setProp: (key, value) => dispatch(setProp(['permissions', index, key], value))
-})
-export default connect(mapStateToProps, mapDispatchToProps)(Permission)
+  },
+  (dispatch, { path }) => ({
+    deleteRecord: () => dispatch(deleteFromArray(path))
+  }))(DeleteButton)

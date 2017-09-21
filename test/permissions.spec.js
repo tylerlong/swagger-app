@@ -3,7 +3,7 @@ import R from 'ramda'
 import { Popconfirm } from 'antd'
 
 import Permissions from '../src/web/containers/Permissions'
-import Permission from '../src/web/containers/Permissions/Permission'
+import Permission from '../src/web/components/Permissions/Permission'
 import store from './store'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
@@ -14,7 +14,7 @@ beforeEach(() => {
 })
 const count = state.permissions.length
 const getCount = () => store.getState().permissions.length
-const getModel = (index) => store.getState().permissions[index]
+const getPermission = (path) => R.path(path, store.getState())
 
 describe('test permissions', () => {
   test('permissions list', () => {
@@ -34,20 +34,20 @@ describe('test permissions', () => {
 
   test('update permission fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(Permission).first().props().index
+    const path = wrapper.find(Permission).first().props().path
 
     // name
     let input = wrapper.find('input').first()
     input.simulate('change', { target: { value: 'Hello' } })
-    expect(getModel(index).name).toEqual('Hello')
+    expect(getPermission(path).name).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
-    expect(getModel(index).name).toEqual('World')
+    expect(getPermission(path).name).toEqual('World')
 
     // description
     input = wrapper.find('input').at(1)
     input.simulate('change', { target: { value: 'Hello' } })
-    expect(getModel(index).description).toEqual('Hello')
+    expect(getPermission(path).description).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
-    expect(getModel(index).description).toEqual('World')
+    expect(getPermission(path).description).toEqual('World')
   })
 })
