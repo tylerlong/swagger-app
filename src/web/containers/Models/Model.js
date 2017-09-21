@@ -1,7 +1,7 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import { setProp, deleteFromArray, addModelProperty } from '../../actions'
+import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Model from '../../components/Models/Model'
 import TextField from '../../components/Common/TextField'
 import DeleteButton from '../../components/Common/DeleteButton'
@@ -38,5 +38,5 @@ export const DeleteModelButton = connect(
 
 export const AddModelPropertyButton = connect(
   (state) => ({ name: 'property' }),
-  (dispatch, { path }) => ({ add: () => dispatch(addModelProperty(path)) })
+  (dispatch, { path }) => ({ add: () => dispatch(addToArray(path.concat('properties'), { name: 'name', description: 'description', type: 'string', createdAt: Date.now(), enum: [], isArray: false, required: false })) })
 )(AddButton)

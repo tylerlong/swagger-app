@@ -37,6 +37,11 @@ const reducer = (state = defaultState, action) => {
         R.over(R.lensPath(R.init(action.path)), R.remove(R.last(action.path), 1)),
         alert('success', 'Deleted')
       )
+    case 'ADD_TO_ARRAY':
+      return R.pipe(
+        R.over(R.lensPath(action.path), R.append(action.obj)),
+        alert('success', 'Added')
+      )
     default:
       if (!R.contains(action.type, ['@@redux/INIT', 'OPEN_FILE', 'NEW_FILE', 'LOAD_STATE'])) {
         // When app starts, '@@redux/INIT' invoked by Redux

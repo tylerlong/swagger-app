@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Models from '../../components/Models'
 import { orderBy } from '../../utils'
-import { addModel } from '../../actions'
+import { addToArray } from '../../actions'
 import AddButton from '../../components/Common/AddButton'
 
 const mapStateToProps = ({ models }) => ({
@@ -16,5 +16,5 @@ export default connect(mapStateToProps, null)(Models)
 
 export const AddModelButton = connect(
   (state) => ({ name: 'model' }),
-  (dispatch) => ({ add: () => dispatch(addModel()) })
+  (dispatch) => ({ add: () => dispatch(addToArray(['models'], { name: 'Name', createdAt: Date.now(), properties: [] })) })
 )(AddButton)

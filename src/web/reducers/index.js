@@ -3,7 +3,6 @@ import R from 'ramda'
 import appReducer from './app'
 import permissionsReducer from './permissions'
 import pathParametersReducer from './pathParameters'
-import modelsReducer from './models'
 import pathsReducer from './paths'
 
 const reducer = (state, action) => {
@@ -12,9 +11,6 @@ const reducer = (state, action) => {
   }
   if (R.test(/_PATH_PARAMETER/, action.type)) {
     return pathParametersReducer(state, action)
-  }
-  if (R.test(/_MODEL/, action.type)) {
-    return modelsReducer(state, action)
   }
   if (R.test(/_PATH/, action.type)) {
     return pathsReducer(state, action)

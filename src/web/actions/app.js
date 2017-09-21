@@ -7,3 +7,5 @@ export const showAlert = (type, message) => ({ type: 'SHOW_ALERT', alert: { type
 export const loadState = filePath => ({ type: 'LOAD_STATE', filePath })
 
 export const deleteFromArray = path => ({ type: 'DELETE_FROM_ARRAY', path })
+
+export const addToArray = (path, obj) => ({ type: 'ADD_TO_ARRAY', path, obj })
