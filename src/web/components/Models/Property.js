@@ -4,7 +4,7 @@ import { PropertyTextField, PropertySelectField, PropertyCheckboxField, DeletePr
 
 class Property extends React.Component {
   render () {
-    console.log(`render Models.Model.Property`)
+    console.log(`render Model.Property`)
     const { path } = this.props
     return (
       <div>
