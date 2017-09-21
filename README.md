@@ -23,7 +23,7 @@ open http://localhost:8080
 ## Test
 
 ```
-yarn test:watch
+yarn test
 ```
 
 
@@ -40,8 +40,3 @@ yarn build
 - detect file changed not by me
 - don't persist alerts
 - improve test coverage
-
-
-## Principles
-
-- Avoid adding new CSS classes, reuse existing ones.

@@ -12,28 +12,29 @@ const webConfig = {
     filename: '[name].bundle.js'
   },
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader'
-      })
-    },
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            'react'
-          ],
-          plugins: [
-            ['import', { libraryName: 'antd', style: 'css' }]
-          ]
+    rules: [
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              'react'
+            ],
+            plugins: [
+              ['import', { libraryName: 'antd', style: 'css' }]
+            ]
+          }
         }
       }
-    }
     ]
   },
   plugins: [
@@ -60,12 +61,14 @@ const electronConfig = {
     __dirname: false // https://github.com/webpack/webpack/issues/2010#issuecomment-181256611
   },
   module: {
-    rules: [{
-      test: /\.js$/,
-      use: {
-        loader: 'babel-loader'
+    rules: [
+      { // todo: is this necessary?
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader'
+        }
       }
-    }]
+    ]
   }
 }
 
