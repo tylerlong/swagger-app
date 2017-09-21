@@ -1,7 +1,8 @@
 import { createLogic } from 'redux-logic'
 import { Base64 } from 'js-base64'
 
-import { defaultState } from '../reducers/app'
+// todo: move defaultState to container
+import { defaultState } from '../reducers'
 
 const openFileLogic = createLogic({
   type: 'OPEN_FILE',
