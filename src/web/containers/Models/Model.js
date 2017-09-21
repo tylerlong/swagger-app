@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 
 import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Model from '../../components/Models/Model'
-import TextField from '../../components/Common/TextField'
-import DeleteButton from '../../components/Common/DeleteButton'
-import AddButton from '../../components/Common/AddButton'
+import { TextField, DeleteButton, AddButton } from '../../components/Common'
 
 const mapStateToProps = (state, { path }) => {
   const { properties } = R.path(path, state)

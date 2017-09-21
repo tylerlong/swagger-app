@@ -2,10 +2,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 
 import { setProp, deleteFromArray } from '../../actions'
-import TextField from '../../components/Common/TextField'
-import SelectField from '../../components/Common/SelectField'
-import CheckboxField from '../../components/Common/CheckboxField'
-import DeleteButton from '../../components/Common/DeleteButton'
+import { TextField, SelectField, CheckboxField, DeleteButton } from '../../components/Common'
 
 const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })
 const mapDispatchToProps = (dispatch, { path, name }) => ({

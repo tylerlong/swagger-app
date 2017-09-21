@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Models from '../../components/Models'
 import { orderBy } from '../../utils'
 import { addToArray } from '../../actions'
-import AddButton from '../../components/Common/AddButton'
+import { AddButton } from '../../components/Common'
 
 const mapStateToProps = ({ models }) => ({
   models: R.pipe(
