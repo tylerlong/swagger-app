@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Collapse, Card, Row, Col, Icon } from 'antd'
 
-import Property from '../../containers/Models/Property'
+import Property from './Property'
 import DeleteModelButton from '../../containers/Models/DeleteModelButton'
 import { ModelTextField } from '../../containers/Models/ModelFields'
 

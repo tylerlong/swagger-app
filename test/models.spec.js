@@ -5,7 +5,7 @@ import { Popconfirm, Select } from 'antd'
 import store from './store'
 import Models from '../src/web/containers/Models'
 import Model from '../src/web/containers/Models/Model'
-import Property from '../src/web/containers/Models/Property'
+import Property from '../src/web/components/Models/Property'
 import { getWrapper } from './shared'
 import state from '../dist/state.json'
 
