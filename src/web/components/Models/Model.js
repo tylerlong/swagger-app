@@ -1,13 +1,14 @@
 import React from 'react'
-import { Button, Collapse, Card, Row, Col, Icon } from 'antd'
+import { Collapse, Card, Row, Col } from 'antd'
 
 import Property from './Property'
 import { ModelTextField, DeleteModelButton } from '../../containers/Models/Model'
+import { AddModelPropertyButton } from '../../containers/Models/Property'
 
 class Model extends React.Component {
   render () {
     console.log(`render Models.Model`)
-    const { index: index1, properties, addModelProperty } = this.props
+    const { index: index1, properties } = this.props
     return (
       <div>
         <DeleteModelButton index={index1} />
@@ -24,7 +25,7 @@ class Model extends React.Component {
                   )
                 })}
               </Collapse>
-              <Button type='primary' size='large' onClick={addModelProperty}><Icon type='plus' />Add property</Button>
+              <AddModelPropertyButton index={index1} />
             </Card>
           </Col>
         </Row>
