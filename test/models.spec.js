@@ -16,7 +16,7 @@ beforeEach(() => {
 const count = state.models.length
 const getByPath = path => R.path(path, store.getState())
 const getModelCount = () => store.getState().models.length
-const getPropertyCount = (path) => getByPath(path).properties.length
+const getPropertyCount = path => getByPath(path).properties.length
 
 describe('test model', () => {
   test('models list', () => {

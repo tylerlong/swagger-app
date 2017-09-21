@@ -61,7 +61,7 @@
   "paths": [
     {
       "createdAt": 1498875254374,
-      "path": "/restapi",
+      "name": "/restapi",
       "requests": [
         {
           "createdAt": 1498875254375,

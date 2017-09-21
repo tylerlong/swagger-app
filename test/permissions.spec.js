@@ -14,7 +14,7 @@ beforeEach(() => {
 })
 const count = state.permissions.length
 const getCount = () => store.getState().permissions.length
-const getPermission = (path) => R.path(path, store.getState())
+const getPermission = path => R.path(path, store.getState())
 
 describe('test permissions', () => {
   test('permissions list', () => {

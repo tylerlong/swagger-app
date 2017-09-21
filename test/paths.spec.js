@@ -14,7 +14,7 @@ beforeEach(() => {
 })
 const count = state.paths.length
 const getCount = () => store.getState().paths.length
-const getModel = (index) => store.getState().paths[index]
+const getPath = path => R.path(path, store.getState())
 
 describe('test paths', () => {
   test('view paths', () => {
@@ -34,10 +34,10 @@ describe('test paths', () => {
 
   test('edit path path', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(Path).first().props().index
+    const path = wrapper.find(Path).first().props().path
     wrapper.find('input').first().simulate('change', { target: { value: '/hello' } })
-    expect(getModel(index).path).toEqual('/hello')
+    expect(getPath(path).path).toEqual('/hello')
     wrapper.find('input').first().simulate('change', { target: { value: '/world' } })
-    expect(getModel(index).path).toEqual('/world')
+    expect(getPath(path).path).toEqual('/world')
   })
 })

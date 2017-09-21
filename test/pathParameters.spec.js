@@ -14,7 +14,7 @@ beforeEach(() => {
 })
 const count = state.pathParameters.length
 const getCount = () => store.getState().pathParameters.length
-const getPathParameter = (path) => R.path(path, store.getState())
+const getPathParameter = path => R.path(path, store.getState())
 
 describe('test pathParameters', () => {
   test('pathParameters list', () => {

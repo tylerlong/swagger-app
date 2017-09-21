@@ -1,32 +1,20 @@
-import React from 'react'
 import R from 'ramda'
-import { Button, Icon, Collapse } from 'antd'
 import { connect } from 'react-redux'
 
-import Path from './Path'
-import { addPath } from '../../actions'
+import Paths from '../../components/Paths'
 import { orderBy } from '../../utils'
+import { addToArray } from '../../actions'
+import { AddButton } from '../../components/Common'
 
-class Paths extends React.Component {
-  render () {
-    console.log(`render Paths`)
-    const { paths, addPath } = this.props
-    return (
-      <div>
-        <h2>Paths</h2>
-        <Collapse accordion>
-          {orderBy(R.prop('path'), paths).map(path => {
-            return (
-              <Collapse.Panel header={path.path} key={path.createdAt}>
-                <Path index={R.findIndex(R.propEq('createdAt', path.createdAt), paths)} />
-              </Collapse.Panel>
-            )
-          })}
-        </Collapse>
-        <Button type='primary' size='large' onClick={addPath}><Icon type='plus' />Add path</Button>
-      </div>
-    )
-  }
-}
+const mapStateToProps = ({ paths }) => ({
+  paths: R.pipe(
+    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['paths', index], name, createdAt })),
+    orderBy(R.prop('name'))
+  )(paths)
+})
+export default connect(mapStateToProps, null)(Paths)
 
-export default connect(R.pick(['paths']), { addPath })(Paths)
+export const AddPathButton = connect(
+  (state) => ({ name: 'path' }),
+  (dispatch) => ({ add: () => dispatch(addToArray(['paths'], { name: '🔥 /', createdAt: Date.now(), requests: [] })) })
+)(AddButton)
