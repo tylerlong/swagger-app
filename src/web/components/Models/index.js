@@ -1,7 +1,8 @@
 import React from 'react'
 import { Collapse } from 'antd'
 
-import Model, { AddModelButton } from '../../containers/Models/Model'
+import { AddModelButton } from '../../containers/Models'
+import Model from '../../containers/Models/Model'
 
 class Models extends React.Component {
   render () {

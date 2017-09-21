@@ -1,9 +1,8 @@
 import React from 'react'
 import { Collapse, Card, Row, Col } from 'antd'
 
+import { ModelTextField, DeleteModelButton, AddModelPropertyButton } from '../../containers/Models/Model'
 import Property from './Property'
-import { ModelTextField, DeleteModelButton } from '../../containers/Models/Model'
-import { AddModelPropertyButton } from '../../containers/Models/Property'
 
 class Model extends React.Component {
   render () {

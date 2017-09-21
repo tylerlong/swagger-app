@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import Models from '../../components/Models'
 import { orderBy } from '../../utils'
+import { addModel } from '../../actions'
+import AddButton from '../../components/Common/AddButton'
 
 const mapStateToProps = ({ models }) => ({
   models: R.pipe(
@@ -11,3 +13,8 @@ const mapStateToProps = ({ models }) => ({
   )(models)
 })
 export default connect(mapStateToProps, null)(Models)
+
+export const AddModelButton = connect(
+  (state) => ({ name: 'model' }),
+  (dispatch) => ({ add: () => dispatch(addModel()) })
+)(AddButton)

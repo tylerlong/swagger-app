@@ -1,11 +1,10 @@
 import { connect } from 'react-redux'
 
-import { setProp, deleteFromArray, addModelProperty } from '../../actions'
+import { setProp, deleteFromArray } from '../../actions'
 import TextField from '../../components/Common/TextField'
 import SelectField from '../../components/Common/SelectField'
 import CheckboxField from '../../components/Common/CheckboxField'
 import DeleteButton from '../../components/Common/DeleteButton'
-import AddButton from '../../components/Common/AddButton'
 
 const mapStateToProps = ({ models }, { index1, index2, name }) => ({ value: models[index1].properties[index2][name] })
 const mapDispatchToProps = (dispatch, { index1, index2, name }) => ({
@@ -26,8 +25,3 @@ export const DeletePropertyButton = connect(
   (dispatch, { index1, index2 }) => ({
     deleteRecord: () => dispatch(deleteFromArray('models', index1, 'properties', index2))
   }))(DeleteButton)
-
-export const AddModelPropertyButton = connect(
-    (state) => ({ name: 'property' }),
-    (dispatch, { index }) => ({ add: () => dispatch(addModelProperty(index)) })
-  )(AddButton)
