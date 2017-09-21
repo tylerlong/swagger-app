@@ -1,10 +1,11 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import { setProp, addModelProperty, deleteFromArray } from '../../actions'
+import { setProp, addModel, addModelProperty, deleteFromArray } from '../../actions'
 import Model from '../../components/Models/Model'
 import TextField from '../../components/Common/TextField'
 import DeleteButton from '../../components/Common/DeleteButton'
+import AddButton from '../../components/Common/AddButton'
 
 const mapStateToProps = ({ models }, { index }) => {
   const { properties } = models[index]
@@ -37,3 +38,8 @@ export const DeleteModelButton = connect(
   (dispatch, { index }) => ({
     deleteRecord: () => dispatch(deleteFromArray('models', index))
   }))(DeleteButton)
+
+export const AddModelButton = connect(
+  (state) => ({ name: 'model' }),
+  (dispatch) => ({ add: () => dispatch(addModel()) })
+)(AddButton)

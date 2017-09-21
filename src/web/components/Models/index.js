@@ -1,12 +1,12 @@
 import React from 'react'
-import { Button, Collapse, Icon } from 'antd'
+import { Collapse } from 'antd'
 
-import Model from '../../containers/Models/Model'
+import Model, { AddModelButton } from '../../containers/Models/Model'
 
 class Models extends React.Component {
   render () {
     console.log(`render Models`)
-    const { models, addModel } = this.props
+    const { models } = this.props
     return (
       <div>
         <h2>Models</h2>
@@ -19,7 +19,7 @@ class Models extends React.Component {
             )
           })}
         </Collapse>
-        <Button type='primary' size='large' onClick={addModel}><Icon type='plus' />Add model</Button>
+        <AddModelButton />
       </div>
     )
   }

@@ -1,7 +1,6 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import { addModel } from '../../actions'
 import Models from '../../components/Models'
 import { orderBy } from '../../utils'
 
@@ -11,5 +10,4 @@ const mapStateToProps = ({ models }) => ({
     orderBy(R.prop('name'))
   )(models)
 })
-const mapDispatchToProps = { addModel }
-export default connect(mapStateToProps, mapDispatchToProps)(Models)
+export default connect(mapStateToProps, null)(Models)
