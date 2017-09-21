@@ -1,5 +1,4 @@
 export * from './app'
 export * from './permissions'
-export * from './pathParameters'
 export * from './paths'
 export * from './home'
