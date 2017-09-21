@@ -11,7 +11,7 @@ const reducer = (state, action) => {
       )
     case 'ADD_MODEL_PROPERTY':
       return R.pipe(
-        R.over(R.lensPath(['models', action.index, 'properties']), R.append(action.props)),
+        R.over(R.lensPath(action.path.concat('properties')), R.append(action.props)),
         alert('sccess', 'Model property added')
       )
     default:

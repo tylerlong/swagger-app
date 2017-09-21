@@ -1,3 +1,4 @@
+import R from 'ramda'
 import { connect } from 'react-redux'
 
 import { setProp, deleteFromArray } from '../../actions'
@@ -6,22 +7,22 @@ import SelectField from '../../components/Common/SelectField'
 import CheckboxField from '../../components/Common/CheckboxField'
 import DeleteButton from '../../components/Common/DeleteButton'
 
-const mapStateToProps = ({ models }, { index1, index2, name }) => ({ value: models[index1].properties[index2][name] })
-const mapDispatchToProps = (dispatch, { index1, index2, name }) => ({
-  update: value => dispatch(setProp(['models', index1, 'properties', index2, name], value))
+const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })
+const mapDispatchToProps = (dispatch, { path, name }) => ({
+  update: value => dispatch(setProp(path.concat(name), value))
 })
 export const PropertyTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)
 export const PropertySelectField = connect(mapStateToProps, mapDispatchToProps)(SelectField)
 export const PropertyCheckboxField = connect(mapStateToProps, mapDispatchToProps)(CheckboxField)
 
 export const DeletePropertyButton = connect(
-  ({ models }, { index1, index2 }) => {
-    const { name } = models[index1].properties[index2]
+  (state, { path }) => {
+    const { name } = R.path(path, state)
     return {
       componentName: 'property',
       recordName: name
     }
   },
-  (dispatch, { index1, index2 }) => ({
-    deleteRecord: () => dispatch(deleteFromArray('models', index1, 'properties', index2))
+  (dispatch, { path }) => ({
+    deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)

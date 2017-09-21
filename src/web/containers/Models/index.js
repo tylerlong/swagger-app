@@ -8,7 +8,7 @@ import AddButton from '../../components/Common/AddButton'
 
 const mapStateToProps = ({ models }) => ({
   models: R.pipe(
-    R.addIndex(R.map)(({ name, createdAt }, index) => ({ index, name, createdAt })),
+    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['models', index], name, createdAt })),
     orderBy(R.prop('name'))
   )(models)
 })

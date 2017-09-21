@@ -12,10 +12,10 @@ class Models extends React.Component {
       <div>
         <h2>Models</h2>
         <Collapse accordion>
-          {models.map(({index, name, createdAt}) => {
+          {models.map(({path, name, createdAt}) => {
             return (
               <Collapse.Panel header={name} key={createdAt}>
-                <Model index={index} />
+                <Model path={path} />
               </Collapse.Panel>
             )
           })}

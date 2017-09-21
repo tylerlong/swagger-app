@@ -7,24 +7,24 @@ import Property from './Property'
 class Model extends React.Component {
   render () {
     console.log(`render Models.Model`)
-    const { index: index1, properties } = this.props
+    const { path, properties } = this.props
     return (
       <div>
-        <DeleteModelButton index={index1} />
-        <ModelTextField index={index1} name='name' />
+        <DeleteModelButton path={path} />
+        <ModelTextField path={path} name='name' />
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {properties.map(({ index: index2, name, createdAt }) => {
+                {properties.map(({ path, name, createdAt }) => {
                   return (
                     <Collapse.Panel header={name} key={createdAt}>
-                      <Property index1={index1} index2={index2} />
+                      <Property path={path} />
                     </Collapse.Panel>
                   )
                 })}
               </Collapse>
-              <AddModelPropertyButton index={index1} />
+              <AddModelPropertyButton path={path} />
             </Card>
           </Col>
         </Row>

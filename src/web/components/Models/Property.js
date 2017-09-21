@@ -5,17 +5,17 @@ import { PropertyTextField, PropertySelectField, PropertyCheckboxField, DeletePr
 class Property extends React.Component {
   render () {
     console.log(`render Models.Model.Property`)
-    const { index1, index2 } = this.props
+    const { path } = this.props
     return (
       <div>
-        <DeletePropertyButton index1={index1} index2={index2} />
-        <PropertyTextField index1={index1} index2={index2} name='name' />
-        <PropertyTextField index1={index1} index2={index2} name='description' />
-        <PropertySelectField index1={index1} index2={index2} name='type'
+        <DeletePropertyButton path={path} />
+        <PropertyTextField path={path} name='name' />
+        <PropertyTextField path={path} name='description' />
+        <PropertySelectField path={path} name='type'
           options={['string', 'object', 'integer', 'boolean', 'date-time', 'int64', 'number', 'binary']} />
-        <PropertyTextField index1={index1} index2={index2} name='enum' isArray />
-        <PropertyCheckboxField index1={index1} index2={index2} name='required' />
-        <PropertyCheckboxField index1={index1} index2={index2} name='isArray' />
+        <PropertyTextField path={path} name='enum' isArray />
+        <PropertyCheckboxField path={path} name='required' />
+        <PropertyCheckboxField path={path} name='isArray' />
       </div>
     )
   }

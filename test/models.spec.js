@@ -14,8 +14,9 @@ beforeEach(() => {
   wrapper = getWrapper(Models, R.pick(['models'], state))
 })
 const count = state.models.length
-const getCount = () => store.getState().models.length
-const getModel = (index) => store.getState().models[index]
+const getByPath = path => R.path(path, store.getState())
+const getModelCount = () => store.getState().models.length
+const getPropertyCount = (path) => getByPath(path).properties.length
 
 describe('test model', () => {
   test('models list', () => {
@@ -23,92 +24,92 @@ describe('test model', () => {
   })
   test('add model', () => {
     wrapper.find('button.ant-btn-primary').simulate('click')
-    expect(getCount()).toEqual(count + 1)
+    expect(getModelCount()).toEqual(count + 1)
   })
   test('delete model', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     wrapper.find(Popconfirm).props().onConfirm()
-    expect(getCount()).toEqual(count - 1)
+    expect(getModelCount()).toEqual(count - 1)
   })
   test('update model fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(Model).first().props().index
+    const path = wrapper.find(Model).first().props().path
     wrapper.find('input').first().simulate('change', { target: { value: 'Hello' } })
-    expect(getModel(index).name).toEqual('Hello')
+    expect(getByPath(path).name).toEqual('Hello')
     wrapper.find('input').first().simulate('change', { target: { value: 'World' } })
-    expect(getModel(index).name).toEqual('World')
+    expect(getByPath(path).name).toEqual('World')
   })
   test('model properties list index #0', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(Model).first().props().index
+    const path = wrapper.find(Model).first().props().path
     const count = wrapper.find(Model).first().find('.ant-collapse-item').length
-    expect(store.getState().models[index].properties.length).toEqual(count)
+    expect(getPropertyCount(path)).toEqual(count)
   })
   test('model properties list index #1', () => {
     wrapper.find('div.ant-collapse-header').at(1).simulate('click')
-    const index = wrapper.find(Model).first().props().index
+    const path = wrapper.find(Model).first().props().path
     const count = wrapper.find(Model).first().find('.ant-collapse-item').length
-    expect(store.getState().models[index].properties.length).toEqual(count)
+    expect(getPropertyCount(path)).toEqual(count)
   })
   test('model properties list index #2', () => {
     wrapper.find('div.ant-collapse-header').at(2).simulate('click')
-    const index = wrapper.find(Model).first().props().index
+    const path = wrapper.find(Model).first().props().path
     const count = wrapper.find(Model).first().find('.ant-collapse-item').length
-    expect(store.getState().models[index].properties.length).toEqual(count)
+    expect(getPropertyCount(path)).toEqual(count)
   })
   test('add model property', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(Model).first().props().index
-    const count = store.getState().models[index].properties.length
+    const path = wrapper.find(Model).first().props().path
+    const count = getPropertyCount(path)
     wrapper.find(Model).first().find('button.ant-btn-primary').simulate('click')
-    expect(store.getState().models[index].properties.length).toEqual(count + 1)
+    expect(getPropertyCount(path)).toEqual(count + 1)
   })
   test('delete model property', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     wrapper.find(Model).first().find('div.ant-collapse-header').first().simulate('click')
-    const index = wrapper.find(Model).first().props().index
-    const count = store.getState().models[index].properties.length
+    const path = wrapper.find(Model).first().props().path
+    const count = getPropertyCount(path)
     wrapper.find(Model).first().find(Property).first().find(Popconfirm).props().onConfirm()
-    expect(store.getState().models[index].properties.length).toEqual(count - 1)
+    expect(getPropertyCount(path)).toEqual(count - 1)
   })
   test('update model property fields', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     wrapper.find(Model).first().find('div.ant-collapse-header').first().simulate('click')
     const form = wrapper.find(Model).first().find(Property).first()
-    const { index1, index2 } = form.props()
+    const { path } = form.props()
 
     // name
     let input = form.find('input').first()
     input.simulate('change', { target: { value: 'Hello' } })
-    expect(store.getState().models[index1].properties[index2].name).toEqual('Hello')
+    expect(getByPath(path).name).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
-    expect(store.getState().models[index1].properties[index2].name).toEqual('World')
+    expect(getByPath(path).name).toEqual('World')
 
     // description
     input = form.find('input').at(1)
     input.simulate('change', { target: { value: 'Hello' } })
-    expect(store.getState().models[index1].properties[index2].description).toEqual('Hello')
+    expect(getByPath(path).description).toEqual('Hello')
     input.simulate('change', { target: { value: 'World' } })
-    expect(store.getState().models[index1].properties[index2].description).toEqual('World')
+    expect(getByPath(path).description).toEqual('World')
 
     // type
     const select = form.find(Select).first()
     select.props().onChange('int64')
-    expect(store.getState().models[index1].properties[index2].type).toEqual('int64')
+    expect(getByPath(path).type).toEqual('int64')
     select.props().onChange('binary')
-    expect(store.getState().models[index1].properties[index2].type).toEqual('binary')
+    expect(getByPath(path).type).toEqual('binary')
 
     // enum
     input = form.find('input').at(2)
     input.simulate('change', { target: { value: 'Hello, World' } })
-    expect(store.getState().models[index1].properties[index2].enum).toEqual(['Hello', 'World'])
+    expect(getByPath(path).enum).toEqual(['Hello', 'World'])
 
     // required & isArray
     input = form.find('.ant-checkbox-input').first()
     input.simulate('change', { target: { checked: true } })
-    expect(store.getState().models[index1].properties[index2].required).toEqual(true)
+    expect(getByPath(path).required).toEqual(true)
     input = form.find('.ant-checkbox-input').at(1)
     input.simulate('change', { target: { checked: true } })
-    expect(store.getState().models[index1].properties[index2].isArray).toEqual(true)
+    expect(getByPath(path).isArray).toEqual(true)
   })
 })
