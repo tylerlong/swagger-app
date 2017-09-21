@@ -16,5 +16,5 @@ export default connect(mapStateToProps, null)(PathParameters)
 
 export const AddPathParameterButton = connect(
   (state) => ({ name: 'path parameter' }),
-  (dispatch) => ({ add: () => dispatch(addToArray(['pathParameters'], { name: 'name', description: 'Description', enum: [], createdAt: Date.now() })) })
+  (dispatch) => ({ add: () => dispatch(addToArray(['pathParameters'], { name: '🔥 name', description: 'description', enum: [], createdAt: Date.now() })) })
 )(AddButton)
