@@ -1,6 +1,7 @@
 /* eslint-env jest */
-import { alert, getFormItemLayout, formItemLayout, orderBy } from '../src/web/utils'
 import R from 'ramda'
+
+import { alert, getFormItemLayout, formItemLayout, orderBy } from '../src/web/utils'
 
 describe('test alert', () => {
   const state = { alerts: [] }
