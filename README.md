@@ -39,3 +39,4 @@ yarn build
 - migrate data from PostgreSQL
 - detect file changed not by me
 - improve test coverage
+- use logger, so it won't output anything in production
