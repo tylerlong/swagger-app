@@ -13,8 +13,7 @@ describe('test alert', () => {
   })
 
   test('alert unknown type', () => {
-    expect(alert('bug', 'Hello world')(state)).not.toEqual({ alerts: [{ type: 'bug', message: 'Hello world' }] })
-    expect(alert('bug', 'Hello world')(state)).toEqual(state)
+    expect(() => { alert('bug', 'Hello world')(state) }).toThrowError(TypeError, 'Unknown alert type')
   })
 
   test('alert invalid message', () => {
