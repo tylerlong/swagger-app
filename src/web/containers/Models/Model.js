@@ -6,16 +6,15 @@ import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Model from '../../components/Models/Model'
 import { TextField, DeleteButton, AddButton } from '../../components/Common'
 
-const getPath = (state, props) => props.path
-const getProperties = (state, props) => R.path(props.path, state).properties
-const getOrderedProperties = createCachedSelector(
-  [getPath, getProperties],
+const propertiesSelector = createCachedSelector(
+  (state, props) => props.path,
+  (state, props) => R.path(props.path, state).properties,
   (path, properties) => R.pipe(
     R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: path.concat(['properties', index]), name, createdAt })),
     R.sortBy(R.prop('createdAt'))
   )(properties)
 )((state, props) => props.path.join('/'))
-const mapStateToProps = (state, props) => ({ properties: getOrderedProperties(state, props) })
+const mapStateToProps = (state, props) => ({ properties: propertiesSelector(state, props) })
 export default connect(mapStateToProps, null)(Model)
 
 export const ModelTextField = connect(
