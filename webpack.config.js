@@ -59,16 +59,6 @@ const electronConfig = {
   },
   node: {
     __dirname: false // https://github.com/webpack/webpack/issues/2010#issuecomment-181256611
-  },
-  module: {
-    rules: [
-      { // todo: is this necessary?
-        test: /\.js$/,
-        use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
   }
 }
 
