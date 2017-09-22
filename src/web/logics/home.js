@@ -3,21 +3,9 @@ import { Base64 } from 'js-base64'
 
 import { defaultState } from '../reducers'
 
-const openFileLogic = createLogic({
-  type: 'OPEN_FILE',
-  latest: true,
-  async process ({ getState, action }, dispatch, done) {
-    if (global.electron) { // electron
-      const filesOpened = global.electron.dialog.showOpenDialog({ properties: ['openFile'] })
-      if (filesOpened) {
-        window.location = window.location.href.split('#')[0] + '#/edit/' + Base64.encodeURI(filesOpened[0])
-      }
-    } else { // browser
-      window.location = window.location.href.split('#')[0] + '#/edit/' + Base64.encodeURI('/state.json')
-    }
-    done()
-  }
-})
+const editFile = (filePath) => {
+  window.location = window.location.href.split('#')[0] + '#/edit/' + Base64.encodeURI(filePath)
+}
 
 const newFileLogic = createLogic({
   type: 'NEW_FILE',
@@ -29,14 +17,30 @@ const newFileLogic = createLogic({
       })
       if (filePath) {
         global.fs.writeFileSync(filePath, JSON.stringify(defaultState, null, 2))
-        window.location = window.location.href.split('#')[0] + '#/edit/' + Base64.encodeURI(filePath)
+        editFile(filePath)
       }
     }
     done()
   }
 })
 
+const openFileLogic = createLogic({
+  type: 'OPEN_FILE',
+  latest: true,
+  async process ({ getState, action }, dispatch, done) {
+    if (global.electron) { // electron
+      const filesOpened = global.electron.dialog.showOpenDialog({ properties: ['openFile'] })
+      if (filesOpened) {
+        editFile(filesOpened[0])
+      }
+    } else { // browser
+      editFile('/state.json')
+    }
+    done()
+  }
+})
+
 export default [
-  openFileLogic,
-  newFileLogic
+  newFileLogic,
+  openFileLogic
 ]
