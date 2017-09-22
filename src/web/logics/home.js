@@ -2,9 +2,10 @@ import { createLogic } from 'redux-logic'
 import { Base64 } from 'js-base64'
 
 import { defaultState } from '../reducers'
+import { redirectTo } from '../utils'
 
 const editFile = (filePath) => {
-  window.location = window.location.href.split('#')[0] + '#/edit/' + Base64.encodeURI(filePath)
+  redirectTo(`/edit/${Base64.encodeURI(filePath)}`)
 }
 
 const newFileLogic = createLogic({

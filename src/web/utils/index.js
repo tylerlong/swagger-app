@@ -28,3 +28,8 @@ export const formItemLayout = getFormItemLayout(4, 18)
 export const orderBy = R.curry((selector, objects) => {
   return R.sort(R.comparator((a, b) => R.toLower(selector(a).toString()) < R.toLower(selector(b).toString())), objects)
 })
+
+// Usage example: redirectTo('/edit/xxxx')
+export const redirectTo = path => {
+  window.location = [window.location.href.split('#')[0], path].join('#')
+}
