@@ -35,6 +35,6 @@ export const DeleteModelButton = connect(
   }))(DeleteButton)
 
 export const AddModelPropertyButton = connect(
-  (state) => ({ name: 'property' }),
+  state => ({ name: 'property' }),
   (dispatch, { path }) => ({ add: () => dispatch(addToArray(path.concat('properties'), { name: '🔥 name', description: 'description', type: 'string', createdAt: Date.now(), enum: [], isArray: false, required: false })) })
 )(AddButton)

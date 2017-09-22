@@ -5,7 +5,7 @@ import { Base64 } from 'js-base64'
 import { defaultState } from '../reducers'
 import { redirectTo } from '../utils'
 
-const editFile = (filePath) => {
+const editFile = filePath => {
   redirectTo(`/edit/${Base64.encodeURI(filePath)}`)
 }
 

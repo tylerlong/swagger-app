@@ -21,5 +21,5 @@ class Alerts extends React.Component {
 }
 
 const mapStateToProps = ({ alerts }) => ({ alerts })
-const mapDispatchToProps = (dispatch) => ({ clearAlerts: () => dispatch(setProp(['alerts'], [])) })
+const mapDispatchToProps = dispatch => ({ clearAlerts: () => dispatch(setProp(['alerts'], [])) })
 export default connect(mapStateToProps, mapDispatchToProps)(Alerts)

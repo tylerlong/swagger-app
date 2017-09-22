@@ -35,6 +35,6 @@ export const DeletePathButton = connect(
   }))(DeleteButton)
 
 export const AddPathRequestButton = connect(
-  (state) => ({ name: 'request' }),
+  state => ({ name: 'request' }),
   (dispatch, { path }) => ({ add: () => dispatch(addToArray(path.concat('requests'), { name: '🔥 name', description: 'description', method: 'GET', createdAt: Date.now(), since: '', apiGroup: 'Light', permissions: [], batch: false, visibility: 'public', status: 'normal', tags: [], parameters: {}, request: {}, response: {}, examples: [] })) })
 )(AddButton)
