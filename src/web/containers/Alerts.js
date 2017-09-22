@@ -6,12 +6,13 @@ import { message } from 'antd'
 import { setProp } from '../actions'
 
 class Alerts extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return nextProps.alerts.length > 0
+  }
   componentDidUpdate () {
     const { alerts, clearAlerts } = this.props
-    if (alerts.length > 0) {
-      R.forEach(alert => R.prop(alert.type, message)(alert.message), alerts)
-      clearAlerts()
-    }
+    R.forEach(alert => R.prop(alert.type, message)(alert.message), alerts)
+    clearAlerts()
   }
   render () {
     console.log(`render Alerts`)

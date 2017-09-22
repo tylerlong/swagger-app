@@ -13,9 +13,9 @@ import { loadState } from '../actions'
 
 class App extends React.Component {
   componentDidMount () {
-    const { match: { params: { base64 } } } = this.props
+    const { loadState, match: { params: { base64 } } } = this.props
     const filePath = Base64.decode(base64)
-    this.props.loadState(filePath)
+    loadState(filePath)
     window.document.title = filePath
   }
   render () {
