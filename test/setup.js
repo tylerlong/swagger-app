@@ -1,2 +1,3 @@
-// mute console.log
+// mute console output
 console.log = () => {}
+console.error = () => {}

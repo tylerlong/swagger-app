@@ -14,17 +14,17 @@ const store = createStore(
 
 // auto persist state
 if (global.electron) {
-  let currentData
+  let persistedData
   const subject = new Rx.Subject().debounceTime(1000)
   subject.subscribe(() => {
     const state = store.getState()
     const data = JSON.stringify(state, null, 2)
-    if (data !== currentData) {
+    if (data !== persistedData) {
       const tokens = window.location.href.split('#/edit/')
       if (tokens.length > 1) {
         const filePath = Base64.decode(tokens[1])
         global.fs.writeFileSync(filePath, data)
-        currentData = data
+        persistedData = data
       }
     }
   })

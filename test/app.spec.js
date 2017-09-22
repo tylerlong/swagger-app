@@ -24,24 +24,9 @@ describe('global actions', () => {
 })
 
 describe('unknown actions', () => {
-  test('path', () => {
-    store.dispatch({ type: 'MOVE_PATH' })
-    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_PATH')
-  })
-  test('permission', () => {
-    store.dispatch({ type: 'MOVE_PERMISSION' })
-    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_PERMISSION')
-  })
-  test('model', () => {
-    store.dispatch({ type: 'MOVE_MODEL' })
-    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_MODEL')
-  })
-  test('path_parameter', () => {
-    store.dispatch({ type: 'MOVE_PATH_PARAMETER' })
-    expect(store.getState().alerts[1].message).toEqual('Unknown action type: MOVE_PATH_PARAMETER')
-  })
-  test('global', () => {
+  test('reducers', () => {
+    const state = store.getState()
     store.dispatch({ type: 'UNKNOWN_ACTION' })
-    expect(store.getState().alerts[1].message).toEqual('Unknown action type: UNKNOWN_ACTION')
+    expect(store.getState()).toEqual(state)
   })
 })
