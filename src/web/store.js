@@ -1,3 +1,4 @@
+import R from 'ramda'
 import { createStore, applyMiddleware } from 'redux'
 import { createLogicMiddleware } from 'redux-logic'
 import Rx from 'rxjs/Rx'
@@ -17,7 +18,7 @@ if (global.electron) {
   let persistedData
   const subject = new Rx.Subject().debounceTime(1000)
   subject.subscribe(() => {
-    const state = store.getState()
+    const state = R.omit(['alerts'], store.getState())
     const data = JSON.stringify(state, null, 2)
     if (data !== persistedData) {
       const tokens = window.location.href.split('#/edit/')

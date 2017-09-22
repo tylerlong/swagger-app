@@ -1,3 +1,4 @@
+import R from 'ramda'
 import { createLogic } from 'redux-logic'
 import { Base64 } from 'js-base64'
 
@@ -17,7 +18,7 @@ const newFileLogic = createLogic({
         filters: [{ name: 'swagger files', extensions: ['json'] }]
       })
       if (filePath) {
-        global.fs.writeFileSync(filePath, JSON.stringify(defaultState, null, 2))
+        global.fs.writeFileSync(filePath, JSON.stringify(R.omit(['alerts'], defaultState), null, 2))
         editFile(filePath)
       }
     }
