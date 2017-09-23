@@ -24,13 +24,10 @@ export const ModelTextField = connect(
   }))(TextField)
 
 export const DeleteModelButton = connect(
-  (state, { path }) => {
-    const { name } = R.path(path, state)
-    return {
-      componentName: 'model',
-      recordName: name
-    }
-  },
+  (state, { path }) => ({
+    componentName: 'model',
+    recordName: R.path(path, state).name
+  }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)

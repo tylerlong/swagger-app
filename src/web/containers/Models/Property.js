@@ -13,13 +13,10 @@ export const PropertySelectField = connect(mapStateToProps, mapDispatchToProps)(
 export const PropertyCheckboxField = connect(mapStateToProps, mapDispatchToProps)(CheckboxField)
 
 export const DeletePropertyButton = connect(
-  (state, { path }) => {
-    const { name } = R.path(path, state)
-    return {
-      componentName: 'property',
-      recordName: name
-    }
-  },
+  (state, { path }) => ({
+    componentName: 'property',
+    recordName: R.path(path, state).name
+  }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)
