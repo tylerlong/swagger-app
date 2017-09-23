@@ -1,4 +1,5 @@
 import R from 'ramda'
+import PropTypes from 'prop-types'
 
 export const alert = R.curry((type, message) => {
   if (R.complement(R.contains)(type, ['success', 'info', 'warning', 'error'])) {
@@ -33,3 +34,16 @@ export const orderBy = R.curry((selector, objects) => {
 export const redirectTo = path => {
   window.location = [window.location.href.split('#')[0], path].join('#')
 }
+
+// For propTypes check
+export const pathType = PropTypes.arrayOf(
+  PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired
+  ]).isRequired
+).isRequired
+export const objType = PropTypes.shape({
+  path: pathType,
+  name: PropTypes.string.isRequired,
+  createdAt: PropTypes.number.isRequired
+}).isRequired

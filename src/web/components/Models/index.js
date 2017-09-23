@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import { AddModelButton } from '../../containers/Models'
 import Model from '../../containers/Models/Model'
+import { objType } from '../../utils'
 
 class Models extends React.Component {
   render () {
@@ -28,18 +29,7 @@ class Models extends React.Component {
 }
 
 Models.propTypes = {
-  models: PropTypes.arrayOf(
-    PropTypes.shape({
-      path: PropTypes.arrayOf(
-        PropTypes.oneOfType([
-          PropTypes.string.isRequired,
-          PropTypes.number.isRequired
-        ]).isRequired
-      ).isRequired,
-      name: PropTypes.string.isRequired,
-      createdAt: PropTypes.number.isRequired
-    }).isRequired
-  ).isRequired
+  models: PropTypes.arrayOf(objType)
 }
 
 export default Models

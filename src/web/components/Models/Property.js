@@ -1,7 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { PropertyTextField, PropertySelectField, PropertyCheckboxField, DeletePropertyButton } from '../../containers/Models/Property'
+import { pathType } from '../../utils'
 
 class Property extends React.Component {
   render () {
@@ -23,12 +23,7 @@ class Property extends React.Component {
 }
 
 Property.propTypes = {
-  path: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.string.isRequired,
-      PropTypes.number.isRequired
-    ]).isRequired
-  ).isRequired
+  path: pathType
 }
 
 export default Property

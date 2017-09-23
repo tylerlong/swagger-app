@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import { ModelTextField, DeleteModelButton, AddModelPropertyButton } from '../../containers/Models/Model'
 import Property from './Property'
+import { pathType, objType } from '../../utils'
 
 class Model extends React.Component {
   render () {
@@ -35,24 +36,8 @@ class Model extends React.Component {
 }
 
 Model.propTypes = {
-  path: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.string.isRequired,
-      PropTypes.number.isRequired
-    ]).isRequired
-  ).isRequired,
-  properties: PropTypes.arrayOf(
-    PropTypes.shape({
-      path: PropTypes.arrayOf(
-        PropTypes.oneOfType([
-          PropTypes.string.isRequired,
-          PropTypes.number.isRequired
-        ]).isRequired
-      ).isRequired,
-      name: PropTypes.string.isRequired,
-      createdAt: PropTypes.number.isRequired
-    }).isRequired
-  ).isRequired
+  path: pathType,
+  properties: PropTypes.arrayOf(objType)
 }
 
 export default Model
