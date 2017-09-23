@@ -8,7 +8,7 @@ import { formItemLayout } from '../../utils'
 class TextField extends React.Component {
   render () {
     console.log(`render TextField`)
-    const { name, value, update, isArray = false } = this.props
+    const { name, value, update, isArray } = this.props
     let input = null
     if (isArray) {
       input = <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', value || [])}
@@ -23,6 +23,10 @@ class TextField extends React.Component {
       </Form.Item>
     )
   }
+}
+
+TextField.defaultProps = {
+  isArray: false
 }
 
 TextField.propTypes = {
