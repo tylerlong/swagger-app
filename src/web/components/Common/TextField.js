@@ -34,7 +34,7 @@ TextField.propTypes = {
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string)
-  ]).isRequired,
+  ]),
   update: PropTypes.func.isRequired,
   isArray: PropTypes.bool.isRequired
 }
