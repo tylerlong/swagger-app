@@ -1,5 +1,6 @@
 import React from 'react'
 import { Collapse, Card, Row, Col } from 'antd'
+import PropTypes from 'prop-types'
 
 import { ModelTextField, DeleteModelButton, AddModelPropertyButton } from '../../containers/Models/Model'
 import Property from './Property'
@@ -31,6 +32,27 @@ class Model extends React.Component {
       </div>
     )
   }
+}
+
+Model.propTypes = {
+  path: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.number.isRequired
+    ]).isRequired
+  ).isRequired,
+  properties: PropTypes.arrayOf(
+    PropTypes.shape({
+      path: PropTypes.arrayOf(
+        PropTypes.oneOfType([
+          PropTypes.string.isRequired,
+          PropTypes.number.isRequired
+        ]).isRequired
+      ).isRequired,
+      name: PropTypes.string.isRequired,
+      createdAt: PropTypes.number.isRequired
+    }).isRequired
+  ).isRequired
 }
 
 export default Model

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { PropertyTextField, PropertySelectField, PropertyCheckboxField, DeletePropertyButton } from '../../containers/Models/Property'
 
@@ -19,6 +20,15 @@ class Property extends React.Component {
       </div>
     )
   }
+}
+
+Property.propTypes = {
+  path: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.number.isRequired
+    ]).isRequired
+  ).isRequired
 }
 
 export default Property
