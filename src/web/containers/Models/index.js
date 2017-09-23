@@ -1,19 +1,19 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
-import { createSelector } from 'reselect'
+import createCachedSelector from 're-reselect'
 
 import Models from '../../components/Models'
 import { orderBy } from '../../utils'
 import { addToArray } from '../../actions'
 import { AddButton } from '../../components/Common'
 
-const modelsSelector = createSelector(
+const modelsSelector = createCachedSelector(
   state => state.models,
   models => R.pipe(
     R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['models', index], name, createdAt })),
     orderBy(R.prop('name'))
   )(models)
-)
+)(state => 'models')
 const mapStateToProps = state => ({ models: modelsSelector(state) })
 export default connect(mapStateToProps, null)(Models)
 
