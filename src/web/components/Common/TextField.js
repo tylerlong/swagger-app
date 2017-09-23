@@ -32,8 +32,8 @@ TextField.defaultProps = {
 TextField.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string)
+    PropTypes.string.isRequired,
+    PropTypes.arrayOf(PropTypes.string.isRequired)
   ]),
   update: PropTypes.func.isRequired,
   isArray: PropTypes.bool.isRequired

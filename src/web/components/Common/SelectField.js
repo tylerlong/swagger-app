@@ -22,7 +22,7 @@ SelectField.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   update: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string).isRequired
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 }
 
 export default SelectField
