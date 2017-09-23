@@ -11,13 +11,10 @@ export const PermissionTextField = connect(
   }))(TextField)
 
 export const DeletePermissionButton = connect(
-  (state, { path }) => {
-    const { name } = R.path(path, state)
-    return {
-      componentName: 'permission',
-      recordName: name
-    }
-  },
+  (state, { path }) => ({
+    componentName: 'permission',
+    recordName: R.path(path.concat('name'), state)
+  }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)
