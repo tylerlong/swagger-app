@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { PermissionTextField, DeletePermissionButton } from '../../containers/Permissions/Permission'
+import { pathType } from '../../utils'
 
 class Permission extends React.Component {
   render () {
@@ -14,6 +15,10 @@ class Permission extends React.Component {
       </div>
     )
   }
+}
+
+Permission.propTypes = {
+  path: pathType
 }
 
 export default Permission

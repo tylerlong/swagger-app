@@ -1,8 +1,10 @@
 import React from 'react'
 import { Collapse } from 'antd'
+import PropTypes from 'prop-types'
 
 import { AddPermissionButton } from '../../containers/Permissions'
 import Permission from './Permission'
+import { objType } from '../../utils'
 
 class Permissions extends React.Component {
   render () {
@@ -24,6 +26,10 @@ class Permissions extends React.Component {
       </div>
     )
   }
+}
+
+Permissions.propTypes = {
+  permissions: PropTypes.arrayOf(objType)
 }
 
 export default Permissions

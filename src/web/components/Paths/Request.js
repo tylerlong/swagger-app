@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { RequestTextField, RequestSelectField, DeleteRequestButton } from '../../containers/Paths/Request'
+import { pathType } from '../../utils'
 
 class Request extends React.Component {
   render () {
@@ -15,6 +16,10 @@ class Request extends React.Component {
       </div>
     )
   }
+}
+
+Request.propTypes = {
+  path: pathType
 }
 
 export default Request

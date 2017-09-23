@@ -1,8 +1,10 @@
 import React from 'react'
 import { Collapse } from 'antd'
+import PropTypes from 'prop-types'
 
 import { AddPathButton } from '../../containers/Paths'
 import Path from '../../containers/Paths/Path'
+import { objType } from '../../utils'
 
 class Paths extends React.Component {
   render () {
@@ -24,6 +26,10 @@ class Paths extends React.Component {
       </div>
     )
   }
+}
+
+Paths.propTypes = {
+  paths: PropTypes.arrayOf(objType)
 }
 
 export default Paths

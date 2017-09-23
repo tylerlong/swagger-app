@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { PathParameterTextField, DeletePathParameterButton } from '../../containers/PathParameters/PathParameter'
+import { pathType } from '../../utils'
 
 class PathParameter extends React.Component {
   render () {
@@ -15,6 +16,10 @@ class PathParameter extends React.Component {
       </div>
     )
   }
+}
+
+PathParameter.propTypes = {
+  path: pathType
 }
 
 export default PathParameter
