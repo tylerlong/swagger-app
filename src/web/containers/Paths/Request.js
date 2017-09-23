@@ -12,13 +12,10 @@ export const RequestTextField = connect(mapStateToProps, mapDispatchToProps)(Tex
 export const RequestSelectField = connect(mapStateToProps, mapDispatchToProps)(SelectField)
 
 export const DeleteRequestButton = connect(
-  (state, { path }) => {
-    const { name } = R.path(path, state)
-    return {
-      componentName: 'request',
-      recordName: name
-    }
-  },
+  (state, { path }) => ({
+    componentName: 'request',
+    recordName: R.path(path.concat('name'), state)
+  }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)

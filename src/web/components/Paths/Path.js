@@ -11,7 +11,7 @@ class Path extends React.Component {
     return (
       <div>
         <DeletePathButton path={path} />
-        <PathTextField path={path} name='path' />
+        <PathTextField path={path} name='name' />
         <Row type='flex' justify='center'>
           <Col xs={24} sm={18}>
             <Card title='Requests'>

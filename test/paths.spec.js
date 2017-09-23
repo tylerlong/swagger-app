@@ -36,8 +36,8 @@ describe('test paths', () => {
     wrapper.find('div.ant-collapse-header').first().simulate('click')
     const path = wrapper.find(Path).first().props().path
     wrapper.find('input').first().simulate('change', { target: { value: '/hello' } })
-    expect(getPath(path).path).toEqual('/hello')
+    expect(getPath(path).name).toEqual('/hello')
     wrapper.find('input').first().simulate('change', { target: { value: '/world' } })
-    expect(getPath(path).path).toEqual('/world')
+    expect(getPath(path).name).toEqual('/world')
   })
 })

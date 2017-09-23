@@ -8,7 +8,7 @@ import { TextField, DeleteButton, AddButton } from '../../components/Common'
 
 const propertiesSelector = createSelector(
   (state, props) => props.path,
-  (state, props) => R.path(props.path, state).properties,
+  (state, props) => R.path(props.path.concat('properties'), state),
   (path, properties) => R.pipe(
     R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: path.concat(['properties', index]), name, createdAt })),
     R.sortBy(R.prop('createdAt'))

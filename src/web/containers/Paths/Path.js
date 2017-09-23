@@ -1,19 +1,20 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
+import createSelector from 're-reselect'
 
 import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Path from '../../components/Paths/Path'
 import { TextField, DeleteButton, AddButton } from '../../components/Common'
 
-const mapStateToProps = (state, { path }) => {
-  const { requests } = R.path(path, state)
-  return {
-    requests: R.pipe(
-      R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: path.concat(['requests', index]), name, createdAt })),
-      R.sortBy(R.prop('createdAt'))
-    )(requests)
-  }
-}
+const requestsSelector = createSelector(
+  (state, props) => props.path,
+  (state, props) => R.path(props.path.concat('requests'), state),
+  (path, requests) => R.pipe(
+    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: path.concat(['requests', index]), name, createdAt })),
+    R.sortBy(R.prop('createdAt'))
+  )(requests)
+)((state, props) => props.path.join('/'))
+const mapStateToProps = (state, props) => ({ requests: requestsSelector(state, props) })
 export default connect(mapStateToProps, null)(Path)
 
 export const PathTextField = connect(
@@ -23,13 +24,10 @@ export const PathTextField = connect(
   }))(TextField)
 
 export const DeletePathButton = connect(
-  (state, { path }) => {
-    const { name } = R.path(path, state)
-    return {
-      componentName: 'path',
-      recordName: name
-    }
-  },
+  (state, { path }) => ({
+    componentName: 'path',
+    recordName: R.path(path.concat('name'), state)
+  }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)
