@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Icon } from 'antd'
+import PropTypes from 'prop-types'
 
 class AddButton extends React.Component {
   render () {
@@ -7,6 +8,11 @@ class AddButton extends React.Component {
     const { name, add } = this.props
     return <Button type='primary' size='large' onClick={add}><Icon type='plus' />Add {name}</Button>
   }
+}
+
+AddButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  add: PropTypes.func.isRequired
 }
 
 export default AddButton

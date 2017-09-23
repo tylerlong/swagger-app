@@ -1,6 +1,7 @@
 import React from 'react'
 import R from 'ramda'
 import { Input, Form } from 'antd'
+import PropTypes from 'prop-types'
 
 import { formItemLayout } from '../../utils'
 
@@ -22,6 +23,16 @@ class TextField extends React.Component {
       </Form.Item>
     )
   }
+}
+
+TextField.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]).isRequired,
+  update: PropTypes.func.isRequired,
+  isArray: PropTypes.bool.isRequired
 }
 
 export default TextField

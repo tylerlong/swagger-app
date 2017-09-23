@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Checkbox } from 'antd'
+import PropTypes from 'prop-types'
 
 import { formItemLayout } from '../../utils'
 
@@ -13,6 +14,12 @@ class CheckboxField extends React.Component {
       </Form.Item>
     )
   }
+}
+
+CheckboxField.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.bool.isRequired,
+  update: PropTypes.func.isRequired
 }
 
 export default CheckboxField

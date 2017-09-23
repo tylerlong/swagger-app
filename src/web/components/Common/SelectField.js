@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Select } from 'antd'
+import PropTypes from 'prop-types'
 
 import { formItemLayout } from '../../utils'
 
@@ -15,6 +16,13 @@ class SelectField extends React.Component {
       </Form.Item>
     )
   }
+}
+
+SelectField.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  update: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export default SelectField

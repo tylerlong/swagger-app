@@ -31,6 +31,7 @@
     "husky": "^0.14.3",
     "jest": "^21.1.0",
     "nock": "^9.0.18",
+    "prop-types": "^15.5.10",
     "react-test-renderer": "^15.6.1",
     "redux-logic-test": "^1.0.5",
     "standard": "^10.0.3",

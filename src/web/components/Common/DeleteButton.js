@@ -1,5 +1,6 @@
 import React from 'react'
 import { Popconfirm, Button, Icon } from 'antd'
+import PropTypes from 'prop-types'
 
 class DeleteButton extends React.Component {
   render () {
@@ -11,6 +12,12 @@ class DeleteButton extends React.Component {
       </Popconfirm>
     )
   }
+}
+
+DeleteButton.propTypes = {
+  componentName: PropTypes.string.isRequired,
+  recordName: PropTypes.string.isRequired,
+  deleteRecord: PropTypes.func.isRequired
 }
 
 export default DeleteButton
