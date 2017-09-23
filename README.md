@@ -40,5 +40,4 @@ yarn build
 - detect file changed not by me
 - improve test coverage
 - use logger, so it won't output anything in production
-- bug: add a path parameter, edit it. Then delete the one above it. exception in console
-    - Similar issue for other components
+- Typechecking With PropTypes
