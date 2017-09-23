@@ -1,12 +1,12 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
-import createCachedSelector from 're-reselect'
+import createSelector from 're-reselect'
 
 import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Model from '../../components/Models/Model'
 import { TextField, DeleteButton, AddButton } from '../../components/Common'
 
-const propertiesSelector = createCachedSelector(
+const propertiesSelector = createSelector(
   (state, props) => props.path,
   (state, props) => R.path(props.path, state).properties,
   (path, properties) => R.pipe(
