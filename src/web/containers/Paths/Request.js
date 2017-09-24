@@ -11,16 +11,18 @@ const mapDispatchToProps = (dispatch, { path, name }) => ({
 export const RequestTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)
 export const RequestSelectField = connect(mapStateToProps, mapDispatchToProps)(SelectField)
 
-export const PermissionsSelectField = connect((state, { path, name }) => ({
+export const PermissionsSelectField = connect((state, { path, name = 'permissions' }) => ({
   value: R.path(path.concat(name), state),
   options: R.map(R.prop('name'), state.permissions),
+  name,
   isArray: true
-}), mapDispatchToProps)(SelectField)
-export const TagsSelectField = connect((state, { path, name }) => ({
+}), (dispatch, { path, name = 'permissions' }) => { return mapDispatchToProps(dispatch, { path, name }) })(SelectField)
+export const TagsSelectField = connect((state, { path, name = 'tags' }) => ({
   value: R.path(path.concat(name), state),
   options: state.info.tags,
+  name,
   isArray: true
-}), mapDispatchToProps)(SelectField)
+}), (dispatch, { path, name = 'tags' }) => { return mapDispatchToProps(dispatch, { path, name }) })(SelectField)
 
 export const DeleteRequestButton = connect(
   (state, { path }) => ({
