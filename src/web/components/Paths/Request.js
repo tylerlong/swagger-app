@@ -7,9 +7,9 @@ import { pathType } from '../../utils'
 
 class Request extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
-    return !R.and(
-      this.props.path === nextProps.path,
-      R.equals(this.props.permissions, nextProps.permissions),
+    return !(
+      this.props.path === nextProps.path &&
+      R.equals(this.props.permissions, nextProps.permissions) &&
       R.equals(this.props.tags, nextProps.tags)
     )
   }

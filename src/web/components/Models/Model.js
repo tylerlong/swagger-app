@@ -10,8 +10,8 @@ import Span from '../../containers/Common/Span'
 
 class Model extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
-    return !R.and(
-      this.props.path === nextProps.path,
+    return !(
+      this.props.path === nextProps.path &&
       R.equals(R.map(R.prop('createdAt'), this.props.properties), R.map(R.prop('createdAt'), nextProps.properties))
     )
   }
