@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { Collapse } from 'antd'
 import PropTypes from 'prop-types'
@@ -7,6 +8,9 @@ import Model from '../../containers/Models/Model'
 import { objType } from '../../utils'
 
 class Models extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !R.equals(R.map(R.prop('label'), this.props.models), R.map(R.prop('label'), nextProps.models))
+  }
   render () {
     console.log(`render Models`)
     const { models } = this.props

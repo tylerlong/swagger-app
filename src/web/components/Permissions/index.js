@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { Collapse } from 'antd'
 import PropTypes from 'prop-types'
@@ -7,6 +8,9 @@ import Permission from './Permission'
 import { objType } from '../../utils'
 
 class Permissions extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !R.equals(R.map(R.prop('label'), this.props.permissions), R.map(R.prop('label'), nextProps.permissions))
+  }
   render () {
     console.log(`render Permissions`)
     const { permissions } = this.props
