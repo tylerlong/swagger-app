@@ -10,6 +10,7 @@ const mapDispatchToProps = (dispatch, { path, name }) => ({
 })
 export const RequestTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)
 export const RequestSelectField = connect(mapStateToProps, mapDispatchToProps)(SelectField)
+
 export const PermissionsSelectField = connect((state, { path, name }) => ({
   value: R.path(path.concat(name), state),
   options: R.map(R.prop('name'), state.permissions),

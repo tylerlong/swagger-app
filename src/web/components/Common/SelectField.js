@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { Form, Select } from 'antd'
 import PropTypes from 'prop-types'
@@ -5,6 +6,12 @@ import PropTypes from 'prop-types'
 import { formItemLayout } from '../../utils'
 
 class SelectField extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !(
+      R.equals(this.props.value, nextProps.value) &&
+      R.equals(this.props.options, nextProps.options)
+    )
+  }
   render () {
     console.log(`render SelectField`)
     const { name, value, update, options, isArray } = this.props
