@@ -44,6 +44,5 @@ export const pathType = PropTypes.arrayOf(
 ).isRequired
 export const objType = PropTypes.shape({
   path: pathType,
-  label: PropTypes.string.isRequired,
   createdAt: PropTypes.number.isRequired
 }).isRequired

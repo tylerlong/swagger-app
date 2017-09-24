@@ -6,12 +6,13 @@ import PropTypes from 'prop-types'
 import { ModelTextField, DeleteModelButton, AddModelPropertyButton } from '../../containers/Models/Model'
 import Property from './Property'
 import { pathType, objType } from '../../utils'
+import Span from '../../containers/Common/Span'
 
 class Model extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     return !R.and(
       this.props.path === nextProps.path,
-      R.equals(R.map(R.prop('label'), this.props.properties), R.map(R.prop('label'), nextProps.properties))
+      R.equals(R.map(R.prop('createdAt'), this.props.properties), R.map(R.prop('createdAt'), nextProps.properties))
     )
   }
   render () {
@@ -25,9 +26,9 @@ class Model extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {properties.map(({ path, label, createdAt }) => {
+                {properties.map(({ path, createdAt }) => {
                   return (
-                    <Collapse.Panel header={label} key={createdAt}>
+                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
                       <Property path={path} />
                     </Collapse.Panel>
                   )

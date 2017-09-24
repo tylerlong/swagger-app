@@ -6,12 +6,13 @@ import PropTypes from 'prop-types'
 import { PathTextField, DeletePathButton, AddPathRequestButton } from '../../containers/Paths/Path'
 import Request from './Request'
 import { pathType, objType } from '../../utils'
+import Span from '../../containers/Common/Span'
 
 class Path extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     return !R.and(
       this.props.path === nextProps.path,
-      R.equals(R.map(R.prop('label'), this.props.requests), R.map(R.prop('label'), nextProps.requests))
+      R.equals(R.map(R.prop('createdAt'), this.props.requests), R.map(R.prop('createdAt'), nextProps.requests))
     )
   }
   render () {
@@ -26,9 +27,9 @@ class Path extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Requests'>
               <Collapse accordion>
-                {requests.map(({ path, label, createdAt }) => {
+                {requests.map(({ path, createdAt }) => {
                   return (
-                    <Collapse.Panel header={label} key={createdAt}>
+                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
                       <Request path={path} />
                     </Collapse.Panel>
                   )

@@ -6,10 +6,11 @@ import PropTypes from 'prop-types'
 import { AddPathParameterButton } from '../../containers/PathParameters'
 import PathParameter from './PathParameter'
 import { objType } from '../../utils'
+import Span from '../../containers/Common/Span'
 
 class PathParameters extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
-    return !R.equals(R.map(R.prop('label'), this.props.pathParameters), R.map(R.prop('label'), nextProps.pathParameters))
+    return !R.equals(R.map(R.prop('createdAt'), this.props.pathParameters), R.map(R.prop('createdAt'), nextProps.pathParameters))
   }
   render () {
     console.log(`render PathParameters`)
@@ -18,9 +19,9 @@ class PathParameters extends React.Component {
       <div>
         <h2>Path Parameters</h2>
         <Collapse accordion>
-          {pathParameters.map(({ path, label, createdAt }) => {
+          {pathParameters.map(({ path, createdAt }) => {
             return (
-              <Collapse.Panel header={label} key={createdAt}>
+              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
                 <PathParameter path={path} />
               </Collapse.Panel>
             )

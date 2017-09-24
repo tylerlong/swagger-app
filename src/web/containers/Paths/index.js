@@ -10,8 +10,9 @@ import { AddButton } from '../../components/Common'
 const pathsSelector = createSelector(
   state => state.paths,
   paths => R.pipe(
-    R.addIndex(R.map)(({ uri, createdAt }, index) => ({ path: ['paths', index], label: uri, createdAt })),
-    orderBy(R.prop('label'))
+    R.addIndex(R.map)(({ uri, createdAt }, index) => ({ path: ['paths', index], uri, createdAt })),
+    orderBy(R.prop('uri')),
+    R.map(R.omit('uri'))
   )(paths)
 )(state => 'paths')
 const mapStateToProps = (state) => ({

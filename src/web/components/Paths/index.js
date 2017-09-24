@@ -6,10 +6,11 @@ import PropTypes from 'prop-types'
 import { AddPathButton } from '../../containers/Paths'
 import Path from '../../containers/Paths/Path'
 import { objType } from '../../utils'
+import Span from '../../containers/Common/Span'
 
 class Paths extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
-    return !R.equals(R.map(R.prop('label'), this.props.paths), R.map(R.prop('label'), nextProps.paths))
+    return !R.equals(R.map(R.prop('createdAt'), this.props.paths), R.map(R.prop('createdAt'), nextProps.paths))
   }
   render () {
     console.log(`render Paths`)
@@ -18,9 +19,9 @@ class Paths extends React.Component {
       <div>
         <h2>Paths</h2>
         <Collapse accordion>
-          {paths.map(({path, label, createdAt}) => {
+          {paths.map(({path, createdAt}) => {
             return (
-              <Collapse.Panel header={label} key={createdAt}>
+              <Collapse.Panel header={<Span path={path.concat('uri')} />} key={createdAt}>
                 <Path path={path} />
               </Collapse.Panel>
             )
