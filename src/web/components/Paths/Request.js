@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -5,6 +6,12 @@ import { RequestTextField, RequestSelectField, DeleteRequestButton } from '../..
 import { pathType } from '../../utils'
 
 class Request extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !R.and(
+      this.props.path === nextProps.path,
+      R.equals(this.props.permissions, nextProps.permissions)
+    )
+  }
   render () {
     console.log(`render Path.Request`)
     const { path, permissions } = this.props
