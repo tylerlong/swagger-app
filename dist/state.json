@@ -86,8 +86,9 @@
           "apiGroup": "Light",
           "permissions": [],
           "batch": false,
-          "visibility": "public",
-          "status": "normal",
+          "beta": false,
+          "accessLevel": "Public",
+          "status": "Normal",
           "method": "GET",
           "tags": [
             "API Versions"
@@ -114,8 +115,9 @@
             "ReadCallLog"
           ],
           "batch": false,
-          "visibility": "public",
-          "status": "normal",
+          "beta": false,
+          "accessLevel": "Basic",
+          "status": "Normal",
           "method": "GET",
           "tags": [
             "Call Log"

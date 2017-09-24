@@ -2,7 +2,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 
 import { setProp, deleteFromArray } from '../../actions'
-import { TextField, SelectField, DeleteButton } from '../../components/Common'
+import { TextField, SelectField, DeleteButton, CheckboxField } from '../../components/Common'
 
 const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })
 const mapDispatchToProps = (dispatch, { path, name }) => ({
@@ -10,6 +10,7 @@ const mapDispatchToProps = (dispatch, { path, name }) => ({
 })
 export const RequestTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)
 export const RequestSelectField = connect(mapStateToProps, mapDispatchToProps)(SelectField)
+export const RequestCheckboxField = connect(mapStateToProps, mapDispatchToProps)(CheckboxField)
 
 export const PermissionsSelectField = connect((state, { path, name = 'permissions' }) => ({
   value: R.path(path.concat(name), state),

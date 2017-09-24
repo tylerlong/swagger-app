@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { RequestTextField, RequestSelectField, DeleteRequestButton, PermissionsSelectField, TagsSelectField } from '../../containers/Paths/Request'
+import {
+  RequestTextField, RequestSelectField,
+  DeleteRequestButton, PermissionsSelectField,
+  TagsSelectField, RequestCheckboxField
+} from '../../containers/Paths/Request'
 import { pathType } from '../../utils'
 
 class Request extends React.Component {
@@ -17,6 +21,10 @@ class Request extends React.Component {
         <RequestSelectField path={path} name='apiGroup' options={['Light', 'Medium', 'Heavy', 'Auth']} />
         <PermissionsSelectField path={path} />
         <TagsSelectField path={path} />
+        <RequestSelectField path={path} name='status' options={['Normal', 'Deprecated', 'Disabled']} />
+        <RequestSelectField path={path} name='accessLevel' options={['Basic', 'Advanced', 'Internal']} />
+        <RequestCheckboxField path={path} name='batch' />
+        <RequestCheckboxField path={path} name='beta' />
       </div>
     )
   }
