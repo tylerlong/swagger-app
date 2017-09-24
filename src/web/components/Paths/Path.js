@@ -1,6 +1,6 @@
 import R from 'ramda'
 import React from 'react'
-import { Collapse, Card, Row, Col } from 'antd'
+import { Collapse, Row, Col } from 'antd'
 import PropTypes from 'prop-types'
 
 import { PathTextField, DeletePathButton, AddPathRequestButton } from '../../containers/Paths/Path'
@@ -24,19 +24,18 @@ class Path extends React.Component {
         <PathTextField path={path} name='name' />
         <PathTextField path={path} name='uri' />
         <Row type='flex' justify='center'>
-          <Col xs={24} sm={18}>
-            <Card title='Requests'>
-              <Collapse accordion>
-                {requests.map(({ path, createdAt }) => {
-                  return (
-                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                      <Request path={path} />
-                    </Collapse.Panel>
-                  )
-                })}
-              </Collapse>
-              <AddPathRequestButton path={path} />
-            </Card>
+          <Col xs={24} sm={20}>
+            <h3>Requests</h3>
+            <Collapse accordion>
+              {requests.map(({ path, createdAt }) => {
+                return (
+                  <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                    <Request path={path} />
+                  </Collapse.Panel>
+                )
+              })}
+            </Collapse>
+            <AddPathRequestButton path={path} />
           </Col>
         </Row>
       </div>

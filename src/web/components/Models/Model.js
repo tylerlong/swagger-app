@@ -1,6 +1,6 @@
 import R from 'ramda'
 import React from 'react'
-import { Collapse, Card, Row, Col } from 'antd'
+import { Collapse, Row, Col } from 'antd'
 import PropTypes from 'prop-types'
 
 import { ModelTextField, DeleteModelButton, AddModelPropertyButton } from '../../containers/Models/Model'
@@ -23,19 +23,18 @@ class Model extends React.Component {
         <DeleteModelButton path={path} />
         <ModelTextField path={path} name='name' />
         <Row type='flex' justify='center'>
-          <Col xs={24} sm={18}>
-            <Card title='Properties'>
-              <Collapse accordion>
-                {properties.map(({ path, createdAt }) => {
-                  return (
-                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                      <Property path={path} />
-                    </Collapse.Panel>
-                  )
-                })}
-              </Collapse>
-              <AddModelPropertyButton path={path} />
-            </Card>
+          <Col xs={24} sm={20}>
+            <h3>Properties</h3>
+            <Collapse accordion>
+              {properties.map(({ path, createdAt }) => {
+                return (
+                  <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                    <Property path={path} />
+                  </Collapse.Panel>
+                )
+              })}
+            </Collapse>
+            <AddModelPropertyButton path={path} />
           </Col>
         </Row>
       </div>

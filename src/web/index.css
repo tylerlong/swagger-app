@@ -2,7 +2,7 @@ html, body {
   padding: 16px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   display: block;
   border-bottom: 1px dotted #ddd;
   margin-bottom: 16px !important;
