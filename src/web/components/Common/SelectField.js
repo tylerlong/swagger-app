@@ -8,19 +8,11 @@ class SelectField extends React.Component {
   render () {
     console.log(`render SelectField`)
     const { name, value, update, options, isArray } = this.props
-    let input = null
-    if (isArray) {
-      input = <Select mode='multiple' style={{ width: 240 }} value={value} onChange={value => { update(value) }}>
-        { options.map(option => <Select.Option value={option} key={option}>{option}</Select.Option>) }
-      </Select>
-    } else {
-      input = <Select style={{ width: 120 }} value={value} onChange={value => { update(value) }}>
-        { options.map(option => <Select.Option value={option} key={option}>{option}</Select.Option>) }
-      </Select>
-    }
     return (
       <Form.Item {...formItemLayout} label={name}>
-        {input}
+        <Select mode={isArray ? 'multiple' : 'default'} style={{ width: isArray ? 240 : 120 }} value={value} onChange={value => { update(value) }}>
+          {options.map(option => <Select.Option value={option} key={option}>{option}</Select.Option>)}
+        </Select>
       </Form.Item>
     )
   }
