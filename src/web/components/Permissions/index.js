@@ -14,9 +14,9 @@ class Permissions extends React.Component {
       <div>
         <h2>Permissions</h2>
         <Collapse accordion>
-          {permissions.map(({ path, name, createdAt }) => {
+          {permissions.map(({ path, label, createdAt }) => {
             return (
-              <Collapse.Panel header={name} key={createdAt}>
+              <Collapse.Panel header={label} key={createdAt}>
                 <Permission path={path} />
               </Collapse.Panel>
             )

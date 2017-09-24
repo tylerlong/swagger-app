@@ -10,8 +10,8 @@ import { AddButton } from '../../components/Common'
 const pathsSelector = createSelector(
   state => state.paths,
   paths => R.pipe(
-    R.addIndex(R.map)(({ uri, createdAt }, index) => ({ path: ['paths', index], name: uri, createdAt })),
-    orderBy(R.prop('name'))
+    R.addIndex(R.map)(({ uri, createdAt }, index) => ({ path: ['paths', index], label: uri, createdAt })),
+    orderBy(R.prop('label'))
   )(paths)
 )(state => 'paths')
 const mapStateToProps = (state) => ({
@@ -21,5 +21,5 @@ export default connect(mapStateToProps, null)(Paths)
 
 export const AddPathButton = connect(
   state => ({ name: 'path' }),
-  dispatch => ({ add: () => dispatch(addToArray(['paths'], { name: '🔥 /', createdAt: Date.now(), requests: [] })) })
+  dispatch => ({ add: () => dispatch(addToArray(['paths'], { name: 'name', uri: '🔥 /', createdAt: Date.now(), requests: [] })) })
 )(AddButton)

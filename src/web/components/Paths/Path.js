@@ -19,9 +19,9 @@ class Path extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Requests'>
               <Collapse accordion>
-                {requests.map(({ path, name, createdAt }) => {
+                {requests.map(({ path, label, createdAt }) => {
                   return (
-                    <Collapse.Panel header={name} key={createdAt}>
+                    <Collapse.Panel header={label} key={createdAt}>
                       <Request path={path} />
                     </Collapse.Panel>
                   )

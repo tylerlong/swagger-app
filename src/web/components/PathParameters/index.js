@@ -14,9 +14,9 @@ class PathParameters extends React.Component {
       <div>
         <h2>Path Parameters</h2>
         <Collapse accordion>
-          {pathParameters.map(({ path, name, createdAt }) => {
+          {pathParameters.map(({ path, label, createdAt }) => {
             return (
-              <Collapse.Panel header={name} key={createdAt}>
+              <Collapse.Panel header={label} key={createdAt}>
                 <PathParameter path={path} />
               </Collapse.Panel>
             )

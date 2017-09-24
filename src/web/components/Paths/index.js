@@ -14,9 +14,9 @@ class Paths extends React.Component {
       <div>
         <h2>Paths</h2>
         <Collapse accordion>
-          {paths.map(({path, name, createdAt}) => {
+          {paths.map(({path, label, createdAt}) => {
             return (
-              <Collapse.Panel header={name} key={createdAt}>
+              <Collapse.Panel header={label} key={createdAt}>
                 <Path path={path} />
               </Collapse.Panel>
             )

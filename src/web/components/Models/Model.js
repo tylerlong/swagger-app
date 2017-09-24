@@ -18,9 +18,9 @@ class Model extends React.Component {
           <Col xs={24} sm={18}>
             <Card title='Properties'>
               <Collapse accordion>
-                {properties.map(({ path, name, createdAt }) => {
+                {properties.map(({ path, label, createdAt }) => {
                   return (
-                    <Collapse.Panel header={name} key={createdAt}>
+                    <Collapse.Panel header={label} key={createdAt}>
                       <Property path={path} />
                     </Collapse.Panel>
                   )

@@ -10,8 +10,8 @@ import { AddButton } from '../../components/Common'
 const modelsSelector = createSelector(
   state => state.models,
   models => R.pipe(
-    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['models', index], name, createdAt })),
-    orderBy(R.prop('name'))
+    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['models', index], label: name, createdAt })),
+    orderBy(R.prop('label'))
   )(models)
 )(state => 'models')
 const mapStateToProps = state => ({ models: modelsSelector(state) })

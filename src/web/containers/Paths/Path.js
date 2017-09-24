@@ -10,7 +10,7 @@ const requestsSelector = createSelector(
   (state, props) => props.path,
   (state, props) => R.path(props.path.concat('requests'), state),
   (path, requests) => R.pipe(
-    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: path.concat(['requests', index]), name, createdAt })),
+    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: path.concat(['requests', index]), label: name, createdAt })),
     R.sortBy(R.prop('createdAt'))
   )(requests)
 )((state, props) => props.path.join('/'))

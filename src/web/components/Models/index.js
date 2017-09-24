@@ -14,9 +14,9 @@ class Models extends React.Component {
       <div>
         <h2>Models</h2>
         <Collapse accordion>
-          {models.map(({ path, name, createdAt }) => {
+          {models.map(({ path, label, createdAt }) => {
             return (
-              <Collapse.Panel header={name} key={createdAt}>
+              <Collapse.Panel header={label} key={createdAt}>
                 <Model path={path} />
               </Collapse.Panel>
             )
