@@ -10,8 +10,9 @@ import { AddButton } from '../../components/Common'
 const permissionsSelector = createSelector(
   state => state.permissions,
   permissions => R.pipe(
-    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['permissions', index], label: name, createdAt })),
-    orderBy(R.prop('label'))
+    R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['permissions', index], name, createdAt })),
+    orderBy(R.prop('name')),
+    R.map(R.omit(['name']))
   )(permissions)
 )(state => 'permissions')
 const mapStateToProps = state => ({ permissions: permissionsSelector(state) })

@@ -6,10 +6,11 @@ import PropTypes from 'prop-types'
 import { AddPermissionButton } from '../../containers/Permissions'
 import Permission from './Permission'
 import { objType } from '../../utils'
+import Span from '../../containers/Common/Span'
 
 class Permissions extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
-    return !R.equals(R.map(R.prop('label'), this.props.permissions), R.map(R.prop('label'), nextProps.permissions))
+    return !R.equals(R.map(R.prop('createdAt'), this.props.permissions), R.map(R.prop('createdAt'), nextProps.permissions))
   }
   render () {
     console.log(`render Permissions`)
@@ -18,9 +19,9 @@ class Permissions extends React.Component {
       <div>
         <h2>Permissions</h2>
         <Collapse accordion>
-          {permissions.map(({ path, label, createdAt }) => {
+          {permissions.map(({ path, createdAt }) => {
             return (
-              <Collapse.Panel header={label} key={createdAt}>
+              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
                 <Permission path={path} />
               </Collapse.Panel>
             )
