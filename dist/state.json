@@ -7,9 +7,15 @@
     "termsOfService": "https://www.example.com/terms-of-service",
     "host": "api.example.com",
     "basePath": "/",
-    "schemes": ["https"],
-    "produces": ["application/json"],
-    "consumes": ["application/json"]
+    "schemes": [
+      "https"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "consumes": [
+      "application/json"
+    ]
   },
   "permissions": [
     {
@@ -77,6 +83,34 @@
           "method": "GET",
           "tags": [
             "API Versions"
+          ],
+          "parameters": {},
+          "request": {},
+          "response": {},
+          "examples": []
+        }
+      ]
+    },
+    {
+      "createdAt": 1498875254399,
+      "name": "Call Log",
+      "uri": "/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log",
+      "requests": [
+        {
+          "createdAt": 1498875254399,
+          "name": "Get User Call Log",
+          "description": "Returns filtered call log records.",
+          "since": "1.0.3 (Release 5.11)",
+          "apiGroup": "Heavy",
+          "permissions": [
+            "ReadCallLog"
+          ],
+          "batch": false,
+          "visibility": "public",
+          "status": "normal",
+          "method": "GET",
+          "tags": [
+            "Call Log"
           ],
           "parameters": {},
           "request": {},
