@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { RequestTextField, RequestSelectField, DeleteRequestButton } from '../../containers/Paths/Request'
 import { pathType } from '../../utils'
@@ -6,7 +7,7 @@ import { pathType } from '../../utils'
 class Request extends React.Component {
   render () {
     console.log(`render Path.Request`)
-    const { path } = this.props
+    const { path, permissions } = this.props
     return (
       <div>
         <DeleteRequestButton path={path} />
@@ -15,14 +16,15 @@ class Request extends React.Component {
         <RequestTextField path={path} name='description' />
         <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
         <RequestSelectField path={path} name='apiGroup' options={['Light', 'Medium', 'Heavy', 'Auth']} />
-        <RequestTextField path={path} name='permissions' isArray />
+        <RequestSelectField path={path} name='permissions' options={permissions} isArray />
       </div>
     )
   }
 }
 
 Request.propTypes = {
-  path: pathType
+  path: pathType,
+  permissions: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 }
 
 export default Request

@@ -32,6 +32,11 @@
       "createdAt": 1498875020815,
       "name": "Contacts",
       "description": "Creating, viewing, editing and deleting user personal contacts"
+    },
+    {
+      "createdAt": 1498875020899,
+      "name": "ReadCallLog",
+      "description": "Viewing user call logs"
     }
   ],
   "pathParameters": [
