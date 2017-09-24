@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { Collapse, Card, Row, Col } from 'antd'
 import PropTypes from 'prop-types'
@@ -7,6 +8,12 @@ import Property from './Property'
 import { pathType, objType } from '../../utils'
 
 class Model extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !R.and(
+      this.props.path === nextProps.path,
+      R.equals(R.map(R.prop('label'), this.props.properties), R.map(R.prop('label'), nextProps.properties))
+    )
+  }
   render () {
     console.log(`render Model`)
     const { path, properties } = this.props
