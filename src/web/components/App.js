@@ -2,6 +2,7 @@ import React from 'react'
 import { Tabs, Button, Icon } from 'antd'
 import { Link } from 'react-router-dom'
 import { Base64 } from 'js-base64'
+import PropTypes from 'prop-types'
 
 import Info from '../components/Info'
 import Permissions from '../containers/Permissions'
@@ -33,6 +34,17 @@ class App extends React.Component {
       </div>
     )
   }
+}
+
+App.propTypes = {
+  title: PropTypes.string.isRequired,
+  version: PropTypes.string.isRequired,
+  loadState: PropTypes.func.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      base64: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
 }
 
 export default App
