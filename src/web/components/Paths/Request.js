@@ -11,8 +11,9 @@ class Request extends React.Component {
       <div>
         <DeleteRequestButton path={path} />
         <RequestTextField path={path} name='name' />
-        <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
+        <RequestTextField path={path} name='since' />
         <RequestTextField path={path} name='description' />
+        <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
       </div>
     )
   }

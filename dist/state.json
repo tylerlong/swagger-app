@@ -61,7 +61,8 @@
   "paths": [
     {
       "createdAt": 1498875254374,
-      "name": "/restapi",
+      "name": "Base URL",
+      "uri": "/restapi",
       "requests": [
         {
           "createdAt": 1498875254375,
