@@ -14,6 +14,7 @@ class Request extends React.Component {
         <RequestTextField path={path} name='since' />
         <RequestTextField path={path} name='description' />
         <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
+        <RequestSelectField path={path} name='apiGroup' options={['Light', 'Medium', 'Heavy', 'Auth']} />
       </div>
     )
   }
