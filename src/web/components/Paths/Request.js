@@ -9,12 +9,13 @@ class Request extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     return !R.and(
       this.props.path === nextProps.path,
-      R.equals(this.props.permissions, nextProps.permissions)
+      R.equals(this.props.permissions, nextProps.permissions),
+      R.equals(this.props.tags, nextProps.tags)
     )
   }
   render () {
     console.log(`render Path.Request`)
-    const { path, permissions } = this.props
+    const { path, permissions, tags } = this.props
     return (
       <div>
         <DeleteRequestButton path={path} />
@@ -24,6 +25,7 @@ class Request extends React.Component {
         <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
         <RequestSelectField path={path} name='apiGroup' options={['Light', 'Medium', 'Heavy', 'Auth']} />
         <RequestSelectField path={path} name='permissions' options={permissions} isArray />
+        <RequestSelectField path={path} name='tags' options={tags} isArray />
       </div>
     )
   }
@@ -31,7 +33,8 @@ class Request extends React.Component {
 
 Request.propTypes = {
   path: pathType,
-  permissions: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
+  permissions: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 }
 
 export default Request

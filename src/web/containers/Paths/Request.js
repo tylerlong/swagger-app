@@ -6,8 +6,10 @@ import { TextField, SelectField, DeleteButton } from '../../components/Common'
 import Request from '../../components/Paths/Request'
 
 export default connect(
-  ({ permissions }) => ({ permissions: R.map(R.prop('name'), permissions) }),
-  null
+  ({ permissions, info: { tags } }) => ({
+    permissions: R.map(R.prop('name'), permissions),
+    tags
+  }), null
 )(Request)
 
 const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })

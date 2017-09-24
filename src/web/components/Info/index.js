@@ -17,6 +17,7 @@ class Info extends React.Component {
         <InfoTextField name='schemes' isArray />
         <InfoTextField name='produces' isArray />
         <InfoTextField name='consumes' isArray />
+        <InfoTextField name='tags' isArray />
       </div>
     )
   }

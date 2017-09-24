@@ -15,6 +15,9 @@
     ],
     "consumes": [
       "application/json"
+    ],
+    "tags": [
+      "Call Log"
     ]
   },
   "permissions": [

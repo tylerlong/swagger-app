@@ -16,7 +16,8 @@ export const defaultState = {
     basePath: '/',
     schemes: ['https'],
     produces: ['application/json'],
-    consumes: ['application/json']
+    consumes: ['application/json'],
+    tags: []
   },
   permissions: [],
   pathParameters: [],
