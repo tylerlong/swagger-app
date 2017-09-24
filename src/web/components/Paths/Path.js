@@ -4,7 +4,7 @@ import { Collapse, Row, Col } from 'antd'
 import PropTypes from 'prop-types'
 
 import { PathTextField, DeletePathButton, AddPathRequestButton } from '../../containers/Paths/Path'
-import Request from '../../containers/Paths/Request'
+import Request from './Request'
 import { pathType, objType } from '../../utils'
 import Span from '../../containers/Common/Span'
 
