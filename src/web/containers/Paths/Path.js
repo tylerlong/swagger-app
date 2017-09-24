@@ -26,7 +26,7 @@ export const PathTextField = connect(
 export const DeletePathButton = connect(
   (state, { path }) => ({
     componentName: 'path',
-    recordName: R.path(path.concat('name'), state)
+    recordName: R.path(path.concat('uri'), state)
   }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))

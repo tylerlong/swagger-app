@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { Collapse } from 'antd'
 import PropTypes from 'prop-types'
@@ -7,6 +8,9 @@ import Path from '../../containers/Paths/Path'
 import { objType } from '../../utils'
 
 class Paths extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !R.equals(R.map(R.prop('label'), this.props.paths), R.map(R.prop('label'), nextProps.paths))
+  }
   render () {
     console.log(`render Paths`)
     const { paths } = this.props
