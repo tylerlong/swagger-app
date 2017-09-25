@@ -5,7 +5,7 @@ import { pathType } from '../../utils'
 
 class Permission extends React.Component {
   render () {
-    console.log(`render Permission`)
+    console.log('render Permission')
     const { path } = this.props
     return (
       <div>

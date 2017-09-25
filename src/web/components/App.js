@@ -18,7 +18,7 @@ class App extends React.Component {
     window.document.title = filePath
   }
   render () {
-    console.log(`render App`)
+    console.log('render App')
     const { title, version } = this.props
     return (
       <div>

@@ -16,7 +16,7 @@ class Model extends React.Component {
     )
   }
   render () {
-    console.log(`render Model`)
+    console.log('render Model')
     const { path, properties } = this.props
     return (
       <div>

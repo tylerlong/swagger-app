@@ -13,7 +13,7 @@ class Models extends React.Component {
     return !R.equals(R.map(R.prop('createdAt'), this.props.models), R.map(R.prop('createdAt'), nextProps.models))
   }
   render () {
-    console.log(`render Models`)
+    console.log('render Models')
     const { models } = this.props
     return (
       <div>

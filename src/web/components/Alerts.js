@@ -13,7 +13,7 @@ class Alerts extends React.Component {
     clearAlerts()
   }
   render () {
-    console.log(`render Alerts`)
+    console.log('render Alerts')
     return null
   }
 }

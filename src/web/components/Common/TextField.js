@@ -7,7 +7,7 @@ import { formItemLayout } from '../../utils'
 
 class TextField extends React.Component {
   render () {
-    console.log(`render TextField`)
+    console.log('render TextField')
     const { name, value, update, isArray } = this.props
     let input = null
     if (isArray) {

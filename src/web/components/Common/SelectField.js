@@ -13,7 +13,7 @@ class SelectField extends React.Component {
     )
   }
   render () {
-    console.log(`render SelectField`)
+    console.log('render SelectField')
     const { name, value, update, options, isArray } = this.props
     return (
       <Form.Item {...formItemLayout} label={name}>

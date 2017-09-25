@@ -5,7 +5,7 @@ import { pathType } from '../../utils'
 
 class Property extends React.Component {
   render () {
-    console.log(`render Model.Property`)
+    console.log('render Model.Property')
     const { path } = this.props
     return (
       <div>

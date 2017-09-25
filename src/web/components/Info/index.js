@@ -4,7 +4,7 @@ import { InfoTextField } from '../../containers/Info'
 
 class Info extends React.Component {
   render () {
-    console.log(`render Info`)
+    console.log('render Info')
     return (
       <div>
         <h2>Info</h2>

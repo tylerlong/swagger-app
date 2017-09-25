@@ -13,7 +13,7 @@ class PathParameters extends React.Component {
     return !R.equals(R.map(R.prop('createdAt'), this.props.pathParameters), R.map(R.prop('createdAt'), nextProps.pathParameters))
   }
   render () {
-    console.log(`render PathParameters`)
+    console.log('render PathParameters')
     const { pathParameters } = this.props
     return (
       <div>

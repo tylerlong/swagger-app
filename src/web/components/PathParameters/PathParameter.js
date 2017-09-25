@@ -5,7 +5,7 @@ import { pathType } from '../../utils'
 
 class PathParameter extends React.Component {
   render () {
-    console.log(`render PathParameter`)
+    console.log('render PathParameter')
     const { path } = this.props
     return (
       <div>
