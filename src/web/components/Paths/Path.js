@@ -4,9 +4,9 @@ import { Collapse, Row, Col } from 'antd'
 import PropTypes from 'prop-types'
 
 import { PathTextField, DeletePathButton, AddPathRequestButton } from '../../containers/Paths/Path'
-import Request from './Request'
 import { pathType, objType } from '../../utils'
 import Span from '../../containers/Common/Span'
+import Request from '../../containers/Paths/Request'
 
 class Path extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -16,7 +16,7 @@ class Path extends React.Component {
     )
   }
   render () {
-    console.log(`render Path`)
+    console.log('render Path')
     const { path, requests } = this.props
     return (
       <div>

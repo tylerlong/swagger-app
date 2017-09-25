@@ -1,8 +1,22 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
+import createSelector from 're-reselect'
 
-import { setProp, deleteFromArray } from '../../actions'
-import { TextField, SelectField, DeleteButton, CheckboxField } from '../../components/Common'
+import { setProp, deleteFromArray, addToArray } from '../../actions'
+import { TextField, SelectField, DeleteButton, CheckboxField, AddButton } from '../../components/Common'
+import Request from '../../components/Paths/Request'
+
+const examplesSelector = createSelector(
+  (state, props) => props.path,
+  (state, props) => R.path(props.path.concat('examples'), state),
+  (path, examples = []) => R.pipe(
+    R.addIndex(R.map)(({ createdAt }, index) => ({ path: path.concat(['examples', index]), createdAt })),
+    R.sortBy(R.prop('createdAt'))
+  )(examples)
+)((state, props) => props.path.join('/'))
+export default connect((state, props) => ({
+  examples: examplesSelector(state, props)
+}), null)(Request)
 
 const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })
 const mapDispatchToProps = (dispatch, { path, name }) => ({
@@ -33,3 +47,10 @@ export const DeleteRequestButton = connect(
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
   }))(DeleteButton)
+
+export const AddPathRequestExampleButton = connect(
+  state => ({ name: 'example' }),
+  (dispatch, { path }) => ({ add: () => dispatch(addToArray(path.concat('examples'), {
+    name: '🔥 name', description: 'description', request: 'request', response: 'response', createdAt: Date.now()
+  })) })
+)(AddButton)

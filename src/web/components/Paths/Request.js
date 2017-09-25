@@ -1,16 +1,21 @@
 import React from 'react'
+import { Row, Col, Collapse } from 'antd'
+import PropTypes from 'prop-types'
 
 import {
   RequestTextField, RequestSelectField,
   DeleteRequestButton, PermissionsSelectField,
-  TagsSelectField, RequestCheckboxField
+  TagsSelectField, RequestCheckboxField,
+  AddPathRequestExampleButton
 } from '../../containers/Paths/Request'
-import { pathType } from '../../utils'
+import { pathType, objType } from '../../utils'
+import Example from './Example'
+import Span from '../../containers/Common/Span'
 
 class Request extends React.Component {
   render () {
-    console.log(`render Path.Request`)
-    const { path } = this.props
+    console.log('render Path.Request')
+    const { path, examples } = this.props
     return (
       <div>
         <DeleteRequestButton path={path} />
@@ -25,13 +30,29 @@ class Request extends React.Component {
         <RequestSelectField path={path} name='accessLevel' options={['Basic', 'Advanced', 'Internal']} />
         <RequestCheckboxField path={path} name='batch' />
         <RequestCheckboxField path={path} name='beta' />
+        <Row type='flex' justify='center'>
+          <Col xs={24} sm={20}>
+            <h4>Examples</h4>
+            <Collapse accordion>
+              {examples.map(({ path, createdAt }) => {
+                return (
+                  <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                    <Example path={path} />
+                  </Collapse.Panel>
+                )
+              })}
+            </Collapse>
+            <AddPathRequestExampleButton path={path} />
+          </Col>
+        </Row>
       </div>
     )
   }
 }
 
 Request.propTypes = {
-  path: pathType
+  path: pathType,
+  examples: PropTypes.arrayOf(objType)
 }
 
 export default Request
