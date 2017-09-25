@@ -13,7 +13,7 @@ class Paths extends React.Component {
     return !R.equals(R.map(R.prop('createdAt'), this.props.paths), R.map(R.prop('createdAt'), nextProps.paths))
   }
   render () {
-    console.log(`render Paths`)
+    console.log('render Paths')
     const { paths } = this.props
     return (
       <div>
