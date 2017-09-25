@@ -40,4 +40,3 @@ yarn build
 - detect file changed not by me
 - improve test coverage
 - use logger, so it won't output anything in production
-- auto open newly created element

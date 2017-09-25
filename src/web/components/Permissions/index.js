@@ -19,7 +19,7 @@ class Permissions extends React.Component {
     return (
       <div>
         <h2>Permissions</h2>
-        <SmartCollapse accordion>
+        <SmartCollapse>
           {permissions.map(({ path, createdAt }) => {
             return (
               <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>

@@ -15,7 +15,7 @@ class SmartCollapse extends React.Component {
     }
   }
   render () {
-    return <Collapse {...this.props} activeKey={this.state.activeKey} onChange={activeKey => this.setState({ activeKey })} />
+    return <Collapse {...this.props} accordion activeKey={this.state.activeKey} onChange={activeKey => this.setState({ activeKey })} />
   }
 }
 

@@ -7,6 +7,7 @@ import { AddModelButton } from '../../containers/Models'
 import Model from '../../containers/Models/Model'
 import { objType } from '../../utils'
 import Span from '../../containers/Common/Span'
+import { SmartCollapse } from '../Common'
 
 class Models extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -18,7 +19,7 @@ class Models extends React.Component {
     return (
       <div>
         <h2>Models</h2>
-        <Collapse accordion>
+        <SmartCollapse>
           {models.map(({ path, createdAt }) => {
             return (
               <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
@@ -26,7 +27,7 @@ class Models extends React.Component {
               </Collapse.Panel>
             )
           })}
-        </Collapse>
+        </SmartCollapse>
         <AddModelButton />
       </div>
     )

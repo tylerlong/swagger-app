@@ -7,6 +7,7 @@ import { AddPathParameterButton } from '../../containers/PathParameters'
 import PathParameter from './PathParameter'
 import { objType } from '../../utils'
 import Span from '../../containers/Common/Span'
+import { SmartCollapse } from '../Common'
 
 class PathParameters extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -18,7 +19,7 @@ class PathParameters extends React.Component {
     return (
       <div>
         <h2>Path Parameters</h2>
-        <Collapse accordion>
+        <SmartCollapse>
           {pathParameters.map(({ path, createdAt }) => {
             return (
               <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
@@ -26,7 +27,7 @@ class PathParameters extends React.Component {
               </Collapse.Panel>
             )
           })}
-        </Collapse>
+        </SmartCollapse>
         <AddPathParameterButton />
       </div>
     )

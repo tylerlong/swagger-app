@@ -7,6 +7,7 @@ import { PathTextField, DeletePathButton, AddPathRequestButton } from '../../con
 import { pathType, objType } from '../../utils'
 import Span from '../../containers/Common/Span'
 import Request from '../../containers/Paths/Request'
+import { SmartCollapse } from '../Common'
 
 class Path extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -26,7 +27,7 @@ class Path extends React.Component {
         <Row type='flex' justify='center'>
           <Col xs={24} sm={20}>
             <h3>Requests</h3>
-            <Collapse accordion>
+            <SmartCollapse>
               {requests.map(({ path, createdAt }) => {
                 return (
                   <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
@@ -34,7 +35,7 @@ class Path extends React.Component {
                   </Collapse.Panel>
                 )
               })}
-            </Collapse>
+            </SmartCollapse>
             <AddPathRequestButton path={path} />
           </Col>
         </Row>

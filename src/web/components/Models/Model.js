@@ -7,6 +7,7 @@ import { ModelTextField, DeleteModelButton, AddModelPropertyButton } from '../..
 import Property from './Property'
 import { pathType, objType } from '../../utils'
 import Span from '../../containers/Common/Span'
+import { SmartCollapse } from '../Common'
 
 class Model extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -25,7 +26,7 @@ class Model extends React.Component {
         <Row type='flex' justify='center'>
           <Col xs={24} sm={20}>
             <h3>Properties</h3>
-            <Collapse accordion>
+            <SmartCollapse>
               {properties.map(({ path, createdAt }) => {
                 return (
                   <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
@@ -33,7 +34,7 @@ class Model extends React.Component {
                   </Collapse.Panel>
                 )
               })}
-            </Collapse>
+            </SmartCollapse>
             <AddModelPropertyButton path={path} />
           </Col>
         </Row>

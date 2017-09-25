@@ -12,6 +12,7 @@ import {
 import { pathType, objType } from '../../utils'
 import Example from './Example'
 import Span from '../../containers/Common/Span'
+import { SmartCollapse } from '../Common'
 
 class Request extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -40,7 +41,7 @@ class Request extends React.Component {
         <Row type='flex' justify='center'>
           <Col xs={24} sm={20}>
             <h4>Examples</h4>
-            <Collapse accordion>
+            <SmartCollapse>
               {examples.map(({ path, createdAt }) => {
                 return (
                   <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
@@ -48,7 +49,7 @@ class Request extends React.Component {
                   </Collapse.Panel>
                 )
               })}
-            </Collapse>
+            </SmartCollapse>
             <AddPathRequestExampleButton path={path} />
           </Col>
         </Row>
