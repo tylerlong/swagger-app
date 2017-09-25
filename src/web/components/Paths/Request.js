@@ -1,3 +1,4 @@
+import R from 'ramda'
 import React from 'react'
 import { Row, Col, Collapse } from 'antd'
 import PropTypes from 'prop-types'
@@ -13,6 +14,12 @@ import Example from './Example'
 import Span from '../../containers/Common/Span'
 
 class Request extends React.Component {
+  shouldComponentUpdate (nextProps, nextState) {
+    return !(
+      this.props.path === nextProps.path &&
+      R.equals(R.map(R.prop('createdAt'), this.props.examples), R.map(R.prop('createdAt'), nextProps.examples))
+    )
+  }
   render () {
     console.log('render Path.Request')
     const { path, examples } = this.props
