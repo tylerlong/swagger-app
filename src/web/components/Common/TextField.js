@@ -11,10 +11,10 @@ class TextField extends React.Component {
     const { name, value, update, isArray } = this.props
     let input = null
     if (isArray) {
-      input = <Input placeholder='Values separated by commas' size='large' defaultValue={R.join(', ', value || [])}
+      input = <Input placeholder='Values separated by commas' defaultValue={R.join(', ', value || [])}
         onChange={event => { update(R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
     } else {
-      input = <Input placeholder={name} size='large' value={value}
+      input = <Input placeholder={name} value={value}
         onChange={event => { update(event.target.value) }} />
     }
     return (
