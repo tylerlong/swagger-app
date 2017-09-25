@@ -16,6 +16,10 @@ class CheckboxField extends React.Component {
   }
 }
 
+CheckboxField.defaultProps = {
+  value: false
+}
+
 CheckboxField.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.bool.isRequired,

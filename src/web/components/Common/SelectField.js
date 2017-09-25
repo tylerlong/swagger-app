@@ -34,7 +34,7 @@ SelectField.propTypes = {
   value: PropTypes.oneOfType([
     PropTypes.string.isRequired,
     PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
-  ]).isRequired,
+  ]),
   update: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   isArray: PropTypes.bool.isRequired

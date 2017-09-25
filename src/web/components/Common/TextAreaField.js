@@ -17,6 +17,10 @@ class TextAreaField extends React.Component {
   }
 }
 
+TextAreaField.defaultProps = {
+  value: ''
+}
+
 TextAreaField.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
