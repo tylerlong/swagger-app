@@ -7,6 +7,7 @@ import { AddPermissionButton } from '../../containers/Permissions'
 import Permission from './Permission'
 import { objType } from '../../utils'
 import Span from '../../containers/Common/Span'
+import { SmartCollapse } from '../Common'
 
 class Permissions extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -18,15 +19,15 @@ class Permissions extends React.Component {
     return (
       <div>
         <h2>Permissions</h2>
-        <Collapse accordion>
+        <SmartCollapse accordion>
           {permissions.map(({ path, createdAt }) => {
             return (
-              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt} id={'' + createdAt}>
                 <Permission path={path} />
               </Collapse.Panel>
             )
           })}
-        </Collapse>
+        </SmartCollapse>
         <AddPermissionButton />
       </div>
     )
