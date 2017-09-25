@@ -10,7 +10,7 @@ class TextAreaField extends React.Component {
     const { name, value, update } = this.props
     return (
       <Form.Item {...formItemLayout} label={name}>
-        <Input.TextArea placeholder={name} value={value}
+        <Input.TextArea placeholder={name} value={value} autosize={{ minRows: 2, maxRows: 16 }}
           onChange={event => { update(event.target.value) }} />
       </Form.Item>
     )

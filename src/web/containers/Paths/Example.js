@@ -1,7 +1,7 @@
 import R from 'ramda'
 import { connect } from 'react-redux'
 
-import { TextField, DeleteButton } from '../../components/Common'
+import { TextField, TextAreaField, DeleteButton } from '../../components/Common'
 import { deleteFromArray, setProp } from '../../actions'
 
 export const DeletePathRequestExampleButton = connect(
@@ -18,3 +18,4 @@ const mapDispatchToProps = (dispatch, { path, name }) => ({
   update: value => dispatch(setProp(path.concat(name), value))
 })
 export const PathRequestExampleTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)
+export const PathRequestExampleTextAreaField = connect(mapStateToProps, mapDispatchToProps)(TextAreaField)

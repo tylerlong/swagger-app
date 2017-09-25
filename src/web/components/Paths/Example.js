@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { pathType } from '../../utils'
-import { DeletePathRequestExampleButton, PathRequestExampleTextField } from '../../containers/Paths/Example'
+import { DeletePathRequestExampleButton, PathRequestExampleTextField, PathRequestExampleTextAreaField } from '../../containers/Paths/Example'
 
 class Example extends React.Component {
   render () {
@@ -11,6 +11,8 @@ class Example extends React.Component {
       <DeletePathRequestExampleButton path={path} />
       <PathRequestExampleTextField path={path} name='name' />
       <PathRequestExampleTextField path={path} name='description' />
+      <PathRequestExampleTextAreaField path={path} name='request' />
+      <PathRequestExampleTextAreaField path={path} name='response' />
     </div>
   }
 }
