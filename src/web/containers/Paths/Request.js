@@ -50,7 +50,13 @@ export const DeleteRequestButton = connect(
 
 export const AddPathRequestExampleButton = connect(
   state => ({ name: 'example' }),
-  (dispatch, { path }) => ({ add: () => dispatch(addToArray(path.concat('examples'), {
-    name: '🔥 name', description: '', request: '', response: '', createdAt: Date.now()
-  })) })
+  (dispatch, { path }) => ({
+    add: () => dispatch(addToArray(path.concat('examples'), {
+      createdAt: Date.now(),
+      name: '🔥 name',
+      description: '',
+      request: '',
+      response: ''
+    }))
+  })
 )(AddButton)

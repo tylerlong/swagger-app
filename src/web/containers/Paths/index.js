@@ -22,5 +22,12 @@ export default connect(mapStateToProps, null)(Paths)
 
 export const AddPathButton = connect(
   state => ({ name: 'path' }),
-  dispatch => ({ add: () => dispatch(addToArray(['paths'], { name: 'name', uri: '🔥 /', createdAt: Date.now(), requests: [] })) })
+  dispatch => ({
+    add: () => dispatch(addToArray(['paths'], {
+      createdAt: Date.now(),
+      name: '',
+      uri: '🔥 /',
+      requests: []
+    }))
+  })
 )(AddButton)

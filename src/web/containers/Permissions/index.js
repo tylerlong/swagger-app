@@ -20,5 +20,11 @@ export default connect(mapStateToProps, null)(Permissions)
 
 export const AddPermissionButton = connect(
   state => ({ name: 'permission' }),
-  dispatch => ({ add: () => dispatch(addToArray(['permissions'], { name: '🔥 name', description: '', createdAt: Date.now() })) })
+  dispatch => ({
+    add: () => dispatch(addToArray(['permissions'], {
+      createdAt: Date.now(),
+      name: '🔥 name',
+      description: ''
+    }))
+  })
 )(AddButton)

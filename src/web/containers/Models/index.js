@@ -20,5 +20,11 @@ export default connect(mapStateToProps, null)(Models)
 
 export const AddModelButton = connect(
   state => ({ name: 'model' }),
-  dispatch => ({ add: () => dispatch(addToArray(['models'], { name: '🔥 name', createdAt: Date.now(), properties: [] })) })
+  dispatch => ({
+    add: () => dispatch(addToArray(['models'], {
+      createdAt: Date.now(),
+      name: '🔥 name',
+      properties: []
+    }))
+  })
 )(AddButton)
