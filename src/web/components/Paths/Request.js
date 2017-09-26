@@ -7,7 +7,8 @@ import {
   RequestTextField, RequestSelectField,
   DeleteRequestButton, PermissionsSelectField,
   TagsSelectField, RequestCheckboxField,
-  AddPathRequestExampleButton, AddPathRequestQueryParameterButton
+  AddPathRequestExampleButton, AddPathRequestQueryParameterButton,
+  AddPathRequestRequestFieldButton, AddPathRequestResponseFieldButton
 } from '../../containers/Paths/Request'
 import { pathType, objType } from '../../utils'
 import Example from './Example'
@@ -20,12 +21,14 @@ class Request extends React.Component {
     return !(
       this.props.path === nextProps.path &&
       R.equals(R.map(R.prop('createdAt'), this.props.examples), R.map(R.prop('createdAt'), nextProps.examples)) &&
-      R.equals(R.map(R.prop('createdAt'), this.props.queryParameters), R.map(R.prop('createdAt'), nextProps.queryParameters))
+      R.equals(R.map(R.prop('createdAt'), this.props.queryParameters), R.map(R.prop('createdAt'), nextProps.queryParameters)) &&
+      R.equals(R.map(R.prop('createdAt'), this.props.requestFields), R.map(R.prop('createdAt'), nextProps.requestFields)) &&
+      R.equals(R.map(R.prop('createdAt'), this.props.responseFields), R.map(R.prop('createdAt'), nextProps.responseFields))
     )
   }
   render () {
     console.log('render Path.Request')
-    const { path, examples, queryParameters } = this.props
+    const { path, examples, queryParameters, requestFields, responseFields } = this.props
     return (
       <div>
         <DeleteRequestButton path={path} />
@@ -57,10 +60,28 @@ class Request extends React.Component {
               </CenterPanel>
             </Collapse.Panel>
             <Collapse.Panel header='Request'>
-              <h4>Request</h4>
+              <CenterPanel>
+                <SmartCollapse>
+                  {requestFields.map(({ path, createdAt }) => (
+                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                      <Property path={path} />
+                    </Collapse.Panel>
+                  ))}
+                </SmartCollapse>
+                <AddPathRequestRequestFieldButton path={path} />
+              </CenterPanel>
             </Collapse.Panel>
             <Collapse.Panel header='Response'>
-              <h4>Response</h4>
+              <CenterPanel>
+                <SmartCollapse>
+                  {responseFields.map(({ path, createdAt }) => (
+                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                      <Property path={path} />
+                    </Collapse.Panel>
+                  ))}
+                </SmartCollapse>
+                <AddPathRequestResponseFieldButton path={path} />
+              </CenterPanel>
             </Collapse.Panel>
             <Collapse.Panel header='Examples'>
               <CenterPanel>
@@ -84,7 +105,9 @@ class Request extends React.Component {
 Request.propTypes = {
   path: pathType,
   examples: PropTypes.arrayOf(objType),
-  queryParameters: PropTypes.arrayOf(objType)
+  queryParameters: PropTypes.arrayOf(objType),
+  requestFields: PropTypes.arrayOf(objType),
+  responseFields: PropTypes.arrayOf(objType)
 }
 
 export default Request

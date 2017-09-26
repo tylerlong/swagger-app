@@ -23,9 +23,27 @@ const queryParametersSelector = createSelector(
     R.sortBy(R.prop('createdAt'))
   )(queryParameters)
 )((state, props) => props.path.join('/'))
+const requestFieldsSelector = createSelector(
+  (state, props) => props.path,
+  (state, props) => R.path(props.path.concat('request'), state),
+  (path, requestFields = []) => R.pipe(
+    R.addIndex(R.map)(({ createdAt }, index) => ({ path: path.concat(['request', index]), createdAt })),
+    R.sortBy(R.prop('createdAt'))
+  )(requestFields)
+)((state, props) => props.path.join('/'))
+const responseFieldsSelector = createSelector(
+  (state, props) => props.path,
+  (state, props) => R.path(props.path.concat('response'), state),
+  (path, responseFields = []) => R.pipe(
+    R.addIndex(R.map)(({ createdAt }, index) => ({ path: path.concat(['response', index]), createdAt })),
+    R.sortBy(R.prop('createdAt'))
+  )(responseFields)
+)((state, props) => props.path.join('/'))
 export default connect((state, props) => ({
   examples: examplesSelector(state, props),
-  queryParameters: queryParametersSelector(state, props)
+  queryParameters: queryParametersSelector(state, props),
+  requestFields: requestFieldsSelector(state, props),
+  responseFields: responseFieldsSelector(state, props)
 }), null)(Request)
 
 const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })
@@ -75,5 +93,19 @@ export const AddPathRequestQueryParameterButton = connect(
   state => ({ name: 'query parameter' }),
   (dispatch, { path }) => ({
     add: () => dispatch(addToArray(path.concat('queryParameters'), defaultProperty()))
+  })
+)(AddButton)
+
+export const AddPathRequestRequestFieldButton = connect(
+  state => ({ name: 'request field' }),
+  (dispatch, { path }) => ({
+    add: () => dispatch(addToArray(path.concat('request'), defaultProperty()))
+  })
+)(AddButton)
+
+export const AddPathRequestResponseFieldButton = connect(
+  state => ({ name: 'response field' }),
+  (dispatch, { path }) => ({
+    add: () => dispatch(addToArray(path.concat('response'), defaultProperty()))
   })
 )(AddButton)
