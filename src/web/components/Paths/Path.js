@@ -1,13 +1,13 @@
 import R from 'ramda'
 import React from 'react'
-import { Collapse, Row, Col } from 'antd'
+import { Collapse } from 'antd'
 import PropTypes from 'prop-types'
 
 import { PathTextField, DeletePathButton, AddPathRequestButton } from '../../containers/Paths/Path'
 import { pathType, objType } from '../../utils'
 import Span from '../../containers/Common/Span'
 import Request from '../../containers/Paths/Request'
-import { SmartCollapse } from '../Common'
+import { SmartCollapse, CenterPanel } from '../Common'
 
 class Path extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -24,19 +24,17 @@ class Path extends React.Component {
         <DeletePathButton path={path} />
         <PathTextField path={path} name='name' />
         <PathTextField path={path} name='uri' />
-        <Row type='flex' justify='center'>
-          <Col xs={24} sm={22}>
-            <h3>Requests</h3>
-            <SmartCollapse>
-              {requests.map(({ path, createdAt }) => (
-                <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                  <Request path={path} />
-                </Collapse.Panel>
-              ))}
-            </SmartCollapse>
-            <AddPathRequestButton path={path} />
-          </Col>
-        </Row>
+        <CenterPanel>
+          <h3>Requests</h3>
+          <SmartCollapse>
+            {requests.map(({ path, createdAt }) => (
+              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                <Request path={path} />
+              </Collapse.Panel>
+            ))}
+          </SmartCollapse>
+          <AddPathRequestButton path={path} />
+        </CenterPanel>
       </div>
     )
   }
