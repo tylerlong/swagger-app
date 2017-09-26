@@ -28,7 +28,7 @@ class Request extends React.Component {
       <div>
         <DeleteRequestButton path={path} />
         <Row type='flex' justify='center'>
-          <Col xs={24} sm={20}>
+          <Col xs={24} sm={22}>
             <Collapse accordion defaultActiveKey='basic-info'>
               <Collapse.Panel header='Basic Info' key='basic-info'>
                 <RequestTextField path={path} name='name' />
@@ -53,14 +53,18 @@ class Request extends React.Component {
                 <h4>Response</h4>
               </Collapse.Panel>
               <Collapse.Panel header='Examples'>
-                <SmartCollapse>
-                  {examples.map(({ path, createdAt }) => (
-                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                      <Example path={path} />
-                    </Collapse.Panel>
-                  ))}
-                </SmartCollapse>
-                <AddPathRequestExampleButton path={path} />
+                <Row type='flex' justify='center'>
+                  <Col xs={24} sm={22}>
+                    <SmartCollapse>
+                      {examples.map(({ path, createdAt }) => (
+                        <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                          <Example path={path} />
+                        </Collapse.Panel>
+                      ))}
+                    </SmartCollapse>
+                    <AddPathRequestExampleButton path={path} />
+                  </Col>
+                </Row>
               </Collapse.Panel>
             </Collapse>
           </Col>

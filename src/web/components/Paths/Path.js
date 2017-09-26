@@ -25,7 +25,7 @@ class Path extends React.Component {
         <PathTextField path={path} name='name' />
         <PathTextField path={path} name='uri' />
         <Row type='flex' justify='center'>
-          <Col xs={24} sm={20}>
+          <Col xs={24} sm={22}>
             <h3>Requests</h3>
             <SmartCollapse>
               {requests.map(({ path, createdAt }) => (

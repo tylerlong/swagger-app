@@ -24,7 +24,7 @@ class Model extends React.Component {
         <DeleteModelButton path={path} />
         <ModelTextField path={path} name='name' />
         <Row type='flex' justify='center'>
-          <Col xs={24} sm={20}>
+          <Col xs={24} sm={22}>
             <h3>Properties</h3>
             <SmartCollapse>
               {properties.map(({ path, createdAt }) => (
