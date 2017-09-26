@@ -40,22 +40,27 @@ class Request extends React.Component {
         <RequestCheckboxField path={path} name='beta' />
         <Row type='flex' justify='center'>
           <Col xs={24} sm={20}>
-            <h4>Query Parameters</h4>
-          </Col>
-        </Row>
-        <Row type='flex' justify='center'>
-          <Col xs={24} sm={20}>
-            <h4>Examples</h4>
-            <SmartCollapse>
-              {examples.map(({ path, createdAt }) => {
-                return (
-                  <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                    <Example path={path} />
-                  </Collapse.Panel>
-                )
-              })}
-            </SmartCollapse>
-            <AddPathRequestExampleButton path={path} />
+            <Collapse accordion>
+              <Collapse.Panel header='Query Parameters'>
+                <h4>Query Parameters</h4>
+              </Collapse.Panel>
+              <Collapse.Panel header='Request'>
+                <h4>Request</h4>
+              </Collapse.Panel>
+              <Collapse.Panel header='Response'>
+                <h4>Response</h4>
+              </Collapse.Panel>
+              <Collapse.Panel header='Examples'>
+                <SmartCollapse>
+                  {examples.map(({ path, createdAt }) => (
+                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                      <Example path={path} />
+                    </Collapse.Panel>
+                  ))}
+                </SmartCollapse>
+                <AddPathRequestExampleButton path={path} />
+              </Collapse.Panel>
+            </Collapse>
           </Col>
         </Row>
       </div>
