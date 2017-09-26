@@ -45,6 +45,7 @@
     "antd": "^2.13.2",
     "axios": "^0.16.2",
     "electron": "^1.7.6",
+    "indefinite": "^1.0.1",
     "js-base64": "^2.3.2",
     "ramda": "^0.24.1",
     "re-reselect": "^1.0.1",

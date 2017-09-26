@@ -3072,6 +3072,10 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
 
+indefinite@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/indefinite/-/indefinite-1.0.1.tgz#40b1e0692fe7963106a9824f867ec8a481fbe863"
+
 indent-string@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-2.1.0.tgz#8e2d48348742121b4a8218b7a137e9a52049dc80"
