@@ -1,9 +1,9 @@
 import React from 'react'
 import R from 'ramda'
-import { Input, Form } from 'antd'
+import { Input } from 'antd'
 import PropTypes from 'prop-types'
 
-import { formItemLayout } from '../../utils'
+import FormItem from './FormItem'
 
 class TextField extends React.Component {
   render () {
@@ -18,9 +18,9 @@ class TextField extends React.Component {
         onChange={event => { update(event.target.value) }} />
     }
     return (
-      <Form.Item {...formItemLayout} label={name}>
+      <FormItem label={name}>
         {input}
-      </Form.Item>
+      </FormItem>
     )
   }
 }

@@ -1,9 +1,9 @@
 import R from 'ramda'
 import React from 'react'
-import { Form, Select } from 'antd'
+import { Select } from 'antd'
 import PropTypes from 'prop-types'
 
-import { formItemLayout } from '../../utils'
+import FormItem from './FormItem'
 
 class SelectField extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
@@ -16,11 +16,11 @@ class SelectField extends React.Component {
     console.log('render SelectField')
     const { name, value, update, options, isArray } = this.props
     return (
-      <Form.Item {...formItemLayout} label={name}>
+      <FormItem label={name}>
         <Select mode={isArray ? 'multiple' : 'default'} style={{ width: isArray ? 240 : 120 }} value={value} onChange={value => { update(value) }}>
           {options.map(option => <Select.Option value={option} key={option}>{option}</Select.Option>)}
         </Select>
-      </Form.Item>
+      </FormItem>
     )
   }
 }
