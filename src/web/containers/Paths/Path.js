@@ -48,9 +48,9 @@ export const AddPathRequestButton = connect(
       accessLevel: 'Basic',
       batch: false,
       beta: false,
-      parameters: {},
-      request: {},
-      response: {},
+      parameters: [],
+      request: [],
+      response: [],
       examples: []
     }))
   })

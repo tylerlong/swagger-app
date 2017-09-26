@@ -5,6 +5,7 @@ import createSelector from 're-reselect'
 import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Model from '../../components/Models/Model'
 import { TextField, DeleteButton, AddButton } from '../../components/Common'
+import { defaultProperty } from './Property'
 
 const propertiesSelector = createSelector(
   (state, props) => props.path,
@@ -35,14 +36,6 @@ export const DeleteModelButton = connect(
 export const AddModelPropertyButton = connect(
   state => ({ name: 'property' }),
   (dispatch, { path }) => ({
-    add: () => dispatch(addToArray(path.concat('properties'), {
-      createdAt: Date.now(),
-      name: '🔥 name',
-      description: '',
-      type: 'string',
-      enum: [],
-      required: false,
-      isArray: false
-    }))
+    add: () => dispatch(addToArray(path.concat('properties'), defaultProperty()))
   })
 )(AddButton)

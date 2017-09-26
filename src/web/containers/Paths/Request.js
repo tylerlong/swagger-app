@@ -5,6 +5,7 @@ import createSelector from 're-reselect'
 import { setProp, deleteFromArray, addToArray } from '../../actions'
 import { TextField, SelectField, DeleteButton, CheckboxField, AddButton } from '../../components/Common'
 import Request from '../../components/Paths/Request'
+import { defaultProperty } from '../Models/Property'
 
 const examplesSelector = createSelector(
   (state, props) => props.path,
@@ -14,8 +15,17 @@ const examplesSelector = createSelector(
     R.sortBy(R.prop('createdAt'))
   )(examples)
 )((state, props) => props.path.join('/'))
+const queryParametersSelector = createSelector(
+  (state, props) => props.path,
+  (state, props) => R.path(props.path.concat('queryParameters'), state),
+  (path, queryParameters = []) => R.pipe(
+    R.addIndex(R.map)(({ createdAt }, index) => ({ path: path.concat(['queryParameters', index]), createdAt })),
+    R.sortBy(R.prop('createdAt'))
+  )(queryParameters)
+)((state, props) => props.path.join('/'))
 export default connect((state, props) => ({
-  examples: examplesSelector(state, props)
+  examples: examplesSelector(state, props),
+  queryParameters: queryParametersSelector(state, props)
 }), null)(Request)
 
 const mapStateToProps = (state, { path, name }) => ({ value: R.path(path.concat(name), state) })
@@ -58,5 +68,12 @@ export const AddPathRequestExampleButton = connect(
       request: '',
       response: ''
     }))
+  })
+)(AddButton)
+
+export const AddPathRequestQueryParameterButton = connect(
+  state => ({ name: 'query parameter' }),
+  (dispatch, { path }) => ({
+    add: () => dispatch(addToArray(path.concat('queryParameters'), defaultProperty()))
   })
 )(AddButton)

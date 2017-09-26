@@ -7,23 +7,25 @@ import {
   RequestTextField, RequestSelectField,
   DeleteRequestButton, PermissionsSelectField,
   TagsSelectField, RequestCheckboxField,
-  AddPathRequestExampleButton
+  AddPathRequestExampleButton, AddPathRequestQueryParameterButton
 } from '../../containers/Paths/Request'
 import { pathType, objType } from '../../utils'
 import Example from './Example'
 import Span from '../../containers/Common/Span'
 import { SmartCollapse, CenterPanel } from '../Common'
+import Property from '../Models/Property'
 
 class Request extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     return !(
       this.props.path === nextProps.path &&
-      R.equals(R.map(R.prop('createdAt'), this.props.examples), R.map(R.prop('createdAt'), nextProps.examples))
+      R.equals(R.map(R.prop('createdAt'), this.props.examples), R.map(R.prop('createdAt'), nextProps.examples)) &&
+      R.equals(R.map(R.prop('createdAt'), this.props.queryParameters), R.map(R.prop('createdAt'), nextProps.queryParameters))
     )
   }
   render () {
     console.log('render Path.Request')
-    const { path, examples } = this.props
+    const { path, examples, queryParameters } = this.props
     return (
       <div>
         <DeleteRequestButton path={path} />
@@ -43,7 +45,16 @@ class Request extends React.Component {
               <RequestCheckboxField path={path} name='beta' />
             </Collapse.Panel>
             <Collapse.Panel header='Query Parameters'>
-              <h4>Query Parameters</h4>
+              <CenterPanel>
+                <SmartCollapse>
+                  {queryParameters.map(({ path, createdAt }) => (
+                    <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                      <Property path={path} />
+                    </Collapse.Panel>
+                  ))}
+                </SmartCollapse>
+                <AddPathRequestQueryParameterButton path={path} />
+              </CenterPanel>
             </Collapse.Panel>
             <Collapse.Panel header='Request'>
               <h4>Request</h4>
@@ -72,7 +83,8 @@ class Request extends React.Component {
 
 Request.propTypes = {
   path: pathType,
-  examples: PropTypes.arrayOf(objType)
+  examples: PropTypes.arrayOf(objType),
+  queryParameters: PropTypes.arrayOf(objType)
 }
 
 export default Request

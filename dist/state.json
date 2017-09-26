@@ -93,9 +93,9 @@
           "tags": [
             "API Versions"
           ],
-          "parameters": {},
-          "request": {},
-          "response": {},
+          "parameters": [],
+          "request": [],
+          "response": [],
           "examples": []
         }
       ]
@@ -122,9 +122,9 @@
           "tags": [
             "Call Log"
           ],
-          "parameters": {},
-          "request": {},
-          "response": {},
+          "parameters": [],
+          "request": [],
+          "response": [],
           "examples": []
         }
       ]
