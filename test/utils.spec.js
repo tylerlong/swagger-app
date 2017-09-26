@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import R from 'ramda'
 
-import { alert, getFormItemLayout, formItemLayout, orderBy } from '../src/web/utils'
+import { alert, orderBy } from '../src/web/utils'
 
 describe('test alert', () => {
   const state = { alerts: [] }
@@ -26,38 +26,6 @@ describe('test alert', () => {
     expect(alert('success', undefined)(state)).toEqual(state)
     expect(alert('success', ['Hello world'])(state)).not.toEqual({ alerts: [{ type: 'success', message: ['Hello world'] }] })
     expect(alert('success', ['Hello world'])(state)).toEqual(state)
-  })
-})
-
-describe('test getFormItemLayout', () => {
-  test('getFormItemLayout for large width', () => {
-    expect(getFormItemLayout(6, 12)).toEqual({
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 6 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 12 }
-      }
-    })
-  })
-
-  test('getFormItemLayout for small width', () => {
-    expect(getFormItemLayout(6, 18)).toEqual({
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 6 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 18 }
-      }
-    })
-  })
-
-  test('pre-defined FormItemLayouts', () => {
-    expect(formItemLayout).toEqual(getFormItemLayout(4, 18))
   })
 })
 

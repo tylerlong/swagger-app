@@ -2,7 +2,16 @@ import React from 'react'
 import { Form } from 'antd'
 import PropTypes from 'prop-types'
 
-import { formItemLayout } from '../../utils'
+const formItemLayout = {
+  labelCol: {
+    xs: { span: 24 },
+    sm: { span: 4 }
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+    sm: { span: 18 }
+  }
+}
 
 class FormItem extends React.Component {
   render () {

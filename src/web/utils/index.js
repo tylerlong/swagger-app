@@ -11,20 +11,6 @@ export const alert = R.curry((type, message) => {
   return R.over(R.lensPath(['alerts']), R.append({ type, message }))
 })
 
-export const getFormItemLayout = (labelSpan, wrapperSpan) => {
-  return {
-    labelCol: {
-      xs: { span: 24 },
-      sm: { span: labelSpan }
-    },
-    wrapperCol: {
-      xs: { span: 24 },
-      sm: { span: wrapperSpan }
-    }
-  }
-}
-export const formItemLayout = getFormItemLayout(4, 18)
-
 // Order by selector toString, ignore case
 export const orderBy = R.curry((selector, objects) => {
   return R.sort(R.comparator((a, b) => R.toLower(selector(a).toString()) < R.toLower(selector(b).toString())), objects)
