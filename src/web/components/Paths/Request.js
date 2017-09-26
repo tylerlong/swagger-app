@@ -27,20 +27,22 @@ class Request extends React.Component {
     return (
       <div>
         <DeleteRequestButton path={path} />
-        <RequestTextField path={path} name='name' />
-        <RequestTextField path={path} name='since' />
-        <RequestTextField path={path} name='description' />
-        <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
-        <RequestSelectField path={path} name='apiGroup' options={['Light', 'Medium', 'Heavy', 'Auth']} />
-        <PermissionsSelectField path={path} />
-        <TagsSelectField path={path} />
-        <RequestSelectField path={path} name='status' options={['Normal', 'Deprecated', 'Disabled']} />
-        <RequestSelectField path={path} name='accessLevel' options={['Basic', 'Advanced', 'Internal']} />
-        <RequestCheckboxField path={path} name='batch' />
-        <RequestCheckboxField path={path} name='beta' />
         <Row type='flex' justify='center'>
           <Col xs={24} sm={20}>
-            <Collapse accordion>
+            <Collapse accordion defaultActiveKey='basic-info'>
+              <Collapse.Panel header='Basic Info' key='basic-info'>
+                <RequestTextField path={path} name='name' />
+                <RequestTextField path={path} name='since' />
+                <RequestTextField path={path} name='description' />
+                <RequestSelectField path={path} name='method' options={['GET', 'POST', 'PUT', 'DELETE']} />
+                <RequestSelectField path={path} name='apiGroup' options={['Light', 'Medium', 'Heavy', 'Auth']} />
+                <PermissionsSelectField path={path} />
+                <TagsSelectField path={path} />
+                <RequestSelectField path={path} name='status' options={['Normal', 'Deprecated', 'Disabled']} />
+                <RequestSelectField path={path} name='accessLevel' options={['Basic', 'Advanced', 'Internal']} />
+                <RequestCheckboxField path={path} name='batch' />
+                <RequestCheckboxField path={path} name='beta' />
+              </Collapse.Panel>
               <Collapse.Panel header='Query Parameters'>
                 <h4>Query Parameters</h4>
               </Collapse.Panel>
