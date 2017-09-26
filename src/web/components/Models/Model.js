@@ -27,13 +27,11 @@ class Model extends React.Component {
           <Col xs={24} sm={20}>
             <h3>Properties</h3>
             <SmartCollapse>
-              {properties.map(({ path, createdAt }) => {
-                return (
-                  <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                    <Property path={path} />
-                  </Collapse.Panel>
-                )
-              })}
+              {properties.map(({ path, createdAt }) => (
+                <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                  <Property path={path} />
+                </Collapse.Panel>
+              ))}
             </SmartCollapse>
             <AddModelPropertyButton path={path} />
           </Col>

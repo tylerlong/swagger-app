@@ -28,13 +28,11 @@ class Path extends React.Component {
           <Col xs={24} sm={20}>
             <h3>Requests</h3>
             <SmartCollapse>
-              {requests.map(({ path, createdAt }) => {
-                return (
-                  <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                    <Request path={path} />
-                  </Collapse.Panel>
-                )
-              })}
+              {requests.map(({ path, createdAt }) => (
+                <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+                  <Request path={path} />
+                </Collapse.Panel>
+              ))}
             </SmartCollapse>
             <AddPathRequestButton path={path} />
           </Col>

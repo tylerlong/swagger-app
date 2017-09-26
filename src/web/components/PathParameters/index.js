@@ -20,13 +20,11 @@ class PathParameters extends React.Component {
       <div>
         <h2>Path Parameters</h2>
         <SmartCollapse>
-          {pathParameters.map(({ path, createdAt }) => {
-            return (
-              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                <PathParameter path={path} />
-              </Collapse.Panel>
-            )
-          })}
+          {pathParameters.map(({ path, createdAt }) => (
+            <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+              <PathParameter path={path} />
+            </Collapse.Panel>
+          ))}
         </SmartCollapse>
         <AddPathParameterButton />
       </div>

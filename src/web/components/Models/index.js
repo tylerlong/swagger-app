@@ -20,13 +20,11 @@ class Models extends React.Component {
       <div>
         <h2>Models</h2>
         <SmartCollapse>
-          {models.map(({ path, createdAt }) => {
-            return (
-              <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
-                <Model path={path} />
-              </Collapse.Panel>
-            )
-          })}
+          {models.map(({ path, createdAt }) => (
+            <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
+              <Model path={path} />
+            </Collapse.Panel>
+          ))}
         </SmartCollapse>
         <AddModelButton />
       </div>

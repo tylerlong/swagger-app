@@ -20,13 +20,11 @@ class Paths extends React.Component {
       <div>
         <h2>Paths</h2>
         <SmartCollapse>
-          {paths.map(({path, createdAt}) => {
-            return (
-              <Collapse.Panel header={<Span path={path.concat('uri')} />} key={createdAt}>
-                <Path path={path} />
-              </Collapse.Panel>
-            )
-          })}
+          {paths.map(({ path, createdAt }) => (
+            <Collapse.Panel header={<Span path={path.concat('uri')} />} key={createdAt}>
+              <Path path={path} />
+            </Collapse.Panel>
+          ))}
         </SmartCollapse>
         <AddPathButton />
       </div>
