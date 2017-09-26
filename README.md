@@ -40,3 +40,8 @@ yarn build
 - detect file changed not by me
 - improve test coverage
 - use logger, so it won't output anything in production
+- extract default values to right file like `defaultProperty`
+- request & response
+- if property type is obj, allow user to select a model as the type. Add a type selectField to the right of the type select field.
+- enum is only for string type ? hide it for other types
+- export to valid swagger spec and test it with swagger-ui
