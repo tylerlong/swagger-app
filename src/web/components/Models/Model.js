@@ -30,7 +30,7 @@ class Model extends React.Component {
               <Collapse.Panel header={<Span path={path.concat('name')} />} key={createdAt}>
                 <Property path={path} />
               </Collapse.Panel>
-              ))}
+            ))}
           </SmartCollapse>
           <AddModelPropertyButton path={path} />
         </CenterPanel>
