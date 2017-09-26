@@ -40,6 +40,11 @@ class Request extends React.Component {
         <RequestCheckboxField path={path} name='beta' />
         <Row type='flex' justify='center'>
           <Col xs={24} sm={20}>
+            <h4>Query Parameters</h4>
+          </Col>
+        </Row>
+        <Row type='flex' justify='center'>
+          <Col xs={24} sm={20}>
             <h4>Examples</h4>
             <SmartCollapse>
               {examples.map(({ path, createdAt }) => {
