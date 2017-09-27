@@ -6,7 +6,6 @@ import { deleteFromArray, setProp } from '../../actions'
 
 export const DeletePathRequestExampleButton = connect(
   (state, { path }) => ({
-    componentName: 'example',
     recordName: R.path(path.concat('name'), state)
   }),
   (dispatch, { path }) => ({

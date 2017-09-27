@@ -24,7 +24,6 @@ export const PropertyCheckboxField = connect(mapStateToProps, mapDispatchToProps
 
 export const DeletePropertyButton = connect(
   (state, { path }) => ({
-    componentName: 'property',
     recordName: R.path(path.concat('name'), state)
   }),
   (dispatch, { path }) => ({
