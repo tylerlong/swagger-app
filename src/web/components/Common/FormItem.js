@@ -25,8 +25,7 @@ class FormItem extends React.Component {
 }
 
 FormItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired
+  label: PropTypes.string.isRequired
 }
 
 export default FormItem

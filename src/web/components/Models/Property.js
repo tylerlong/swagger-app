@@ -12,7 +12,7 @@ class Property extends React.Component {
         <DeletePropertyButton path={path} />
         <PropertyTextField path={path} name='name' />
         <PropertyTextField path={path} name='description' />
-        <PropertyTypeSelectField path={path} name='type' />
+        <PropertyTypeSelectField path={path} />
         <PropertyTextField path={path} name='enum' isArray />
         <PropertyCheckboxField path={path} name='required' />
         <PropertyCheckboxField path={path} name='isArray' />

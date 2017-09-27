@@ -17,7 +17,7 @@ class SelectField extends React.Component {
     const { name, value, update, options, isArray } = this.props
     return (
       <FormItem label={name}>
-        <Select mode={isArray ? 'multiple' : 'default'} style={{ width: isArray ? 240 : 120 }} value={value} onChange={value => { update(value) }}>
+        <Select mode={isArray ? 'multiple' : 'default'} style={{ width: isArray ? 256 : 128 }} value={value} onChange={value => { update(value) }}>
           {options.map(option => <Select.Option value={option} key={option}>{option}</Select.Option>)}
         </Select>
       </FormItem>
