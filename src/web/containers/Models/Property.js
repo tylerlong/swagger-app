@@ -2,7 +2,7 @@ import R from 'ramda'
 import { connect } from 'react-redux'
 
 import { setProp, deleteFromArray } from '../../actions'
-import { TextField, SelectField, CheckboxField, DeleteButton } from '../../components/Common'
+import { TextField, CheckboxField, DeleteButton, TypeSelectField } from '../../components/Common'
 
 export const defaultProperty = () => ({
   createdAt: Date.now(),
@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch, { path, name }) => ({
   update: value => dispatch(setProp(path.concat(name), value))
 })
 export const PropertyTextField = connect(mapStateToProps, mapDispatchToProps)(TextField)
-export const PropertySelectField = connect(mapStateToProps, mapDispatchToProps)(SelectField)
+export const PropertyTypeSelectField = connect(mapStateToProps, mapDispatchToProps)(TypeSelectField)
 export const PropertyCheckboxField = connect(mapStateToProps, mapDispatchToProps)(CheckboxField)
 
 export const DeletePropertyButton = connect(

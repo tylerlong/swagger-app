@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PropertyTextField, PropertySelectField, PropertyCheckboxField, DeletePropertyButton } from '../../containers/Models/Property'
+import { PropertyTextField, PropertyTypeSelectField, PropertyCheckboxField, DeletePropertyButton } from '../../containers/Models/Property'
 import { pathType } from '../../utils'
 
 class Property extends React.Component {
@@ -12,8 +12,7 @@ class Property extends React.Component {
         <DeletePropertyButton path={path} />
         <PropertyTextField path={path} name='name' />
         <PropertyTextField path={path} name='description' />
-        <PropertySelectField path={path} name='type'
-          options={['string', 'object', 'integer', 'boolean', 'date-time', 'int64', 'number', 'binary']} />
+        <PropertyTypeSelectField path={path} name='type' />
         <PropertyTextField path={path} name='enum' isArray />
         <PropertyCheckboxField path={path} name='required' />
         <PropertyCheckboxField path={path} name='isArray' />

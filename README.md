@@ -37,7 +37,7 @@ yarn build
 ## todo list
 
 - migrate data from PostgreSQL
-- detect file changed not by me
+- detect file changed not by the app
 - improve test coverage
 - use logger, so it won't output anything in production
 - extract default values to right file like `defaultProperty`
@@ -45,3 +45,5 @@ yarn build
 - enum is only for string type ? hide it for other types
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code
+- package an electron app
+- reorganize components/Common

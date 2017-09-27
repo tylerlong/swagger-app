@@ -7,6 +7,7 @@ import SelectField from './SelectField'
 import Span from './Span'
 import SmartCollapse from './SmartCollapse'
 import CenterPanel from './CenterPanel'
+import TypeSelectField from './TypeSelectField'
 
 export {
   AddButton,
@@ -17,5 +18,6 @@ export {
   SelectField,
   Span,
   SmartCollapse,
-  CenterPanel
+  CenterPanel,
+  TypeSelectField
 }
