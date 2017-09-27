@@ -45,4 +45,3 @@ yarn build
 - enum is only for string type ? hide it for other types
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code
-- "Are you sure to delete xxx 'yyy'?" don't show xxx any more because it is not accurate if the model is shared in multiple places.

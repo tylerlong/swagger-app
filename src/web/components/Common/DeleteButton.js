@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 class DeleteButton extends React.Component {
   render () {
     console.log('render DeleteButton')
-    const { recordName, deleteRecord } = this.props
+    const { name, deleteRecord } = this.props
     return (
-      <Popconfirm title={`Are you sure to delete "${recordName}"?`} okText='Yes' cancelText='No' onConfirm={deleteRecord}>
+      <Popconfirm title={`Are you sure to delete "${name}"?`} okText='Yes' cancelText='No' onConfirm={deleteRecord}>
         <Button type='danger'><Icon type='arrow-up' />Delete</Button>
       </Popconfirm>
     )
@@ -15,7 +15,7 @@ class DeleteButton extends React.Component {
 }
 
 DeleteButton.propTypes = {
-  recordName: PropTypes.string,
+  name: PropTypes.string,
   deleteRecord: PropTypes.func.isRequired
 }
 

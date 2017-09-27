@@ -69,7 +69,7 @@ export const TagsSelectField = connect((state, { path, name = 'tags' }) => ({
 
 export const DeleteRequestButton = connect(
   (state, { path }) => ({
-    recordName: R.path(path.concat('name'), state)
+    name: R.path(path.concat('name'), state)
   }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))

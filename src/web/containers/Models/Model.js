@@ -26,7 +26,7 @@ export const ModelTextField = connect(
 
 export const DeleteModelButton = connect(
   (state, { path }) => ({
-    recordName: R.path(path.concat('name'), state)
+    name: R.path(path.concat('name'), state)
   }),
   (dispatch, { path }) => ({
     deleteRecord: () => dispatch(deleteFromArray(path))
