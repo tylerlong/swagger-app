@@ -40,7 +40,6 @@ yarn build
 - detect file changed not by the app
 - improve test coverage
 - use logger, so it won't output anything in production
-- extract default values to right file like `defaultProperty`
 - enum is only for string type ? hide it for other types
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code

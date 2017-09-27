@@ -7,6 +7,12 @@ import Model from '../../components/Models/Model'
 import { TextField, DeleteButton, AddButton } from '../../components/Common'
 import { defaultProperty } from './Property'
 
+export const defaultModel = () => ({
+  createdAt: Date.now(),
+  name: '🔥 name',
+  properties: []
+})
+
 const propertiesSelector = createSelector(
   (state, props) => props.path,
   (state, props) => R.path(props.path.concat('properties'), state),

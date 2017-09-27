@@ -6,6 +6,7 @@ import PathParameters from '../../components/PathParameters'
 import { orderBy } from '../../utils'
 import { addToArray } from '../../actions'
 import { AddButton } from '../../components/Common'
+import { defaultPathParameter } from './PathParameter'
 
 const pathParametersSelector = createSelector(
   state => state.pathParameters,
@@ -21,11 +22,6 @@ export default connect(mapStateToProps, null)(PathParameters)
 export const AddPathParameterButton = connect(
   state => ({ name: 'path parameter' }),
   dispatch => ({
-    add: () => dispatch(addToArray(['pathParameters'], {
-      createdAt: Date.now(),
-      name: '🔥 name',
-      description: '',
-      enum: []
-    }))
+    add: () => dispatch(addToArray(['pathParameters'], defaultPathParameter()))
   })
 )(AddButton)

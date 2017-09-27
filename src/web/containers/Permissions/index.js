@@ -6,6 +6,7 @@ import Permissions from '../../components/Permissions'
 import { orderBy } from '../../utils'
 import { addToArray } from '../../actions'
 import { AddButton } from '../../components/Common'
+import { defaultPermission } from './Permission'
 
 const permissionsSelector = createSelector(
   state => state.permissions,
@@ -21,10 +22,6 @@ export default connect(mapStateToProps, null)(Permissions)
 export const AddPermissionButton = connect(
   state => ({ name: 'permission' }),
   dispatch => ({
-    add: () => dispatch(addToArray(['permissions'], {
-      createdAt: Date.now(),
-      name: '🔥 name',
-      description: ''
-    }))
+    add: () => dispatch(addToArray(['permissions'], defaultPermission()))
   })
 )(AddButton)

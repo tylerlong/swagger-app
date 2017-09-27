@@ -6,6 +6,26 @@ import { setProp, deleteFromArray, addToArray } from '../../actions'
 import { TextField, SelectField, DeleteButton, CheckboxField, AddButton } from '../../components/Common'
 import Request from '../../components/Paths/Request'
 import { defaultProperty } from '../Models/Property'
+import { defaultExample } from './Example'
+
+export const defaultRequest = () => ({
+  createdAt: Date.now(),
+  name: '🔥 name',
+  since: '',
+  description: '',
+  method: 'GET',
+  apiGroup: 'Light',
+  permissions: [],
+  tags: [],
+  status: 'Normal',
+  accessLevel: 'Basic',
+  batch: false,
+  beta: false,
+  parameters: [],
+  request: [],
+  response: [],
+  examples: []
+})
 
 const examplesSelector = createSelector(
   (state, props) => props.path,
@@ -78,13 +98,7 @@ export const DeleteRequestButton = connect(
 export const AddPathRequestExampleButton = connect(
   state => ({ name: 'example' }),
   (dispatch, { path }) => ({
-    add: () => dispatch(addToArray(path.concat('examples'), {
-      createdAt: Date.now(),
-      name: '🔥 name',
-      description: '',
-      request: '',
-      response: ''
-    }))
+    add: () => dispatch(addToArray(path.concat('examples'), defaultExample()))
   })
 )(AddButton)
 

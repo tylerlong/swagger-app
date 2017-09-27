@@ -4,6 +4,14 @@ import { connect } from 'react-redux'
 import { TextField, TextAreaField, DeleteButton } from '../../components/Common'
 import { deleteFromArray, setProp } from '../../actions'
 
+export const defaultExample = () => ({
+  createdAt: Date.now(),
+  name: '🔥 name',
+  description: '',
+  request: '',
+  response: ''
+})
+
 export const DeletePathRequestExampleButton = connect(
   (state, { path }) => ({
     name: R.path(path.concat('name'), state)

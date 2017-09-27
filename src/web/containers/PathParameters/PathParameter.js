@@ -4,6 +4,13 @@ import { connect } from 'react-redux'
 import { setProp, deleteFromArray } from '../../actions'
 import { TextField, DeleteButton } from '../../components/Common'
 
+export const defaultPathParameter = () => ({
+  createdAt: Date.now(),
+  name: '🔥 name',
+  description: '',
+  enum: []
+})
+
 export const PathParameterTextField = connect(
   (state, { path, name }) => ({ value: R.path(path.concat(name), state) }),
   (dispatch, { path, name }) => ({

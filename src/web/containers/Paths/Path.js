@@ -5,6 +5,14 @@ import createSelector from 're-reselect'
 import { setProp, deleteFromArray, addToArray } from '../../actions'
 import Path from '../../components/Paths/Path'
 import { TextField, DeleteButton, AddButton } from '../../components/Common'
+import { defaultRequest } from './Request'
+
+export const defaultPath = () => ({
+  createdAt: Date.now(),
+  name: '',
+  uri: '🔥 /',
+  requests: []
+})
 
 const requestsSelector = createSelector(
   (state, props) => props.path,
@@ -34,23 +42,6 @@ export const DeletePathButton = connect(
 export const AddPathRequestButton = connect(
   state => ({ name: 'request' }),
   (dispatch, { path }) => ({
-    add: () => dispatch(addToArray(path.concat('requests'), {
-      createdAt: Date.now(),
-      name: '🔥 name',
-      since: '',
-      description: '',
-      method: 'GET',
-      apiGroup: 'Light',
-      permissions: [],
-      tags: [],
-      status: 'Normal',
-      accessLevel: 'Basic',
-      batch: false,
-      beta: false,
-      parameters: [],
-      request: [],
-      response: [],
-      examples: []
-    }))
+    add: () => dispatch(addToArray(path.concat('requests'), defaultRequest()))
   })
 )(AddButton)

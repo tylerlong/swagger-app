@@ -6,6 +6,7 @@ import Paths from '../../components/Paths'
 import { orderBy } from '../../utils'
 import { addToArray } from '../../actions'
 import { AddButton } from '../../components/Common'
+import { defaultPath } from './Path'
 
 const pathsSelector = createSelector(
   state => state.paths,
@@ -23,11 +24,6 @@ export default connect(mapStateToProps, null)(Paths)
 export const AddPathButton = connect(
   state => ({ name: 'path' }),
   dispatch => ({
-    add: () => dispatch(addToArray(['paths'], {
-      createdAt: Date.now(),
-      name: '',
-      uri: '🔥 /',
-      requests: []
-    }))
+    add: () => dispatch(addToArray(['paths'], defaultPath()))
   })
 )(AddButton)

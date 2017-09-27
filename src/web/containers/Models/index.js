@@ -6,6 +6,7 @@ import Models from '../../components/Models'
 import { orderBy } from '../../utils'
 import { addToArray } from '../../actions'
 import { AddButton } from '../../components/Common'
+import { defaultModel } from './Model'
 
 const modelsSelector = createSelector(
   state => state.models,
@@ -21,10 +22,6 @@ export default connect(mapStateToProps, null)(Models)
 export const AddModelButton = connect(
   state => ({ name: 'model' }),
   dispatch => ({
-    add: () => dispatch(addToArray(['models'], {
-      createdAt: Date.now(),
-      name: '🔥 name',
-      properties: []
-    }))
+    add: () => dispatch(addToArray(['models'], defaultModel()))
   })
 )(AddButton)
