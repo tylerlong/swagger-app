@@ -75,6 +75,20 @@
     },
     "files": [
       "build/"
-    ]
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 128,
+          "y": 160
+        },
+        {
+          "x": 384,
+          "y": 160,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   }
 }
