@@ -89,6 +89,7 @@
           "path": "/Applications"
         }
       ]
-    }
+    },
+    "compression": "maximum"
   }
 }
