@@ -14,8 +14,7 @@
     "test:watch": "yarn test --watch",
     "prepush": "yarn test",
     "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "rm -rf dist && electron-builder"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
   "author": {
