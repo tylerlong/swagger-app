@@ -44,4 +44,5 @@ yarn build
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code
 - package an electron app
+- should support auto upgrade
 - reorganize components/Common
