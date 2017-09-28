@@ -2,6 +2,7 @@ node_modules/
 *.bundle.*
 coverage/
 dist/*.app/
+dist/*.zip
 
 # misc
 .DS_Store

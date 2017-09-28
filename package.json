@@ -14,7 +14,8 @@
     "test:watch": "yarn test --watch",
     "prepush": "yarn test",
     "start": "electron .",
-    "dist": "cd dist && rm -rf Swagger.app && cp -r Electron.app Swagger.app && mkdir -p Swagger.app/Contents/Resources/app/dist && cp ../package.json Swagger.app/Contents/Resources/app/ && ls . | grep -v '\\.app$' | xargs -J % -n1 cp % Swagger.app/Contents/Resources/app/dist/"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
@@ -27,6 +28,7 @@
     "babel-preset-react": "^6.24.1",
     "coveralls": "^2.13.2",
     "css-loader": "^0.28.7",
+    "electron-builder": "^19.31.1",
     "enzyme": "2.9.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
@@ -63,5 +65,11 @@
     "setupFiles": [
       "./test/setup.js"
     ]
+  },
+  "build": {
+    "appId": "swagger.ringcentral.com",
+    "mac": {
+      "category": "public.app-category.productivity"
+    }
   }
 }
