@@ -5,7 +5,7 @@ import { Popconfirm } from 'antd'
 import Paths from '../src/web/containers/Paths'
 import Path from '../src/web/containers/Paths/Path'
 import { getWrapper } from './shared'
-import state from '../dist/state.json'
+import state from '../build/state.json'
 import store from './store'
 
 let wrapper = null

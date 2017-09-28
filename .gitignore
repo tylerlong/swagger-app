@@ -1,8 +1,7 @@
 node_modules/
 *.bundle.*
 coverage/
-dist/*.app/
-dist/*.zip
+dist/
 
 # misc
 .DS_Store

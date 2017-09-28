@@ -8,7 +8,7 @@ const webConfig = {
     index: './src/web/index.js'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'build'),
     filename: '[name].bundle.js'
   },
   module: {
@@ -42,7 +42,7 @@ const webConfig = {
     new WriteFilePlugin()
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist')
+    contentBase: path.join(__dirname, 'build')
   },
   devtool: 'source-map'
 }
@@ -55,7 +55,7 @@ const electronConfig = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'build')
   },
   node: {
     __dirname: false // https://github.com/webpack/webpack/issues/2010#issuecomment-181256611

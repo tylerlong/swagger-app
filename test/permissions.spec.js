@@ -6,7 +6,7 @@ import Permissions from '../src/web/containers/Permissions'
 import Permission from '../src/web/components/Permissions/Permission'
 import store from './store'
 import { getWrapper } from './shared'
-import state from '../dist/state.json'
+import state from '../build/state.json'
 
 let wrapper = null
 beforeEach(() => {

@@ -6,7 +6,7 @@ import PathParameters from '../src/web/containers/PathParameters'
 import PathParameter from '../src/web/components/PathParameters/PathParameter'
 import store from './store'
 import { getWrapper } from './shared'
-import state from '../dist/state.json'
+import state from '../build/state.json'
 
 let wrapper = null
 beforeEach(() => {
