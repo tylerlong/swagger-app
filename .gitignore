@@ -1,6 +1,7 @@
 node_modules/
 *.bundle.*
 coverage/
+dist/*.app/
 
 # misc
 .DS_Store
