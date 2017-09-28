@@ -14,7 +14,7 @@
     "test:watch": "yarn test --watch",
     "prepush": "yarn test",
     "start": "electron .",
-    "dist": "rm -rf dist/Swagger.app && cp -r dist/Electron.app dist/Swagger.app && mkdir -p dist/Swagger.app/Contents/Resources/app/dist && cp package.json dist/Swagger.app/Contents/Resources/app/ && cp dist/*.bundle.* dist/Swagger.app/Contents/Resources/app/dist && cp dist/index.html dist/Swagger.app/Contents/Resources/app/dist && cp dist/state.json dist/Swagger.app/Contents/Resources/app/dist"
+    "dist": "cd dist && rm -rf Swagger.app && cp -r Electron.app Swagger.app && mkdir -p Swagger.app/Contents/Resources/app/dist && cp ../package.json Swagger.app/Contents/Resources/app/ && ls . | grep -v '\\.app$' | xargs -J % -n1 cp % Swagger.app/Contents/Resources/app/dist/"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
