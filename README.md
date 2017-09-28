@@ -20,6 +20,7 @@ yarn dev
 open http://localhost:8080
 ```
 
+
 ## Test
 
 ```
@@ -31,6 +32,13 @@ yarn test
 
 ```
 yarn build
+```
+
+
+## Distribution
+
+```
+yarn dist
 ```
 
 
@@ -49,3 +57,4 @@ yarn build
 - upgrade to React 16
     - https://juejin.im/entry/5982db5d6fb9a03c350a489a
     - low priority
+- `yarn release` doesn't work
