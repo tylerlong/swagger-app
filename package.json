@@ -13,8 +13,7 @@
     "test": "standard && jest",
     "test:watch": "yarn test --watch",
     "prepush": "yarn test",
-    "start": "electron .",
-    "dist": "rm -rf dist && electron-builder"
+    "start": "electron ."
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
   "author": {

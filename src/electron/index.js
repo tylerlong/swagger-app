@@ -19,13 +19,13 @@ const createWindow = () => {
   })
 }
 
-autoUpdater.on('update-downloaded', () => {
-  autoUpdater.quitAndInstall()
-})
-
 app.on('ready', () => {
   createWindow()
   autoUpdater.checkForUpdates()
+})
+
+autoUpdater.on('update-downloaded', () => {
+  autoUpdater.quitAndInstall()
 })
 
 app.on('window-all-closed', () => {
