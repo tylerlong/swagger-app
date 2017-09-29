@@ -38,8 +38,10 @@ yarn build
 ## Distribution
 
 ```
-yarn dist
+rm -rf dist && GH_TOKEN=github-token ./publish.sh
 ```
+
+Go to GitHub and release it.
 
 
 ## todo list
