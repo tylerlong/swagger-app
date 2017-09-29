@@ -90,6 +90,12 @@
         }
       ]
     },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
     "compression": "maximum"
   }
 }
