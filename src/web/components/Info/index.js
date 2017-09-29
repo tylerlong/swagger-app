@@ -7,7 +7,7 @@ class Info extends React.Component {
     console.log('render Info')
     return (
       <div>
-        <h2>Info</h2>
+        <h2>Basic Info</h2>
         <InfoTextField name='title' />
         <InfoTextField name='version' />
         <InfoTextField name='description' />

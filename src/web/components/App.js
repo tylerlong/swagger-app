@@ -24,8 +24,8 @@ class App extends React.Component {
       <div>
         <Button><Link to='/'><Icon type='home' /> Home</Link></Button>
         <h1>{title} {version}</h1>
-        <Tabs tabPosition='left' defaultActiveKey='paths'>
-          <Tabs.TabPane tab='Basic Info' key='info'><Info /></Tabs.TabPane>
+        <Tabs tabPosition='left' defaultActiveKey='basic-info'>
+          <Tabs.TabPane tab='Basic Info' key='basic-info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>
           <Tabs.TabPane tab='Paths' key='paths'><Paths /></Tabs.TabPane>
