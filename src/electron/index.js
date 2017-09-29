@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron'
 import path from 'path'
+import { autoUpdater } from 'electron-updater'
 
 let browserWindow = null
 
@@ -18,7 +19,14 @@ const createWindow = () => {
   })
 }
 
-app.on('ready', createWindow)
+autoUpdater.on('update-downloaded', () => {
+  autoUpdater.quitAndInstall()
+})
+
+app.on('ready', () => {
+  createWindow()
+  autoUpdater.checkForUpdates()
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
