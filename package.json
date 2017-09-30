@@ -1,6 +1,6 @@
 {
   "name": "swagger-app",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "private": true,
   "description": "An app to create swagger spec.",
   "main": "build/electron.bundle.js",
@@ -31,7 +31,7 @@
     "coveralls": "^2.13.2",
     "css-loader": "^0.28.7",
     "electron": "^1.7.8",
-    "electron-builder": "^19.32.2",
+    "electron-builder": "^19.33.0",
     "enzyme": "2.9.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
@@ -72,12 +72,16 @@
   },
   "build": {
     "appId": "swagger.ringcentral.com",
-    "mac": {
-      "category": "public.app-category.productivity"
-    },
     "files": [
       "build/"
     ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
     "dmg": {
       "contents": [
         {
@@ -94,7 +98,6 @@
     },
     "win": {
       "target": [
-        "portable",
         "nsis"
       ]
     },
