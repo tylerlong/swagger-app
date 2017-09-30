@@ -76,11 +76,7 @@
       "build/"
     ],
     "mac": {
-      "category": "public.app-category.productivity",
-      "target": [
-        "dmg",
-        "zip"
-      ]
+      "category": "public.app-category.productivity"
     },
     "dmg": {
       "contents": [
