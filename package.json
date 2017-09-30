@@ -1,6 +1,6 @@
 {
   "name": "swagger-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "An app to create swagger spec.",
   "main": "build/electron.bundle.js",
@@ -13,7 +13,8 @@
     "test": "standard && jest",
     "test:watch": "yarn test --watch",
     "prepush": "yarn test",
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "rm -rf dist && electron-builder build"
   },
   "repository": "git@bitbucket.org:tylerlong/swagger-app.git",
   "author": {
@@ -30,7 +31,7 @@
     "coveralls": "^2.13.2",
     "css-loader": "^0.28.7",
     "electron": "^1.7.8",
-    "electron-builder": "^19.31.1",
+    "electron-builder": "^19.32.2",
     "enzyme": "2.9.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
