@@ -1,8 +1,8 @@
-import { app, BrowserWindow, Menu } from 'electron'
+import { app, BrowserWindow } from 'electron'
 import path from 'path'
 import { autoUpdater } from 'electron-updater'
 
-import menu from './menu'
+import { setApplicationMenu } from './menu'
 
 let browserWindow = null
 
@@ -22,7 +22,7 @@ const createWindow = () => {
 }
 
 app.on('ready', () => {
-  Menu.setApplicationMenu(menu)
+  setApplicationMenu()
   createWindow()
   autoUpdater.checkForUpdates()
 })
