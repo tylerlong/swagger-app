@@ -1,8 +1,13 @@
 import { app, BrowserWindow } from 'electron'
 import path from 'path'
 import { autoUpdater } from 'electron-updater'
+import log from 'electron-log'
 
 import { setApplicationMenu } from './menu'
+
+log.transports.file.level = 'info'
+autoUpdater.logger = log
+log.info('App starting...')
 
 let browserWindow = null
 

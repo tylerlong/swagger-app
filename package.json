@@ -1,6 +1,6 @@
 {
   "name": "swagger-app",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "description": "An app to create swagger spec.",
   "main": "build/electron.bundle.js",
@@ -50,6 +50,7 @@
   "dependencies": {
     "antd": "^2.13.3",
     "axios": "^0.16.2",
+    "electron-log": "^2.2.9",
     "electron-updater": "^2.10.1",
     "indefinite": "^1.0.1",
     "js-base64": "^2.3.2",
