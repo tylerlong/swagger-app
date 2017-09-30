@@ -7,7 +7,7 @@ import { setApplicationMenu } from './menu'
 
 log.transports.file.level = 'info'
 autoUpdater.logger = log
-log.info('App starting...')
+autoUpdater.checkForUpdatesAndNotify()
 
 let browserWindow = null
 
@@ -29,11 +29,6 @@ const createWindow = () => {
 app.on('ready', () => {
   setApplicationMenu()
   createWindow()
-  autoUpdater.checkForUpdates()
-})
-
-autoUpdater.on('update-downloaded', () => {
-  autoUpdater.quitAndInstall()
 })
 
 app.on('window-all-closed', () => {
