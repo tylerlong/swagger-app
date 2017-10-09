@@ -8,7 +8,7 @@ class DeleteButton extends React.Component {
     const { name, deleteRecord } = this.props
     return (
       <Popconfirm title={`Are you sure to delete "${name}"?`} okText='Yes' cancelText='No' onConfirm={deleteRecord}>
-        <Button type='danger'><Icon type='arrow-up' />Delete</Button>
+        <Button type='danger'><Icon type='delete' />Delete</Button>
       </Popconfirm>
     )
   }
