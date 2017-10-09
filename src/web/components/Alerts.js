@@ -9,7 +9,8 @@ class Alerts extends React.Component {
   }
   componentDidUpdate () {
     const { alerts, clearAlerts } = this.props
-    R.forEach(alert => R.prop(alert.type, message)(alert.message), alerts)
+    // todo: antd doesn't work with React 16. uncomment the following line when it works
+    // R.forEach(alert => R.prop(alert.type, message)(alert.message), alerts)
     clearAlerts()
   }
   render () {

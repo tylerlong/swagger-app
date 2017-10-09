@@ -1,6 +1,6 @@
 {
   "name": "swagger-app",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "description": "An app to create swagger spec.",
   "main": "build/electron.bundle.js",
@@ -32,13 +32,14 @@
     "css-loader": "^0.28.7",
     "electron": "^1.7.8",
     "electron-builder": "^19.33.0",
-    "enzyme": "2.9.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
     "nock": "^9.0.21",
     "prop-types": "^15.6.0",
-    "react-test-renderer": "15.6.2",
+    "react-test-renderer": "^16.0.0",
     "redux-logic-test": "^1.0.5",
     "standard": "^10.0.3",
     "style-loader": "^0.18.2",
@@ -48,7 +49,7 @@
     "yarn-upgrade-all": "^0.2.0"
   },
   "dependencies": {
-    "antd": "^2.13.3",
+    "antd": "^2.13.4",
     "axios": "^0.16.2",
     "electron-log": "^2.2.9",
     "electron-updater": "^2.10.1",
@@ -56,8 +57,8 @@
     "js-base64": "^2.3.2",
     "ramda": "^0.24.1",
     "re-reselect": "^1.0.1",
-    "react": "15.6.2",
-    "react-dom": "15.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
@@ -67,6 +68,7 @@
   },
   "jest": {
     "setupFiles": [
+      "./test/shim.js",
       "./test/setup.js"
     ]
   },
