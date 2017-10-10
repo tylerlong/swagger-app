@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import R from 'ramda'
-import { Popconfirm } from 'antd'
+import { Popconfirm, Select } from 'antd'
 
 import PathParameters from '../src/web/containers/PathParameters'
 import PathParameter from '../src/web/components/PathParameters/PathParameter'
@@ -51,8 +51,8 @@ describe('test pathParameters', () => {
     expect(getPathParameter(path).description).toEqual('World')
 
     // enum
-    input = wrapper.find('input').at(2)
-    input.simulate('change', { target: { value: 'Hello, World' } })
+    input = wrapper.find(Select).first()
+    input.props().onChange(['Hello', 'World'])
     expect(getPathParameter(path).enum).toEqual(['Hello', 'World'])
   })
 })

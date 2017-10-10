@@ -93,15 +93,15 @@ describe('test model', () => {
     expect(getByPath(path).description).toEqual('World')
 
     // type
-    const select = form.find(Select).first()
+    let select = form.find(Select).first()
     select.props().onChange('int64')
     expect(getByPath(path).type).toEqual('int64')
     select.props().onChange('binary')
     expect(getByPath(path).type).toEqual('binary')
 
     // enum
-    input = form.find('input').at(2)
-    input.simulate('change', { target: { value: 'Hello, World' } })
+    select = form.find(Select).at(1)
+    select.props().onChange(['Hello', 'World'])
     expect(getByPath(path).enum).toEqual(['Hello', 'World'])
 
     // required & isArray
