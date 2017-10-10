@@ -1,6 +1,5 @@
 import React from 'react'
-import R from 'ramda'
-import { Input } from 'antd'
+import { Input, Select } from 'antd'
 import PropTypes from 'prop-types'
 
 import FormItem from './FormItem'
@@ -9,17 +8,16 @@ class TextField extends React.Component {
   render () {
     console.log('render TextField')
     const { name, value, update, isArray } = this.props
-    let input = null
+    let component = null
     if (isArray) {
-      input = <Input placeholder='Values separated by commas' defaultValue={R.join(', ', value || [])}
-        onChange={event => { update(R.pipe(R.split(','), R.map(R.trim), R.reject(R.equals('')))(event.target.value)) }} />
+      component = <Select placeholder='Input some text then press enter' mode='tags' style={{ width: 256 }} value={value} onChange={value => { update(value) }} />
     } else {
-      input = <Input placeholder={name} value={value}
+      component = <Input placeholder={name} value={value}
         onChange={event => { update(event.target.value) }} />
     }
     return (
       <FormItem label={name}>
-        {input}
+        {component}
       </FormItem>
     )
   }
