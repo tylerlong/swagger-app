@@ -13,7 +13,7 @@ const pathsSelector = createSelector(
   paths => R.pipe(
     R.addIndex(R.map)(({ uri, createdAt }, index) => ({ path: ['paths', index], uri, createdAt })),
     orderBy(R.prop('uri')),
-    R.map(R.omit('uri'))
+    R.map(R.omit(['uri']))
   )(paths)
 )(state => 'paths')
 const mapStateToProps = (state) => ({

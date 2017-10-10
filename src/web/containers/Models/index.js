@@ -13,7 +13,7 @@ const modelsSelector = createSelector(
   models => R.pipe(
     R.addIndex(R.map)(({ name, createdAt }, index) => ({ path: ['models', index], name, createdAt })),
     orderBy(R.prop('name')),
-    R.map(R.omit('name'))
+    R.map(R.omit(['name']))
   )(models)
 )(state => 'models')
 const mapStateToProps = state => ({ models: modelsSelector(state) })

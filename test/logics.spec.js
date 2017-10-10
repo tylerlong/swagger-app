@@ -26,6 +26,6 @@ test('loadState', () => {
       { type: 'LOAD_STATE', filePath: '/state.json' },
       { type: 'SET_STATE', state: { message: 'Hello world' } }
     ])
-    expect(R.omit('alerts', store.getState())).toEqual({ message: 'Hello world' })
+    expect(R.omit(['alerts'], store.getState())).toEqual({ message: 'Hello world' })
   })
 })
