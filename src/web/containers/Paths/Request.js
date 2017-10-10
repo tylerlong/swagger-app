@@ -37,9 +37,9 @@ const examplesSelector = createSelector(
 )((state, props) => props.path.join('/'))
 const queryParametersSelector = createSelector(
   (state, props) => props.path,
-  (state, props) => R.path(props.path.concat('queryParameters'), state),
+  (state, props) => R.path(props.path.concat('parameters'), state),
   (path, queryParameters = []) => R.pipe(
-    R.addIndex(R.map)(({ createdAt }, index) => ({ path: path.concat(['queryParameters', index]), createdAt })),
+    R.addIndex(R.map)(({ createdAt }, index) => ({ path: path.concat(['parameters', index]), createdAt })),
     R.sortBy(R.prop('createdAt'))
   )(queryParameters)
 )((state, props) => props.path.join('/'))
@@ -105,7 +105,7 @@ export const AddPathRequestExampleButton = connect(
 export const AddPathRequestQueryParameterButton = connect(
   state => ({ name: 'query parameter' }),
   (dispatch, { path }) => ({
-    add: () => dispatch(addToArray(path.concat('queryParameters'), defaultProperty()))
+    add: () => dispatch(addToArray(path.concat('parameters'), defaultProperty()))
   })
 )(AddButton)
 
