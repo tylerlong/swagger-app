@@ -1,5 +1,6 @@
 /* eslint-env jest */
 import R from 'ramda'
+import { Select } from 'antd'
 
 import Info from '../src/web/components/Info'
 import store from './store'
@@ -23,18 +24,23 @@ describe('test info', () => {
   })
   test('update arrays', () => {
     // schemes
-    let input = wrapper.find('input[placeholder="Values separated by commas"]').first()
-    input.simulate('change', { target: { value: 'https,http' } })
+    let input = wrapper.find(Select).first()
+    input.props().onChange(['https', 'http'])
     expect(store.getState().info.schemes).toEqual(['https', 'http'])
 
     // produces
-    input = wrapper.find('input[placeholder="Values separated by commas"]').at(1)
-    input.simulate('change', { target: { value: 'application/json,text/plain; charset=utf-8' } })
+    input = wrapper.find(Select).at(1)
+    input.props().onChange(['application/json', 'text/plain; charset=utf-8'])
     expect(store.getState().info.produces).toEqual(['application/json', 'text/plain; charset=utf-8'])
 
     // consumes
-    input = wrapper.find('input[placeholder="Values separated by commas"]').at(2)
-    input.simulate('change', { target: { value: 'application/json,text/plain; charset=utf-8' } })
+    input = wrapper.find(Select).at(2)
+    input.props().onChange(['application/json', 'text/plain; charset=utf-8'])
     expect(store.getState().info.consumes).toEqual(['application/json', 'text/plain; charset=utf-8'])
+
+    // tags
+    input = wrapper.find(Select).at(3)
+    input.props().onChange(['hello', 'world'])
+    expect(store.getState().info.tags).toEqual(['hello', 'world'])
   })
 })
