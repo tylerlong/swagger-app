@@ -10,7 +10,7 @@ class TextField extends React.Component {
     const { name, value, update, isArray } = this.props
     let component = null
     if (isArray) {
-      component = <Select placeholder='Input some text then press enter' mode='tags' style={{ width: 256 }} value={value} onChange={value => { update(value) }} />
+      component = <Select placeholder='Input some text then press enter' mode='tags' style={{ width: '100%' }} value={value} onChange={value => { update(value) }} />
     } else {
       component = <Input placeholder={name} value={value}
         onChange={event => { update(event.target.value) }} />
