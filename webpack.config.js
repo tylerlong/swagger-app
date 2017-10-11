@@ -27,6 +27,7 @@ const webConfig = {
           loader: 'babel-loader',
           options: {
             presets: [
+              ['env', { 'targets': { 'node': '4.8.4' } }],
               'react'
             ],
             plugins: [
@@ -57,9 +58,25 @@ const electronConfig = {
     filename: '[name].bundle.js',
     path: path.join(__dirname, 'build')
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', { 'targets': { 'node': '4.8.4' } }]
+            ]
+          }
+        }
+      }
+    ]
+  },
   node: {
     __dirname: false // https://github.com/webpack/webpack/issues/2010#issuecomment-181256611
-  }
+  },
+  devtool: 'source-map'
 }
 
 export default [webConfig, electronConfig]

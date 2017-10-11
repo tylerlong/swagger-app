@@ -38,7 +38,7 @@ yarn build
 ## Distribution
 
 ```
-rm -rf dist && GH_TOKEN=github-token ./publish.sh
+yarn release && rm -rf dist && GH_TOKEN=github-token ./publish.sh
 ```
 
 Go to GitHub and release it.
@@ -54,6 +54,3 @@ Go to GitHub and release it.
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code
 - reorganize components/Common
-- `yarn release` doesn't work
-    - UglifyJS doesn't support ES6
-    - babel-preset-env target node 4?
