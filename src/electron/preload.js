@@ -1,5 +1,5 @@
-import electron from 'electron'
-import fs from 'fs'
+const electron = require('electron')
+const fs = require('fs')
 
 process.once('loaded', () => {
   global.electron = electron.remote

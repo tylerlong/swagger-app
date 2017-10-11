@@ -1,9 +1,9 @@
-import { app, BrowserWindow } from 'electron'
-import path from 'path'
-import { autoUpdater } from 'electron-updater'
-import log from 'electron-log'
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
+const { autoUpdater } = require('electron-updater')
+const log = require('electron-log')
 
-import { setApplicationMenu } from './menu'
+const { setApplicationMenu } = require('./menu')
 
 log.transports.file.level = 'info'
 autoUpdater.logger = log
@@ -17,10 +17,10 @@ const createWindow = () => {
     height: 768,
     webPreferences: {
       nodeIntegration: false,
-      preload: path.join(__dirname, 'preload.bundle.js')
+      preload: path.join(__dirname, 'preload.js')
     }
   })
-  browserWindow.loadURL(path.join('file://', __dirname, 'index.html'))
+  browserWindow.loadURL(path.join('file://', __dirname, '../../build/index.html'))
   browserWindow.on('closed', () => {
     browserWindow = null
   })

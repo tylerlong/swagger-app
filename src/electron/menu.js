@@ -89,6 +89,10 @@ if (process.platform === 'darwin') {
 
 const menu = Menu.buildFromTemplate(template)
 
-export const setApplicationMenu = () => {
+const setApplicationMenu = () => {
   Menu.setApplicationMenu(menu)
+}
+
+module.exports = {
+  setApplicationMenu
 }
