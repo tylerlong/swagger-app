@@ -1,4 +1,4 @@
-import R from 'ramda'
+import * as R from 'ramda'
 import { createStore, applyMiddleware } from 'redux'
 import { createLogicMiddleware } from 'redux-logic'
 import Rx from 'rxjs/Rx'

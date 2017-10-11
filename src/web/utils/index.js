@@ -1,4 +1,4 @@
-import R from 'ramda'
+import * as R from 'ramda'
 import PropTypes from 'prop-types'
 
 export const alert = R.curry((type, message) => {

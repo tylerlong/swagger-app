@@ -1,4 +1,4 @@
-import R from 'ramda'
+import * as R from 'ramda'
 import React from 'react'
 import { Select } from 'antd'
 import PropTypes from 'prop-types'

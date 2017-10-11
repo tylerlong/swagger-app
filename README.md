@@ -56,3 +56,4 @@ Go to GitHub and release it.
 - reorganize components/Common
 - `yarn release` doesn't work
     - UglifyJS doesn't support ES6
+    - babel-preset-env target node 4?

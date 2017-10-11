@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import R from 'ramda'
+import * as R from 'ramda'
 
 import { alert, orderBy } from '../src/web/utils'
 

@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import R from 'ramda'
+import * as R from 'ramda'
 import nock from 'nock'
 import axios from 'axios'
 import httpAdapter from 'axios/lib/adapters/http'

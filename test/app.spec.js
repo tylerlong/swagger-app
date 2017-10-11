@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import R from 'ramda'
+import * as R from 'ramda'
 
 import { setState, setProp } from '../src/web/actions'
 import store from './store'
