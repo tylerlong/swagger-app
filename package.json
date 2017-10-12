@@ -76,7 +76,9 @@
   "build": {
     "appId": "swagger.ringcentral.com",
     "files": [
-      "build/",
+      "build/index.html",
+      "build/index.bundle.js",
+      "build/index.bundle.css",
       "src/electron/"
     ],
     "mac": {
