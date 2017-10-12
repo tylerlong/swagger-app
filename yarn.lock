@@ -181,9 +181,9 @@ ansi-styles@^3.2.0:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^2.13.5:
-  version "2.13.5"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-2.13.5.tgz#f2f4ce9fff92ccd0486bdf2cd7065f32d661e720"
+antd@^2.13.6:
+  version "2.13.6"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-2.13.6.tgz#eb60b5db2bb03a92f918a2a2be3bca95a82ce1fa"
   dependencies:
     array-tree-filter "~1.0.0"
     babel-runtime "6.x"
@@ -621,6 +621,10 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-array-includes@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-array-includes/-/babel-plugin-array-includes-2.0.3.tgz#cf5452e81c7b803fb7959f1045ac88e2ec28ff76"
+
 babel-plugin-check-es2015-constants@^6.22.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
@@ -674,6 +678,15 @@ babel-plugin-transform-async-to-generator@^6.22.0:
     babel-helper-remap-async-to-generator "^6.24.1"
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.22.0"
+
+babel-plugin-transform-async-to-module-method@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-async-to-module-method/-/babel-plugin-transform-async-to-module-method-6.24.1.tgz#9109a08987794b411cb213850ce935ec2f029cdb"
+  dependencies:
+    babel-helper-remap-async-to-generator "^6.24.1"
+    babel-plugin-syntax-async-functions "^6.8.0"
+    babel-runtime "^6.22.0"
+    babel-types "^6.24.1"
 
 babel-plugin-transform-es2015-arrow-functions@^6.22.0:
   version "6.22.0"
@@ -858,6 +871,13 @@ babel-plugin-transform-flow-strip-types@^6.22.0:
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.22.0"
 
+babel-plugin-transform-inline-imports-commonjs@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-inline-imports-commonjs/-/babel-plugin-transform-inline-imports-commonjs-1.2.0.tgz#20c7d192bafc54c8727386e3387d8ee4ef19e6a5"
+  dependencies:
+    babel-plugin-transform-strict-mode "^6.8.0"
+    builtin-modules "^1.1.1"
+
 babel-plugin-transform-react-display-name@^6.23.0:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
@@ -892,7 +912,7 @@ babel-plugin-transform-regenerator@^6.22.0, babel-plugin-transform-regenerator@^
   dependencies:
     regenerator-transform "^0.10.0"
 
-babel-plugin-transform-strict-mode@^6.24.1:
+babel-plugin-transform-strict-mode@^6.24.1, babel-plugin-transform-strict-mode@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-strict-mode/-/babel-plugin-transform-strict-mode-6.24.1.tgz#d5faf7aa578a65bbe591cf5edae04a0c67020758"
   dependencies:
@@ -994,6 +1014,17 @@ babel-preset-react@^6.24.1:
     babel-plugin-transform-react-jsx-self "^6.22.0"
     babel-plugin-transform-react-jsx-source "^6.22.0"
     babel-preset-flow "^6.23.0"
+
+babel-preset-ts-node4-bluebird@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-ts-node4-bluebird/-/babel-preset-ts-node4-bluebird-0.1.1.tgz#72a3bb93b4ff026308844ca8d1d1ba587e30e7fd"
+  dependencies:
+    babel-plugin-array-includes "^2.0.3"
+    babel-plugin-transform-async-to-module-method "^6.24.1"
+    babel-plugin-transform-es2015-destructuring "^6.23.0"
+    babel-plugin-transform-es2015-parameters "^6.24.1"
+    babel-plugin-transform-es2015-spread "^6.22.0"
+    babel-plugin-transform-inline-imports-commonjs "^1.2.0"
 
 babel-register@^6.26.0:
   version "6.26.0"

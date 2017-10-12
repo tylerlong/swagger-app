@@ -17,10 +17,10 @@ const createWindow = () => {
     height: 768,
     webPreferences: {
       nodeIntegration: false,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.bundle.js')
     }
   })
-  browserWindow.loadURL(path.join('file://', __dirname, '../../build/index.html'))
+  browserWindow.loadURL(path.join('file://', __dirname, 'index.html'))
   browserWindow.on('closed', () => {
     browserWindow = null
   })
