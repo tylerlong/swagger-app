@@ -26,7 +26,7 @@ const config = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['env', { 'targets': { 'node': '4.8.4' } }],
+              ['env', { 'targets': { 'node': '6.11.4' } }],
               'react'
             ],
             plugins: [

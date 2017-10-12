@@ -54,3 +54,4 @@ Go to GitHub and release it.
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code
 - reorganize components/Common
+- webpack electron-main code and remove node_modules/ from electron-builder
