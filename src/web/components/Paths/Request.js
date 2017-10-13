@@ -59,7 +59,7 @@ class Request extends React.Component {
                 <AddPathRequestQueryParameterButton path={path} />
               </CenterPanel>
             </Collapse.Panel>
-            <Collapse.Panel header='Request'>
+            <Collapse.Panel header='Request Body'>
               <CenterPanel>
                 <SmartCollapse>
                   {requestFields.map(({ path, createdAt }) => (
@@ -71,7 +71,7 @@ class Request extends React.Component {
                 <AddPathRequestRequestFieldButton path={path} />
               </CenterPanel>
             </Collapse.Panel>
-            <Collapse.Panel header='Response'>
+            <Collapse.Panel header='Response Body'>
               <CenterPanel>
                 <SmartCollapse>
                   {responseFields.map(({ path, createdAt }) => (
