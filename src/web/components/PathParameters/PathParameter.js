@@ -13,6 +13,7 @@ class PathParameter extends React.Component {
         <PathParameterTextField path={path} name='name' />
         <PathParameterTextField path={path} name='description' />
         <PathParameterTextField path={path} name='enum' isArray />
+        <PathParameterTextField path={path} name='defaultValue' />
       </div>
     )
   }

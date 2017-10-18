@@ -8,7 +8,8 @@ export const defaultPathParameter = () => ({
   createdAt: Date.now(),
   name: '🔥 name',
   description: '',
-  enum: []
+  enum: [],
+  defaultValue: ''
 })
 
 export const PathParameterTextField = connect(
