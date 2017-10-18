@@ -19,11 +19,16 @@ class App extends React.Component {
   }
   render () {
     console.log('render App')
-    const { title, version } = this.props
+    const { title, version, toSwaggerJson } = this.props
     return (
       <div>
         <Button><Link to='/'><Icon type='home' /> Home</Link></Button>
-        <h1>{title} {version}</h1>
+        <h1>
+          {title} {version}
+          <div>
+            <Button onClick={toSwaggerJson}><Icon type='export' /> Swagger JSON</Button>
+          </div>
+        </h1>
         <Tabs tabPosition='left' defaultActiveKey='basic-info'>
           <Tabs.TabPane tab='Basic Info' key='basic-info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>

@@ -21,6 +21,16 @@ const loadStateLogic = createLogic({
   }
 })
 
+const toSwaggerJsonLogic = createLogic({
+  type: 'TO_SWAGGER_JSON',
+  latest: true,
+  async process ({ getState, action }, dispatch, done) {
+    console.log('TO_SWAGGER_JSON')
+    done()
+  }
+})
+
 export default [
-  loadStateLogic
+  loadStateLogic,
+  toSwaggerJsonLogic
 ]
