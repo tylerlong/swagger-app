@@ -32,3 +32,31 @@ export const objType = PropTypes.shape({
   path: pathType,
   createdAt: PropTypes.number.isRequired
 }).isRequired
+
+export const toSwagger = (state) => {
+  return {
+    swagger: '2.0',
+    info: {
+      version: state.info.version,
+      title: state.info.title,
+      description: state.info.description,
+      termsOfService: state.info.termsOfService
+    },
+    host: state.info.host,
+    basePath: state.info.basePath,
+    schemes: state.info.schemes,
+    produces: state.info.produces,
+    consumes: state.info.consumes,
+    parameters: R.zipObj(R.map(R.prop('name'), state.pathParameters), R.map(pathParameter => ({
+      name: pathParameter.name,
+      in: 'path',
+      required: true,
+      type: 'string',
+      enum: pathParameter.enum,
+      description: pathParameter.description,
+      default: pathParameter.defaultValue
+    }), state.pathParameters)),
+    definitions: {},
+    paths: {}
+  }
+}

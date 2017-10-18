@@ -3,6 +3,7 @@ import axios from 'axios'
 import moment from 'moment'
 
 import { setState } from '../actions'
+import { toSwagger } from '../utils'
 
 const downloadFile = (filename, text) => {
   const element = document.createElement('a')
@@ -37,17 +38,18 @@ const toSwaggerJsonLogic = createLogic({
   latest: true,
   async process ({ getState, action }, dispatch, done) {
     const state = getState()
-    const data = JSON.stringify(state, null, 2)
+    const swagger = toSwagger(state)
+    const text = JSON.stringify(swagger, null, 2)
     if (global.electron) { // electron
       const filePath = global.electron.dialog.showSaveDialog({
         filters: [{ name: 'swagger files', extensions: ['json'] }]
       })
       if (filePath) {
-        global.fs.writeFileSync(filePath, data)
+        global.fs.writeFileSync(filePath, text)
         global.electron.shell.showItemInFolder(filePath)
       }
     } else { // browser
-      downloadFile(`swagger-${moment().format('YYYYMMDDHHmmss')}.json`, data)
+      downloadFile(`swagger-${moment().format('YYYYMMDDHHmmss')}.json`, text)
     }
     done()
   }
