@@ -15,7 +15,7 @@ class TypeSelectField extends React.Component {
     let modelSelect = null
     if (value === 'object' || !R.contains(value, options)) {
       modelSelect = (
-        <Select value={value === 'object' ? '' : value} onChange={value => { update(value) }} style={{ width: 128 }}>
+        <Select value={value === 'object' ? '' : value} onChange={value => { update(value) }} style={{ width: '100%' }}>
           {models.map(({name, createdAt}) => <Select.Option value={name} key={createdAt}>{name}</Select.Option>)}
         </Select>
       )
