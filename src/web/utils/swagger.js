@@ -1,7 +1,9 @@
 import * as R from 'ramda'
 
-const extractProperties = (model) => {
-  return R.zipObj(R.map(R.prop('name'), model.properties), R.map(property => {
+import { primitiveTypes } from './common'
+
+const extractProperties = properties => {
+  return R.zipObj(R.map(R.prop('name'), properties), R.map(property => {
     const prop = {}
     prop.description = property.description
     if (property.type.toLowerCase() === property.type) { // primitive type
@@ -32,25 +34,36 @@ const extractProperties = (model) => {
       prop.enum = property.enum
     }
     return prop
-  }, model.properties))
+  }, properties))
 }
 
-const extractSchema = (request) => {
-  return {}
+const extractSchema = response => {
+  if (response.length === 0) {
+    return undefined
+  }
+  if (response.length === 1 && !R.contains(response[0].type, primitiveTypes)) {
+    return { '$ref': `#/definitions/${response[0].type}` }
+  }
+  return {
+    type: 'object',
+    properties: extractProperties(response)
+  }
 }
 
-const extractRequests = (path) => {
+const extractRequests = path => {
   return R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => ({
     tags: request.tags,
     description: request.description,
-    response: { default: {
-      description: 'OK',
-      schema: extractSchema(request)
-    }}
+    response: {
+      default: {
+        description: 'OK',
+        schema: extractSchema(request.response)
+      }
+    }
   }), path.requests))
 }
 
-export const toSwagger = (state) => {
+export const toSwagger = state => {
   return {
     swagger: '2.0',
     info: {
@@ -75,7 +88,7 @@ export const toSwagger = (state) => {
     }), state.pathParameters)),
     definitions: R.zipObj(R.map(R.prop('name'), state.models), R.map(model => ({
       type: 'object',
-      properties: extractProperties(model)
+      properties: extractProperties(model.properties)
     }), state.models)),
     paths: R.zipObj(R.map(R.prop('uri'), state.paths), R.map(path => extractRequests(path), state.paths))
   }

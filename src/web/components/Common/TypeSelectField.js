@@ -4,8 +4,9 @@ import { Select } from 'antd'
 import PropTypes from 'prop-types'
 
 import FormItem from './FormItem'
+import { primitiveTypes } from '../../utils'
 
-const options = ['string', 'object', 'integer', 'boolean', 'date-time', 'int64', 'number', 'binary']
+const options = primitiveTypes
 
 class TypeSelectField extends React.Component {
   render () {

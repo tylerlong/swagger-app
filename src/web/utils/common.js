@@ -32,3 +32,5 @@ export const objType = PropTypes.shape({
   path: pathType,
   createdAt: PropTypes.number.isRequired
 }).isRequired
+
+export const primitiveTypes = ['string', 'object', 'integer', 'boolean', 'date-time', 'int64', 'number', 'binary']
