@@ -1,6 +1,6 @@
 {
   "name": "swagger-app",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "description": "An app to create swagger spec.",
   "main": "build/electron.bundle.js",

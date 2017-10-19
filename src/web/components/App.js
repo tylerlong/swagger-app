@@ -31,7 +31,7 @@ class App extends React.Component {
           <Tabs.TabPane tab='Paths' key='paths'><Paths /></Tabs.TabPane>
           <Tabs.TabPane tab='Models' key='models'><Models /></Tabs.TabPane>
           <Tabs.TabPane tab={<span><Icon type='export' />Save as</span>} key='save-as'>
-            <Button onClick={toSwaggerJson}>Swagger JSON</Button>
+            <Button type='primary' onClick={toSwaggerJson}>Swagger JSON</Button>
           </Tabs.TabPane>
         </Tabs>
       </div>
