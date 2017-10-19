@@ -51,18 +51,58 @@ const extractSchema = response => {
 }
 
 const extractRequests = path => {
-  const result = R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => ({
-    tags: request.tags,
-    description: `${request.name}. ${request.description}`.trim(),
-    response: {
-      default: {
-        description: 'OK',
-        schema: extractSchema(request.response)
-      }
+  let result = R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => {
+    if (request.accessLevel === 'Internal' || request.status !== 'Normal') {
+      return undefined
     }
-  }), R.filter(request => {
-    return request.accessLevel !== 'Internal' && request.status === 'Normal'
-  }, path.requests)))
+    const temp = {
+      tags: request.tags,
+      description: `${request.name}. ${request.description}`.trim(),
+      response: {
+        default: {
+          description: 'OK',
+          schema: extractSchema(request.response)
+        }
+      },
+      parameters: []
+    }
+    if (request.parameters.length > 0) { // query parameters
+      temp.parameters = temp.parameters.concat(request.parameters.map(p => {
+        const temp2 = {
+          type: p.type,
+          description: p.description,
+          name: p.name,
+          in: 'query'
+        }
+        if (p.enum.length > 0) {
+          temp2.enum = p.enum
+        }
+        if (R.contains(temp2.type, ['date-time', 'binary'])) {
+          temp2.format = temp2.type
+          temp2.type = 'string'
+        }
+        if (temp2.type === 'int64') {
+          temp2.type = 'integer'
+          temp2.format = 'int64'
+        }
+        return temp2
+      }))
+    }
+    if (request.request.length > 0) { // request body
+      temp.parameters.push({
+        name: 'body',
+        in: 'body',
+        schema: extractSchema(request.request)
+      })
+    }
+    if (R.isEmpty(temp.parameters)) {
+      delete temp['parameters']
+    }
+    return temp
+  }, path.requests))
+
+  result = R.pickBy((request, key) => request !== undefined, result)
+
   const pathParameters = R.map(s => s.substring(1, s.length - 1), R.match(/\{.+?\}/g, path.uri))
   if (pathParameters.length > 0) {
     result.parameters = pathParameters.map(pp => ({
@@ -101,7 +141,7 @@ export const toSwagger = state => {
     }), state.models)),
     paths: R.pickBy(
       (val, key) => {
-        return !R.isEmpty(val)
+        return !R.isEmpty(val) && !R.equals(R.keys(val), ['parameters'])
       },
       R.zipObj(
         R.map(R.prop('uri'), state.paths),
