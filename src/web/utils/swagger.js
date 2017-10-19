@@ -44,6 +44,14 @@ const extractSchema = response => {
   if (response.length === 1 && !R.contains(response[0].type, primitiveTypes)) {
     return { '$ref': `#/definitions/${response[0].type}` }
   }
+  if (response.length === 1 && response[0].type === 'object') { // put "/restapi/v1.0/account/{accountId}/extension/{extensionId}"
+    return {
+      tyle: 'object',
+      enum: response[0].enum.map(item => ({
+        '$ref': `#/definitions/${item}`
+      }))
+    }
+  }
   return {
     type: 'object',
     properties: extractProperties(response)
