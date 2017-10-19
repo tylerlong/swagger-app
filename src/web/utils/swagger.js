@@ -66,7 +66,7 @@ const extractRequests = path => {
     const temp = {
       tags: request.tags,
       description: `${request.name}. ${request.description}`.trim(),
-      response: {
+      responses: {
         default: {
           description: 'OK',
           schema: extractSchema(request.response)
@@ -134,15 +134,21 @@ export const toSwagger = state => {
     schemes: state.info.schemes,
     produces: state.info.produces,
     consumes: state.info.consumes,
-    parameters: R.zipObj(R.map(R.prop('name'), state.pathParameters), R.map(pathParameter => ({
-      name: pathParameter.name,
-      in: 'path',
-      required: true,
-      type: 'string',
-      enum: pathParameter.enum,
-      description: pathParameter.description,
-      default: pathParameter.defaultValue
-    }), state.pathParameters)),
+    parameters: R.zipObj(R.map(R.prop('name'), state.pathParameters), R.map(pathParameter => {
+      const temp = {
+        name: pathParameter.name,
+        in: 'path',
+        required: true,
+        type: 'string',
+        enum: pathParameter.enum,
+        description: pathParameter.description,
+        default: pathParameter.defaultValue
+      }
+      if (R.isEmpty(temp.enum)) {
+        delete temp['enum']
+      }
+      return temp
+    }, state.pathParameters)),
     definitions: R.zipObj(R.map(R.prop('name'), state.models), R.map(model => ({
       type: 'object',
       properties: extractProperties(model.properties)
