@@ -46,7 +46,6 @@ Go to GitHub and release it.
 
 ## todo list
 
-- migrate data from PostgreSQL
 - detect file changed not by the app
 - improve test coverage
 - use logger, so it won't output anything in production
@@ -54,4 +53,4 @@ Go to GitHub and release it.
 - export to valid swagger spec and test it with swagger-ui
 - reorganize containers' code
 - reorganize components/Common
-- webpack electron-main code and remove node_modules/ from electron-builder
+- refuse to open if not expected format

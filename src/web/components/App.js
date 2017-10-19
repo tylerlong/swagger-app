@@ -26,7 +26,7 @@ class App extends React.Component {
         <h1>
           {title} {version}
           <div>
-            <Button onClick={toSwaggerJson}><Icon type='export' /> Swagger JSON</Button>
+            <h6>Save as <Button onClick={toSwaggerJson}><Icon type='export' /> Swagger JSON</Button></h6>
           </div>
         </h1>
         <Tabs tabPosition='left' defaultActiveKey='basic-info'>
