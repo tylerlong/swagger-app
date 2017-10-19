@@ -41,7 +41,7 @@ const extractSchema = response => {
   if (response.length === 0) {
     return undefined
   }
-  if (response.length === 1 && !R.contains(response[0].type, primitiveTypes)) {
+  if (response.length === 1 && !R.contains(response[0].type, primitiveTypes) && !response[0].isArray) {
     return { '$ref': `#/definitions/${response[0].type}` }
   }
   if (response.length === 1 && response[0].type === 'object') { // put "/restapi/v1.0/account/{accountId}/extension/{extensionId}"
