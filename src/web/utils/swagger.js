@@ -46,7 +46,7 @@ const extractSchema = response => {
   }
   if (response.length === 1 && response[0].type === 'object') { // put "/restapi/v1.0/account/{accountId}/extension/{extensionId}"
     return {
-      tyle: 'object',
+      type: 'object',
       enum: response[0].enum.map(item => ({
         '$ref': `#/definitions/${item}`
       }))
