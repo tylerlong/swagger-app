@@ -23,18 +23,16 @@ class App extends React.Component {
     return (
       <div>
         <Button><Link to='/'><Icon type='home' /> Home</Link></Button>
-        <h1>
-          {title} {version}
-          <div>
-            <h6>Save as <Button onClick={toSwaggerJson}><Icon type='export' /> Swagger JSON</Button></h6>
-          </div>
-        </h1>
-        <Tabs tabPosition='left' defaultActiveKey='basic-info'>
+        <h1>{title} {version}</h1>
+        <Tabs tabPosition='left' defaultActiveKey='save-as'>
           <Tabs.TabPane tab='Basic Info' key='basic-info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>
           <Tabs.TabPane tab='Paths' key='paths'><Paths /></Tabs.TabPane>
           <Tabs.TabPane tab='Models' key='models'><Models /></Tabs.TabPane>
+          <Tabs.TabPane tab={<span><Icon type='export' />Save as</span>} key='save-as'>
+            <Button onClick={toSwaggerJson}>Swagger JSON</Button>
+          </Tabs.TabPane>
         </Tabs>
       </div>
     )
