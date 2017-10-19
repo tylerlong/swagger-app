@@ -51,16 +51,25 @@ const extractSchema = response => {
 }
 
 const extractRequests = path => {
-  return R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => ({
+  const result = R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => ({
     tags: request.tags,
-    description: request.description,
+    description: `${request.name}. ${request.description}`.trim(),
     response: {
       default: {
         description: 'OK',
         schema: extractSchema(request.response)
       }
     }
-  }), path.requests))
+  }), R.filter(request => {
+    return request.accessLevel !== 'Internal' && request.status === 'Normal'
+  }, path.requests)))
+  const pathParameters = R.map(s => s.substring(1, s.length - 1), R.match(/\{.+?\}/g, path.uri))
+  if (pathParameters.length > 0) {
+    result.parameters = pathParameters.map(pp => ({
+      '$ref': `#/parameters/${pp}`
+    }))
+  }
+  return result
 }
 
 export const toSwagger = state => {
@@ -90,6 +99,14 @@ export const toSwagger = state => {
       type: 'object',
       properties: extractProperties(model.properties)
     }), state.models)),
-    paths: R.zipObj(R.map(R.prop('uri'), state.paths), R.map(path => extractRequests(path), state.paths))
+    paths: R.pickBy(
+      (val, key) => {
+        return !R.isEmpty(val)
+      },
+      R.zipObj(
+        R.map(R.prop('uri'), state.paths),
+        R.map(path => extractRequests(path), state.paths)
+      )
+    )
   }
 }
