@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.2",
@@ -35,26 +35,26 @@
     "coveralls": "^3.0.0",
     "css-loader": "^0.28.7",
     "electron": "^1.7.9",
-    "electron-builder": "^19.37.2",
+    "electron-builder": "^19.40.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
     "extract-text-webpack-plugin": "^3.0.1",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
-    "nock": "^9.0.22",
+    "nock": "^9.0.25",
     "prop-types": "^15.6.0",
     "react-test-renderer": "^16.0.0",
     "redux-logic-test": "^1.0.5",
     "standard": "^10.0.3",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.2",
+    "webpack-dev-server": "^2.9.3",
     "yarn-upgrade-all": "^0.2.0"
   },
   "dependencies": {
-    "antd": "^2.13.6",
+    "antd": "^2.13.7",
     "electron-log": "^2.2.9",
-    "electron-updater": "^2.13.0",
+    "electron-updater": "^2.15.0",
     "indefinite": "^1.0.1",
     "js-base64": "^2.3.2",
     "moment": "^2.19.1",
@@ -67,7 +67,7 @@
     "redux": "^3.7.2",
     "redux-logic": "^0.12.3",
     "reselect": "^3.0.1",
-    "rxjs": "^5.4.3"
+    "rxjs": "^5.5.0"
   },
   "jest": {
     "setupFiles": [
