@@ -1,2 +1,3 @@
 export * from './common'
-export * from './swagger'
+export * from './swagger/to'
+export * from './swagger/from'

@@ -1,6 +1,6 @@
 import * as R from 'ramda'
 
-import { primitiveTypes } from './common'
+import { primitiveTypes } from '../common'
 
 const extractProperties = properties => {
   return R.zipObj(R.map(R.prop('name'), properties), R.map(property => {
