@@ -1,15 +1,7 @@
 /* eslint-env jest */
-// import * as R from 'ramda'
-
-import { toSwagger } from '../src/web/utils'
+import { toSwagger, fromSwagger } from '../src/web/utils'
 
 const state = JSON.parse(`{
-  "alerts": [
-    {
-      "type": "success",
-      "message": "Data loaded"
-    }
-  ],
   "info": {
     "title": "Example API",
     "version": "1.0",
@@ -27,6 +19,7 @@ const state = JSON.parse(`{
       "application/json"
     ],
     "tags": [
+      "API Versions",
       "Call Log"
     ]
   },
@@ -417,6 +410,7 @@ describe('swagger 2.0', () => {
     expect(result).toEqual(swagger)
   })
   test('import', () => {
-
+    const result = fromSwagger(swagger)
+    expect(result.info).toEqual(state.info)
   })
 })
