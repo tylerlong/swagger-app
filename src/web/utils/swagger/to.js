@@ -77,7 +77,14 @@ const extractRequests = path => {
         }
       },
       parameters: [],
-      'x-permissions': request.permissions
+      'x-permissions': request.permissions,
+      'x-accessLevel': request.accessLevel,
+      'x-apiGroup': request.apiGroup,
+      'x-status': request.status,
+      'x-since': request.since,
+      'x-examples': request.examples,
+      'x-beta': request.beta,
+      'x-batch': request.batch
     }
     if (request.parameters.length > 0) { // query parameters
       temp.parameters = temp.parameters.concat(request.parameters.map(p => {

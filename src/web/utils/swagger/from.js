@@ -52,7 +52,15 @@ export const fromSwagger = swagger => {
               name: request.summary,
               description: request.description,
               method: method.toUpperCase(),
-              tags: request.tags
+              tags: request.tags,
+              accessLevel: request['x-accessLevel'],
+              apiGroup: request['x-apiGroup'],
+              status: request['x-status'],
+              since: request['x-since'],
+              examples: request['x-examples'],
+              permissions: request['x-permissions'],
+              beta: request['x-beta'],
+              batch: request['x-batch']
             }
           })
         )(value)
