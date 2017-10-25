@@ -72,7 +72,8 @@ const extractRequests = path => {
           schema: extractSchema(request.response)
         }
       },
-      parameters: []
+      parameters: [],
+      'x-permissions': request.permissions
     }
     if (request.parameters.length > 0) { // query parameters
       temp.parameters = temp.parameters.concat(request.parameters.map(p => {
@@ -161,6 +162,7 @@ export const toSwagger = state => {
         R.map(R.prop('uri'), state.paths),
         R.map(path => extractRequests(path), state.paths)
       )
-    )
+    ),
+    'x-permissions': state.permissions
   }
 }

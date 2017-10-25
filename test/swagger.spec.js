@@ -377,7 +377,8 @@ const swagger = JSON.parse(`{
           "default": {
             "description": "OK"
           }
-        }
+        },
+        "x-permissions": []
       }
     },
     "/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log": {
@@ -390,7 +391,10 @@ const swagger = JSON.parse(`{
           "default": {
             "description": "OK"
           }
-        }
+        },
+        "x-permissions": [
+          "ReadCallLog"
+        ]
       },
       "parameters": [
         {
@@ -401,7 +405,29 @@ const swagger = JSON.parse(`{
         }
       ]
     }
-  }
+  },
+  "x-permissions": [
+    {
+      "createdAt": 1498875025725,
+      "name": "EditAccounts",
+      "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)"
+    },
+    {
+      "createdAt": 1498875008388,
+      "name": "Accounts",
+      "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+    },
+    {
+      "createdAt": 1498875020815,
+      "name": "Contacts",
+      "description": "Creating, viewing, editing and deleting user personal contacts"
+    },
+    {
+      "createdAt": 1498875020899,
+      "name": "ReadCallLog",
+      "description": "Viewing user call logs"
+    }
+  ]
 }`)
 
 describe('swagger 2.0', () => {
@@ -412,5 +438,6 @@ describe('swagger 2.0', () => {
   test('import', () => {
     const result = fromSwagger(swagger)
     expect(result.info).toEqual(state.info)
+    expect(result.permissions).toEqual(state.permissions)
   })
 })

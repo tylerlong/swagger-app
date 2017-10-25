@@ -24,7 +24,8 @@ export const fromSwagger = swagger => {
         ),
         R.flatten,
         R.uniq
-      )(swagger.paths)
-    }
+      )(swagger.paths).sort()
+    },
+    permissions: swagger['x-permissions']
   }
 }
