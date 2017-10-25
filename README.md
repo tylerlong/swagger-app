@@ -49,8 +49,4 @@ Go to GitHub and release it.
 - detect file changed not by the app
 - improve test coverage
 - use logger, so it won't output anything in production
-- enum is only for string type ? hide it for other types
-- export to valid swagger spec and test it with swagger-ui
-- reorganize containers' code
-- reorganize components/Common
-- refuse to open if not expected format
+- import arbitrary swagger file should not crash the app
