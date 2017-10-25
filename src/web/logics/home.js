@@ -31,7 +31,10 @@ const openFileLogic = createLogic({
   latest: true,
   async process ({ getState, action }, dispatch, done) {
     if (global.electron) { // electron
-      const filesOpened = global.electron.dialog.showOpenDialog({ properties: ['openFile'] })
+      const filesOpened = global.electron.dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [{ name: 'swagger files', extensions: ['json'] }]
+      })
       if (filesOpened) {
         editFile(filesOpened[0])
       }
