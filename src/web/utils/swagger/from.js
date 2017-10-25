@@ -26,6 +26,15 @@ export const fromSwagger = swagger => {
         R.uniq
       )(swagger.paths).sort()
     },
-    permissions: swagger['x-permissions']
+    permissions: swagger['x-permissions'],
+    pathParameters: R.pipe(
+      R.values,
+      R.map(item => ({
+        createdAt: item['x-createdAt'],
+        name: item.name,
+        description: item.description,
+        enum: item.enum || []
+      }))
+    )(swagger.parameters)
   }
 }

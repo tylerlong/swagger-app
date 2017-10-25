@@ -270,6 +270,7 @@ const swagger = JSON.parse(`{
   ],
   "parameters": {
     "accountId": {
+      "x-createdAt": 1498875032646,
       "name": "accountId",
       "in": "path",
       "required": true,
@@ -277,6 +278,7 @@ const swagger = JSON.parse(`{
       "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
     },
     "scaleSize": {
+      "x-createdAt": 1498875033792,
       "name": "scaleSize",
       "in": "path",
       "required": true,
@@ -289,6 +291,7 @@ const swagger = JSON.parse(`{
       "description": "Dimensions of a profile image which will be returned in response"
     },
     "answeringRuleId": {
+      "x-createdAt": 1498875137756,
       "name": "answeringRuleId",
       "in": "path",
       "required": true,
@@ -296,6 +299,7 @@ const swagger = JSON.parse(`{
       "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule"
     },
     "attachmentId": {
+      "x-createdAt": 1498875138459,
       "name": "attachmentId",
       "in": "path",
       "required": true,
@@ -439,5 +443,9 @@ describe('swagger 2.0', () => {
     const result = fromSwagger(swagger)
     expect(result.info).toEqual(state.info)
     expect(result.permissions).toEqual(state.permissions)
+    expect(result.pathParameters).toEqual(state.pathParameters)
+  })
+  test('export then import back', () => {
+
   })
 })

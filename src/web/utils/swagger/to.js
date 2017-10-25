@@ -137,6 +137,7 @@ export const toSwagger = state => {
     consumes: state.info.consumes,
     parameters: R.zipObj(R.map(R.prop('name'), state.pathParameters), R.map(pathParameter => {
       const temp = {
+        'x-createdAt': pathParameter.createdAt,
         name: pathParameter.name,
         in: 'path',
         required: true,
