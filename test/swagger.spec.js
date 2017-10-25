@@ -406,7 +406,9 @@ const swagger = JSON.parse(`{
           }
         },
         "x-permissions": []
-      }
+      },
+      "x-name": "Base URL",
+      "x-createdAt": 1498875254374
     },
     "/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log": {
       "get": {
@@ -430,7 +432,9 @@ const swagger = JSON.parse(`{
         {
           "$ref": "#/parameters/extensionId"
         }
-      ]
+      ],
+      "x-name": "Call Log",
+      "x-createdAt": 1498875254399
     }
   },
   "x-permissions": [
@@ -467,6 +471,7 @@ describe('swagger 2.0', () => {
     expect(result.info).toEqual(state.info)
     expect(result.permissions).toEqual(state.permissions)
     expect(result.pathParameters).toEqual(state.pathParameters)
+    expect(result.paths).toEqual(state.paths)
     expect(result.models).toEqual(state.models)
   })
   test('export then import back', () => {

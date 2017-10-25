@@ -120,6 +120,8 @@ const extractRequests = path => {
       '$ref': `#/parameters/${pp}`
     }))
   }
+  result['x-name'] = path.name
+  result['x-createdAt'] = path.createdAt
   return result
 }
 

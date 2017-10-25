@@ -36,6 +36,15 @@ export const fromSwagger = swagger => {
         enum: item.enum || []
       }))
     )(swagger.parameters),
+    paths: R.map(key => {
+      const value = swagger.paths[key]
+      return {
+        createdAt: value['x-createdAt'],
+        uri: key,
+        name: value['x-name'],
+        requests: []
+      }
+    }, R.keys(swagger.paths)),
     models: R.map(key => {
       const value = swagger.definitions[key]
       return {
