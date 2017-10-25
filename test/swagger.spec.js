@@ -15,8 +15,16 @@ describe('swagger 2.0', () => {
     expect(result.pathParameters).toEqual(state.pathParameters)
     expect(result.paths).toEqual(state.paths)
     expect(result.models).toEqual(state.models)
+    expect(result).toEqual(state)
   })
-  test('export then import back', () => {
-
+  test('export then import', () => {
+    let result = toSwagger(state)
+    result = fromSwagger(result)
+    expect(result).toEqual(state)
+  })
+  test('import then export', () => {
+    let result = fromSwagger(swagger)
+    result = toSwagger(result)
+    expect(result).toEqual(swagger)
   })
 })

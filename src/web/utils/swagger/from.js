@@ -60,7 +60,10 @@ export const fromSwagger = swagger => {
               examples: request['x-examples'],
               permissions: request['x-permissions'],
               beta: request['x-beta'],
-              batch: request['x-batch']
+              batch: request['x-batch'],
+              parameters: request.parameters || [],
+              request: request.request || [],
+              response: request.response || []
             }
           })
         )(value)
