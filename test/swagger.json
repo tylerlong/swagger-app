@@ -1,0 +1,215 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Example API",
+    "description": "Restful API for Example",
+    "termsOfService": "https://www.example.com/terms-of-service"
+  },
+  "host": "api.example.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "parameters": {
+    "accountId": {
+      "x-createdAt": 1498875032646,
+      "name": "accountId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "Internal identifier of a RingCentral account or tilde (~) to indicate the account logged-in within the current session"
+    },
+    "scaleSize": {
+      "x-createdAt": 1498875033792,
+      "name": "scaleSize",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "enum": [
+        "90x90",
+        "195x195",
+        "584x584"
+      ],
+      "description": "Dimensions of a profile image which will be returned in response"
+    },
+    "answeringRuleId": {
+      "x-createdAt": 1498875137756,
+      "name": "answeringRuleId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule"
+    },
+    "attachmentId": {
+      "x-createdAt": 1498875138459,
+      "name": "attachmentId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "Internal identifier of a message attachment"
+    }
+  },
+  "definitions": {
+    "AccountInfo": {
+      "type": "object",
+      "x-createdAt": 1498875254895,
+      "properties": {
+        "id": {
+          "description": "Internal identifier of an account",
+          "x-createdAt": 1498875254896,
+          "required": true,
+          "type": "string"
+        },
+        "uri": {
+          "description": "Canonical URI of an account",
+          "x-createdAt": 1498875254897,
+          "required": false,
+          "type": "string"
+        },
+        "mainNumber": {
+          "description": "Main phone number of the current account",
+          "x-createdAt": 1498875254898,
+          "required": false,
+          "type": "string"
+        }
+      }
+    },
+    "AnsweringRuleInfo": {
+      "type": "object",
+      "x-createdAt": 1498875255421,
+      "properties": {
+        "id": {
+          "description": "Internal identifier of an asnwering rule",
+          "x-createdAt": 1498875255422,
+          "required": true,
+          "type": "string"
+        },
+        "uri": {
+          "description": "Canonical URI to the answering rule resource",
+          "x-createdAt": 1498875255423,
+          "required": false,
+          "type": "string"
+        },
+        "type": {
+          "description": "Type of an answering rule",
+          "x-createdAt": 1498875255424,
+          "required": false,
+          "type": "string",
+          "enum": [
+            "BusinessHours",
+            "AfterHours",
+            "Custom"
+          ]
+        }
+      }
+    },
+    "VersionInfo": {
+      "type": "object",
+      "x-createdAt": 1498875255943,
+      "properties": {
+        "uri": {
+          "description": "Canonical URI of API versions",
+          "x-createdAt": 1498875255944,
+          "required": true,
+          "type": "string"
+        },
+        "versionString": {
+          "description": "Version of the RingCentral REST API",
+          "x-createdAt": 1498875255945,
+          "required": false,
+          "type": "string"
+        },
+        "releaseDate": {
+          "description": "Release date of this version",
+          "x-createdAt": 1498875255946,
+          "required": false,
+          "type": "string",
+          "format": "date-time"
+        },
+        "uriString": {
+          "description": "URI part determining the current version",
+          "x-createdAt": 1498875255947,
+          "required": false,
+          "type": "string"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/restapi": {
+      "get": {
+        "x-createdAt": 1498875254375,
+        "tags": [
+          "API Versions"
+        ],
+        "summary": "Get API Versions",
+        "description": "Returns current API version(s) and server info.",
+        "responses": {
+          "default": {
+            "description": "OK"
+          }
+        },
+        "x-permissions": []
+      },
+      "x-name": "Base URL",
+      "x-createdAt": 1498875254374
+    },
+    "/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log": {
+      "get": {
+        "x-createdAt": 1498875254399,
+        "tags": [
+          "Call Log"
+        ],
+        "summary": "Get User Call Log",
+        "description": "Returns filtered call log records.",
+        "responses": {
+          "default": {
+            "description": "OK"
+          }
+        },
+        "x-permissions": [
+          "ReadCallLog"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/parameters/accountId"
+        },
+        {
+          "$ref": "#/parameters/extensionId"
+        }
+      ],
+      "x-name": "Call Log",
+      "x-createdAt": 1498875254399
+    }
+  },
+  "x-permissions": [
+    {
+      "createdAt": 1498875025725,
+      "name": "EditAccounts",
+      "description": "Viewing and updating user account info (including name, business name, address and phone number/account number)"
+    },
+    {
+      "createdAt": 1498875008388,
+      "name": "Accounts",
+      "description": "Managing accounts: creating new accounts, viewing and updating account information, deleting existing accounts"
+    },
+    {
+      "createdAt": 1498875020815,
+      "name": "Contacts",
+      "description": "Creating, viewing, editing and deleting user personal contacts"
+    },
+    {
+      "createdAt": 1498875020899,
+      "name": "ReadCallLog",
+      "description": "Viewing user call logs"
+    }
+  ]
+}
