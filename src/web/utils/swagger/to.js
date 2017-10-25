@@ -7,6 +7,8 @@ const extractProperties = properties => {
     const prop = {}
     prop.description = property.description
     if (property.type.toLowerCase() === property.type) { // primitive type
+      prop['x-createdAt'] = property.createdAt
+      prop.required = property.required
       prop.type = property.type
       if (property.isArray) {
         prop.items = {
@@ -153,6 +155,7 @@ export const toSwagger = state => {
     }, state.pathParameters)),
     definitions: R.zipObj(R.map(R.prop('name'), state.models), R.map(model => ({
       type: 'object',
+      'x-createdAt': model.createdAt,
       properties: extractProperties(model.properties)
     }), state.models)),
     paths: R.pickBy(

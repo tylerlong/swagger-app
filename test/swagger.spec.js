@@ -310,34 +310,48 @@ const swagger = JSON.parse(`{
   "definitions": {
     "AccountInfo": {
       "type": "object",
+      "x-createdAt": 1498875254895,
       "properties": {
         "id": {
           "description": "Internal identifier of an account",
+          "x-createdAt": 1498875254896,
+          "required": true,
           "type": "string"
         },
         "uri": {
           "description": "Canonical URI of an account",
+          "x-createdAt": 1498875254897,
+          "required": false,
           "type": "string"
         },
         "mainNumber": {
           "description": "Main phone number of the current account",
+          "x-createdAt": 1498875254898,
+          "required": false,
           "type": "string"
         }
       }
     },
     "AnsweringRuleInfo": {
       "type": "object",
+      "x-createdAt": 1498875255421,
       "properties": {
         "id": {
           "description": "Internal identifier of an asnwering rule",
+          "x-createdAt": 1498875255422,
+          "required": true,
           "type": "string"
         },
         "uri": {
           "description": "Canonical URI to the answering rule resource",
+          "x-createdAt": 1498875255423,
+          "required": false,
           "type": "string"
         },
         "type": {
           "description": "Type of an answering rule",
+          "x-createdAt": 1498875255424,
+          "required": false,
           "type": "string",
           "enum": [
             "BusinessHours",
@@ -349,22 +363,31 @@ const swagger = JSON.parse(`{
     },
     "VersionInfo": {
       "type": "object",
+      "x-createdAt": 1498875255943,
       "properties": {
         "uri": {
           "description": "Canonical URI of API versions",
+          "x-createdAt": 1498875255944,
+          "required": true,
           "type": "string"
         },
         "versionString": {
           "description": "Version of the RingCentral REST API",
+          "x-createdAt": 1498875255945,
+          "required": false,
           "type": "string"
         },
         "releaseDate": {
           "description": "Release date of this version",
+          "x-createdAt": 1498875255946,
+          "required": false,
           "type": "string",
           "format": "date-time"
         },
         "uriString": {
           "description": "URI part determining the current version",
+          "x-createdAt": 1498875255947,
+          "required": false,
           "type": "string"
         }
       }
@@ -444,6 +467,7 @@ describe('swagger 2.0', () => {
     expect(result.info).toEqual(state.info)
     expect(result.permissions).toEqual(state.permissions)
     expect(result.pathParameters).toEqual(state.pathParameters)
+    expect(result.models).toEqual(state.models)
   })
   test('export then import back', () => {
 
