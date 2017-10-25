@@ -33,15 +33,16 @@ export const fromSwagger = swagger => {
         createdAt: item['x-createdAt'],
         name: item.name,
         description: item.description,
-        enum: item.enum || []
+        enum: item.enum || [],
+        defaultValue: item.default
       }))
     )(swagger.parameters),
     paths: R.map(key => {
       const value = swagger.paths[key]
       return { // path
         createdAt: value['x-createdAt'],
-        uri: key,
         name: value['x-name'],
+        uri: key,
         requests: R.pipe(
           R.pick(['get', 'post', 'put', 'delete']),
           R.keys,
@@ -50,20 +51,36 @@ export const fromSwagger = swagger => {
             return { // request
               createdAt: request['x-createdAt'],
               name: request.summary,
+              since: request['x-since'],
               description: request.description,
               method: method.toUpperCase(),
-              tags: request.tags,
-              accessLevel: request['x-accessLevel'],
               apiGroup: request['x-apiGroup'],
-              status: request['x-status'],
-              since: request['x-since'],
-              examples: request['x-examples'],
               permissions: request['x-permissions'],
-              beta: request['x-beta'],
+              tags: request.tags,
+              status: request['x-status'],
+              accessLevel: request['x-accessLevel'],
               batch: request['x-batch'],
+              beta: request['x-beta'],
               parameters: request.parameters || [],
               request: request.request || [],
-              response: request.response || []
+              response: ((schema) => {
+                if (R.isNil(schema)) {
+                  return []
+                }
+                if (!R.isNil(schema['$ref'])) {
+                  const modelName = R.last(schema['$ref'].split('/'))
+                  return [{
+                    // createdAt: 1508392862927,
+                    name: modelName,
+                    // description: '',
+                    type: modelName
+                    // enum: [],
+                    // required: true,
+                    // isArray: false
+                  }]
+                }
+              })(request.responses.default.schema),
+              examples: request['x-examples']
             }
           })
         )(value)
