@@ -396,10 +396,12 @@ const swagger = JSON.parse(`{
   "paths": {
     "/restapi": {
       "get": {
+        "x-createdAt": 1498875254375,
         "tags": [
           "API Versions"
         ],
-        "description": "Get API Versions. Returns current API version(s) and server info.",
+        "summary": "Get API Versions",
+        "description": "Returns current API version(s) and server info.",
         "responses": {
           "default": {
             "description": "OK"
@@ -412,10 +414,12 @@ const swagger = JSON.parse(`{
     },
     "/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log": {
       "get": {
+        "x-createdAt": 1498875254399,
         "tags": [
           "Call Log"
         ],
-        "description": "Get User Call Log. Returns filtered call log records.",
+        "summary": "Get User Call Log",
+        "description": "Returns filtered call log records.",
         "responses": {
           "default": {
             "description": "OK"

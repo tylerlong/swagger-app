@@ -66,8 +66,10 @@ const extractRequests = path => {
       return undefined
     }
     const temp = {
+      'x-createdAt': request.createdAt,
       tags: request.tags,
-      description: `${request.name}. ${request.description}`.trim(),
+      summary: request.name,
+      description: request.description,
       responses: {
         default: {
           description: 'OK',

@@ -38,11 +38,24 @@ export const fromSwagger = swagger => {
     )(swagger.parameters),
     paths: R.map(key => {
       const value = swagger.paths[key]
-      return {
+      return { // path
         createdAt: value['x-createdAt'],
         uri: key,
         name: value['x-name'],
-        requests: []
+        requests: R.pipe(
+          R.pick(['get', 'post', 'put', 'delete']),
+          R.keys,
+          R.map(method => {
+            const request = value[method]
+            return { // request
+              createdAt: request['x-createdAt'],
+              name: request.summary,
+              description: request.description,
+              method: method.toUpperCase(),
+              tags: request.tags
+            }
+          })
+        )(value)
       }
     }, R.keys(swagger.paths)),
     models: R.map(key => {
