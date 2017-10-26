@@ -67,7 +67,7 @@ export const fromSwagger = swagger => {
         name: value['x-name'],
         uri: key,
         requests: R.pipe(
-          R.pick(value['x-methods']),
+          R.pick(value['x-methods'] || ['get', 'post', 'put', 'delete']),
           R.keys,
           R.map(method => {
             const request = value[method]
