@@ -130,7 +130,11 @@ export const fromSwagger = swagger => {
                   }]
                 }
               })(R.find(R.propEq('in', 'body'), request.parameters || [])),
-              response: ((schema) => { // response body
+              response: (responses => { // response body
+                if (R.isNil(responses)) {
+                  return []
+                }
+                const schema = (responses.default || responses['200']).schema
                 if (R.isNil(schema)) {
                   return []
                 }
@@ -149,7 +153,7 @@ export const fromSwagger = swagger => {
                 if (!R.isNil(schema.properties)) {
                   return extractProperties(schema.properties)
                 }
-              })((request.responses.default || request.responses['200']).schema),
+              })(request.responses),
               examples: request['x-examples']
             }
           })

@@ -49,4 +49,5 @@ Go to GitHub and release it.
 - detect file changed not by the app
 - improve test coverage
 - use logger, so it won't output anything in production
-- import arbitrary swagger file should not crash the app
+- https://developer.ringcentral.com/api-explorer/latest/swagger-ring_internal.json
+    - basePath change to '/restapi'
