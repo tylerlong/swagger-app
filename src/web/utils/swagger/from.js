@@ -68,15 +68,15 @@ export const fromSwagger = swagger => {
                   return []
                 }
                 if (!R.isNil(schema['$ref'])) {
-                  const modelName = R.last(schema['$ref'].split('/'))
+                  const type = R.last(schema['$ref'].split('/'))
                   return [{
-                    // createdAt: 1508392862927,
-                    name: modelName,
-                    // description: '',
-                    type: modelName
-                    // enum: [],
-                    // required: true,
-                    // isArray: false
+                    createdAt: schema['x-createdAt'],
+                    name: schema['x-name'],
+                    description: schema['x-description'],
+                    type,
+                    enum: [],
+                    required: true,
+                    isArray: false
                   }]
                 }
               })(request.responses.default.schema),
