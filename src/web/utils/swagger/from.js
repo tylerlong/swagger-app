@@ -146,7 +146,7 @@ export const fromSwagger = swagger => {
                 if (!R.isNil(schema.properties)) {
                   return extractProperties(schema.properties)
                 }
-              })(request.responses.default.schema),
+              })((request.responses.default || request.responses['200']).schema),
               examples: request['x-examples']
             }
           })
