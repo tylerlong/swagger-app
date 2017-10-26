@@ -100,6 +100,9 @@ export const fromSwagger = swagger => {
                   return []
                 }
                 const schema = body.schema
+                if (R.isNil(schema)) { // fax sending endpoint of https://developer.ringcentral.com/api-explorer/latest/swagger-ring_internal.json
+                  return []
+                }
                 const properties = schema.properties
                 if (!R.isNil(properties)) {
                   return extractProperties(properties)
