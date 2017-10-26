@@ -6,9 +6,9 @@ const extractProperties = properties => {
   return R.zipObj(R.map(R.prop('name'), properties), R.map(property => {
     const prop = {}
     prop.description = property.description
+    prop['x-createdAt'] = property.createdAt
+    prop.required = property.required
     if (property.type.toLowerCase() === property.type) { // primitive type
-      prop['x-createdAt'] = property.createdAt
-      prop.required = property.required
       prop.type = property.type
       if (property.isArray) {
         prop.items = {

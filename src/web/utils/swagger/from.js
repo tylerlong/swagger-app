@@ -9,7 +9,7 @@ const extractProperties = properties => {
         createdAt: value['x-createdAt'],
         name: key,
         description: value.description,
-        type: value.type,
+        type: value.type || R.last(value['$ref'].split('/')),
         enum: value.enum || [],
         required: value.required,
         isArray: value.type === 'array'
