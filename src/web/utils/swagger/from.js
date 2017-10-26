@@ -9,7 +9,7 @@ const extractProperties = properties => {
         createdAt: value['x-createdAt'],
         name: key,
         description: value.description,
-        type: value.type || R.last(value['$ref'].split('/')),
+        type: value.format || value.type || R.last(value['$ref'].split('/')),
         enum: value.enum || [],
         required: value.required,
         isArray: false
@@ -89,7 +89,7 @@ export const fromSwagger = swagger => {
                   createdAt: p['x-createdAt'],
                   name: p.name,
                   description: p.description,
-                  type: p.type,
+                  type: p.format || p.type,
                   enum: p.enum || [],
                   required: p.required,
                   isArray: false
@@ -99,8 +99,29 @@ export const fromSwagger = swagger => {
                 if (R.isNil(body)) {
                   return []
                 }
-                const properties = body.schema.properties
-                return extractProperties(properties)
+                const schema = body.schema
+                const properties = schema.properties
+                if (!R.isNil(properties)) {
+                  return extractProperties(properties)
+                }
+                // console.info(schema.type === 'body' && !R.isNil(schema.enum))
+                // console.info('hello')
+                // console.info(schema.type)
+                // console.info(schema.type === 'body')
+                // console.info('type: ' + schema.type + ' | ' + schema.type === 'body')
+                // console.info('enum: ' + schema.enum + ' | ' + !R.isNil(schema.enum))
+                // console.info('world')
+                if (schema.type === 'object' && !R.isNil(schema.enum)) {
+                  return [{
+                    createdAt: schema['x-createdAt'],
+                    name: schema['x-name'],
+                    description: schema['x-description'],
+                    type: 'object',
+                    enum: R.map(item => R.last(item['$ref'].split('/')), schema.enum),
+                    required: schema['x-required'],
+                    isArray: false
+                  }]
+                }
               })(R.find(R.propEq('in', 'body'), request.parameters || [])),
               response: ((schema) => { // response body
                 if (R.isNil(schema)) {
