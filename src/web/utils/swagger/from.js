@@ -107,19 +107,19 @@ export const fromSwagger = swagger => {
                 if (schema.type === 'object' && !R.isNil(schema.enum)) {
                   return [{
                     createdAt: schema['x-createdAt'],
-                    name: schema['x-name'],
-                    description: schema['x-description'],
+                    name: schema.title,
+                    description: schema.description,
                     type: 'object',
                     enum: R.map(item => R.last(item['$ref'].split('/')), schema.enum),
-                    required: schema['x-required'],
+                    required: schema.required,
                     isArray: false
                   }]
                 }
                 if (!R.isNil(schema['$ref'])) {
                   return [{
                     createdAt: schema['x-createdAt'],
-                    name: schema['x-name'],
-                    description: schema['x-description'],
+                    name: schema.title,
+                    description: schema.description,
                     type: R.last(schema['$ref'].split('/')),
                     enum: [],
                     required: schema.required,
@@ -135,11 +135,11 @@ export const fromSwagger = swagger => {
                   const type = R.last(schema['$ref'].split('/'))
                   return [{
                     createdAt: schema['x-createdAt'],
-                    name: schema['x-name'],
-                    description: schema['x-description'],
+                    name: schema.title,
+                    description: schema.description,
                     type,
                     enum: [],
-                    required: true,
+                    required: schema.required,
                     isArray: false
                   }]
                 }
