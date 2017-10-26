@@ -1,5 +1,23 @@
 import * as R from 'ramda'
 
+const extractProperties = properties => {
+  return R.pipe(
+    R.keys,
+    R.map(key => {
+      const value = properties[key]
+      return {
+        createdAt: value['x-createdAt'],
+        name: key,
+        description: value.description,
+        type: value.type,
+        enum: value.enum || [],
+        required: value.required,
+        isArray: value.type === 'array'
+      }
+    })
+  )(properties)
+}
+
 export const fromSwagger = swagger => {
   return {
     info: {
@@ -61,9 +79,15 @@ export const fromSwagger = swagger => {
               accessLevel: request['x-accessLevel'],
               batch: request['x-batch'],
               beta: request['x-beta'],
-              parameters: request.parameters || [],
-              request: request.request || [],
-              response: ((schema) => {
+              parameters: R.filter(p => p.in === 'query', request.parameters || []),
+              request: (body => { // request body
+                if (R.isNil(body)) {
+                  return []
+                }
+                const properties = body.schema.properties
+                return extractProperties(properties)
+              })(R.find(R.propEq('in', 'body'), request.parameters || [])),
+              response: ((schema) => { // response body
                 if (R.isNil(schema)) {
                   return []
                 }
@@ -79,6 +103,7 @@ export const fromSwagger = swagger => {
                     isArray: false
                   }]
                 }
+                return extractProperties(schema.properties)
               })(request.responses.default.schema),
               examples: request['x-examples']
             }

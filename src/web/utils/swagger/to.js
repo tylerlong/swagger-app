@@ -68,9 +68,9 @@ const extractSchema = response => {
 
 const extractRequests = path => {
   let result = R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => {
-    if (request.accessLevel === 'Internal' || request.status !== 'Normal') {
-      return undefined
-    }
+    // if (request.accessLevel === 'Internal' || request.status !== 'Normal') {
+    //   return undefined
+    // }
     const temp = {
       'x-createdAt': request.createdAt,
       tags: request.tags,
