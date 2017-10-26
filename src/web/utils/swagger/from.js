@@ -163,8 +163,8 @@ export const fromSwagger = swagger => {
           return {
             createdAt: v['x-createdAt'],
             name: k,
-            type: v.format || v.type,
             description: v.description,
+            type: v.format || v.type || R.last(v['$ref'].split('/')),
             enum: v.enum || [],
             required: v.required,
             isArray: v.type === 'array'
