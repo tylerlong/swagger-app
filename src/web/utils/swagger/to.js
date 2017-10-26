@@ -96,10 +96,12 @@ const extractRequests = path => {
     if (request.parameters.length > 0) { // query parameters
       temp.parameters = temp.parameters.concat(request.parameters.map(p => {
         const temp2 = {
+          'x-createdAt': p.createdAt,
           type: p.type,
           description: p.description,
           name: p.name,
-          in: 'query'
+          in: 'query',
+          required: p.required
         }
         if (p.enum.length > 0) {
           temp2.enum = p.enum

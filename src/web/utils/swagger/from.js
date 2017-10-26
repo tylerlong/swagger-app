@@ -5,15 +5,20 @@ const extractProperties = properties => {
     R.keys,
     R.map(key => {
       const value = properties[key]
-      return {
+      const result = {
         createdAt: value['x-createdAt'],
         name: key,
         description: value.description,
         type: value.type || R.last(value['$ref'].split('/')),
         enum: value.enum || [],
         required: value.required,
-        isArray: value.type === 'array'
+        isArray: false
       }
+      if (result.type === 'array') {
+        result.isArray = true
+        result.type = value.items.type || R.last(value.items['$ref'].split('/'))
+      }
+      return result
     })
   )(properties)
 }
@@ -79,7 +84,17 @@ export const fromSwagger = swagger => {
               accessLevel: request['x-accessLevel'],
               batch: request['x-batch'],
               beta: request['x-beta'],
-              parameters: R.filter(p => p.in === 'query', request.parameters || []),
+              parameters: R.map(p => { // query parameters
+                return {
+                  createdAt: p['x-createdAt'],
+                  name: p.name,
+                  description: p.description,
+                  type: p.type,
+                  enum: p.enum || [],
+                  required: p.required,
+                  isArray: false
+                }
+              }, R.filter(p => p.in === 'query', request.parameters || [])),
               request: (body => { // request body
                 if (R.isNil(body)) {
                   return []
