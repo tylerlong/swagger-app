@@ -67,7 +67,8 @@ const extractSchema = response => {
 }
 
 const extractRequests = path => {
-  let result = R.zipObj(R.map(R.pipe(R.prop('method'), R.toLower), path.requests), R.map(request => {
+  const methods = R.map(R.pipe(R.prop('method'), R.toLower), path.requests)
+  let result = R.zipObj(methods, R.map(request => {
     // if (request.accessLevel === 'Internal' || request.status !== 'Normal') {
     //   return undefined
     // }
@@ -137,6 +138,7 @@ const extractRequests = path => {
   }
   result['x-name'] = path.name
   result['x-createdAt'] = path.createdAt
+  result['x-methods'] = methods
   return result
 }
 
