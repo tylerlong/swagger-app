@@ -160,15 +160,20 @@ export const fromSwagger = swagger => {
         name: key,
         properties: R.map(k => {
           const v = value.properties[k]
-          return {
+          const result = {
             createdAt: v['x-createdAt'],
             name: k,
             description: v.description,
             type: v.format || v.type || R.last(v['$ref'].split('/')),
             enum: v.enum || [],
             required: v.required,
-            isArray: v.type === 'array'
+            isArray: false
           }
+          if (result.type === 'array') {
+            result.isArray = true
+            result.type = v.items.type || R.last(v.items['$ref'].split('/'))
+          }
+          return result
         },
           R.keys(value.properties)
         )
