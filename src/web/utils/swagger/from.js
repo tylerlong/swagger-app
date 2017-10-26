@@ -104,13 +104,6 @@ export const fromSwagger = swagger => {
                 if (!R.isNil(properties)) {
                   return extractProperties(properties)
                 }
-                // console.info(schema.type === 'body' && !R.isNil(schema.enum))
-                // console.info('hello')
-                // console.info(schema.type)
-                // console.info(schema.type === 'body')
-                // console.info('type: ' + schema.type + ' | ' + schema.type === 'body')
-                // console.info('enum: ' + schema.enum + ' | ' + !R.isNil(schema.enum))
-                // console.info('world')
                 if (schema.type === 'object' && !R.isNil(schema.enum)) {
                   return [{
                     createdAt: schema['x-createdAt'],
@@ -119,6 +112,17 @@ export const fromSwagger = swagger => {
                     type: 'object',
                     enum: R.map(item => R.last(item['$ref'].split('/')), schema.enum),
                     required: schema['x-required'],
+                    isArray: false
+                  }]
+                }
+                if (!R.isNil(schema['$ref'])) {
+                  return [{
+                    createdAt: schema['x-createdAt'],
+                    name: schema['x-name'],
+                    description: schema['x-description'],
+                    type: R.last(schema['$ref'].split('/')),
+                    enum: [],
+                    required: schema.required,
                     isArray: false
                   }]
                 }
@@ -139,7 +143,9 @@ export const fromSwagger = swagger => {
                     isArray: false
                   }]
                 }
-                return extractProperties(schema.properties)
+                if (!R.isNil(schema.properties)) {
+                  return extractProperties(schema.properties)
+                }
               })(request.responses.default.schema),
               examples: request['x-examples']
             }

@@ -49,7 +49,8 @@ const extractSchema = response => {
       'x-createdAt': item.createdAt,
       'x-name': item.name,
       'x-description': item.description,
-      '$ref': `#/definitions/${item.type}`
+      '$ref': `#/definitions/${item.type}`,
+      required: item.required
     }
   }
   if (response.length === 1 && response[0].type === 'object') { // put "/restapi/v1.0/account/{accountId}/extension/{extensionId}"
