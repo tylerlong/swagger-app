@@ -52,5 +52,3 @@ Go to GitHub and release it.
 - https://developer.ringcentral.com/api-explorer/latest/swagger-ring_internal.json
     - basePath change to '/restapi'
     - get tags correct
-- arbitrary swagger import
-    - path parameters is empty
