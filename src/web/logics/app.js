@@ -3,7 +3,7 @@ import axios from 'axios'
 import moment from 'moment'
 
 import { setState } from '../actions'
-import { toSwagger, fromSwagger } from '../utils'
+import { fromSwagger } from '../utils'
 
 const downloadFile = (filename, text) => {
   const element = document.createElement('a')
@@ -33,13 +33,12 @@ const loadStateLogic = createLogic({
   }
 })
 
-const toSwaggerJsonLogic = createLogic({
-  type: 'TO_SWAGGER_JSON',
+const exportReduxStateLogic = createLogic({
+  type: 'EXPORT_REDUX_STATE',
   latest: true,
   async process ({ getState, action }, dispatch, done) {
     const state = getState()
-    const swagger = toSwagger(state)
-    const text = JSON.stringify(swagger, null, 2)
+    const text = JSON.stringify(state, null, 2)
     if (global.electron) { // electron
       const filePath = global.electron.dialog.showSaveDialog({
         filters: [{ name: 'swagger files', extensions: ['json'] }]
@@ -49,7 +48,7 @@ const toSwaggerJsonLogic = createLogic({
         global.electron.shell.showItemInFolder(filePath)
       }
     } else { // browser
-      downloadFile(`swagger-${moment().format('YYYYMMDDHHmmss')}.json`, text)
+      downloadFile(`redux-state-${moment().format('YYYYMMDDHHmmss')}.json`, text)
     }
     done()
   }
@@ -57,5 +56,5 @@ const toSwaggerJsonLogic = createLogic({
 
 export default [
   loadStateLogic,
-  toSwaggerJsonLogic
+  exportReduxStateLogic
 ]

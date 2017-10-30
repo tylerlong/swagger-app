@@ -19,19 +19,20 @@ class App extends React.Component {
   }
   render () {
     console.log('render App')
-    const { title, version, toSwaggerJson } = this.props
+    const { title, version, exportReduxState } = this.props
     return (
       <div>
         <Button><Link to='/'><Icon type='home' /> Home</Link></Button>
         <h1>{title} {version}</h1>
-        <Tabs tabPosition='left' defaultActiveKey='save-as'>
+        <Tabs tabPosition='left' defaultActiveKey='basic-info'>
           <Tabs.TabPane tab='Basic Info' key='basic-info'><Info /></Tabs.TabPane>
           <Tabs.TabPane tab='Permissions' key='permissions'><Permissions /></Tabs.TabPane>
           <Tabs.TabPane tab='Path Parameters' key='path-parameters'><PathParameters /></Tabs.TabPane>
           <Tabs.TabPane tab='Paths' key='paths'><Paths /></Tabs.TabPane>
           <Tabs.TabPane tab='Models' key='models'><Models /></Tabs.TabPane>
-          <Tabs.TabPane tab={<span><Icon type='export' />Save as</span>} key='save-as'>
-            <Button type='primary' onClick={toSwaggerJson}>Swagger JSON</Button>
+          <Tabs.TabPane tab={<span><Icon type='tool' />Troubleshooting</span>} key='troubleshooting'>
+            <h2>Troubleshooting</h2>
+            <Button type='primary' onClick={exportReduxState}>Export Redux state</Button>
           </Tabs.TabPane>
         </Tabs>
       </div>
