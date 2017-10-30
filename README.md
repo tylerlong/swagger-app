@@ -54,4 +54,3 @@ Go to GitHub and release it.
     - get tags correct
 - arbitrary swagger import
     - path parameters is empty
-    - createdAt is missing
