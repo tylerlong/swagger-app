@@ -55,16 +55,41 @@ export const fromSwagger = swagger => {
       )(swagger.paths).sort()
     },
     permissions: swagger['x-permissions'],
-    pathParameters: R.pipe(
-      R.values,
-      R.map(item => ({
-        createdAt: item['x-createdAt'] || generateTimestamp(),
-        name: item.name,
-        description: item.description,
-        enum: item.enum || [],
-        defaultValue: item.default
-      }))
-    )(swagger.parameters),
+    pathParameters: (() => {
+      if (!R.isNil(swagger.parameters) && !R.isEmpty(swagger.parameters)) {
+        return R.pipe(
+          R.values,
+          R.map(item => ({
+            createdAt: item['x-createdAt'] || generateTimestamp(),
+            name: item.name,
+            description: item.description,
+            enum: item.enum || [],
+            defaultValue: item.default
+          }))
+        )(swagger.parameters)
+      } else { // arbitrary swagger spec
+        return R.pipe(
+          R.values,
+          R.map(R.pipe(
+            R.pick(['get', 'post', 'put', 'delete']),
+            R.values,
+            R.map(R.pipe(
+              R.prop('parameters'),
+              R.filter(R.propEq('in', 'path'))
+            ))
+          )),
+          R.flatten,
+          R.uniqBy(R.prop('name')),
+          R.map(item => ({
+            createdAt: item['x-createdAt'] || generateTimestamp(),
+            name: item.name,
+            description: item.description,
+            enum: item.enum,
+            defaultValue: item.default
+          }))
+        )(swagger.paths)
+      }
+    })(),
     paths: R.map(key => {
       const value = swagger.paths[key]
       return { // path
