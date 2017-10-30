@@ -46,8 +46,7 @@ export const fromSwagger = swagger => {
           R.pipe(
             R.pick(['get', 'post', 'put', 'delete']),
             R.values,
-            R.map(R.prop('tags')),
-            R.flatten
+            R.map(R.prop('tags'))
           )
         ),
         R.flatten,
