@@ -84,7 +84,7 @@ export const fromSwagger = swagger => {
             createdAt: item['x-createdAt'] || generateTimestamp(),
             name: item.name,
             description: item.description,
-            enum: item.enum,
+            enum: item.enum || [],
             defaultValue: item.default
           }))
         )(swagger.paths)
