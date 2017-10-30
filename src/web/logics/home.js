@@ -3,7 +3,7 @@ import { createLogic } from 'redux-logic'
 import { Base64 } from 'js-base64'
 
 import { defaultState } from '../reducers'
-import { redirectTo } from '../utils'
+import { redirectTo, toSwagger } from '../utils'
 
 const editFile = filePath => {
   redirectTo(`/edit/${Base64.encodeURI(filePath)}`)
@@ -18,7 +18,8 @@ const newFileLogic = createLogic({
         filters: [{ name: 'swagger files', extensions: ['json'] }]
       })
       if (filePath) {
-        global.fs.writeFileSync(filePath, JSON.stringify(R.omit(['alerts'], defaultState), null, 2))
+        const defaultSwagger = toSwagger(R.omit(['alerts'], defaultState))
+        global.fs.writeFileSync(filePath, JSON.stringify(defaultSwagger, null, 2))
         editFile(filePath)
       }
     }

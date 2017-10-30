@@ -6,6 +6,7 @@ import { Base64 } from 'js-base64'
 
 import reducer from './reducers'
 import logics from './logics'
+import { toSwagger } from './utils'
 
 const logicMiddleware = createLogicMiddleware(logics)
 const store = createStore(
@@ -19,7 +20,7 @@ if (global.electron) {
   const subject = new Rx.Subject().debounceTime(1000)
   subject.subscribe(() => {
     const state = R.omit(['alerts'], store.getState())
-    const data = JSON.stringify(state, null, 2)
+    const data = JSON.stringify(toSwagger(state), null, 2)
     if (data !== persistedData) {
       const tokens = window.location.href.split('#/edit/')
       if (tokens.length > 1) {

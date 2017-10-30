@@ -3,7 +3,7 @@ import axios from 'axios'
 import moment from 'moment'
 
 import { setState } from '../actions'
-import { toSwagger } from '../utils'
+import { toSwagger, fromSwagger } from '../utils'
 
 const downloadFile = (filename, text) => {
   const element = document.createElement('a')
@@ -23,7 +23,7 @@ const loadStateLogic = createLogic({
     let state = null
     if (global.electron) { // electron
       const data = global.fs.readFileSync(filePath, 'utf-8')
-      state = JSON.parse(data)
+      state = fromSwagger(JSON.parse(data))
     } else { // browser
       const res = await axios.get(filePath)
       state = res.data
