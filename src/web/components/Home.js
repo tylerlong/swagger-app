@@ -8,13 +8,14 @@ class Home extends React.Component {
   }
   render () {
     console.log('render Home')
-    const { newFile, openFile, json2yaml } = this.props
+    const { newFile, openFile, json2yaml, yaml2json } = this.props
     let utilities = null
     if (global.electron) {
       utilities = (
         <div className='utilities'>
           <h2>Utilities</h2>
           <Button onClick={json2yaml}>Convert JSON to YAML</Button>
+          <Button onClick={yaml2json}>Convert YAML to JSON</Button>
         </div>
       )
     }

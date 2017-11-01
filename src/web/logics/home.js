@@ -73,8 +73,35 @@ const json2YamlLogic = createLogic({
   }
 })
 
+const yaml2JsonLogic = createLogic({
+  type: 'YAML_TO_JSON',
+  latest: true,
+  async process ({ getState, action }, dispatch, done) {
+    if (global.electron) { // electron
+      const filesOpened = global.electron.dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [{ name: 'YAML files', extensions: ['yaml', 'yml'] }]
+      })
+      if (filesOpened) {
+        const fileOpened = filesOpened[0]
+        const fileToSave = global.electron.dialog.showSaveDialog({
+          filters: [{ name: 'JSON files', extensions: ['json'] }]
+        })
+        if (fileToSave) {
+          const data = global.fs.readFileSync(fileOpened, 'utf-8')
+          const json = JSON.stringify(YAML.load(data), null, 2)
+          global.fs.writeFileSync(fileToSave, json, 'utf-8')
+          global.electron.shell.showItemInFolder(fileToSave)
+        }
+      }
+    }
+    done()
+  }
+})
+
 export default [
   newFileLogic,
   openFileLogic,
-  json2YamlLogic
+  json2YamlLogic,
+  yaml2JsonLogic
 ]
