@@ -1,4 +1,6 @@
 --ignore-file=match:/^yarn\.lock$/
 --ignore-file=match:/\.bundle\./
+--ignore-file=match:/state\.json$/
+--ignore-file=match:/swagger\.json$/
 --ignore-dir=coverage
 --ignore-dir=dist

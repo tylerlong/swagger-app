@@ -1,9 +1,9 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
-const { autoUpdater } = require('electron-updater')
-const log = require('electron-log')
+import { app, BrowserWindow } from 'electron'
+import path from 'path'
+import { autoUpdater } from 'electron-updater'
+import log from 'electron-log'
 
-const { setApplicationMenu } = require('./menu')
+import { setApplicationMenu } from './menu'
 
 log.transports.file.level = 'info'
 autoUpdater.logger = log
