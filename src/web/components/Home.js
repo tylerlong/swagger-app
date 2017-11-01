@@ -8,11 +8,21 @@ class Home extends React.Component {
   }
   render () {
     console.log('render Home')
-    const { newFile, openFile } = this.props
+    const { newFile, openFile, json2yaml } = this.props
+    let utilities = null
+    if (global.electron) {
+      utilities = (
+        <div className='utilities'>
+          <h2>Utilities</h2>
+          <Button onClick={json2yaml}>Convert JSON to YAML</Button>
+        </div>
+      )
+    }
     return <div>
       <h1>swagger-app</h1>
       {global.electron ? <Button onClick={newFile}>New</Button> : null}
       <Button type='primary' onClick={openFile}>Open</Button>
+      { utilities }
     </div>
   }
 }

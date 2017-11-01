@@ -3,6 +3,7 @@ export const newFile = () => ({ type: 'NEW_FILE' })
 export const openFile = () => ({ type: 'OPEN_FILE' })
 export const loadState = filePath => ({ type: 'LOAD_STATE', filePath })
 export const exportReduxState = () => ({ type: 'EXPORT_REDUX_STATE' })
+export const json2yaml = () => ({ type: 'JSON_TO_YAML' })
 
 // reducers
 export const setState = state => ({ type: 'SET_STATE', state })

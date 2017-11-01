@@ -30,3 +30,7 @@ h1 {
 .ant-form-item-label {
   text-transform: capitalize;
 }
+
+.utilities {
+  margin-top: 64px;
+}

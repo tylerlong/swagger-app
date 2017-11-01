@@ -46,7 +46,19 @@ const openFileLogic = createLogic({
   }
 })
 
+const json2YamlLogic = createLogic({
+  type: 'JSON_TO_YAML',
+  latest: true,
+  async process ({ getState, action }, dispatch, done) {
+    if (global.electron) { // electron
+      console.log('JSON_TO_YAML')
+    }
+    done()
+  }
+})
+
 export default [
   newFileLogic,
-  openFileLogic
+  openFileLogic,
+  json2YamlLogic
 ]
