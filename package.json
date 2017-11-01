@@ -1,6 +1,6 @@
 {
   "name": "swagger-app",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "An app to create swagger spec.",
   "main": "build/electron.bundle.js",
@@ -57,6 +57,7 @@
     "electron-updater": "^2.15.0",
     "indefinite": "^1.0.1",
     "js-base64": "^2.3.2",
+    "js-yaml": "^3.10.0",
     "moment": "^2.19.1",
     "ramda": "^0.25.0",
     "re-reselect": "^1.0.1",

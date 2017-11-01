@@ -1,6 +1,7 @@
 import * as R from 'ramda'
 import { createLogic } from 'redux-logic'
 import { Base64 } from 'js-base64'
+import YAML from 'js-yaml'
 
 import { defaultState } from '../reducers'
 import { redirectTo, toSwagger } from '../utils'
@@ -51,7 +52,22 @@ const json2YamlLogic = createLogic({
   latest: true,
   async process ({ getState, action }, dispatch, done) {
     if (global.electron) { // electron
-      console.log('JSON_TO_YAML')
+      const filesOpened = global.electron.dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [{ name: 'JSON files', extensions: ['json'] }]
+      })
+      if (filesOpened) {
+        const fileOpened = filesOpened[0]
+        const fileToSave = global.electron.dialog.showSaveDialog({
+          filters: [{ name: 'YAML files', extensions: ['yaml', 'yml'] }]
+        })
+        if (fileToSave) {
+          const data = global.fs.readFileSync(fileOpened, 'utf-8')
+          const yaml = YAML.dump(JSON.parse(data))
+          global.fs.writeFileSync(fileToSave, yaml, 'utf-8')
+          global.electron.shell.showItemInFolder(fileToSave)
+        }
+      }
     }
     done()
   }
