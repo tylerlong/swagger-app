@@ -53,7 +53,7 @@ export const fromSwagger = swagger => {
         R.uniq
       )(swagger.paths).sort()
     },
-    permissions: swagger['x-permissions'],
+    permissions: swagger['x-permissions'] || [],
     pathParameters: (() => {
       if (!R.isNil(swagger.parameters) && !R.isEmpty(swagger.parameters)) {
         return R.pipe(
