@@ -4,7 +4,7 @@ import { Base64 } from 'js-base64'
 import YAML from 'js-yaml'
 
 import { defaultState } from '../reducers'
-import { redirectTo, toSwagger } from '../utils'
+import { redirectTo, toSwagger, fromSwagger } from '../utils'
 
 const editFile = filePath => {
   redirectTo(`/edit/${Base64.encodeURI(filePath)}`)
@@ -38,7 +38,19 @@ const openFileLogic = createLogic({
         filters: [{ name: 'swagger files', extensions: ['json'] }]
       })
       if (filesOpened) {
-        editFile(filesOpened[0])
+        const fileOpened = filesOpened[0]
+
+        // check validness of the file
+        const data = global.fs.readFileSync(fileOpened, 'utf-8')
+        try {
+          fromSwagger(JSON.parse(data))
+        } catch (e) {
+          console.log(e)
+          global.electron.getCurrentWindow().toggleDevTools()
+          return
+        }
+
+        editFile(fileOpened)
       }
     } else { // browser
       editFile('/state.json')
