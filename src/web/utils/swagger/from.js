@@ -158,6 +158,7 @@ export const fromSwagger = swagger => {
                     isArray: false
                   }]
                 }
+                return []
               })(R.find(R.propEq('in', 'body'), request.parameters || [])),
               response: (responses => { // response body
                 if (R.isNil(responses)) {
@@ -182,6 +183,7 @@ export const fromSwagger = swagger => {
                 if (!R.isNil(schema.properties)) {
                   return extractProperties(schema.properties)
                 }
+                return []
               })(request.responses),
               examples: request['x-examples']
             }
