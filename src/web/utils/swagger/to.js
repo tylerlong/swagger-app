@@ -6,7 +6,7 @@ const extractProperties = properties => {
   return R.zipObj(R.map(R.prop('name'), properties), R.map(property => {
     const prop = {}
     prop.description = property.description
-    prop['x-createdAt'] = property.createdAt
+    prop['x-created-at'] = property.createdAt
     prop.required = property.required
     if (property.type.toLowerCase() === property.type) { // primitive type
       prop.type = property.type
@@ -46,7 +46,7 @@ const extractSchema = response => {
   if (response.length === 1 && !R.contains(response[0].type, primitiveTypes) && !response[0].isArray) {
     const item = response[0]
     return {
-      'x-createdAt': item.createdAt,
+      'x-created-at': item.createdAt,
       title: item.name,
       description: item.description,
       '$ref': `#/definitions/${item.type}`,
@@ -55,7 +55,7 @@ const extractSchema = response => {
   }
   if (response.length === 1 && response[0].type === 'object') { // put "/restapi/v1.0/account/{accountId}/extension/{extensionId}"
     return {
-      'x-createdAt': response[0].createdAt,
+      'x-created-at': response[0].createdAt,
       title: response[0].name,
       description: response[0].description,
       required: response[0].required,
@@ -78,7 +78,7 @@ const extractRequests = path => {
     //   return undefined
     // }
     const temp = {
-      'x-createdAt': request.createdAt,
+      'x-created-at': request.createdAt,
       tags: request.tags,
       summary: request.name,
       description: request.description,
@@ -101,7 +101,7 @@ const extractRequests = path => {
     if (request.parameters.length > 0) { // query parameters
       temp.parameters = temp.parameters.concat(request.parameters.map(p => {
         const temp2 = {
-          'x-createdAt': p.createdAt,
+          'x-created-at': p.createdAt,
           type: p.type,
           description: p.description,
           name: p.name,
@@ -144,7 +144,7 @@ const extractRequests = path => {
     }))
   }
   result['x-name'] = path.name
-  result['x-createdAt'] = path.createdAt
+  result['x-created-at'] = path.createdAt
   result['x-methods'] = methods
   return result
 }
@@ -165,7 +165,7 @@ export const toSwagger = state => {
     consumes: state.info.consumes,
     parameters: R.zipObj(R.map(R.prop('name'), state.pathParameters), R.map(pathParameter => {
       const temp = {
-        'x-createdAt': pathParameter.createdAt,
+        'x-created-at': pathParameter.createdAt,
         name: pathParameter.name,
         in: 'path',
         required: true,
@@ -181,7 +181,7 @@ export const toSwagger = state => {
     }, state.pathParameters)),
     definitions: R.zipObj(R.map(R.prop('name'), state.models), R.map(model => ({
       type: 'object',
-      'x-createdAt': model.createdAt,
+      'x-created-at': model.createdAt,
       properties: extractProperties(model.properties)
     }), state.models)),
     paths: R.pickBy(

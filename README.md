@@ -53,3 +53,4 @@ Go to GitHub and release it.
 - Rename extension fields
     - x-accessLevel => x-access-level
     - x-apiGroup => x-throttling-group
+    - x-createdAt => x-created-at

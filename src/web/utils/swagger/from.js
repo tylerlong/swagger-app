@@ -11,7 +11,7 @@ const extractProperties = properties => {
     R.map(key => {
       const value = properties[key]
       const result = {
-        createdAt: value['x-createdAt'] || generateTimestamp(),
+        createdAt: value['x-created-at'] || generateTimestamp(),
         name: key,
         description: value.description,
         type: value.format || value.type || R.last(value['$ref'].split('/')),
@@ -59,7 +59,7 @@ export const fromSwagger = swagger => {
         return R.pipe(
           R.values,
           R.map(item => ({
-            createdAt: item['x-createdAt'] || generateTimestamp(),
+            createdAt: item['x-created-at'] || generateTimestamp(),
             name: item.name,
             description: item.description,
             enum: item.enum || [],
@@ -80,7 +80,7 @@ export const fromSwagger = swagger => {
           R.flatten,
           R.uniqBy(R.prop('name')),
           R.map(item => ({
-            createdAt: item['x-createdAt'] || generateTimestamp(),
+            createdAt: item['x-created-at'] || generateTimestamp(),
             name: item.name,
             description: item.description,
             enum: item.enum || [],
@@ -92,7 +92,7 @@ export const fromSwagger = swagger => {
     paths: R.map(key => {
       const value = swagger.paths[key]
       return { // path
-        createdAt: value['x-createdAt'] || generateTimestamp(),
+        createdAt: value['x-created-at'] || generateTimestamp(),
         name: value['x-name'],
         uri: key,
         requests: R.pipe(
@@ -101,7 +101,7 @@ export const fromSwagger = swagger => {
           R.map(method => {
             const request = value[method]
             return { // request
-              createdAt: request['x-createdAt'] || generateTimestamp(),
+              createdAt: request['x-created-at'] || generateTimestamp(),
               name: request.summary,
               since: request['x-since'],
               description: request.description,
@@ -115,7 +115,7 @@ export const fromSwagger = swagger => {
               beta: request['x-beta'],
               parameters: R.map(p => { // query parameters
                 return {
-                  createdAt: p['x-createdAt'] || generateTimestamp(),
+                  createdAt: p['x-created-at'] || generateTimestamp(),
                   name: p.name,
                   description: p.description,
                   type: p.format || p.type,
@@ -138,7 +138,7 @@ export const fromSwagger = swagger => {
                 }
                 if (schema.type === 'object' && !R.isNil(schema.enum)) {
                   return [{
-                    createdAt: schema['x-createdAt'] || generateTimestamp(),
+                    createdAt: schema['x-created-at'] || generateTimestamp(),
                     name: schema.title,
                     description: schema.description,
                     type: 'object',
@@ -149,7 +149,7 @@ export const fromSwagger = swagger => {
                 }
                 if (!R.isNil(schema['$ref'])) {
                   return [{
-                    createdAt: schema['x-createdAt'] || generateTimestamp(),
+                    createdAt: schema['x-created-at'] || generateTimestamp(),
                     name: schema.title,
                     description: schema.description,
                     type: R.last(schema['$ref'].split('/')),
@@ -171,7 +171,7 @@ export const fromSwagger = swagger => {
                 if (!R.isNil(schema['$ref'])) {
                   const type = R.last(schema['$ref'].split('/'))
                   return [{
-                    createdAt: schema['x-createdAt'] || generateTimestamp(),
+                    createdAt: schema['x-created-at'] || generateTimestamp(),
                     name: schema.title,
                     description: schema.description,
                     type,
@@ -194,12 +194,12 @@ export const fromSwagger = swagger => {
     models: R.map(key => {
       const value = swagger.definitions[key]
       return {
-        createdAt: value['x-createdAt'] || generateTimestamp(),
+        createdAt: value['x-created-at'] || generateTimestamp(),
         name: key,
         properties: R.map(k => {
           const v = value.properties[k]
           const result = {
-            createdAt: v['x-createdAt'] || generateTimestamp(),
+            createdAt: v['x-created-at'] || generateTimestamp(),
             name: k,
             description: v.description,
             type: v.format || v.type || R.last(v['$ref'].split('/')),
