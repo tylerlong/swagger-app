@@ -110,7 +110,7 @@ export const fromSwagger = swagger => {
               permissions: request['x-permissions'],
               tags: request.tags,
               status: request['x-status'],
-              accessLevel: request['x-accessLevel'],
+              accessLevel: request['x-access-level'],
               batch: request['x-batch'],
               beta: request['x-beta'],
               parameters: R.map(p => { // query parameters

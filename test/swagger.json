@@ -6713,7 +6713,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.0",
@@ -6749,7 +6749,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Deprecated",
         "x-since": "",
@@ -6835,7 +6835,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -6880,7 +6880,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -6974,7 +6974,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7009,7 +7009,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7100,7 +7100,7 @@
           "ReadAccounts",
           "EditExtensions"
         ],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.10 (Release 6.2)",
@@ -7136,7 +7136,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7164,7 +7164,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7194,7 +7194,7 @@
         "x-permissions": [
           "ReadAccounts"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7215,7 +7215,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7318,7 +7318,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7380,7 +7380,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7459,7 +7459,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7493,7 +7493,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Disabled",
         "x-since": "",
@@ -7670,7 +7670,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7719,7 +7719,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Disabled",
         "x-since": "",
@@ -7747,7 +7747,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7828,7 +7828,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7890,7 +7890,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -7930,7 +7930,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8012,7 +8012,7 @@
         "x-permissions": [
           "ReadAccounts"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Heavy",
         "x-status": "Normal",
         "x-since": "1.0.19 (Release 7.3)",
@@ -8053,7 +8053,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8154,7 +8154,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8188,7 +8188,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8221,7 +8221,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8254,7 +8254,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8282,7 +8282,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8342,7 +8342,7 @@
         "x-permissions": [
           "EditExtensions"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.10 (Release 6.2)",
@@ -8456,7 +8456,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8562,7 +8562,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8673,7 +8673,7 @@
         "x-permissions": [
           "ReadContacts"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Heavy",
         "x-status": "Normal",
         "x-since": "1.0.4 (Release 5.13)",
@@ -8725,7 +8725,7 @@
           "Contacts",
           "ReadContacts"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8762,7 +8762,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8790,7 +8790,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8831,7 +8831,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8898,7 +8898,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -8934,7 +8934,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Deprecated",
         "x-since": "",
@@ -9015,7 +9015,7 @@
         "x-permissions": [
           "ReadAccounts"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.15 (Release 7.0)",
@@ -9134,7 +9134,7 @@
         "x-permissions": [
           "EditExtensions"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.24 (Release 8.0)",
@@ -9195,7 +9195,7 @@
         "x-permissions": [
           "ReadAccounts"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.15 (Release 7.0)",
@@ -9278,7 +9278,7 @@
         "x-permissions": [
           "EditExtensions"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.24 (Release 8.0)",
@@ -9309,7 +9309,7 @@
         "x-permissions": [
           "EditExtensions"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -9358,7 +9358,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9414,7 +9414,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.22 (Release 7.5)",
@@ -9508,7 +9508,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.22 (Release 7.5)",
@@ -9585,7 +9585,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9626,7 +9626,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9683,7 +9683,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9704,7 +9704,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9732,7 +9732,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9790,7 +9790,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -9840,7 +9840,7 @@
           "EditCallLog",
           "ReadCallLog"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10019,7 +10019,7 @@
         "x-permissions": [
           "ReadCallLog"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.3 (Release 5.11)",
@@ -10142,7 +10142,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10178,7 +10178,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Disabled",
         "x-since": "",
@@ -10206,7 +10206,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10294,7 +10294,7 @@
           "InternalMessages",
           "ReadMessages"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10347,7 +10347,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10401,7 +10401,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10464,7 +10464,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10565,7 +10565,7 @@
           "Faxes",
           "ReadMessages"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10645,7 +10645,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10696,7 +10696,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10777,7 +10777,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -10853,7 +10853,7 @@
         "x-permissions": [
           "EditExtensions"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Heavy",
         "x-status": "Normal",
         "x-since": "1.0.26 (Release 8.2)",
@@ -10904,7 +10904,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.26 (Release 8.2)",
@@ -10985,7 +10985,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11090,7 +11090,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11151,7 +11151,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11204,7 +11204,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11235,7 +11235,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11340,7 +11340,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11391,7 +11391,7 @@
         "x-permissions": [
           "Meetings"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.25 (Release 8.1)",
@@ -11577,7 +11577,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -11632,7 +11632,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -11660,7 +11660,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -11712,7 +11712,7 @@
           "EditMessages",
           "ReadMessages"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -11760,7 +11760,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -11914,7 +11914,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12010,7 +12010,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12055,7 +12055,7 @@
         "x-permissions": [
           "ReadPresence"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.2",
@@ -12091,7 +12091,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12112,7 +12112,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12149,7 +12149,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12188,7 +12188,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12237,7 +12237,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12271,7 +12271,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12299,7 +12299,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12344,7 +12344,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12383,7 +12383,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12404,7 +12404,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12491,7 +12491,7 @@
         "x-permissions": [
           "RingOut"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Heavy",
         "x-status": "Normal",
         "x-since": "1.0.7 (Release 5.16)",
@@ -12527,7 +12527,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12563,7 +12563,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12591,7 +12591,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12673,7 +12673,7 @@
           "SMS",
           "ReadMessages"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.2",
@@ -12743,7 +12743,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12802,7 +12802,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12838,7 +12838,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12919,7 +12919,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12953,7 +12953,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -12981,7 +12981,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13002,7 +13002,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13040,7 +13040,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Deprecated",
         "x-since": "",
@@ -13105,7 +13105,7 @@
           "ReadCallRecording",
           "ReadCallLog"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Heavy",
         "x-status": "Normal",
         "x-since": "1.0.18",
@@ -13156,7 +13156,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13201,7 +13201,7 @@
         "x-permissions": [
           "ReadAccounts"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.0",
@@ -13242,7 +13242,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13263,7 +13263,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13297,7 +13297,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13330,7 +13330,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13351,7 +13351,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13372,7 +13372,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13410,7 +13410,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13446,7 +13446,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13479,7 +13479,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13512,7 +13512,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13533,7 +13533,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13554,7 +13554,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13594,7 +13594,7 @@
         "x-permissions": [
           "ReadClientInfo"
         ],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.11 (Release 6.3)",
@@ -13682,7 +13682,7 @@
         "x-permissions": [
           "EditCustomData"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13715,7 +13715,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13743,7 +13743,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13831,7 +13831,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13866,7 +13866,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13899,7 +13899,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13927,7 +13927,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -13981,7 +13981,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14016,7 +14016,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14121,7 +14121,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14149,7 +14149,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14177,7 +14177,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14205,7 +14205,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14233,7 +14233,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14266,7 +14266,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14354,7 +14354,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14389,7 +14389,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14466,7 +14466,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14501,7 +14501,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14534,7 +14534,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -14599,7 +14599,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -14693,7 +14693,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -14779,7 +14779,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -14825,7 +14825,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -14920,7 +14920,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -15025,7 +15025,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -15105,7 +15105,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -15182,7 +15182,7 @@
         "x-permissions": [
           "Glip"
         ],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.28 (Release 8.4)",
@@ -15219,7 +15219,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15247,7 +15247,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15275,7 +15275,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15303,7 +15303,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15331,7 +15331,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15359,7 +15359,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15387,7 +15387,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15408,7 +15408,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15437,7 +15437,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15465,7 +15465,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15493,7 +15493,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15521,7 +15521,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15549,7 +15549,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15577,7 +15577,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15598,7 +15598,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15627,7 +15627,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15777,7 +15777,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15805,7 +15805,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Internal",
+        "x-access-level": "Internal",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -15957,7 +15957,7 @@
         "x-permissions": [
           "NumberLookup"
         ],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Medium",
         "x-status": "Normal",
         "x-since": "1.0.10 (Release 6.2)",
@@ -16019,7 +16019,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Advanced",
+        "x-access-level": "Advanced",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -16080,7 +16080,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -16121,7 +16121,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "1.0.24 (Release 8.0)",
@@ -16158,7 +16158,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -16186,7 +16186,7 @@
           }
         },
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",
@@ -16234,7 +16234,7 @@
           }
         ],
         "x-permissions": [],
-        "x-accessLevel": "Basic",
+        "x-access-level": "Basic",
         "x-apiGroup": "Light",
         "x-status": "Normal",
         "x-since": "",

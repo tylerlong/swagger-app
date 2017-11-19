@@ -90,7 +90,7 @@ const extractRequests = path => {
       },
       parameters: [],
       'x-permissions': request.permissions,
-      'x-accessLevel': request.accessLevel,
+      'x-access-level': request.accessLevel,
       'x-apiGroup': request.apiGroup,
       'x-status': request.status,
       'x-since': request.since,
