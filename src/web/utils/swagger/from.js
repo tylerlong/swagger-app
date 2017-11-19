@@ -106,7 +106,7 @@ export const fromSwagger = swagger => {
               since: request['x-since'],
               description: request.description,
               method: method.toUpperCase(),
-              apiGroup: request['x-apiGroup'],
+              throttlingGroup: request['x-throttling-group'],
               permissions: request['x-permissions'],
               tags: request.tags,
               status: request['x-status'],

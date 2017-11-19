@@ -91,7 +91,7 @@ const extractRequests = path => {
       parameters: [],
       'x-permissions': request.permissions,
       'x-access-level': request.accessLevel,
-      'x-apiGroup': request.apiGroup,
+      'x-throttling-group': request.throttlingGroup,
       'x-status': request.status,
       'x-since': request.since,
       'x-examples': request.examples,

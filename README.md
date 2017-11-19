@@ -50,3 +50,6 @@ Go to GitHub and release it.
 - improve test coverage
 - use logger, so it won't output anything in production
 - https://developer.ringcentral.com/api-explorer/latest/swagger-ring_internal.json
+- Rename extension fields
+    - x-accessLevel => x-access-level
+    - x-apiGroup => x-throttling-group

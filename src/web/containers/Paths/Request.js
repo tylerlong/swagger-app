@@ -14,7 +14,7 @@ export const defaultRequest = () => ({
   since: '',
   description: '',
   method: 'GET',
-  apiGroup: 'Light',
+  throttlingGroup: 'Light',
   permissions: [],
   tags: [],
   status: 'Normal',

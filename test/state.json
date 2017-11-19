@@ -381,7 +381,7 @@
           "since": "1.0.0",
           "description": "Returns current API version(s) and server info.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "API Versions"
@@ -426,7 +426,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Authorization"
@@ -453,7 +453,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Authorization"
@@ -545,7 +545,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Authorization"
@@ -582,7 +582,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Authorization"
@@ -692,7 +692,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "API Versions"
@@ -729,7 +729,7 @@
           "since": "1.0.10 (Release 6.2)",
           "description": "Creates the account in Initial state.",
           "method": "POST",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "Accounts",
             "EditAccounts",
@@ -837,7 +837,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -864,7 +864,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -884,7 +884,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadAccounts"
           ],
@@ -916,7 +916,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -943,7 +943,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -1041,7 +1041,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -1098,7 +1098,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -1190,7 +1190,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -1210,7 +1210,7 @@
           "since": "",
           "description": "Get Account Call Log Records by Filter",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -1419,7 +1419,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -1439,7 +1439,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -1476,7 +1476,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1550,7 +1550,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Devices"
@@ -1605,7 +1605,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Devices"
@@ -1642,7 +1642,7 @@
           "since": "1.0.19 (Release 7.3)",
           "description": "Returns list of countries which can be selected for a dialing plan (to call short numbers and special services).",
           "method": "GET",
-          "apiGroup": "Heavy",
+          "throttlingGroup": "Heavy",
           "permissions": [
             "ReadAccounts"
           ],
@@ -1726,7 +1726,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1746,7 +1746,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1856,7 +1856,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1883,7 +1883,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1910,7 +1910,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1930,7 +1930,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -1960,7 +1960,7 @@
           "since": "1.0.10 (Release 6.2)",
           "description": "Modifies extension(s) by extension ID(s).\r\n\r\n1. Updates the extension data:\r\n\r\n    - status info\r\n    - contact info\r\n    - password/PIN\r\n    - partnerId\r\n\r\n2. Provisions unassigned extensions",
           "method": "PUT",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "EditExtensions"
           ],
@@ -2023,7 +2023,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -2121,7 +2121,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Address Book"
@@ -2225,7 +2225,7 @@
           "since": "1.0.4 (Release 5.13)",
           "description": "Returns the extension address book.",
           "method": "GET",
-          "apiGroup": "Heavy",
+          "throttlingGroup": "Heavy",
           "permissions": [
             "ReadContacts"
           ],
@@ -2333,7 +2333,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Contacts",
             "ReadContacts"
@@ -2383,7 +2383,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Address Book"
@@ -2403,7 +2403,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Address Book"
@@ -2433,7 +2433,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Address Book"
@@ -2480,7 +2480,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Address Book"
@@ -2535,7 +2535,7 @@
           "since": "",
           "description": "Returns a group or several groups description, including the user-defined group name, number of contacts in the group, and optional note. Batch request is supported.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Address Book"
@@ -2570,7 +2570,7 @@
           "since": "1.0.15 (Release 7.0)",
           "description": "Returns the extension answering rules.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadAccounts"
           ],
@@ -2637,7 +2637,7 @@
           "since": "1.0.24 (Release 8.0)",
           "description": "Creates a custom answering rule for a particular caller ID.",
           "method": "POST",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "EditExtensions"
           ],
@@ -2785,7 +2785,7 @@
           "since": "1.0.15 (Release 7.0)",
           "description": "Returns an answering rule by ID.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadAccounts"
           ],
@@ -2832,7 +2832,7 @@
           "since": "1.0.24 (Release 8.0)",
           "description": "Updates a custom answering rule for a particular caller ID.",
           "method": "PUT",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "EditExtensions"
           ],
@@ -2909,7 +2909,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Deletes a custom answering rule by a particular ID.",
           "method": "DELETE",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "EditExtensions"
           ],
@@ -2946,7 +2946,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -2973,7 +2973,7 @@
           "since": "1.0.22 (Release 7.5)",
           "description": "Returns a list of user permissions granted at authorization procedure.",
           "method": "GET",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [],
           "tags": [
             "Authorization Profile"
@@ -3027,7 +3027,7 @@
           "since": "1.0.22 (Release 7.5)",
           "description": "Checks if a certain user permission is activated for the particular extension.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Authorization Profile"
@@ -3125,7 +3125,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Blocked Numbers"
@@ -3173,7 +3173,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Blocked Numbers"
@@ -3220,7 +3220,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Blocked Numbers"
@@ -3260,7 +3260,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Blocked Numbers"
@@ -3280,7 +3280,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Blocked Numbers"
@@ -3317,7 +3317,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Answering Rules"
@@ -3363,7 +3363,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "EditCallLog",
             "ReadCallLog"
@@ -3396,7 +3396,7 @@
           "since": "1.0.3 (Release 5.11)",
           "description": "Get Extension Call Log Records by Filter",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadCallLog"
           ],
@@ -3607,7 +3607,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -3705,7 +3705,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -3725,7 +3725,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -3762,7 +3762,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "InternalMessages",
             "ReadMessages"
@@ -3839,7 +3839,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Conferencing"
@@ -3879,7 +3879,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Conferencing"
@@ -3935,7 +3935,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Devices"
@@ -3990,7 +3990,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Faxes",
             "ReadMessages"
@@ -4088,7 +4088,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Forwarding Numbers"
@@ -4155,7 +4155,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Forwarding Numbers"
@@ -4211,7 +4211,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -4285,7 +4285,7 @@
           "since": "1.0.26 (Release 8.2)",
           "description": "Creates extension user custom greeting.",
           "method": "POST",
-          "apiGroup": "Heavy",
+          "throttlingGroup": "Heavy",
           "permissions": [
             "EditExtensions"
           ],
@@ -4358,7 +4358,7 @@
           "since": "1.0.26 (Release 8.2)",
           "description": "Returns a custom greeting by ID.",
           "method": "GET",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [],
           "tags": [
             "Answering Rules"
@@ -4403,7 +4403,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Returns a list of meetings for a particular extension.\r\n\r\n::: info\r\nThe list of meetings does not include messages of 'Instant' type.\r\n:::",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Meetings"
           ],
@@ -4470,7 +4470,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Creates a new meeting.",
           "method": "POST",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "Meetings"
           ],
@@ -4601,7 +4601,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Returns information that includes dial-in numbers for Zoom meetings, support and international dial in numbers URIs as well as meeting account information.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Meetings"
           ],
@@ -4648,7 +4648,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Returns a particular meetings details.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Meetings"
           ],
@@ -4688,7 +4688,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Deletes a scheduled meeting.",
           "method": "DELETE",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "Meetings"
           ],
@@ -4718,7 +4718,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Modifies a particular meetings.",
           "method": "PUT",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "Meetings"
           ],
@@ -4842,7 +4842,7 @@
           "since": "1.0.25 (Release 8.1)",
           "description": "Ends a meetings which is in progress.",
           "method": "POST",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "Meetings"
           ],
@@ -4879,7 +4879,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Messages"
@@ -5050,7 +5050,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Messages"
@@ -5089,7 +5089,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Messages"
@@ -5119,7 +5119,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "EditMessages",
             "ReadMessages"
@@ -5172,7 +5172,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Messages"
@@ -5209,7 +5209,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Messages"
@@ -5349,7 +5349,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -5439,7 +5439,7 @@
           "since": "1.0.2",
           "description": "Returns presence status of an extension or several extensions by their ID(s).\r\n\r\nThe presenceStatus is returned as Offline (the parameters telephonyStatus, message, userStatus and dndStatus are not returned at all) for the following extension types: Department/Announcement Only/Take Messages Only (Voicemail)/Fax User/Paging Only Group/Shared Lines Group/IVR Menu/Application Extension/Park Location.\r\n\r\nIf the user requests his/her own presence status, the response contains actual presence status even if the status publication is turned off.\r\n\r\nBatch request is supported. For batch requests the number of extensions in one request is limited to 30. If more extensions are included in the request, the error code 400 Bad Request is returned with the logical error code InvalidMultipartRequest and the corresponding message 'Extension Presence Info multipart request is limited to 30 extensions'.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadPresence"
           ],
@@ -5478,7 +5478,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Presence"
@@ -5498,7 +5498,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Presence"
@@ -5525,7 +5525,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Presence"
@@ -5552,7 +5552,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Presence"
@@ -5579,7 +5579,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -5609,7 +5609,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -5639,7 +5639,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -5676,7 +5676,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Extension"
@@ -5713,7 +5713,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Reporting"
@@ -5733,7 +5733,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Reporting"
@@ -5760,7 +5760,7 @@
           "since": "1.0.7 (Release 5.16)",
           "description": "Makes a 2-leg RingOut call.",
           "method": "POST",
-          "apiGroup": "Heavy",
+          "throttlingGroup": "Heavy",
           "permissions": [
             "RingOut"
           ],
@@ -5845,7 +5845,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "RingOut"
@@ -5872,7 +5872,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "RingOut"
@@ -5892,7 +5892,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "RingOut"
@@ -5929,7 +5929,7 @@
           "since": "1.0.2",
           "description": "Creates and sends new SMS message. Sending SMS messages simultaneously to different recipients is limited up to 50 requests per minute; relevant for all client applications.",
           "method": "POST",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "SMS",
             "ReadMessages"
@@ -5997,7 +5997,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Ordering"
@@ -6044,7 +6044,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Ordering"
@@ -6099,7 +6099,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6119,7 +6119,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6209,7 +6209,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6229,7 +6229,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6259,7 +6259,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6286,7 +6286,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Presence"
@@ -6313,7 +6313,7 @@
           "since": "1.0.18",
           "description": "Returns call recording metadata.",
           "method": "GET",
-          "apiGroup": "Heavy",
+          "throttlingGroup": "Heavy",
           "permissions": [
             "ReadCallRecording",
             "ReadCallLog"
@@ -6388,7 +6388,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Call Log"
@@ -6425,7 +6425,7 @@
           "since": "1.0.0",
           "description": "Returns the information about service plan, available features and limitations for a particular RingCentral customer account.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadAccounts"
           ],
@@ -6472,7 +6472,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6492,7 +6492,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6519,7 +6519,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6546,7 +6546,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6566,7 +6566,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6586,7 +6586,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6613,7 +6613,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6640,7 +6640,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6667,7 +6667,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6694,7 +6694,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6714,7 +6714,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6734,7 +6734,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Account"
@@ -6761,7 +6761,7 @@
           "since": "1.0.11 (Release 6.3)",
           "description": "Returns client application data: general info, specific provisioning parameters, hints, etc.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "ReadClientInfo"
           ],
@@ -6790,7 +6790,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "EditCustomData"
           ],
@@ -6884,7 +6884,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Client Application"
@@ -6911,7 +6911,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Client Application"
@@ -6938,7 +6938,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7030,7 +7030,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7067,7 +7067,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7094,7 +7094,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7121,7 +7121,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7176,7 +7176,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7213,7 +7213,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7317,7 +7317,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7344,7 +7344,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7371,7 +7371,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7398,7 +7398,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7425,7 +7425,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7452,7 +7452,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7544,7 +7544,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7581,7 +7581,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7655,7 +7655,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7692,7 +7692,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Dictionary"
@@ -7719,7 +7719,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Returns a company by ID.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -7802,7 +7802,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Returns list of groups.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -7883,7 +7883,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Creates a group.",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -7979,7 +7979,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Returns a group or few groups by ID(s). Batch request is supported.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -8033,7 +8033,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Updates group members. Please note: Only groups of 'Team' type can be updated. Currently only one operation (either adding or removal) is supported.",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -8115,7 +8115,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Returns a user or few users by ID(s). Batch request is supported.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -8232,7 +8232,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Creates a post.",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -8291,7 +8291,7 @@
           "since": "1.0.28 (Release 8.4)",
           "description": "Returns list of posts.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [
             "Glip"
           ],
@@ -8375,7 +8375,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8402,7 +8402,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8429,7 +8429,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8456,7 +8456,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8483,7 +8483,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8510,7 +8510,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8537,7 +8537,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8557,7 +8557,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8584,7 +8584,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8611,7 +8611,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8638,7 +8638,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8665,7 +8665,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8692,7 +8692,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8719,7 +8719,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8739,7 +8739,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Internal"
@@ -8766,7 +8766,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Interop"
@@ -8793,7 +8793,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Phone Number Parser"
@@ -8958,7 +8958,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Phone Number Parser"
@@ -8985,7 +8985,7 @@
           "since": "1.0.10 (Release 6.2)",
           "description": "Returns the required numbers filtered by criteria.",
           "method": "POST",
-          "apiGroup": "Medium",
+          "throttlingGroup": "Medium",
           "permissions": [
             "NumberLookup"
           ],
@@ -9145,7 +9145,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Phone Number Pool"
@@ -9192,7 +9192,7 @@
           "since": "",
           "description": "",
           "method": "POST",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Push Notifications"
@@ -9241,7 +9241,7 @@
           "since": "1.0.24 (Release 8.0)",
           "description": "Returns a list of subscriptions created by a particular user on a particular client app.",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Push Notifications"
@@ -9295,7 +9295,7 @@
           "since": "",
           "description": "",
           "method": "DELETE",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Push Notifications"
@@ -9315,7 +9315,7 @@
           "since": "",
           "description": "",
           "method": "GET",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Push Notifications"
@@ -9345,7 +9345,7 @@
           "since": "",
           "description": "",
           "method": "PUT",
-          "apiGroup": "Light",
+          "throttlingGroup": "Light",
           "permissions": [],
           "tags": [
             "Push Notifications"
