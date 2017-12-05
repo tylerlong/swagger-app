@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, dialog, shell } from 'electron'
 import path from 'path'
 import { autoUpdater } from 'electron-updater'
 import log from 'electron-log'
@@ -29,6 +29,9 @@ const createWindow = () => {
 app.on('ready', () => {
   setApplicationMenu()
   createWindow()
+  dialog.showMessageBox(browserWindow, { message: 'This app has been deprecated in favor of "Swagger Data Entry App", click OK to download it' })
+  shell.openExternal('https://github.com/tylerlong/swagger-data-entry-app/releases')
+  app.quit()
 })
 
 app.on('window-all-closed', () => {

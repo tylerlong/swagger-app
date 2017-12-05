@@ -6,6 +6,9 @@
 An app to create swagger spec.
 
 
+## ❗️ Deprecated in favor of [swagger-data-entry-app](https://github.com/tylerlong/swagger-data-entry-app/releases)
+
+
 ## Setup
 
 ```
