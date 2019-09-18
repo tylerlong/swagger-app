@@ -57,7 +57,7 @@
     "electron-updater": "^2.16.1",
     "indefinite": "^1.0.1",
     "js-base64": "^2.3.2",
-    "js-yaml": "^3.10.0",
+    "js-yaml": "^3.13.1",
     "moment": "^2.19.2",
     "ramda": "^0.25.0",
     "re-reselect": "^1.0.1",
